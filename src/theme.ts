@@ -3,7 +3,15 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "var(--font-roboto)",
+    h1: {
+      fontSize: 32,
+      fontWeight: 700,
+    },
+  },
+  palette: {
+    primary: {
+      main: "#F0B62B",
+    },
   },
 });
 
