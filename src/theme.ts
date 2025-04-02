@@ -7,10 +7,16 @@ const theme = createTheme({
       fontSize: 32,
       fontWeight: 700,
     },
+    button: {
+      fontWeight: 700,
+    },
   },
   palette: {
     primary: {
       main: "#F0B62B",
+    },
+    secondary: {
+      main: "#ED005B",
     },
   },
 });
