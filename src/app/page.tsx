@@ -1,3 +1,5 @@
+import { CharacteristicsSection } from "@/components/CharacteristicsSection/CharacteristicsSection";
+import { ScrollSection } from "@/components/DifferentialsSection/DifferentialsSection";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { PhraseSection } from "@/components/PhraseSection/PhraseSection";
 import { Box, Stack } from "@mui/material";
@@ -11,6 +13,12 @@ export default function Home() {
           <HeroSection />
 
           <PhraseSection />
+
+          <ScrollSection />
+
+          <CharacteristicsSection />
+
+          <Box sx={{ height: "300svh" }} />
         </Stack>
       </main>
 

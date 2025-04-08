@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 import { Barlow } from "next/font/google";
+import { Header } from "@/components/Header/Header";
 
 export const metadata: Metadata = {
   title:
@@ -40,7 +41,10 @@ export default function RootLayout({
     <html lang="pt-BR" className={barlow.className}>
       <body>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <Header />
+            {children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
