@@ -6,10 +6,10 @@ export interface IMobileHeroSectionProps {}
 
 export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
   return (
-    <Box sx={{ width: "100%", overflow: "hidden", py: 4 }}>
+    <Box sx={{ width: "100%", overflow: "hidden", pt: 4 }}>
       <Container>
         <Stack gap={8}>
-          <XYZLogo width="10rem" />
+          <XYZLogo width="7rem" />
 
           <Stack alignItems="flex-start" gap={4}>
             <Stack gap={2}>
@@ -24,7 +24,7 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
         </Stack>
       </Container>
 
-      <HeroSectionImage width="30rem" />
+      <HeroSectionImage width="20rem" />
     </Box>
   );
 };

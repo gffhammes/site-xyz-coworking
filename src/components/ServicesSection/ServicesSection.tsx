@@ -24,7 +24,13 @@ export interface IServicesSectionProps {}
 
 export const ServicesSection = (props: IServicesSectionProps) => {
   return (
-    <Box sx={{ position: "relative", zIndex: 1 }}>
+    <Box
+      sx={{
+        position: "relative",
+        zIndex: 1,
+        scrollSnapAlign: "center",
+      }}
+    >
       <Stack gap={4}>
         <Container>
           <Stack gap={2} alignItems="center">

@@ -13,7 +13,7 @@ export const Header = (props: IHeaderProps) => {
       sx={{
         position: "fixed",
         top: 0,
-        py: 2,
+        py: 1,
         backgroundColor: "rgba(255, 255, 255, .7)",
         backdropFilter: "blur(10px)",
         zIndex: 999,
@@ -24,7 +24,7 @@ export const Header = (props: IHeaderProps) => {
     >
       <Container>
         <Stack direction="row">
-          <XYZLogo height="2.5rem" />
+          <XYZLogo height="1.75rem" />
         </Stack>
       </Container>
     </Box>

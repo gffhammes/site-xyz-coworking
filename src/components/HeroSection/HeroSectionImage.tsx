@@ -16,6 +16,10 @@ export const HeroSectionImage = ({ height, width }: IHeroSectionImageProps) => {
         height,
         width,
         aspectRatio: image.width / image.height,
+        justifySelf: "flex-end",
+        mr: -5,
+        mt: -5,
+        pointerEvents: "none",
       }}
     >
       <Image src={image.src} alt="XYZ" fill />

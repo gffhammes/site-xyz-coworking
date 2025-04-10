@@ -11,7 +11,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
         <Stack
           alignItems="center"
           gap={2}
-          sx={{ position: "relative", zIndex: 10 }}
+          sx={{ position: "relative", zIndex: 10, scrollSnapAlign: "start" }}
         >
           <Typography
             dangerouslySetInnerHTML={{ __html: data.text }}
