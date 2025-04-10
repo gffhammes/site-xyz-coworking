@@ -15,3 +15,12 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+.ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;  
+}

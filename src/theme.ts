@@ -7,6 +7,10 @@ const theme = createTheme({
       fontSize: 32,
       fontWeight: 700,
     },
+    h2: {
+      fontSize: 24,
+      fontWeight: 700,
+    },
     button: {
       fontWeight: 700,
     },

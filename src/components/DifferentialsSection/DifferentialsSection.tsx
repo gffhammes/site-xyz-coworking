@@ -115,10 +115,7 @@ export const ScrollSection = (props: IScrollSectionProps) => {
         position: "relative",
       }}
     >
-      <Stack
-        ref={containerRef}
-        sx={{ height: `${differentialItems.length * 100}svh` }}
-      >
+      <Stack>
         <Box
           sx={{
             position: "sticky",
@@ -154,18 +151,21 @@ export const ScrollSection = (props: IScrollSectionProps) => {
         <Stack
           sx={{
             top: 0,
-            position: "absolute",
-            height: "fit-content",
             width: "100%",
-            pointerEvents: "none",
           }}
+          ref={containerRef}
         >
           {differentialItems.map((item, index) => {
             return (
               <Box
                 key={item.title}
                 width="100%"
-                sx={{ scrollSnapAlign: "start", height: "80svh", pt: "12svh" }}
+                sx={{
+                  scrollSnapAlign: "start",
+                  height: "80svh",
+                  pt: "12svh",
+                  overflow: "hidden",
+                }}
                 className="teste"
               >
                 <Container sx={{ position: "relative" }}>

@@ -1,9 +1,11 @@
-import { CharacteristicsSection } from "@/components/CharacteristicsSection/CharacteristicsSection";
+import { ServicesSection } from "@/components/ServicesSection/ServicesSection";
 import { ScrollSection } from "@/components/DifferentialsSection/DifferentialsSection";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { PhraseSection } from "@/components/PhraseSection/PhraseSection";
 import { Box, Stack } from "@mui/material";
 import Image from "next/image";
+import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
+import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
 
 export default function Home() {
   return (
@@ -16,9 +18,13 @@ export default function Home() {
 
           <ScrollSection />
 
-          <CharacteristicsSection />
+          <Stack>
+            <ServicesSection />
 
-          <Box sx={{ height: "300svh" }} />
+            <AdvantagesSection />
+
+            <ReviewsSection />
+          </Stack>
         </Stack>
       </main>
 

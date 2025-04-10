@@ -14,15 +14,15 @@ export const Arrows = ({ scrollPrev, scrollNext }: IArrowsProps) => {
         sx={{
           position: "absolute",
           top: "50%",
-          left: "1rem",
+          left: ".2rem",
           transform: "translateY(-50%)",
           backgroundColor: "rgba(255,255,255,.8)",
           borderRadius: "4rem",
         }}
         onClick={scrollPrev}
       >
-        <IconButton color="default" aria-label="Slide Anterior">
-          <ArrowBackIcon />
+        <IconButton color="default" size="small" aria-label="Slide Anterior">
+          <ArrowBackIcon fontSize="small" />
         </IconButton>
       </Box>
 
@@ -30,15 +30,15 @@ export const Arrows = ({ scrollPrev, scrollNext }: IArrowsProps) => {
         sx={{
           position: "absolute",
           top: "50%",
-          right: "1rem",
+          right: ".2rem",
           transform: "translateY(-50%)",
           backgroundColor: "rgba(255,255,255,.8)",
           borderRadius: "4rem",
         }}
         onClick={scrollNext}
       >
-        <IconButton color="default" aria-label="Próximo Slide">
-          <ArrowForwardIcon />
+        <IconButton color="default" size="small" aria-label="Próximo Slide">
+          <ArrowForwardIcon fontSize="small" />
         </IconButton>
       </Box>
     </>

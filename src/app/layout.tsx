@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 import { Barlow } from "next/font/google";
 import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title:
@@ -44,6 +45,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
