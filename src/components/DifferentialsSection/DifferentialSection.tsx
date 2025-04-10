@@ -115,24 +115,24 @@ export const DifferentialSection = () => {
           height: "100%",
         }}
       >
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            width: "100%",
-          }}
-        >
-          {differentialItems.map((item, index) => (
+        {differentialItems.map((item, index) => (
+          <Box
+            key={index}
+            className="teste"
+            sx={{
+              height: sectionHeight,
+              scrollSnapAlign: "start",
+              width: "100%",
+            }}
+          >
             <Box
-              key={index}
-              className="teste"
               sx={{
-                height: sectionHeight,
-                scrollSnapAlign: "start",
+                height: circleSize,
                 width: "100%",
                 overflow: "hidden",
-                zIndex: -1,
                 position: "relative",
+                transform: `translateY(calc(${sectionHeight} / 6))`,
+                zIndex: -1,
               }}
             >
               <Box
@@ -140,43 +140,53 @@ export const DifferentialSection = () => {
                   height: circleSize,
                   width: circleSize,
                   borderRadius: circleSize,
-                  transition: ".3s ease all",
+                  transition: ".8s ease all",
                   backgroundColor:
                     activeIndex === index ? "#dedede" : "#f4f4f4",
-                  top: slidePT,
-                  transform: `translate(-20%, -20%)`,
+                  top: 0,
                   left: 0,
                   zIndex: -1,
                   position: "absolute",
+                  transform: "translateX(-20%)",
                 }}
               />
+            </Box>
 
+            <Box
+              sx={{
+                height: imageSize,
+                width: "100%",
+                overflow: "hidden",
+                position: "relative",
+                transform: `translateY(calc(${sectionHeight} / -8))`,
+                zIndex: -1,
+              }}
+            >
               <Box
                 sx={{
                   height: imageSize,
                   width: imageSize,
                   borderRadius: imageSize,
-                  transition: ".3s ease all",
+                  transition: ".8s ease all",
                   backgroundImage: `url("${item.image}")`,
+                  opacity: activeIndex === index ? "1" : "0",
                   backgroundSize: "cover",
-                  // backgroundImage: activeIndex === index ? "red" : "#f4f4f4",
                   bottom: 0,
-                  transform: `translate(-80%, 0)`,
                   left: "100%",
+                  transform: `translateX(-90%)`,
                   zIndex: -1,
                   position: "absolute",
                 }}
               />
             </Box>
-          ))}
-        </Box>
+          </Box>
+        ))}
       </Box>
     </Stack>
   );
 };
 
 export const sectionHeight = "40rem";
-export const slidePT = "30svh";
 
 export const circleSize = "30rem";
 export const imageSize = "15rem";

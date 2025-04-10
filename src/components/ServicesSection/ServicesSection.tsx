@@ -5,12 +5,7 @@ import {
   SvgIconTypeMap,
   Typography,
 } from "@mui/material";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
-import VpnKeyOutlinedIcon from "@mui/icons-material/VpnKeyOutlined";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import QueryBuilderOutlinedIcon from "@mui/icons-material/QueryBuilderOutlined";
-import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 
 import { ServiceCard } from "./ServiceCard";
 import { Carousel } from "../Carousel/Carousel";
@@ -29,6 +24,7 @@ export const ServicesSection = (props: IServicesSectionProps) => {
         position: "relative",
         zIndex: 1,
         scrollSnapAlign: "center",
+        pt: 10,
       }}
     >
       <Stack gap={4}>
