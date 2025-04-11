@@ -21,9 +21,9 @@ export const ServiceCard = ({ serviceData }: IServiceCardProps) => {
       }}
     >
       <Stack gap={4} alignItems="flex-start" height="100%" sx={{ p: 4 }}>
-        <Box sx={{ height: "5rem" }}>
+        <Stack alignItems="flex-start" sx={{ height: "5rem", width: "100%" }}>
           <serviceData.Image />
-        </Box>
+        </Stack>
 
         <Stack justifyContent="space-between" height="100%" gap={4}>
           <Stack gap={2}>

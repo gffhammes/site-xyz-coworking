@@ -4,7 +4,6 @@ export const SharedWorkspace = (props: ISharedWorkspaceProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
       height="100%"
       viewBox="0 0 740.67538 473.94856"
       xmlnsXlink="http://www.w3.org/1999/xlink"

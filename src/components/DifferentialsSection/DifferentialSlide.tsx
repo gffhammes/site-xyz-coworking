@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { motion, usePresenceData } from "motion/react";
 import { forwardRef } from "react";
 import parse from "html-react-parser";
@@ -19,7 +26,7 @@ export const DifferentialSlide = forwardRef(function Slide(
   const selectedItem = differentialItems[index];
 
   return (
-    <Box sx={{ position: "relative", zIndex: 1 }}>
+    <Box sx={{ position: "relative", zIndex: 1, color: "white" }}>
       <Container>
         <motion.div
           ref={ref}

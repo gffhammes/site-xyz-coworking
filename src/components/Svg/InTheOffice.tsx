@@ -4,7 +4,6 @@ export const InTheOffice = (props: IInTheOfficeProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
       height="100%"
       viewBox="0 0 774.13137 669.89848"
       xmlnsXlink="http://www.w3.org/1999/xlink"

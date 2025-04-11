@@ -9,9 +9,8 @@ import {
   useRef,
   useState,
 } from "react";
-import NorthIcon from "@mui/icons-material/North";
 import SouthIcon from "@mui/icons-material/South";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { DifferentialSlide } from "./DifferentialSlide";
 
 import image1 from "../../../public/images/rearview-businesswoman-enjoying-her-great-results.jpg";
@@ -68,7 +67,7 @@ export const DifferentialSection = () => {
       if (entry.isIntersecting) {
         window.addEventListener("scroll", handleScroll);
 
-        document.documentElement.style["scrollSnapType"] = "y mandatory";
+        document.documentElement.style["scrollSnapType"] = "y proximity";
       } else {
         window.removeEventListener("scroll", handleScroll);
 
@@ -78,7 +77,7 @@ export const DifferentialSection = () => {
 
     observerRef.current = new IntersectionObserver(observeVisibility, {
       root: null,
-      threshold: 0.1,
+      threshold: 0.05,
     });
 
     if (containerRef.current) {
@@ -113,6 +112,7 @@ export const DifferentialSection = () => {
           position: "absolute",
           width: "100%",
           height: "100%",
+          pointerEvents: "none",
         }}
       >
         {differentialItems.map((item, index) => (
@@ -140,9 +140,9 @@ export const DifferentialSection = () => {
                   height: circleSize,
                   width: circleSize,
                   borderRadius: circleSize,
-                  transition: ".8s ease all",
+                  transition: ".3s ease all",
                   backgroundColor:
-                    activeIndex === index ? "#dedede" : "#f4f4f4",
+                    activeIndex === index ? "#363636" : "#a9a9a9",
                   top: 0,
                   left: 0,
                   zIndex: -1,
@@ -150,6 +150,17 @@ export const DifferentialSection = () => {
                   transform: "translateX(-20%)",
                 }}
               />
+
+              <IconButton
+                color="primary"
+                sx={{
+                  position: "absolute",
+                  top: "100%",
+                  transform: "translate(40%, -120%)",
+                }}
+              >
+                <SouthIcon />
+              </IconButton>
             </Box>
 
             <Box
@@ -167,7 +178,7 @@ export const DifferentialSection = () => {
                   height: imageSize,
                   width: imageSize,
                   borderRadius: imageSize,
-                  transition: ".8s ease all",
+                  transition: ".3s ease all",
                   backgroundImage: `url("${item.image}")`,
                   opacity: activeIndex === index ? "1" : "0",
                   backgroundSize: "cover",
