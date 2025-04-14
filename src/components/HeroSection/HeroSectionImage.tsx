@@ -6,9 +6,22 @@ import Image from "next/image";
 export interface IHeroSectionImageProps {
   height?: string;
   width?: string;
+  margin?: {
+    top?: number;
+    bottom?: number;
+    left?: number;
+    right?: number;
+  };
 }
 
-export const HeroSectionImage = ({ height, width }: IHeroSectionImageProps) => {
+export const HeroSectionImage = ({
+  height,
+  width,
+  margin = {
+    right: -5,
+    top: -5,
+  },
+}: IHeroSectionImageProps) => {
   return (
     <Box
       sx={{
@@ -17,12 +30,12 @@ export const HeroSectionImage = ({ height, width }: IHeroSectionImageProps) => {
         width,
         aspectRatio: image.width / image.height,
         justifySelf: "flex-end",
-        mr: -5,
-        mt: -5,
+        mr: margin.right,
+        mt: margin.top,
         pointerEvents: "none",
       }}
     >
-      <Image src={image.src} alt="XYZ" fill />
+      <Image src={image.src} alt="XYZ" fill style={{ left: 0 }} />
     </Box>
   );
 };

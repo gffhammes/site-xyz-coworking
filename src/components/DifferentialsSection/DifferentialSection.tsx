@@ -67,7 +67,7 @@ export const DifferentialSection = () => {
       if (entry.isIntersecting) {
         window.addEventListener("scroll", handleScroll);
 
-        document.documentElement.style["scrollSnapType"] = "y proximity";
+        // document.documentElement.style["scrollSnapType"] = "y mandatory";
       } else {
         window.removeEventListener("scroll", handleScroll);
 

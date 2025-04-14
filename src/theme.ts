@@ -6,6 +6,10 @@ const theme = createTheme({
     h1: {
       fontSize: 32,
       fontWeight: 700,
+
+      "@media (min-width:600px)": {
+        fontSize: 48,
+      },
     },
     h2: {
       fontSize: 24,
