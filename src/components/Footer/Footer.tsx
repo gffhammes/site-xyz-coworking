@@ -1,5 +1,6 @@
 import {
   Box,
+  Chip,
   Container,
   Stack,
   styled,
@@ -7,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { FooterMap } from "./FooterMap";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export interface IFooterProps {}
 
@@ -16,42 +18,85 @@ export const Footer = (props: IFooterProps) => {
       sx={{
         backgroundColor: "#363636",
         color: "white",
-        position: "relative",
-
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          backgroundColor: "#fff",
-          height: "100%",
-          width: "100%",
-          top: 0,
-          left: 0,
-          zIndex: 0,
-        },
       }}
     >
       <Box
         sx={{
-          borderRadius: "5rem 5rem 0 0",
-          backgroundColor: "#363636",
           position: "relative",
           zIndex: 9,
+          overflow: "hidden",
+          width: "100%",
         }}
       >
-        <Container sx={{ pt: 6, pb: 4 }}>
-          <Typography
-            variant="h2"
-            maxWidth="19ch"
-            textAlign="center"
-            sx={{ mx: "auto" }}
-          >
-            Venha conhecer o nosso espaço em Balneário Camboriú!
-          </Typography>
-        </Container>
+        <Box
+          sx={{
+            background: "linear-gradient(0deg, #363636 80%,#f4f4f4 80%)",
+          }}
+        >
+          <Container>
+            <Stack direction="row" gap={4}>
+              <Stack gap={2} sx={{ pt: 10, pb: 4 }} alignItems="flex-start">
+                <Typography variant="h2" maxWidth="19ch" fontSize={16}>
+                  Venha conhecer o nosso espaço em Balneário Camboriú!
+                </Typography>
 
-        <FooterMap />
+                <Chip
+                  label="AGENDAR"
+                  color="primary"
+                  variant="outlined"
+                  icon={
+                    <Box
+                      sx={{
+                        fontSize: 18,
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        pl: 0.5,
+                      }}
+                    >
+                      <WhatsAppIcon fontSize="inherit" />
+                    </Box>
+                  }
+                  clickable
+                  sx={{
+                    fontWeight: 700,
+                  }}
+                />
 
-        <Container sx={{ py: 10 }}>
+                {/* <Stack direction="row" alignItems="center" gap={1}>
+                  <WhatsAppIcon color="primary" fontSize="small" />
+
+                  <Typography
+                    fontWeight={700}
+                    fontSize={14}
+                    textTransform="uppercase"
+                    color="primary"
+                    sx={{ letterSpacing: 1.5 }}
+                  >
+                    whatsapp
+                  </Typography>
+                </Stack> */}
+              </Stack>
+
+              <Box sx={{ position: "relative", flex: "0 0 50%" }}>
+                <Box
+                  sx={{
+                    position: "absolute",
+                    height: "100%",
+                    width: "50svw",
+                    borderRadius: "2rem 0 0 2rem",
+                    overflow: "hidden",
+                    boxShadow: 10,
+                  }}
+                >
+                  <FooterMap />
+                </Box>
+              </Box>
+            </Stack>
+          </Container>
+        </Box>
+
+        <Container sx={{ py: 10, backgroundColor: "#363636" }}>
           <Stack gap={4}>
             <Stack>
               <Typography sx={titleSx}>Endereço</Typography>

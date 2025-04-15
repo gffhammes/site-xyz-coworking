@@ -16,7 +16,10 @@ export interface IAdvantagesSectionProps {}
 export const AdvantagesSection = (props: IAdvantagesSectionProps) => {
   return (
     <Box sx={{ position: "relative" }}>
-      <Container sx={{ position: "relative", zIndex: 1, pt: 5, pb: 10 }}>
+      <Container
+        maxWidth="sm"
+        sx={{ position: "relative", zIndex: 1, pt: 5, pb: 10 }}
+      >
         <Stack gap={4} alignItems="flex-start">
           <Stack gap={2}>
             <Typography variant="h2">
@@ -29,7 +32,7 @@ export const AdvantagesSection = (props: IAdvantagesSectionProps) => {
             </Typography>
           </Stack>
 
-          <Stack gap={4}>
+          <Stack gap={4} direction={{ xs: "column" }}>
             {advantageItems.map((item) => (
               <Box
                 key={item.title}
@@ -58,20 +61,6 @@ export const AdvantagesSection = (props: IAdvantagesSectionProps) => {
           <Button variant="contained">agendar visita</Button>
         </Stack>
       </Container>
-
-      <Box
-        sx={{
-          position: "absolute",
-          height: "calc(100% + 15rem)",
-          width: "100%",
-          backgroundColor: "#cecece",
-          top: 0,
-          left: 0,
-          transform: "translateY(-15rem)",
-          zIndex: 0,
-          // borderRadius: "10rem 10rem 0 0",
-        }}
-      />
     </Box>
   );
 };

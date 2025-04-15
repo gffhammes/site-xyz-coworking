@@ -23,7 +23,9 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
               <Typography>{heroSectionData.subtitle}</Typography>
             </Stack>
 
-            <Button variant="contained">CONHEÇA MAIS</Button>
+            <Stack gap={1} sx={{ position: "relative", zIndex: 1 }}>
+              <Button variant="contained">Entre em contato</Button>
+            </Stack>
           </Stack>
         </Stack>
       </Container>

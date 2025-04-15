@@ -4,9 +4,10 @@ import parse from "html-react-parser";
 
 export interface IServiceCardProps {
   serviceData: IServiceItem;
+  isActive?: boolean;
 }
 
-export const ServiceCard = ({ serviceData }: IServiceCardProps) => {
+export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
   return (
     <Box
       sx={{
@@ -18,6 +19,7 @@ export const ServiceCard = ({ serviceData }: IServiceCardProps) => {
         cursor: "pointer",
         width: "100%",
         height: "100%",
+        filter: isActive ? "none" : "opacity(.4)",
       }}
     >
       <Stack gap={4} alignItems="flex-start" height="100%" sx={{ p: 4 }}>

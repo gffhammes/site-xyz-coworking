@@ -24,7 +24,16 @@ export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
                 </Typography>
               </Stack>
 
-              <Button variant="contained">CONHEÇA MAIS</Button>
+              <Stack
+                direction="row"
+                gap={1}
+                sx={{ position: "relative", zIndex: 1 }}
+              >
+                <Button variant="contained">Entre em contato</Button>
+                <Button variant="outlined" color="inherit">
+                  CONHEÇA MAIS
+                </Button>
+              </Stack>
             </Stack>
           </Stack>
 

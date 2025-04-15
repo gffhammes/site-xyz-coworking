@@ -12,7 +12,7 @@ export const ReviewsSection = (props: IReviewsSectionProps) => {
         "&::before": {
           content: '""',
           position: "absolute",
-          backgroundColor: "#cecece",
+          backgroundColor: "#ffffff",
           height: "100%",
           width: "100%",
           top: 0,
@@ -25,7 +25,7 @@ export const ReviewsSection = (props: IReviewsSectionProps) => {
         gap={4}
         sx={{
           borderRadius: "5rem 5rem 0 0",
-          backgroundColor: "white",
+          backgroundColor: "#f4f4f4",
           position: "relative",
           zIndex: 9,
           py: 10,

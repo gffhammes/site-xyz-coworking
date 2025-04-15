@@ -8,7 +8,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import { Arrows } from "./Arrows";
 
 export interface ICarouselProps {
-  slides: ReactNode[];
+  slides: ReactNode[] | ((args: { selectedIndex: number }) => ReactNode[]);
   showDots?: boolean;
   showArrows?: boolean;
   options?: EmblaOptionsType;
@@ -65,7 +65,7 @@ export const Carousel = ({
         className="embla__container"
         sx={{ display: "flex", ...containerSx }}
       >
-        {slides}
+        {typeof slides === "function" ? slides({ selectedIndex }) : slides}
       </Box>
 
       {showDots && (
