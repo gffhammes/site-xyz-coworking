@@ -78,7 +78,7 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
             position: "absolute",
             top: 0,
             left: 0,
-            background: "linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.8))",
+            background: "linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8))",
             zIndex: 1,
             mixBlendMode: "hard-light",
           }}

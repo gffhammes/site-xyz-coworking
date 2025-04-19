@@ -1,13 +1,13 @@
 "use client";
 
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Stack } from "@mui/material";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { differentialItems } from "./DifferentialSection";
 import { DifferentialSlide } from "./DifferentialSlide";
 import { CarouselDots } from "./CarouselDots";
 import { DifferentialImage } from "./DifferentialImage";
-import SouthIcon from "@mui/icons-material/South";
+import { CarouselControls } from "./CarouselControls";
 
 export interface INewDifferentialSectionProps {}
 
@@ -19,6 +19,7 @@ export const NewDifferentialSection = (props: INewDifferentialSectionProps) => {
     containScroll: "trimSnaps",
     watchDrag: false,
     loop: true,
+    duration: 30,
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -69,17 +70,6 @@ export const NewDifferentialSection = (props: INewDifferentialSectionProps) => {
             zIndex: 20,
           }}
         />
-
-        <Box sx={{ position: "absolute", zIndex: 90, pointerEvents: "all" }}>
-          <CarouselDots
-            scrollSnaps={scrollSnaps}
-            selectedIndex={selectedIndex}
-          />
-
-          <IconButton onClick={() => scrollNext()}>
-            <SouthIcon />
-          </IconButton>
-        </Box>
       </Box>
 
       <DifferentialImage selectedIndex={selectedIndex} />
@@ -121,11 +111,24 @@ export const NewDifferentialSection = (props: INewDifferentialSectionProps) => {
                   flex: "0 0 100%",
                 }}
               >
-                <DifferentialSlide
-                  index={index}
-                  key={index}
-                  isActiveSlide={selectedIndex === index}
-                />
+                <Stack
+                  sx={{ height: "100%" }}
+                  className="slide"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <DifferentialSlide
+                    index={index}
+                    key={index}
+                    isActiveSlide={selectedIndex === index}
+                  />
+
+                  <CarouselControls
+                    scrollNext={scrollNext}
+                    scrollSnaps={scrollSnaps}
+                    selectedIndex={selectedIndex}
+                  />
+                </Stack>
               </Box>
             ))}
           </Box>

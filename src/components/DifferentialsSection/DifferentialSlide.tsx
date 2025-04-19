@@ -33,7 +33,7 @@ export const DifferentialSlide = forwardRef(function Slide(
         position: "relative",
         zIndex: 1,
         color: "white",
-        height: "100%",
+        // height: "100%",
         // opacity: isActiveSlide ? "1" : "0",
         transition: ".3s ease all",
         transform: "translateX(25%)",

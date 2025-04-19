@@ -1,6 +1,7 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { IServiceItem } from "./ServicesSection";
 import parse from "html-react-parser";
+import Image from "next/image";
 
 export interface IServiceCardProps {
   serviceData: IServiceItem;
@@ -9,23 +10,34 @@ export interface IServiceCardProps {
 
 export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
   return (
-    <Box
+    <Stack
       sx={{
         transition: ".3s ease all",
-        border: "1px solid #a9a9a9",
         backgroundColor: "#363636",
         borderRadius: 8,
         overflow: "hidden",
         cursor: "pointer",
         width: "100%",
         height: "100%",
-        filter: isActive ? "none" : "opacity(.4)",
+        // filter: isActive ? "none" : "opacity(.4)",
       }}
     >
-      <Stack gap={4} alignItems="flex-start" height="100%" sx={{ p: 4 }}>
-        <Stack alignItems="flex-start" sx={{ height: "5rem", width: "100%" }}>
+      <Stack
+        alignItems="flex-start"
+        sx={{ flex: "0 0 9rem", width: "100%", position: "relative" }}
+      >
+        <Image
+          fill
+          src={serviceData.image}
+          alt="Imagem Serviço"
+          objectFit="cover"
+        />
+      </Stack>
+
+      <Stack gap={4} alignItems="flex-start" sx={{ p: 4, flex: "1 1 100%" }}>
+        {/* <Stack alignItems="flex-start" sx={{ height: "5rem", width: "100%" }}>
           <serviceData.Image />
-        </Stack>
+        </Stack> */}
 
         <Stack justifyContent="space-between" height="100%" gap={4}>
           <Stack gap={2}>
@@ -65,6 +77,6 @@ export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
           SAIBA MAIS
         </Typography>
       </Stack> */}
-    </Box>
+    </Stack>
   );
 };

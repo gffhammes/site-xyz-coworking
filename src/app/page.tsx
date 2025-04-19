@@ -16,7 +16,7 @@ export default function Home() {
 
           <PhraseSection />
 
-          {/* <NewDifferentialSection /> */}
+          <NewDifferentialSection />
 
           <Stack>
             <ServicesSection />
