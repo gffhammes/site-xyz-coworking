@@ -17,14 +17,17 @@
     "@mui/material": "^6.4.5",
     "@mui/material-nextjs": "^6.4.3",
     "embla-carousel-react": "^8.5.2",
+    "embla-carousel-wheel-gestures": "^8.0.2",
     "formik": "^2.4.6",
     "gsap": "^3.12.7",
     "html-react-parser": "^5.2.3",
+    "lenis": "^1.2.3",
     "motion": "^12.6.3",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-number-format": "^5.4.3"
+    "react-number-format": "^5.4.3",
+    "scroll-snap": "^5.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

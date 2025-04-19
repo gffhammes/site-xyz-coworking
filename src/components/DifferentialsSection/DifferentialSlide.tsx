@@ -15,10 +15,11 @@ import { differentialItems, sectionHeight } from "./DifferentialSection";
 
 export interface IDifferentialSlideProps {
   index: number;
+  isActiveSlide: boolean;
 }
 
 export const DifferentialSlide = forwardRef(function Slide(
-  { index }: IDifferentialSlideProps,
+  { index, isActiveSlide }: IDifferentialSlideProps,
   ref: React.Ref<HTMLDivElement>
 ) {
   const direction = usePresenceData();
@@ -26,46 +27,47 @@ export const DifferentialSlide = forwardRef(function Slide(
   const selectedItem = differentialItems[index];
 
   return (
-    <Box sx={{ position: "relative", zIndex: 1, color: "white" }}>
+    <Stack
+      justifyContent="center"
+      sx={{
+        position: "relative",
+        zIndex: 1,
+        color: "white",
+        height: "100%",
+        // opacity: isActiveSlide ? "1" : "0",
+        transition: ".3s ease all",
+        transform: "translateX(25%)",
+        // transform: isActiveSlide ? "translateX(15%)" : "none",
+        width: "100%",
+      }}
+    >
       <Container>
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: direction * 50 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              delay: 0.1,
-              duration: 0.5,
-            },
+        <Stack
+          alignItems="flex-start"
+          justifyContent="center"
+          gap={2}
+          sx={{
+            pointerEvents: "all",
           }}
-          exit={{ opacity: 0, y: direction * -50 }}
         >
-          <Stack
-            alignItems="flex-start"
-            justifyContent="flex-start"
-            gap={2}
-            sx={{ height: sectionHeight, pt: `calc(${sectionHeight} / 3)` }}
+          <Typography
+            fontSize={24}
+            fontWeight={700}
+            textTransform="uppercase"
+            maxWidth="22ch"
           >
-            <Typography
-              fontSize={24}
-              fontWeight={700}
-              textTransform="uppercase"
-              maxWidth="22ch"
-            >
-              {parse(selectedItem.title)}
-            </Typography>
+            {parse(selectedItem.title)}
+          </Typography>
 
-            <Typography fontWeight={300} maxWidth="30ch">
-              {parse(selectedItem.description)}
-            </Typography>
+          <Typography fontWeight={300} maxWidth="30ch">
+            {parse(selectedItem.description)}
+          </Typography>
 
-            <Button variant="contained" sx={{ mt: 2 }}>
-              CONHECER
-            </Button>
-          </Stack>
-        </motion.div>
+          <Button variant="contained" sx={{ mt: 2 }}>
+            CONHECER
+          </Button>
+        </Stack>
       </Container>
-    </Box>
+    </Stack>
   );
 });

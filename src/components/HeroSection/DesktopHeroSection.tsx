@@ -8,18 +8,22 @@ export interface IDesktopHeroSectionProps {}
 export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
   return (
     <Stack sx={{ width: "100%", overflow: "hidden", pt: 8 }}>
-      <Container>
+      <Container maxWidth="xl">
         <Stack direction="row" gap={4}>
           <Stack gap={20}>
             <XYZLogo width="12rem" />
 
             <Stack alignItems="flex-start" gap={4} pb={20}>
               <Stack gap={2}>
-                <Typography variant="h1" textTransform="uppercase">
+                <Typography
+                  variant="h1"
+                  textTransform="uppercase"
+                  maxWidth="23ch"
+                >
                   {heroSectionData.h1}
                 </Typography>
 
-                <Typography fontSize={24}>
+                <Typography fontSize={24} maxWidth="35ch">
                   {heroSectionData.subtitle}
                 </Typography>
               </Stack>

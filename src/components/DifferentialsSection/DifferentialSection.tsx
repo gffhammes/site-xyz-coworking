@@ -101,7 +101,7 @@ export const DifferentialSection = () => {
     >
       <Box sx={{ position: "sticky", top: 0 }}>
         <AnimatePresence custom={direction} initial={false} mode="popLayout">
-          <DifferentialSlide key={activeIndex} index={activeIndex} />
+          {/* <DifferentialSlide key={activeIndex} index={activeIndex}  /> */}
         </AnimatePresence>
       </Box>
 
