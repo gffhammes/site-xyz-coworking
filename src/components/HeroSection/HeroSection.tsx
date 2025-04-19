@@ -14,6 +14,6 @@ export const HeroSection = (props: IHeroSectionProps) => {
 };
 
 export const heroSectionData = {
-  h1: `Seu Escritório de Alto Padrão em Balneário Camboriú`,
-  subtitle: `Um espaço que transmite credibilidade, impulsiona sua produtividade e conecta você a grandes oportunidades. Trabalhe no melhor coworking de BC!`,
+  h1: `Seu escritório de alto padrão, no coração de Balneário Camboriú`,
+  subtitle: `Espaços projetados para refletir o sucesso de sua empresa, combinando design moderno, infraestrutura de ponta e a melhor localização em Balneário Camboriú. Projetado para quem busca excelência.`,
 };

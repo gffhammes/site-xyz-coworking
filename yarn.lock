@@ -2633,6 +2633,11 @@ react-number-format@^5.4.3:
   resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-5.4.3.tgz#e634df907da7742faf597afab3f25f9a59689d60"
   integrity sha512-VCY5hFg/soBighAoGcdE+GagkJq0230qN6jcS5sp8wQX1qy1fYN/RX7/BXkrs0oyzzwqR8/+eSUrqXbGeywdUQ==
 
+react-parallax@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-3.5.2.tgz#0e2a66dfda31f2e55e748daebfd2897ead866a22"
+  integrity sha512-8dwJXp/QK0fCNb5oYfxP0fbRjsrR2ysQyoRI6l7CxVJkVhO7Z2wFRal7bLosyjW5TxljhHU33AtG15QR8ak4Ng==
+
 react-property@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-property/-/react-property-2.0.2.tgz#d5ac9e244cef564880a610bc8d868bd6f60fdda6"

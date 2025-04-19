@@ -27,6 +27,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-number-format": "^5.4.3",
+    "react-parallax": "^3.5.2",
     "scroll-snap": "^5.0.2"
   },
   "devDependencies": {
