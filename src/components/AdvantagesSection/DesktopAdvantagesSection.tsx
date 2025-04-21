@@ -11,34 +11,24 @@ export const DesktopAdvantagesSection = (
       <Container sx={{ position: "relative", zIndex: 1, pt: 5, pb: 10 }}>
         <Stack
           gap={8}
-          direction="row"
-          alignItems="flex-start"
+          alignItems="center"
           sx={{
             px: 4,
           }}
         >
-          <Stack gap={2} alignItems="flex-start" sx={{ flex: "1 0 25rem" }}>
-            <Typography variant="h2">{advantageSectionData.h2}</Typography>
+          <Stack gap={2} alignItems="center" width="100%">
+            <Typography textAlign="center" maxWidth="25ch" variant="h2">
+              {advantageSectionData.h2}
+            </Typography>
 
-            <Typography>{advantageSectionData.subtitle}</Typography>
-
-            <Button variant="contained">agendar visita</Button>
+            <Typography textAlign="center" maxWidth="46ch">
+              {advantageSectionData.subtitle}
+            </Typography>
           </Stack>
 
-          <Box display="grid" gridTemplateColumns="1fr 1fr" gap={4}>
+          <Box display="grid" gridTemplateColumns="1fr 1fr 1fr" gap={8}>
             {advantageSectionData.advantageItems.map((item) => (
-              <Stack
-                key={item.title}
-                // display="grid"
-                // gridTemplateColumns="min-content auto"
-                // gridTemplateRows="auto auto"
-                // alignItems="center"
-                // gridTemplateAreas={`
-                //   "icon title"
-                //   "none desc"
-                // `}
-                // columnGap={2}
-              >
+              <Stack key={item.title}>
                 <item.Icon fontSize="large" sx={{ gridArea: "icon" }} />
 
                 <Typography sx={{ gridArea: "title" }} fontWeight={700}>
@@ -50,6 +40,8 @@ export const DesktopAdvantagesSection = (
               </Stack>
             ))}
           </Box>
+
+          <Button variant="contained">agendar visita</Button>
         </Stack>
       </Container>
     </Box>

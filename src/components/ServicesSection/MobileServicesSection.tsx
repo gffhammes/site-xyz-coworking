@@ -2,8 +2,8 @@
 
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Carousel } from "../Carousel/Carousel";
-import { ServiceCard } from "./ServiceCard";
 import { servicesItems } from "./ServicesSection";
+import { MobileServiceCard } from "./MobileServiceCard";
 
 export interface IMobileServicesSectionProps {}
 
@@ -36,10 +36,7 @@ export const MobileServicesSection = (props: IMobileServicesSectionProps) => {
           slides={({ selectedIndex }) =>
             servicesItems.map((item, index) => (
               <Box key={item.title} sx={{ flex: "0 0 80%", px: 1 }}>
-                <ServiceCard
-                  serviceData={item}
-                  isActive={selectedIndex === index}
-                />
+                <MobileServiceCard serviceData={item} />
               </Box>
             ))
           }

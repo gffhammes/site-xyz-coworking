@@ -16,9 +16,11 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           <Typography
             dangerouslySetInnerHTML={{ __html: data.text }}
             textAlign="center"
-            fontSize={24}
             sx={{
+              textTransform: "uppercase",
+
               "& strong": {
+                fontSize: 24,
                 fontWeight: 700,
                 textTransform: "uppercase",
               },
@@ -74,5 +76,5 @@ const image1Size = "17rem";
 const image2Size = "15rem";
 
 const data = {
-  text: "Aqui, seu trabalho<br/><strong>atinge outro nível!</strong>",
+  text: "Aqui, seu trabalho<br/><strong>atinge outro nível</strong>",
 };

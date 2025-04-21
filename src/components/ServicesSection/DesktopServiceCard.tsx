@@ -3,12 +3,15 @@ import { IServiceItem } from "./ServicesSection";
 import parse from "html-react-parser";
 import Image from "next/image";
 
-export interface IServiceCardProps {
+export interface IDesktopServiceCardProps {
   serviceData: IServiceItem;
   isActive?: boolean;
 }
 
-export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
+export const DesktopServiceCard = ({
+  serviceData,
+  isActive,
+}: IDesktopServiceCardProps) => {
   return (
     <Stack
       sx={{
@@ -21,10 +24,11 @@ export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
         width: "100%",
         height: "100%",
       }}
+      direction="row"
     >
       <Stack
         alignItems="flex-start"
-        sx={{ flex: "0 0 9rem", width: "100%", position: "relative" }}
+        sx={{ flex: "0 0 40%", width: "100%", position: "relative" }}
       >
         <Image
           fill
@@ -40,6 +44,7 @@ export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
             <Typography fontWeight={700} fontSize={24} lineHeight={1}>
               {serviceData.title}
             </Typography>
+
             <Typography>{parse(serviceData.description)}</Typography>
           </Stack>
 
