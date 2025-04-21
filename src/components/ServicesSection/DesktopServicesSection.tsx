@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Carousel } from "../Carousel/Carousel";
 import { ServiceCard } from "./ServiceCard";
@@ -15,29 +17,28 @@ export const DesktopServicesSection = (props: IDesktopServicesSectionProps) => {
         pt: 10,
       }}
     >
-      <Stack gap={4}>
-        <Container>
+      <Container>
+        <Stack gap={4}>
           <Stack gap={2} alignItems="center">
             <Typography textAlign="center" variant="h2" maxWidth="20ch">
               Tudo o que você precisa para crescer
             </Typography>
 
-            <Typography textAlign="center">
+            <Typography textAlign="center" maxWidth="38ch">
               Do endereço fiscal à sala privativa — escolha o serviço que faz
               sentido pro seu negócio.
             </Typography>
           </Stack>
-        </Container>
 
-        <Carousel
-          options={{ loop: true, align: "center" }}
-          slides={servicesItems.map((item) => (
-            <Box key={item.title} sx={{ flex: "0 0 80%", px: 1 }}>
-              <ServiceCard serviceData={item} />
-            </Box>
-          ))}
-        />
-      </Stack>
+          <Box display="grid" gridTemplateColumns="1fr 1fr" gap={4}>
+            {servicesItems.map((item, index) => (
+              <Box key={item.title}>
+                <ServiceCard serviceData={item} isActive />
+              </Box>
+            ))}
+          </Box>
+        </Stack>
+      </Container>
     </Box>
   );
 };

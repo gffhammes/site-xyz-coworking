@@ -1,11 +1,10 @@
 import { ServicesSection } from "@/components/ServicesSection/ServicesSection";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { PhraseSection } from "@/components/PhraseSection/PhraseSection";
-import { Box, Stack } from "@mui/material";
-import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
+import { Stack } from "@mui/material";
 import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
-import { DifferentialSection } from "@/components/DifferentialsSection/DifferentialSection";
 import { NewDifferentialSection } from "@/components/DifferentialsSection/NewDifferentialSection";
+import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
 
 export default function Home() {
   return (
@@ -20,7 +19,7 @@ export default function Home() {
 
           <NewDifferentialSection />
 
-          <Stack>
+          <Stack gap={8}>
             <ServicesSection />
 
             <AdvantagesSection />

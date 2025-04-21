@@ -14,6 +14,10 @@ const theme = createTheme({
     h2: {
       fontSize: 24,
       fontWeight: 700,
+
+      "@media (min-width:600px)": {
+        fontSize: 32,
+      },
     },
     button: {
       fontWeight: 700,

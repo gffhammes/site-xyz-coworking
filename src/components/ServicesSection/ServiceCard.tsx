@@ -13,13 +13,13 @@ export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
     <Stack
       sx={{
         transition: ".3s ease all",
-        backgroundColor: "#363636",
+        backgroundColor: "#f4f4f4",
+        border: "1px solid #d0d0d0",
         borderRadius: 8,
         overflow: "hidden",
         cursor: "pointer",
         width: "100%",
         height: "100%",
-        // filter: isActive ? "none" : "opacity(.4)",
       }}
     >
       <Stack
@@ -35,27 +35,16 @@ export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
       </Stack>
 
       <Stack gap={4} alignItems="flex-start" sx={{ p: 4, flex: "1 1 100%" }}>
-        {/* <Stack alignItems="flex-start" sx={{ height: "5rem", width: "100%" }}>
-          <serviceData.Image />
-        </Stack> */}
-
         <Stack justifyContent="space-between" height="100%" gap={4}>
           <Stack gap={2}>
-            <Typography
-              fontWeight={700}
-              fontSize={24}
-              lineHeight={1}
-              color="white"
-            >
+            <Typography fontWeight={700} fontSize={24} lineHeight={1}>
               {serviceData.title}
             </Typography>
-            <Typography color="white">
-              {parse(serviceData.description)}
-            </Typography>
+            <Typography>{parse(serviceData.description)}</Typography>
           </Stack>
 
           <Typography
-            color="primary"
+            color="secondary"
             fontWeight={700}
             sx={{ position: "relative" }}
           >
@@ -63,20 +52,6 @@ export const ServiceCard = ({ serviceData, isActive }: IServiceCardProps) => {
           </Typography>
         </Stack>
       </Stack>
-
-      {/* <Stack
-        direction="row"
-        alignItems="center"
-        gap={0.5}
-        sx={{
-          p: 2,
-        }}
-        className="footer"
-      >
-        <Typography fontWeight={700} sx={{ position: "relative" }}>
-          SAIBA MAIS
-        </Typography>
-      </Stack> */}
     </Stack>
   );
 };
