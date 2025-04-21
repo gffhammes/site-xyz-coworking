@@ -12,9 +12,11 @@ export default function Home() {
     <div>
       <main>
         <Stack gap={{ xs: 10 }}>
-          <HeroSection />
+          <Stack>
+            <HeroSection />
 
-          <PhraseSection />
+            <PhraseSection />
+          </Stack>
 
           <NewDifferentialSection />
 

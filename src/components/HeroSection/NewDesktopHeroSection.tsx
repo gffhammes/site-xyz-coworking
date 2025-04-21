@@ -8,12 +8,12 @@ import heroBg from "../../../public/images/hero.jpg";
 import { Parallax, Background } from "react-parallax";
 import Image from "next/image";
 
-export interface IMobileHeroSectionProps {}
+export interface INewDesktopHeroSectionProps {}
 
-export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
+export const NewDesktopHeroSection = (props: INewDesktopHeroSectionProps) => {
   return (
     <Box style={{ height: "110svh", width: "100%", position: "relative" }}>
-      <Box sx={{ height: "100svh" }}>
+      <Box sx={{ height: "90svh" }}>
         <Stack
           sx={{
             width: "100%",
@@ -34,22 +34,24 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
             >
               <XYZLogo width="5rem" color="white" />
 
-              <Stack alignItems="flex-start" gap={4}>
+              <Stack justifyContent="center" flex="1 1 100%" gap={4}>
                 <Stack gap={2}>
                   <Typography
                     variant="h1"
                     textTransform="uppercase"
-                    maxWidth="16ch"
+                    maxWidth="30ch"
                   >
                     {heroSectionData.h1}
                   </Typography>
 
-                  <Typography>{heroSectionData.subtitle}</Typography>
+                  <Typography maxWidth="60ch">
+                    {heroSectionData.subtitle}
+                  </Typography>
                 </Stack>
 
                 <Stack
                   gap={1}
-                  // direction="row"
+                  direction="row"
                   sx={{ position: "relative", zIndex: 1, width: "100%" }}
                 >
                   <Button variant="contained">agendar visita</Button>
@@ -89,12 +91,12 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
 
       <Box
         sx={{
-          height: "10svh",
+          height: "20svh",
           width: "100%",
           backgroundColor: "white",
           position: "absolute",
           bottom: 0,
-          borderRadius: "5rem 5rem 0 0",
+          borderRadius: "20rem 20rem 0 0",
         }}
       />
     </Box>
