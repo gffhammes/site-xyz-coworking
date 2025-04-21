@@ -19,7 +19,7 @@ export default function Home() {
             <NewDifferentialSection />
           </Stack>
 
-          <Stack gap={8}>
+          <Stack gap={8} sx={{ pb: { xs: 0, md: 10 } }}>
             <ServicesSection />
 
             <AdvantagesSection />
@@ -28,8 +28,6 @@ export default function Home() {
           </Stack>
         </Stack>
       </main>
-
-      <footer></footer>
     </div>
   );
 }

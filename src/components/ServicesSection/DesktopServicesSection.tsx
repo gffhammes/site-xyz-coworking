@@ -17,7 +17,7 @@ export const DesktopServicesSection = (props: IDesktopServicesSectionProps) => {
       }}
     >
       <Container>
-        <Stack gap={4} direction="row" alignItems="flex-start">
+        <Stack gap={8} direction="row" alignItems="flex-start">
           <Stack
             gap={2}
             sx={{ flex: "0 0 auto", position: "sticky", top: "30svh", py: 4 }}

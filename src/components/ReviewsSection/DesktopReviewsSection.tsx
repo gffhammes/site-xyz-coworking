@@ -5,21 +5,53 @@ export interface IDesktopReviewsSectionProps {}
 
 export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
   return (
-    <Carousel
-      showArrows
-      options={{ loop: true, align: "center" }}
-      slides={reviewsItems.map((item) => (
-        <Box key={item.name} sx={{ flex: "0 0 100%", px: 6 }}>
-          <Rating value={item.rating} readOnly />
+    <Container>
+      <Box display="grid" gridTemplateColumns="1fr 1fr 1fr">
+        {reviewsItems.map((item, index) => {
+          const borderToUse = () => {
+            let border = {};
 
-          <Typography fontWeight={700} fontSize={20}>
-            {item.name}
-          </Typography>
+            if (index === 0 || index === 1 || index == 2) {
+              border = { ...border, borderTop: "none" };
+            }
 
-          <Typography className="ellipsis">{item.review}</Typography>
-        </Box>
-      ))}
-    />
+            if (index === 3 || index === 4 || index == 5) {
+              border = { ...border, borderBottom: "none" };
+            }
+
+            if (index === 0 || index === 3) {
+              border = { ...border, borderLeft: "none" };
+            }
+
+            if (index === 2 || index === 5) {
+              border = { ...border, borderRight: "none" };
+            }
+
+            return border;
+          };
+
+          return (
+            <Box
+              key={item.name}
+              sx={{
+                flex: "0 0 100%",
+                p: 6,
+                border: ".5px solid #d0d0d0",
+                ...borderToUse(),
+              }}
+            >
+              <Rating value={item.rating} readOnly />
+
+              <Typography fontWeight={700} fontSize={20}>
+                {item.name}
+              </Typography>
+
+              <Typography className="ellipsis">{item.review}</Typography>
+            </Box>
+          );
+        })}
+      </Box>
+    </Container>
   );
 
   // return (
