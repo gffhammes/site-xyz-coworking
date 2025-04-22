@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
-import { differentialItems } from "./DifferentialSection";
 import { Animate } from "../common/Animate";
+import { differentialItems, imageSize } from "./DifferentialSection";
 
 export interface IDifferentialImageProps {
   selectedIndex: number;
@@ -14,12 +14,8 @@ export const DifferentialImage = ({
     <Box
       sx={{
         position: "absolute",
-        height: "15rem",
-        overflow: "hidden",
-        width: "100%",
-        top: "100%",
-        transform: "translateY(-75%)",
-        zIndex: 90,
+        bottom: 0,
+        right: 0,
         pointerEvents: "none",
       }}
     >
@@ -33,13 +29,11 @@ export const DifferentialImage = ({
       >
         <Box
           sx={{
-            height: "15rem",
-            width: "15rem",
-            borderRadius: "15rem",
+            height: imageSize,
+            width: imageSize,
+            borderRadius: imageSize,
+            transform: `translate(40%, 10%)`,
             overflow: "hidden",
-            left: "100%",
-            position: "absolute",
-            transform: "translateX(-75%)",
           }}
         >
           <Image
@@ -51,5 +45,20 @@ export const DifferentialImage = ({
         </Box>
       </Animate>
     </Box>
+
+    // <Box
+    //   sx={{
+    //     position: "absolute",
+    //     height: "15rem",
+    //     overflow: "hidden",
+    //     width: "100%",
+    //     top: "100%",
+    //     transform: "translateY(-75%)",
+    //     zIndex: 90,
+    //     pointerEvents: "none",
+    //   }}
+    // >
+
+    // </Box>
   );
 };

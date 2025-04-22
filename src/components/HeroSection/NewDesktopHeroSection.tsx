@@ -86,7 +86,7 @@ export const NewDesktopHeroSection = (props: INewDesktopHeroSectionProps) => {
           }}
         />
 
-        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" />
+        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" priority />
       </Box>
 
       <Box

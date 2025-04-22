@@ -16,19 +16,17 @@ export const CarouselControls = ({
   return (
     <Stack
       sx={{
-        // position: "absolute", zIndex: 90, pointerEvents: "all"
         position: "relative",
         zIndex: 1,
         pointerEvents: "all",
       }}
+      alignItems="center"
     >
       <CarouselDots scrollSnaps={scrollSnaps} selectedIndex={selectedIndex} />
 
-      {/* <Box sx={{ pb: 2, height: "fit-content", width: "fit-content" }}> */}
       <IconButton onClick={() => scrollNext()} color="primary">
         <SouthIcon />
       </IconButton>
-      {/* </Box> */}
     </Stack>
   );
 };

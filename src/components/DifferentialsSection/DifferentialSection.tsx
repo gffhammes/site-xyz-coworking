@@ -1,206 +1,143 @@
 "use client";
 
-import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react";
-import {
-  forwardRef,
-  SVGProps,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import SouthIcon from "@mui/icons-material/South";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
 import { DifferentialSlide } from "./DifferentialSlide";
+import { CarouselDots } from "./CarouselDots";
+import { DifferentialImage } from "./DifferentialImage";
+import { CarouselControls } from "./CarouselControls";
 
 import image1 from "../../../public/images/rearview-businesswoman-enjoying-her-great-results.jpg";
 import image4 from "../../../public/images/group-friends-having-lunch-together-restaurant.jpg";
 import image3 from "../../../public/images/medium-shot-smiley-colleagues-job.jpg";
 import image2 from "../../../public/images/business-people-office-break.jpg";
 
-export const DifferentialSection = () => {
-  const [direction, setDirection] = useState<1 | -1>(1);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const observerRef = useRef<any>(null);
-  const [y, setY] = useState(0);
+export interface IDifferentialSectionProps {}
 
-  const handleNavigation = useCallback(
-    (e: any) => {
-      const window = e.currentTarget;
-      if (y > window.scrollY) {
-        setDirection(-1);
-      } else if (y < window.scrollY) {
-        setDirection(1);
-      }
-      setY(window.scrollY);
-    },
-    [y]
+export const DifferentialSection = (props: IDifferentialSectionProps) => {
+  const [emblaRef, embla] = useEmblaCarousel({
+    align: "center",
+    skipSnaps: true,
+    axis: "y",
+    containScroll: "trimSnaps",
+    watchDrag: false,
+    loop: true,
+    duration: 30,
+  });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
+  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+  const scrollTo = useCallback(
+    (index: number) => embla && embla.scrollTo(index),
+    [embla]
   );
 
-  useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
-
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [handleNavigation]);
-
-  const handleScroll = () => {
-    const items = document.querySelectorAll(".teste");
-
-    items.forEach((item, index) => {
-      const rect = item.getBoundingClientRect();
-      const offset = 400;
-
-      if (rect.top < offset && rect.bottom > offset) {
-        setActiveIndex(index);
-      }
-    });
-  };
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setSelectedIndex(embla.selectedScrollSnap());
+  }, [embla, setSelectedIndex]);
 
   useEffect(() => {
-    const observeVisibility = (entries: any) => {
-      const [entry] = entries;
-
-      if (entry.isIntersecting) {
-        window.addEventListener("scroll", handleScroll);
-
-        // document.documentElement.style["scrollSnapType"] = "y mandatory";
-      } else {
-        window.removeEventListener("scroll", handleScroll);
-
-        document.documentElement.style["scrollSnapType"] = "none";
-      }
-    };
-
-    observerRef.current = new IntersectionObserver(observeVisibility, {
-      root: null,
-      threshold: 0.05,
-    });
-
-    if (containerRef.current) {
-      observerRef.current.observe(containerRef.current);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
+    if (!embla) return;
+    onSelect();
+    setScrollSnaps(embla.scrollSnapList());
+    embla.on("select", onSelect);
+  }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <Stack
+    <Box
       sx={{
         position: "relative",
-        height: `calc(${sectionHeight} * ${differentialItems.length})`,
+        width: "100%",
+        overflow: "hidden",
+        height: `calc(${circleSize} + ${imageSize})`,
       }}
     >
-      <Box sx={{ position: "sticky", top: 0 }}>
-        <AnimatePresence custom={direction} initial={false} mode="popLayout">
-          {/* <DifferentialSlide key={activeIndex} index={activeIndex}  /> */}
-        </AnimatePresence>
-      </Box>
-
-      <Box
-        ref={containerRef}
-        sx={{
-          top: 0,
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          pointerEvents: "none",
-        }}
-      >
-        {differentialItems.map((item, index) => (
+      <Container maxWidth="sm">
+        <Box sx={{ position: "relative" }}>
           <Box
-            key={index}
-            className="teste"
             sx={{
-              height: sectionHeight,
-              scrollSnapAlign: "start",
+              height: circleSize,
+              width: circleSize,
+              borderRadius: circleSize,
+              backgroundColor: "#363636",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              transform: `translate(-${xTranslateCircle}, 0%)`,
+            }}
+          ></Box>
+
+          <Box
+            sx={{
+              // overflow: "hidden",
+              position: "relative",
+              height: circleSize,
               width: "100%",
+              pointerEvents: "none",
             }}
           >
             <Box
+              className="embla"
+              ref={emblaRef}
               sx={{
-                height: circleSize,
-                width: "100%",
                 overflow: "hidden",
                 position: "relative",
-                transform: `translateY(calc(${sectionHeight} / 6))`,
-                zIndex: -1,
+                height: circleSize,
+                width: circleSize,
+                borderRadius: circleSize,
+                transform: `translateX(-${xTranslateCircle})`,
               }}
             >
               <Box
+                className="embla__container"
                 sx={{
-                  height: circleSize,
-                  width: circleSize,
-                  borderRadius: circleSize,
-                  transition: ".3s ease all",
-                  backgroundColor:
-                    activeIndex === index ? "#363636" : "#a9a9a9",
-                  top: 0,
-                  left: 0,
-                  zIndex: -1,
-                  position: "absolute",
-                  transform: "translateX(-20%)",
-                }}
-              />
-
-              <IconButton
-                color="primary"
-                sx={{
-                  position: "absolute",
-                  top: "100%",
-                  transform: "translate(40%, -120%)",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
                 }}
               >
-                <SouthIcon />
-              </IconButton>
-            </Box>
+                {differentialItems.map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      width: "100%",
+                      flex: "0 0 100%",
+                    }}
+                  >
+                    <Stack sx={{ height: "100%" }} className="slide">
+                      <DifferentialSlide
+                        index={index}
+                        key={index}
+                        isActiveSlide={selectedIndex === index}
+                      />
 
-            <Box
-              sx={{
-                height: imageSize,
-                width: "100%",
-                overflow: "hidden",
-                position: "relative",
-                transform: `translateY(calc(${sectionHeight} / -8))`,
-                zIndex: -1,
-              }}
-            >
-              <Box
-                sx={{
-                  height: imageSize,
-                  width: imageSize,
-                  borderRadius: imageSize,
-                  transition: ".3s ease all",
-                  backgroundImage: `url("${item.image}")`,
-                  opacity: activeIndex === index ? "1" : "0",
-                  backgroundSize: "cover",
-                  bottom: 0,
-                  left: "100%",
-                  transform: `translateX(-90%)`,
-                  zIndex: -1,
-                  position: "absolute",
-                }}
-              />
+                      <CarouselControls
+                        scrollNext={scrollNext}
+                        scrollSnaps={scrollSnaps}
+                        selectedIndex={selectedIndex}
+                      />
+                    </Stack>
+                  </Box>
+                ))}
+              </Box>
             </Box>
           </Box>
-        ))}
-      </Box>
-    </Stack>
+
+          <DifferentialImage selectedIndex={selectedIndex} />
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
-export const sectionHeight = "40rem";
-
-export const circleSize = "30rem";
-export const imageSize = "15rem";
+export const circleSize = "40rem";
+export const imageSize = "20rem";
+export const xTranslateCircle = "15%";
+// export const yTranslateCircle = "25%";
 
 export const differentialItems: IDifferentialItem[] = [
   {

@@ -50,7 +50,6 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
 
                 <Stack
                   gap={1}
-                  // direction="row"
                   sx={{ position: "relative", zIndex: 1, width: "100%" }}
                 >
                   <Button variant="contained">agendar visita</Button>
@@ -85,7 +84,7 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
           }}
         />
 
-        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" />
+        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" priority />
       </Box>
 
       <Box

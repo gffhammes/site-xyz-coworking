@@ -11,7 +11,7 @@ import {
 import { motion, usePresenceData } from "motion/react";
 import { forwardRef } from "react";
 import parse from "html-react-parser";
-import { differentialItems, sectionHeight } from "./DifferentialSection";
+import { differentialItems, xTranslateCircle } from "./DifferentialSection";
 
 export interface IDifferentialSlideProps {
   index: number;
@@ -28,46 +28,40 @@ export const DifferentialSlide = forwardRef(function Slide(
 
   return (
     <Stack
-      justifyContent="center"
       sx={{
         position: "relative",
         zIndex: 1,
         color: "white",
-        // height: "100%",
-        // opacity: isActiveSlide ? "1" : "0",
         transition: ".3s ease all",
-        transform: "translateX(25%)",
-        // transform: isActiveSlide ? "translateX(15%)" : "none",
-        width: "100%",
+        transform: `translateX(${xTranslateCircle})`,
+        height: "100%",
+        justifyContent: "center",
       }}
     >
-      <Container>
-        <Stack
-          alignItems="flex-start"
-          justifyContent="center"
-          gap={2}
-          sx={{
-            pointerEvents: "all",
-          }}
+      <Stack
+        alignItems="flex-start"
+        gap={2}
+        sx={{
+          pointerEvents: "all",
+        }}
+      >
+        <Typography
+          fontSize={{ xs: 24, md: 32 }}
+          fontWeight={700}
+          textTransform="uppercase"
+          maxWidth="22ch"
         >
-          <Typography
-            fontSize={24}
-            fontWeight={700}
-            textTransform="uppercase"
-            maxWidth="22ch"
-          >
-            {parse(selectedItem.title)}
-          </Typography>
+          {parse(selectedItem.title)}
+        </Typography>
 
-          <Typography fontWeight={300} maxWidth="30ch">
-            {parse(selectedItem.description)}
-          </Typography>
+        <Typography fontWeight={300} maxWidth="30ch">
+          {parse(selectedItem.description)}
+        </Typography>
 
-          <Button variant="contained" sx={{ mt: 2 }}>
-            CONHECER
-          </Button>
-        </Stack>
-      </Container>
+        <Button variant="contained" sx={{ mt: 2 }}>
+          CONHECER
+        </Button>
+      </Stack>
     </Stack>
   );
 });
