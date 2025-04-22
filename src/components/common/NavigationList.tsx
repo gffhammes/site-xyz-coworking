@@ -1,0 +1,76 @@
+"use client";
+
+import { Box, Stack, Typography } from "@mui/material";
+import { dark } from "@mui/material/styles/createPalette";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export interface INavigationListProps {
+  direction?: "row" | "column";
+  theme?: "light" | "dark";
+}
+
+export const NavigationList = ({
+  direction = "row",
+  theme = "light",
+}: INavigationListProps) => {
+  const pathname = usePathname();
+
+  return (
+    <Stack direction={direction} gap={4}>
+      {pages
+        .filter((page) => page.isActive)
+        .map((page) => {
+          const isActive = pathname === page.target;
+
+          const activeColor = theme === "light" ? "#363636" : "#ffffff";
+          const inactiveColor =
+            theme === "light" ? "#989898" : "rgba(255, 255, 255, 0.6)";
+          const hoverColor =
+            theme === "light" ? "secondary.main" : "primary.main";
+
+          return (
+            <Box
+              component={Link}
+              href={page.target}
+              sx={{
+                cursor: "pointer",
+                color: isActive ? activeColor : inactiveColor,
+
+                transition: ".3s ease all",
+
+                "&:hover": {
+                  color: hoverColor,
+                },
+              }}
+            >
+              <Typography>{page.name}</Typography>
+            </Box>
+          );
+        })}
+    </Stack>
+  );
+};
+
+export const pages = [
+  {
+    name: "Home",
+    target: "/",
+    isActive: true,
+  },
+  {
+    name: "Serviços",
+    target: "/servicos",
+    isActive: true,
+  },
+  {
+    name: "Blog",
+    target: "https://bc.xyzcoworking.com/blog/",
+    isActive: true,
+  },
+  {
+    name: "Contato",
+    target: "/contato",
+    isActive: false,
+  },
+];

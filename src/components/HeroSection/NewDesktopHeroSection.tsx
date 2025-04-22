@@ -7,6 +7,7 @@ import { heroSectionData } from "./HeroSection";
 import heroBg from "../../../public/images/hero.jpg";
 import { Parallax, Background } from "react-parallax";
 import Image from "next/image";
+import { NavigationList } from "../common/NavigationList";
 
 export interface INewDesktopHeroSectionProps {}
 
@@ -32,7 +33,11 @@ export const NewDesktopHeroSection = (props: INewDesktopHeroSectionProps) => {
               sx={{ height: "100%" }}
               justifyContent="space-between"
             >
-              <XYZLogo width="5rem" color="white" />
+              <Stack direction="row" justifyContent="space-between">
+                <XYZLogo width="5rem" color="white" />
+
+                <NavigationList theme="dark" />
+              </Stack>
 
               <Stack justifyContent="center" flex="1 1 100%" gap={4}>
                 <Stack gap={2}>
