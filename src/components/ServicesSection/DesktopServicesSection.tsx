@@ -13,7 +13,6 @@ export const DesktopServicesSection = (props: IDesktopServicesSectionProps) => {
         position: "relative",
         zIndex: 1,
         scrollSnapAlign: "center",
-        pt: 10,
       }}
     >
       <Container>

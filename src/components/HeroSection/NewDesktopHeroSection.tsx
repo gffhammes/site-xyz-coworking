@@ -36,11 +36,7 @@ export const NewDesktopHeroSection = (props: INewDesktopHeroSectionProps) => {
 
               <Stack justifyContent="center" flex="1 1 100%" gap={4}>
                 <Stack gap={2}>
-                  <Typography
-                    variant="h1"
-                    textTransform="uppercase"
-                    maxWidth="30ch"
-                  >
+                  <Typography variant="h1" maxWidth="30ch">
                     {heroSectionData.h1}
                   </Typography>
 

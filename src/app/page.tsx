@@ -10,19 +10,19 @@ export default function Home() {
   return (
     <div>
       <main>
-        <Stack gap={{ xs: 10 }}>
+        <Stack gap={{ xs: 20 }}>
           <Stack>
             <HeroSection />
 
             <PhraseSection />
-
-            <DifferentialSection />
           </Stack>
 
-          <Stack gap={8} sx={{ pb: { xs: 0, md: 10 } }}>
+          <Stack gap={20} sx={{ pb: { xs: 0, md: 20 } }}>
             <ServicesSection />
 
             <AdvantagesSection />
+
+            <DifferentialSection />
 
             <ReviewsSection />
           </Stack>

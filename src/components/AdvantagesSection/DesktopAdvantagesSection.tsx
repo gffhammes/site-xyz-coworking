@@ -8,7 +8,7 @@ export const DesktopAdvantagesSection = (
 ) => {
   return (
     <Box sx={{ position: "relative" }}>
-      <Container sx={{ position: "relative", zIndex: 1, pt: 5, pb: 10 }}>
+      <Container sx={{ position: "relative", zIndex: 1 }}>
         <Stack
           gap={8}
           alignItems="center"
@@ -29,14 +29,23 @@ export const DesktopAdvantagesSection = (
           <Box display="grid" gridTemplateColumns="1fr 1fr 1fr" gap={8}>
             {advantageSectionData.advantageItems.map((item) => (
               <Stack key={item.title}>
-                <item.Icon fontSize="large" sx={{ gridArea: "icon" }} />
+                <Box sx={{ fontSize: 48 }}>
+                  <item.Icon
+                    fontSize="inherit"
+                    color="secondary"
+                    sx={{ gridArea: "icon" }}
+                  />
+                </Box>
 
-                <Typography sx={{ gridArea: "title" }} fontWeight={700}>
-                  {item.title}
-                </Typography>
-                <Typography sx={{ gridArea: "desc" }}>
-                  {item.description}
-                </Typography>
+                <Stack gap={1}>
+                  <Typography sx={{ gridArea: "title" }} fontWeight={700}>
+                    {item.title}
+                  </Typography>
+
+                  <Typography sx={{ gridArea: "desc" }}>
+                    {item.description}
+                  </Typography>
+                </Stack>
               </Stack>
             ))}
           </Box>

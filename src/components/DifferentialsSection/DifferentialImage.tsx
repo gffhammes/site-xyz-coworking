@@ -41,24 +41,10 @@ export const DifferentialImage = ({
             alt="Imagem"
             fill
             objectFit="cover"
+            sizes="320px"
           />
         </Box>
       </Animate>
     </Box>
-
-    // <Box
-    //   sx={{
-    //     position: "absolute",
-    //     height: "15rem",
-    //     overflow: "hidden",
-    //     width: "100%",
-    //     top: "100%",
-    //     transform: "translateY(-75%)",
-    //     zIndex: 90,
-    //     pointerEvents: "none",
-    //   }}
-    // >
-
-    // </Box>
   );
 };

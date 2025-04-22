@@ -48,8 +48,7 @@ export const DifferentialSlide = forwardRef(function Slide(
         <Typography
           fontSize={{ xs: 24, md: 32 }}
           fontWeight={700}
-          textTransform="uppercase"
-          maxWidth="22ch"
+          lineHeight={1.2}
         >
           {parse(selectedItem.title)}
         </Typography>

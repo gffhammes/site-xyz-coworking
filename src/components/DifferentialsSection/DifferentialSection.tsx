@@ -53,7 +53,7 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
         position: "relative",
         width: "100%",
         overflow: "hidden",
-        height: `calc(${circleSize} + ${imageSize})`,
+        height: `calc(${circleSize} + (${imageSize}/ 8))`,
       }}
     >
       <Container maxWidth="sm">
@@ -69,11 +69,17 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
               left: 0,
               transform: `translate(-${xTranslateCircle}, 0%)`,
             }}
-          ></Box>
+          >
+            <CarouselControls
+              scrollPrev={scrollPrev}
+              scrollNext={scrollNext}
+              scrollSnaps={scrollSnaps}
+              selectedIndex={selectedIndex}
+            />
+          </Box>
 
           <Box
             sx={{
-              // overflow: "hidden",
               position: "relative",
               height: circleSize,
               width: "100%",
@@ -114,12 +120,6 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
                         key={index}
                         isActiveSlide={selectedIndex === index}
                       />
-
-                      <CarouselControls
-                        scrollNext={scrollNext}
-                        scrollSnaps={scrollSnaps}
-                        selectedIndex={selectedIndex}
-                      />
                     </Stack>
                   </Box>
                 ))}
@@ -141,25 +141,25 @@ export const xTranslateCircle = "15%";
 
 export const differentialItems: IDifferentialItem[] = [
   {
-    title: "Endereço estratégico e sofisticado",
+    title: "Endereço estratégico<br/>e sofisticado",
     description:
       "Ter um escritório bem localizado muda a forma como seu negócio é visto.",
     image: image1.src,
   },
   {
-    title: "Infraestrutura impecável",
+    title: "Infraestrutura<br/>impecável",
     description:
       "Cadeiras ergonômicas, internet ultra rápida e climatização total. ",
     image: image2.src,
   },
   {
-    title: "Ambiente exclusivo para negócios",
+    title: "Ambiente exclusivo<br/>para negócios",
     description:
       "Conecte-se a outros profissionais de sucesso e expanda sua rede.",
     image: image3.src,
   },
   {
-    title: "Networking que abre portas",
+    title: "Networking que<br/>abre portas",
     description:
       "Trabalhar cercado de mentes brilhantes pode ser o impulso que faltava para sua empresa crescer. Conexões reais acontecem aqui.",
     image: image4.src,

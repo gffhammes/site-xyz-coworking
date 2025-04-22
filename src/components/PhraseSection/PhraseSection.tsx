@@ -37,7 +37,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           position: "relative",
           mt: -2,
           overflow: "hidden",
-          height: "17rem",
+          height: image1Size,
         }}
       >
         <Box
@@ -72,8 +72,8 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
   );
 };
 
-const image1Size = "17rem";
-const image2Size = "15rem";
+const image1Size = { xs: "17rem", md: "35rem" };
+const image2Size = { xs: "15rem", md: "30rem" };
 
 const data = {
   text: "Aqui, seu trabalho<br/><strong>atinge outro nível</strong>",

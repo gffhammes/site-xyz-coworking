@@ -11,7 +11,13 @@ export const CarouselDots = ({
 }: ICarouselDotsProps) => {
   return (
     <Stack
-      sx={{ top: "50%", position: "absolute", right: 0, zIndex: 20 }}
+      sx={{
+        top: "50%",
+        position: "absolute",
+        transform: "translateY(-100%)",
+        right: "2rem",
+        zIndex: 20,
+      }}
       gap={0.5}
     >
       {scrollSnaps.map((snap, index) => {
@@ -23,7 +29,7 @@ export const CarouselDots = ({
               height: ".5rem",
               width: ".5rem",
               borderRadius: ".5rem",
-              backgroundColor: isActiveSnap ? "primary.main" : "white",
+              backgroundColor: isActiveSnap ? "#6b6b6b" : "#444444",
               transition: ".3s ease all",
             }}
           />

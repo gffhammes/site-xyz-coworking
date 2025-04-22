@@ -37,11 +37,7 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
 
               <Stack alignItems="flex-start" gap={4}>
                 <Stack gap={2}>
-                  <Typography
-                    variant="h1"
-                    textTransform="uppercase"
-                    maxWidth="16ch"
-                  >
+                  <Typography variant="h1" maxWidth="16ch">
                     {heroSectionData.h1}
                   </Typography>
 
