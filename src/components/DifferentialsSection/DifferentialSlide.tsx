@@ -42,6 +42,7 @@ export const DifferentialSlide = forwardRef(function Slide(
         alignItems="flex-start"
         gap={2}
         sx={{
+          width: "fit-content",
           pointerEvents: "all",
         }}
       >

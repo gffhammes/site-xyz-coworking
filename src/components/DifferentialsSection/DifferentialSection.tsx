@@ -75,6 +75,7 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
               scrollNext={scrollNext}
               scrollSnaps={scrollSnaps}
               selectedIndex={selectedIndex}
+              scrollTo={scrollTo}
             />
           </Box>
 

@@ -1,62 +1,105 @@
+"use client";
+
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { XYZLogo } from "../common/XYZLogo";
 import { heroSectionData } from "./HeroSection";
-import { HeroSectionImage } from "./HeroSectionImage";
+import heroBg from "../../../public/images/hero.jpg";
+import { Parallax, Background } from "react-parallax";
+import Image from "next/image";
+import { NavigationList } from "../common/NavigationList";
+import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
 
 export interface IDesktopHeroSectionProps {}
 
 export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
   return (
-    <Stack sx={{ width: "100%", overflow: "hidden", pt: 8 }}>
-      <Container maxWidth="xl">
-        <Stack direction="row" gap={4}>
-          <Stack gap={20}>
-            <XYZLogo width="12rem" />
+    <Box style={{ height: "110svh", width: "100%", position: "relative" }}>
+      <Box sx={{ height: "90svh" }}>
+        <Stack
+          sx={{
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            py: 8,
+            alignItems: "flex-end",
+            position: "relative",
+            zIndex: 1,
+            color: "white",
+          }}
+        >
+          <Container sx={{ height: "100%" }}>
+            <Stack
+              gap={8}
+              sx={{ height: "100%" }}
+              justifyContent="space-between"
+            >
+              <Stack direction="row" justifyContent="space-between">
+                <XYZLogoWithLink width="5rem" color="white" />
 
-            <Stack alignItems="flex-start" gap={4} pb={20}>
-              <Stack gap={2}>
-                <Typography
-                  variant="h1"
-                  textTransform="uppercase"
-                  maxWidth="23ch"
-                >
-                  {heroSectionData.h1}
-                </Typography>
-
-                <Typography fontSize={24} maxWidth="35ch">
-                  {heroSectionData.subtitle}
-                </Typography>
+                <NavigationList theme="dark" />
               </Stack>
 
-              <Stack
-                direction="row"
-                gap={1}
-                sx={{ position: "relative", zIndex: 1 }}
-              >
-                <Button variant="contained">Entre em contato</Button>
-                <Button variant="outlined" color="inherit">
-                  CONHEÇA MAIS
-                </Button>
+              <Stack justifyContent="center" flex="1 1 100%" gap={4}>
+                <Stack gap={2}>
+                  <Typography variant="h1" maxWidth="30ch">
+                    {heroSectionData.h1}
+                  </Typography>
+
+                  <Typography maxWidth="60ch">
+                    {heroSectionData.subtitle}
+                  </Typography>
+                </Stack>
+
+                <Stack
+                  gap={1}
+                  direction="row"
+                  sx={{ position: "relative", zIndex: 1, width: "100%" }}
+                >
+                  <Button variant="contained">agendar visita</Button>
+                  <Button variant="outlined">Descubra o xyz</Button>
+                </Stack>
               </Stack>
             </Stack>
-          </Stack>
-
-          <Box flex="0 0 40%" sx={{ position: "relative" }}>
-            <Box
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                height: "100%",
-                width: "100%",
-                display: "flex",
-              }}
-            >
-              <HeroSectionImage height="100%" margin={{}} />
-            </Box>
-          </Box>
+          </Container>
         </Stack>
-      </Container>
-    </Stack>
+      </Box>
+
+      <Box
+        sx={{
+          height: "100%",
+          width: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: 0,
+        }}
+      >
+        <Box
+          sx={{
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            background: "linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8))",
+            zIndex: 1,
+            mixBlendMode: "hard-light",
+          }}
+        />
+
+        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" priority />
+      </Box>
+
+      <Box
+        sx={{
+          height: "20svh",
+          width: "100%",
+          backgroundColor: "white",
+          position: "absolute",
+          bottom: 0,
+          borderRadius: "20rem 20rem 0 0",
+        }}
+      />
+    </Box>
   );
 };

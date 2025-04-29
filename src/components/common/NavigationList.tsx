@@ -17,7 +17,7 @@ export const NavigationList = ({
   const pathname = usePathname();
 
   return (
-    <Stack direction={direction} gap={4}>
+    <Stack direction={direction} alignItems="center" gap={4}>
       {pages
         .filter((page) => page.isActive)
         .map((page) => {
@@ -31,6 +31,7 @@ export const NavigationList = ({
 
           return (
             <Box
+              key={page.target}
               component={Link}
               href={page.target}
               sx={{

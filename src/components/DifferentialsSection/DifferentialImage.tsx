@@ -40,6 +40,7 @@ export const DifferentialImage = ({
             src={differentialItems[selectedIndex].image}
             alt="Imagem"
             fill
+            priority
             objectFit="cover"
             sizes="320px"
           />

@@ -1,7 +1,6 @@
 import { ResponsiveComponent } from "../common/ResponsiveComponent";
 import { DesktopHeroSection } from "./DesktopHeroSection";
 import { MobileHeroSection } from "./MobileHeroSection";
-import { NewDesktopHeroSection } from "./NewDesktopHeroSection";
 
 export interface IHeroSectionProps {}
 
@@ -9,7 +8,7 @@ export const HeroSection = (props: IHeroSectionProps) => {
   return (
     <ResponsiveComponent
       xs={<MobileHeroSection />}
-      md={<NewDesktopHeroSection />}
+      md={<DesktopHeroSection />}
     />
   );
 };

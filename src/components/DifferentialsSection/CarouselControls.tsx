@@ -8,6 +8,7 @@ export interface ICarouselControlsProps {
   scrollNext: () => void;
   scrollSnaps: any[];
   selectedIndex: number;
+  scrollTo: (index: number) => void;
 }
 
 export const CarouselControls = ({
@@ -15,9 +16,10 @@ export const CarouselControls = ({
   scrollNext,
   scrollSnaps,
   selectedIndex,
+  scrollTo,
 }: ICarouselControlsProps) => {
   return (
-    <Box sx={{ color: "#6b6b6b" }}>
+    <Box sx={{ color: "primary.main" }}>
       <IconButton
         sx={{
           position: "absolute",
@@ -44,7 +46,11 @@ export const CarouselControls = ({
         <SouthIcon />
       </IconButton>
 
-      <CarouselDots scrollSnaps={scrollSnaps} selectedIndex={selectedIndex} />
+      <CarouselDots
+        scrollSnaps={scrollSnaps}
+        selectedIndex={selectedIndex}
+        scrollTo={scrollTo}
+      />
     </Box>
 
     // <Stack

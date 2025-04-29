@@ -1,16 +1,23 @@
 "use client";
 
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import { XYZLogo } from "../common/XYZLogo";
-import { heroSectionData } from "./HeroSection";
-import heroBg from "../../../public/images/hero.jpg";
-import { Parallax, Background } from "react-parallax";
+import {
+  Box,
+  Button,
+  Container,
+  Select,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { servicesHeroSectionData } from "./ServicesHeroSection";
 import Image from "next/image";
-import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
+import { ServicesSelect } from "./ServicesSelect";
+import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 
-export interface IMobileHeroSectionProps {}
+export interface IMobileServicesHeroSectionProps {}
 
-export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
+export const MobileServicesHeroSection = (
+  props: IMobileServicesHeroSectionProps
+) => {
   return (
     <Box style={{ height: "110svh", width: "100%", position: "relative" }}>
       <Box sx={{ height: "100svh" }}>
@@ -35,22 +42,16 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
             >
               <XYZLogoWithLink width="5rem" color="white" />
 
-              <Stack alignItems="flex-start" gap={4}>
+              <Stack alignItems="flex-start" gap={8}>
                 <Stack gap={2}>
                   <Typography variant="h1" maxWidth="16ch">
-                    {heroSectionData.h1}
+                    {servicesHeroSectionData.h1}
                   </Typography>
 
-                  <Typography>{heroSectionData.subtitle}</Typography>
+                  <Typography>{servicesHeroSectionData.subtitle}</Typography>
                 </Stack>
 
-                <Stack
-                  gap={1}
-                  sx={{ position: "relative", zIndex: 1, width: "100%" }}
-                >
-                  <Button variant="contained">agendar visita</Button>
-                  <Button variant="outlined">Descubra o xyz</Button>
-                </Stack>
+                <ServicesSelect />
               </Stack>
             </Stack>
           </Container>
@@ -74,13 +75,19 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
             position: "absolute",
             top: 0,
             left: 0,
-            background: "linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8))",
+            background: "linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,1))",
             zIndex: 1,
             mixBlendMode: "hard-light",
           }}
         />
 
-        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" priority />
+        <Image
+          fill
+          src={servicesHeroSectionData.bgImage}
+          alt="Hero"
+          objectFit="cover"
+          priority
+        />
       </Box>
 
       <Box

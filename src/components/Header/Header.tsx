@@ -3,6 +3,8 @@
 import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
 import { XYZLogo } from "../common/XYZLogo";
 import { Menu } from "../common/Menu";
+import Link from "next/link";
+import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
 
 export interface IHeaderProps {}
 
@@ -25,8 +27,13 @@ export const Header = (props: IHeaderProps) => {
       }}
     >
       <Container>
-        <Stack direction="row" justifyContent="space-between" gap={8}>
-          <XYZLogo height="1.75rem" />
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          gap={8}
+        >
+          <XYZLogoWithLink height="1.75rem" />
 
           <Menu />
         </Stack>
