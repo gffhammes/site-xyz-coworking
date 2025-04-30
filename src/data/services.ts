@@ -14,6 +14,15 @@ export interface IServiceServiceItem {
     title: string;
     description: string;
   };
+  detailsPage: {
+    h1: string;
+    subtitle: string;
+    heroCTAText: string;
+    benefits: { icon: null; text: string }[];
+    steps: string[];
+    included: string[];
+    price: number;
+  };
 }
 
 export const servicesItems: IServiceServiceItem[] = [
@@ -30,6 +39,40 @@ export const servicesItems: IServiceServiceItem[] = [
       description:
         "Perfeito para quem quer registrar sua empresa em um <strong>endereço estratégico</strong> e atender clientes com <strong>mais autoridade.</strong>",
     },
+    detailsPage: {
+      h1: "O primeiro passo para sua empresa existir de verdade",
+      subtitle:
+        "Com nosso endereço fiscal e comercial, sua empresa ganha legitimidade, passa mais confiança e pode operar de forma 100% regular — sem precisar arcar com os altos custos.",
+      heroCTAText: "ENTRAR EM CONTATO",
+      benefits: [
+        {
+          text: "CNPJ ativo com endereço de prestígio em Balneário Camboriú",
+          icon: null,
+        },
+        { text: "Recebimento e aviso de correspondências", icon: null },
+        {
+          text: "Mais confiança e credibilidade junto a clientes e fornecedores",
+          icon: null,
+        },
+        {
+          text: "Ideal para negócios digitais ou empresas em início de operação",
+          icon: null,
+        },
+      ],
+      steps: [
+        "Escolha o plano que melhor se adapta ao seu negócio",
+        "Envie a documentação da sua empresa",
+        "Assine o contrato digitalmente",
+        "Pronto! Você já pode registrar ou transferir seu CNPJ",
+      ],
+      included: [
+        "Endereço fiscal e/ou comercial válido para CNPJ",
+        "Atendimento e triagem de correspondências",
+        "Aviso de recebimento por e-mail ou WhatsApp",
+        "Uso do endereço em materiais de marketing e site",
+      ],
+      price: 89,
+    },
   },
   {
     title: "Salas Privativas",
@@ -43,6 +86,37 @@ export const servicesItems: IServiceServiceItem[] = [
       title: "Salas Privativas",
       description:
         "Ideal para pequenas empresas, startups e autônomos que precisam de um espaço exclusivo.",
+    },
+    detailsPage: {
+      h1: "Seu próprio espaço, com a estrutura que sua empresa merece",
+      subtitle:
+        "Trabalhe com mais foco, profissionalismo e privacidade. Nossas salas privativas são ideais para quem quer um espaço só seu, pronto para impressionar clientes e manter a produtividade em alta.",
+      heroCTAText: "ENTRAR EM CONTATO",
+      benefits: [
+        { text: "Ambiente exclusivo para você ou sua equipe", icon: null },
+        {
+          text: "Pronto para usar, com internet, móveis e limpeza",
+          icon: null,
+        },
+        {
+          text: "Mais profissionalismo e concentração no dia a dia",
+          icon: null,
+        },
+        { text: "Acesso a áreas comuns, recepção e copa", icon: null },
+      ],
+      steps: [
+        "Escolha a sala ideal para o seu perfil",
+        "Assine o contrato digital",
+        "Leve seu notebook e comece a trabalhar no mesmo dia",
+      ],
+      included: [
+        "Sala privativa mobiliada",
+        "Internet de alta velocidade",
+        "Limpeza e manutenção inclusas",
+        "Recepção para seus clientes",
+        "Copa compartilhada",
+      ],
+      price: 890,
     },
   },
   {
@@ -58,16 +132,37 @@ export const servicesItems: IServiceServiceItem[] = [
       description:
         "Precisa de uma sala para uma reunião? Você pode agendar por hora para seu conforto e de seus clientes!",
     },
+    detailsPage: {
+      h1: "Cenário ideal para decisões importantes",
+      subtitle:
+        "Reuniões estratégicas pedem um ambiente à altura. Nossas salas oferecem conforto, tecnologia e a imagem certa para fechar grandes negócios.",
+      heroCTAText: "ENTRAR EM CONTATO",
+      benefits: [
+        { text: "Espaços com ar-condicionado, TV e Wi-Fi", icon: null },
+        {
+          text: "Atendimento personalizado para você e seus convidados",
+          icon: null,
+        },
+        {
+          text: "Ideal para reuniões presenciais ou videoconferências",
+          icon: null,
+        },
+        { text: "Agendamento prático por hora ou período", icon: null },
+      ],
+      steps: [
+        "Escolha o melhor horário para sua reunião",
+        "Faça a reserva online ou via WhatsApp",
+        "Chegue e aproveite o ambiente pronto para uso",
+      ],
+      included: [
+        "Sala de reunião equipada com TV e ar-condicionado",
+        "Wi-Fi de alta velocidade",
+        "Recepção de clientes",
+        "Água, café e estrutura de apoio",
+      ],
+      price: 69,
+    },
   },
-  // {
-  //   title: "Salas de Atendimento",
-  //   seoTitle: "Salas de Atendimento em Balneário Camboriú",
-  //   description:
-  //     "Um espaço acolhedor e profissional para atender seus clientes com a imagem que seu serviço merece. Perfeito para terapeutas, coaches e outros profissionais que oferecem atendimento personalizado.",
-  //   image: estacoesImg.src,
-  //   target: "salas-atendimento",
-  //   heroText: "Um espaço para atender meus clientes",
-  // },
   {
     title: "Estações de Trabalho",
     seoTitle: "Estações de Trabalho em Balneário Camboriú",
@@ -81,5 +176,42 @@ export const servicesItems: IServiceServiceItem[] = [
       description:
         "Esqueça a solidão do home office! Aqui, você trabalha cercado de boas ideias e grandes oportunidades.",
     },
+    detailsPage: {
+      h1: "Mais produtividade com o melhor custo-benefício",
+      subtitle:
+        "Tenha acesso a um espaço de trabalho completo, sem os custos de manter um escritório. Conecte-se, produza mais e esteja cercado por oportunidades todos os dias.",
+      heroCTAText: "ENTRAR EM CONTATO",
+      benefits: [
+        { text: "Estações individuais em ambiente compartilhado", icon: null },
+        {
+          text: "Ideal para freelancers, nômades digitais e pequenos negócios",
+          icon: null,
+        },
+        { text: "Networking e trocas com outros profissionais", icon: null },
+        { text: "Infraestrutura completa inclusa", icon: null },
+      ],
+      steps: [
+        "Escolha seu plano diário ou mensal",
+        "Assine o contrato em poucos minutos",
+        "Comece a usar sua estação quando quiser",
+      ],
+      included: [
+        "Mesa individual e cadeira ergonômica",
+        "Internet rápida e estável",
+        "Acesso à copa, recepção e áreas comuns",
+        "Limpeza e manutenção",
+      ],
+      price: 49,
+    },
   },
 ];
+
+// {
+//   title: "Salas de Atendimento",
+//   seoTitle: "Salas de Atendimento em Balneário Camboriú",
+//   description:
+//     "Um espaço acolhedor e profissional para atender seus clientes com a imagem que seu serviço merece. Perfeito para terapeutas, coaches e outros profissionais que oferecem atendimento personalizado.",
+//   image: estacoesImg.src,
+//   target: "salas-atendimento",
+//   heroText: "Um espaço para atender meus clientes",
+// },
