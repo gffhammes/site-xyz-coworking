@@ -10,6 +10,10 @@ export interface IServiceServiceItem {
   image: string;
   target: string;
   heroText?: string;
+  homeCard: {
+    title: string;
+    description: string;
+  };
 }
 
 export const servicesItems: IServiceServiceItem[] = [
@@ -21,6 +25,11 @@ export const servicesItems: IServiceServiceItem[] = [
     image: salaImg.src,
     target: "endereco-fiscal-e-comercial",
     heroText: "Um endereço para minha empresa",
+    homeCard: {
+      title: "Endereço Fiscal",
+      description:
+        "Perfeito para quem quer registrar sua empresa em um <strong>endereço estratégico</strong> e atender clientes com <strong>mais autoridade.</strong>",
+    },
   },
   {
     title: "Salas Privativas",
@@ -30,6 +39,11 @@ export const servicesItems: IServiceServiceItem[] = [
     image: enderecoImg.src,
     target: "salas-privativas",
     heroText: "Uma sala privativa para meu negócio",
+    homeCard: {
+      title: "Salas Privativas",
+      description:
+        "Ideal para pequenas empresas, startups e autônomos que precisam de um espaço exclusivo.",
+    },
   },
   {
     title: "Salas de Reunião",
@@ -39,16 +53,21 @@ export const servicesItems: IServiceServiceItem[] = [
     image: salaImg.src,
     target: "salas-reuniao",
     heroText: "Uma sala para reunião de negócios",
+    homeCard: {
+      title: "Reserva de Sala",
+      description:
+        "Precisa de uma sala para uma reunião? Você pode agendar por hora para seu conforto e de seus clientes!",
+    },
   },
-  {
-    title: "Salas de Atendimento",
-    seoTitle: "Salas de Atendimento em Balneário Camboriú",
-    description:
-      "Um espaço acolhedor e profissional para atender seus clientes com a imagem que seu serviço merece. Perfeito para terapeutas, coaches e outros profissionais que oferecem atendimento personalizado.",
-    image: estacoesImg.src,
-    target: "salas-atendimento",
-    heroText: "Um espaço para atender meus clientes",
-  },
+  // {
+  //   title: "Salas de Atendimento",
+  //   seoTitle: "Salas de Atendimento em Balneário Camboriú",
+  //   description:
+  //     "Um espaço acolhedor e profissional para atender seus clientes com a imagem que seu serviço merece. Perfeito para terapeutas, coaches e outros profissionais que oferecem atendimento personalizado.",
+  //   image: estacoesImg.src,
+  //   target: "salas-atendimento",
+  //   heroText: "Um espaço para atender meus clientes",
+  // },
   {
     title: "Estações de Trabalho",
     seoTitle: "Estações de Trabalho em Balneário Camboriú",
@@ -57,5 +76,10 @@ export const servicesItems: IServiceServiceItem[] = [
     image: salaImg.src,
     target: "estacoes-trabalho",
     heroText: "Uma estação de trabalho compartilhada",
+    homeCard: {
+      title: "Estações de Trabalho",
+      description:
+        "Esqueça a solidão do home office! Aqui, você trabalha cercado de boas ideias e grandes oportunidades.",
+    },
   },
 ];

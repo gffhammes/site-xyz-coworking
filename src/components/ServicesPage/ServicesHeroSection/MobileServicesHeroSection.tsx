@@ -19,8 +19,8 @@ export const MobileServicesHeroSection = (
   props: IMobileServicesHeroSectionProps
 ) => {
   return (
-    <Box style={{ height: "110svh", width: "100%", position: "relative" }}>
-      <Box sx={{ height: "100svh" }}>
+    <Box style={{ height: "100svh", width: "100%", position: "relative" }}>
+      <Box sx={{ height: "95svh" }}>
         <Stack
           sx={{
             width: "100%",
@@ -92,7 +92,7 @@ export const MobileServicesHeroSection = (
 
       <Box
         sx={{
-          height: "10svh",
+          height: "5svh",
           width: "100%",
           backgroundColor: "white",
           position: "absolute",

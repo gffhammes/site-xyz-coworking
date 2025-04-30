@@ -2,8 +2,8 @@
 
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { Carousel } from "../Carousel/Carousel";
-import { servicesItems } from "./ServicesSection";
 import { MobileServiceCard } from "./MobileServiceCard";
+import { servicesItems } from "@/data/services";
 
 export interface IMobileServicesSectionProps {}
 

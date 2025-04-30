@@ -54,11 +54,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
                 borderRadius: 2,
               }}
               component={Link}
-              href={`#${option.target}`}
-              // onClick={() => {
-              //   console.log(option.target);
-              //   scrollTo(option.target, -1500);
-              // }}
+              href={`/servicos/${option.target}`}
             >
               <Typography textAlign="center" fontSize={14}>
                 {option.heroText}

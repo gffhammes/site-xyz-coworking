@@ -1,10 +1,12 @@
+import { IServiceServiceItem } from "@/data/services";
 import { Box, Stack, Typography, useTheme } from "@mui/material";
-import { IServiceItem } from "./ServicesSection";
+
 import parse from "html-react-parser";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface IMobileServiceCardProps {
-  serviceData: IServiceItem;
+  serviceData: IServiceServiceItem;
   isActive?: boolean;
 }
 
@@ -24,6 +26,8 @@ export const MobileServiceCard = ({
         width: "100%",
         height: "100%",
       }}
+      component={Link}
+      href={`/servicos/${serviceData.target}`}
     >
       <Stack
         alignItems="flex-start"

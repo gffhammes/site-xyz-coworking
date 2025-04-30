@@ -1,10 +1,12 @@
-import { Box, Stack, Typography, useTheme } from "@mui/material";
-import { IServiceItem } from "./ServicesSection";
+import { IServiceServiceItem } from "@/data/services";
+import { Stack, Typography } from "@mui/material";
+
 import parse from "html-react-parser";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface IDesktopServiceCardProps {
-  serviceData: IServiceItem;
+  serviceData: IServiceServiceItem;
   isActive?: boolean;
 }
 
@@ -25,6 +27,8 @@ export const DesktopServiceCard = ({
         height: "100%",
       }}
       direction="row"
+      component={Link}
+      href={`/servicos/${serviceData.target}`}
     >
       <Stack
         alignItems="flex-start"

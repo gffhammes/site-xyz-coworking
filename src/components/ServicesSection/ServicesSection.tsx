@@ -22,36 +22,3 @@ export const ServicesSection = (props: IServicesSectionProps) => {
     />
   );
 };
-
-export interface IServiceItem {
-  title: string;
-  description: string;
-  image: string;
-}
-
-export const servicesItems: IServiceItem[] = [
-  {
-    title: "Endereço Fiscal",
-    description:
-      "Perfeito para quem quer registrar sua empresa em um <strong>endereço estratégico</strong> e atender clientes com <strong>mais autoridade.</strong>",
-    image: enderecoImg.src,
-  },
-  {
-    title: "Salas Privativas",
-    description:
-      "Ideal para pequenas empresas, startups e autônomos que precisam de um espaço exclusivo.",
-    image: salaImg.src,
-  },
-  {
-    title: "Estações de Trabalho",
-    description:
-      "Esqueça a solidão do home office! Aqui, você trabalha cercado de boas ideias e grandes oportunidades.",
-    image: estacoesImg.src,
-  },
-  {
-    title: "Reserva de Sala",
-    description:
-      "Precisa de uma sala para uma reunião? Você pode agendar por hora para seu conforto e de seus clientes!",
-    image: salaImg.src,
-  },
-];

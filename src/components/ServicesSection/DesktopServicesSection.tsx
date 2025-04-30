@@ -1,8 +1,8 @@
 "use client";
 
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { servicesItems } from "./ServicesSection";
 import { DesktopServiceCard } from "./DesktopServiceCard";
+import { servicesItems } from "@/data/services";
 
 export interface IDesktopServicesSectionProps {}
 
