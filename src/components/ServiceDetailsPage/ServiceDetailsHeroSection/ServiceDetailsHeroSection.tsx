@@ -18,11 +18,3 @@ export const ServiceDetailsHeroSection = ({
     />
   );
 };
-
-export const servicesHeroSectionData = {
-  h1: `Encontre a solução certa para o seu sucesso`,
-  subtitle: `Soluções sob medida para quem quer crescer com estrutura, credibilidade e estilo.`,
-  selectLabel: "O que você busca?",
-  buttonText: "Conhecer",
-  bgImage: heroBg.src,
-};

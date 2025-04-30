@@ -8,21 +8,20 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { servicesHeroSectionData } from "./ServiceDetailsHeroSection";
 import Image from "next/image";
 import { XYZLogo } from "@/components/common/XYZLogo";
 import { NavigationList } from "@/components/common/NavigationList";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
-import { ServicesSelect } from "./ServicesSelect";
 import { IServiceServiceItem } from "@/data/services";
+import parse from "html-react-parser";
 
 export interface IDesktopServiceDetailsHeroSectionProps {
   service: IServiceServiceItem;
 }
 
-export const DesktopServiceDetailsHeroSection = (
-  props: IDesktopServiceDetailsHeroSectionProps
-) => {
+export const DesktopServiceDetailsHeroSection = ({
+  service,
+}: IDesktopServiceDetailsHeroSectionProps) => {
   return (
     <Box style={{ height: "110svh", width: "100%", position: "relative" }}>
       <Box sx={{ height: "90svh" }}>
@@ -46,48 +45,37 @@ export const DesktopServiceDetailsHeroSection = (
             </Stack>
 
             <Stack
-              direction="row"
-              alignItems="center"
               justifyContent="center"
+              alignItems="center"
+              gap={8}
               sx={{ height: "100%" }}
             >
-              <Stack
-                gap={8}
-                sx={{ height: "100%" }}
-                justifyContent="space-between"
-              >
-                <Stack
-                  justifyContent="center"
-                  flex="1 1 100%"
-                  alignItems="flex-start"
-                  gap={4}
-                >
-                  <Stack gap={2}>
-                    <Typography variant="h1" maxWidth="20ch">
-                      {servicesHeroSectionData.h1}
-                    </Typography>
+              <Stack gap={2} alignItems="center">
+                <Typography textAlign="center" variant="h1">
+                  <strong
+                    style={{
+                      fontSize: 12,
+                      textTransform: "uppercase",
+                      letterSpacing: 1.1,
+                      filter: "opacity(.4)",
+                    }}
+                  >
+                    {service.title}
+                  </strong>
+                  <br />
+                  {parse(service.detailsPage.h1)}
+                </Typography>
 
-                    <Typography maxWidth="40ch">
-                      {servicesHeroSectionData.subtitle}
-                    </Typography>
-                  </Stack>
-                </Stack>
+                <Typography textAlign="center">
+                  {parse(service.detailsPage.subtitle)}
+                </Typography>
               </Stack>
-
-              <Box sx={{ flex: "0 0 28rem" }}>
-                <Paper
-                  sx={{
-                    p: 4,
-                    borderRadius: 4,
-                    backgroundColor: "rgba(255, 255, 255, 0.2)",
-                    backdropFilter: "blur(20px)",
-                    border: "1px solid rgba(255, 255, 255, 0.5)",
-                    color: "white",
-                  }}
-                >
-                  <ServicesSelect />
-                </Paper>
-              </Box>
+              <Stack direction="row" gap={1}>
+                <Button variant="contained">
+                  {service.detailsPage.heroCTAText}
+                </Button>
+                <Button variant="outlined">CONHECER MAIS</Button>
+              </Stack>
             </Stack>
           </Container>
         </Stack>
@@ -110,19 +98,13 @@ export const DesktopServiceDetailsHeroSection = (
             position: "absolute",
             top: 0,
             left: 0,
-            background: "linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8))",
+            background: "linear-gradient(rgba(0,0,0,.4), rgba(0,0,0, 1))",
             zIndex: 1,
             mixBlendMode: "hard-light",
           }}
         />
 
-        <Image
-          fill
-          src={servicesHeroSectionData.bgImage}
-          alt="Hero"
-          objectFit="cover"
-          priority
-        />
+        <Image fill src={service.image} alt="Hero" objectFit="cover" priority />
       </Box>
 
       <Box

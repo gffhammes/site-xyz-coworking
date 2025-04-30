@@ -9,7 +9,6 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import { ServicesSelect } from "./ServicesSelect";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 import { IServiceServiceItem } from "@/data/services";
 
@@ -29,7 +28,7 @@ export const MobileServiceDetailsHeroSection = ({
             height: "100%",
             overflow: "hidden",
             pt: 4,
-            pb: 8,
+            pb: 4,
             alignItems: "flex-end",
             position: "relative",
             zIndex: 1,
@@ -46,7 +45,7 @@ export const MobileServiceDetailsHeroSection = ({
 
               <Stack alignItems="flex-start" gap={8}>
                 <Stack gap={2}>
-                  <Typography variant="h1" maxWidth="16ch">
+                  <Typography variant="h1">
                     <strong
                       style={{
                         fontSize: 12,
@@ -58,10 +57,12 @@ export const MobileServiceDetailsHeroSection = ({
                       {service.title}
                     </strong>
                     <br />
-                    {service.detailsPage.h1}
+                    {service.detailsPage.h1.replaceAll("<br/>", " ")}
                   </Typography>
 
-                  <Typography>{service.detailsPage.subtitle}</Typography>
+                  <Typography>
+                    {service.detailsPage.subtitle.replaceAll("<br/>", " ")}
+                  </Typography>
                 </Stack>
 
                 <Stack width="100%" gap={1}>

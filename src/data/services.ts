@@ -31,7 +31,7 @@ export const servicesItems: IServiceServiceItem[] = [
     seoTitle: "Endereço Fiscal e Comercial em Balneário Camboriú",
     description:
       "Formalize sua empresa com um endereço de prestígio em Balneário Camboriú, sem custos elevados. Ideal para empresas em início e negócios digitais que buscam credibilidade e presença no mercado.",
-    image: salaImg.src,
+    image: enderecoImg.src,
     target: "endereco-fiscal-e-comercial",
     heroText: "Um endereço para minha empresa",
     homeCard: {
@@ -40,9 +40,9 @@ export const servicesItems: IServiceServiceItem[] = [
         "Perfeito para quem quer registrar sua empresa em um <strong>endereço estratégico</strong> e atender clientes com <strong>mais autoridade.</strong>",
     },
     detailsPage: {
-      h1: "O primeiro passo para sua empresa existir de verdade",
+      h1: "O primeiro passo para sua<br/>empresa existir de verdade",
       subtitle:
-        "Com nosso endereço fiscal e comercial, sua empresa ganha legitimidade, passa mais confiança e pode operar de forma 100% regular — sem precisar arcar com os altos custos.",
+        "Com nosso endereço fiscal e comercial, sua empresa ganha legitimidade, passa mais<br/>confiança e pode operar de forma 100% regular — sem precisar arcar com os altos custos.",
       heroCTAText: "ENTRAR EM CONTATO",
       benefits: [
         {
@@ -79,7 +79,7 @@ export const servicesItems: IServiceServiceItem[] = [
     seoTitle: "Salas Privativas em Balneário Camboriú",
     description:
       "Garanta total privacidade e uma estrutura sofisticada para o seu trabalho. Um espaço exclusivo para você, com a credibilidade que seu negócio precisa, ideal para empreendedores e empresas que buscam profissionalismo.",
-    image: enderecoImg.src,
+    image: salaImg.src,
     target: "salas-privativas",
     heroText: "Uma sala privativa para meu negócio",
     homeCard: {
@@ -88,9 +88,9 @@ export const servicesItems: IServiceServiceItem[] = [
         "Ideal para pequenas empresas, startups e autônomos que precisam de um espaço exclusivo.",
     },
     detailsPage: {
-      h1: "Seu próprio espaço, com a estrutura que sua empresa merece",
+      h1: "Um espaço só seu, com a<br/>estrutura que sua empresa merece",
       subtitle:
-        "Trabalhe com mais foco, profissionalismo e privacidade. Nossas salas privativas são ideais para quem quer um espaço só seu, pronto para impressionar clientes e manter a produtividade em alta.",
+        "Trabalhe com mais foco, profissionalismo e privacidade. Nossas salas privativas são ideais para<br/>quem quer um espaço só seu, pronto para impressionar clientes e manter a produtividade em alta.",
       heroCTAText: "ENTRAR EM CONTATO",
       benefits: [
         { text: "Ambiente exclusivo para você ou sua equipe", icon: null },
@@ -124,7 +124,7 @@ export const servicesItems: IServiceServiceItem[] = [
     seoTitle: "Salas de Reunião em Balneário Camboriú",
     description:
       "Ambientes projetados para causar impacto, com tecnologia e conforto, perfeitos para decisões importantes e reuniões de alto nível. Ideal para empresas e profissionais que buscam um local estratégico para fechar negócios.",
-    image: salaImg.src,
+    image: reunioesImg.src,
     target: "salas-reuniao",
     heroText: "Uma sala para reunião de negócios",
     homeCard: {
@@ -133,9 +133,9 @@ export const servicesItems: IServiceServiceItem[] = [
         "Precisa de uma sala para uma reunião? Você pode agendar por hora para seu conforto e de seus clientes!",
     },
     detailsPage: {
-      h1: "Cenário ideal para decisões importantes",
+      h1: "As salas perfeitas para destacar sua<br/>empresa e fechar grandes negócios",
       subtitle:
-        "Reuniões estratégicas pedem um ambiente à altura. Nossas salas oferecem conforto, tecnologia e a imagem certa para fechar grandes negócios.",
+        "Reuniões estratégicas pedem um ambiente à altura. Nossas salas oferecem<br/>conforto, tecnologia e a imagem certa para fechar grandes negócios.",
       heroCTAText: "ENTRAR EM CONTATO",
       benefits: [
         { text: "Espaços com ar-condicionado, TV e Wi-Fi", icon: null },
@@ -168,7 +168,7 @@ export const servicesItems: IServiceServiceItem[] = [
     seoTitle: "Estações de Trabalho em Balneário Camboriú",
     description:
       "Ambientes dinâmicos e inspiradores para quem busca flexibilidade e produtividade, com infraestrutura de alto padrão para freelancers e pequenas empresas.",
-    image: salaImg.src,
+    image: estacoesImg.src,
     target: "estacoes-trabalho",
     heroText: "Uma estação de trabalho compartilhada",
     homeCard: {
@@ -177,9 +177,9 @@ export const servicesItems: IServiceServiceItem[] = [
         "Esqueça a solidão do home office! Aqui, você trabalha cercado de boas ideias e grandes oportunidades.",
     },
     detailsPage: {
-      h1: "Mais produtividade com o melhor custo-benefício",
+      h1: "O ambiente ideal para fazer conexões<br/>que levam seu negócio mais longe",
       subtitle:
-        "Tenha acesso a um espaço de trabalho completo, sem os custos de manter um escritório. Conecte-se, produza mais e esteja cercado por oportunidades todos os dias.",
+        "Tenha acesso a um espaço de trabalho completo, sem os custos de manter um escritório.<br/>Conecte-se, produza mais e esteja cercado por oportunidades todos os dias.",
       heroCTAText: "ENTRAR EM CONTATO",
       benefits: [
         { text: "Estações individuais em ambiente compartilhado", icon: null },
