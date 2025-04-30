@@ -1,8 +1,8 @@
 import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import parse from "html-react-parser";
-import { IServiceServiceItem } from "./ServicesServicesSection";
 import Link from "next/link";
+import { IServiceServiceItem } from "@/data/services";
 
 export interface IServicesPageServiceCardProps {
   serviceData: IServiceServiceItem;

@@ -10,30 +10,35 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({
   params,
 }: {
-  params: { servico: string };
+  params: Promise<{ servico: string }>;
 }) {
-  const service = servicesItems.find(
-    (service) => service.target === params.servico
-  );
+  const { servico } = await params;
+
+  const service = servicesItems.find((service) => service.target === servico);
 
   if (!service) return {};
 
   return {
     title: service.seoTitle || service.title,
     description: service.description || service.description,
+    // Se quiser, pode reativar o Open Graph:
     // openGraph: {
     //   title: service.seoTitle || service.title,
     //   description: service.seoDescription || service.description,
     //   url: `https://www.seusite.com.br/servicos/${service.target}`,
-    //   type: "article",
+    //   type: 'article',
     // },
   };
 }
 
-export default function Servicos({ params }: { params: { servico: string } }) {
-  const service = servicesItems.find(
-    (service) => service.target === params.servico
-  );
+export default async function Servicos({
+  params,
+}: {
+  params: Promise<{ servico: string }>;
+}) {
+  const { servico } = await params;
+
+  const service = servicesItems.find((service) => service.target === servico);
 
   if (!service) return notFound();
 
@@ -47,11 +52,12 @@ export default function Servicos({ params }: { params: { servico: string } }) {
   );
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return servicesItems.map((service) => ({
     servico: service.target,
   }));
 }
+
 {
   /* <Stack gap={{ xs: 20 }}>
           <Stack>
