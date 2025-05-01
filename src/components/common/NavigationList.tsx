@@ -34,6 +34,7 @@ export const NavigationList = ({
               key={page.target}
               component={Link}
               href={page.target}
+              target={page.openInNewTab ? "_blank" : "_self"}
               sx={{
                 cursor: "pointer",
                 color: isActive ? activeColor : inactiveColor,
@@ -53,6 +54,13 @@ export const NavigationList = ({
   );
 };
 
+export interface IPage {
+  name: string;
+  target: string;
+  isActive: boolean;
+  openInNewTab?: boolean;
+}
+
 export const pages = [
   {
     name: "Home",
@@ -68,6 +76,7 @@ export const pages = [
     name: "Blog",
     target: "https://bc.xyzcoworking.com/blog/",
     isActive: true,
+    openInNewTab: true,
   },
   {
     name: "Contato",

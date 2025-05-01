@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export interface IDiretoLightRowProps {}
 
-const clientName = "Nome Cliente";
+const clientName = "XYZ Coworking";
 
 export const DiretoLightRow = (props: IDiretoLightRowProps) => {
   return (

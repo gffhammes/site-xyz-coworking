@@ -7,6 +7,9 @@ import { ServicesServicesSection } from "@/components/ServicesPage/ServicesServi
 import { IServiceServiceItem, servicesItems } from "@/data/services";
 import { notFound } from "next/navigation";
 import { ServiceDetailsHeroSection } from "@/components/ServiceDetailsPage/ServiceDetailsHeroSection/ServiceDetailsHeroSection";
+import { BenefitsSection } from "@/components/ServiceDetailsPage/BenefitsSection/BenefitsSection";
+import { StepperSection } from "@/components/ServiceDetailsPage/StepperSection/StepperSection";
+import { FloatingCTA } from "@/components/ServiceDetailsPage/FloatingCTA/FloatingCTA";
 
 export async function generateMetadata({
   params,
@@ -44,17 +47,21 @@ export default async function Servicos({
   if (!service) return notFound();
 
   return (
-    // <main>
-    //   <Typography variant="h4" gutterBottom>
-    //     {service.title}
-    //   </Typography>
-    //   <Typography>{service.description}</Typography>
-    // </main>
     <div>
       <main>
-        <Stack gap={{ xs: 20 }}>
-          <ServiceDetailsHeroSection service={service} />
+        <Stack gap={{ xs: 20, pb: 20 }}>
+          <Stack>
+            <ServiceDetailsHeroSection service={service} />
+
+            <BenefitsSection service={service} />
+          </Stack>
+
+          <StepperSection service={service} />
+
+          <ReviewsSection />
         </Stack>
+
+        <FloatingCTA />
       </main>
     </div>
   );

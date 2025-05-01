@@ -3,13 +3,12 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
-import { Barlow } from "next/font/google";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title:
-    "Coworking em Balneário Camboriú | XYZ Coworking – Endereço Fiscal, Salas e Estações",
+    "Coworking em Balneário Camboriú | XYZ Coworking - Endereço Fiscal, Salas e Estações",
   description:
     "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
   icons: {
@@ -28,18 +27,13 @@ export const metadata: Metadata = {
   },
 };
 
-const barlow = Barlow({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={barlow.className}>
+    <html lang="pt-BR">
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
