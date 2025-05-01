@@ -10,6 +10,7 @@ import { ServiceDetailsHeroSection } from "@/components/ServiceDetailsPage/Servi
 import { BenefitsSection } from "@/components/ServiceDetailsPage/BenefitsSection/BenefitsSection";
 import { StepperSection } from "@/components/ServiceDetailsPage/StepperSection/StepperSection";
 import { FloatingCTA } from "@/components/ServiceDetailsPage/FloatingCTA/FloatingCTA";
+import { PlansSection } from "@/components/ServiceDetailsPage/PlansSection/PlansSection";
 
 export async function generateMetadata({
   params,
@@ -57,6 +58,8 @@ export default async function Servicos({
           </Stack>
 
           <StepperSection service={service} />
+
+          <PlansSection service={service} />
 
           <ReviewsSection />
         </Stack>

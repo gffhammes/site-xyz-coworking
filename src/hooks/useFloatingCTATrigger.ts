@@ -15,8 +15,6 @@ export function useFloatingCardTrigger(startId: string, endId: string) {
       const passedStart = startRect.top <= window.innerHeight * 0.5;
       const notReachedEnd = endRect.top > 0;
 
-      console.log({ passedStart, notReachedEnd });
-
       setShow(passedStart && notReachedEnd);
     };
 
