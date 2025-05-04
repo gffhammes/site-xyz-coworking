@@ -5,9 +5,13 @@ import { Box, IconButton } from "@mui/material";
 import { MobileMenuDrawer } from "./MobileMenuDrawer";
 import { useState } from "react";
 
-export interface IMobileMenuProps {}
+export interface IMobileMenuProps {
+  color?: "white" | "rgba(0, 0, 0, 0.54)";
+}
 
-export const MobileMenu = (props: IMobileMenuProps) => {
+export const MobileMenu = ({
+  color = "rgba(0, 0, 0, 0.54)",
+}: IMobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => setIsOpen(true);
@@ -15,8 +19,8 @@ export const MobileMenu = (props: IMobileMenuProps) => {
 
   return (
     <>
-      <Box sx={{ m: "-5px" }}>
-        <IconButton size="small" onClick={handleOpen}>
+      <Box sx={{ m: "-5px", color }}>
+        <IconButton size="small" onClick={handleOpen} color="inherit">
           <MenuIcon />
         </IconButton>
       </Box>

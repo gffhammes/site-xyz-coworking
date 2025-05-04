@@ -2,6 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { XYZLogoWithLink } from "../XYZLogoWithLink";
 import Image from "next/image";
 import { ReactElement } from "react";
+import { MobileMenu } from "../Menu/MobileMenu";
 
 export interface IMobileHeroSectionTemplateProps {
   content: ReactElement;
@@ -34,7 +35,15 @@ export const MobileHeroSectionTemplate = ({
               sx={{ height: "100%" }}
               justifyContent="space-between"
             >
-              <XYZLogoWithLink width="5rem" color="white" />
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <XYZLogoWithLink width="5rem" color="white" />
+
+                <MobileMenu color="white" />
+              </Stack>
 
               {content}
             </Stack>
