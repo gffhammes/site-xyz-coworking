@@ -1,6 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import image1 from "../../../public/images/bc1.jpeg";
-import image2 from "../../../public/images/bc2.jpeg";
+import image1 from "../../../../public/images/bc1.jpeg";
+import image2 from "../../../../public/images/bc2.jpeg";
 
 export interface IPhraseSectionProps {}
 

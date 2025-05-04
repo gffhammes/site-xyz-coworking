@@ -1,9 +1,9 @@
 "use client";
 
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { Carousel } from "../Carousel/Carousel";
 import { MobileServiceCard } from "./MobileServiceCard";
 import { servicesItems } from "@/data/services";
+import { Carousel } from "@/components/Carousel/Carousel";
 
 export interface IMobileServicesSectionProps {}
 

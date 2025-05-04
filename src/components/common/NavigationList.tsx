@@ -8,16 +8,22 @@ import { usePathname } from "next/navigation";
 export interface INavigationListProps {
   direction?: "row" | "column";
   theme?: "light" | "dark";
+  onItemClick?: () => void;
 }
 
 export const NavigationList = ({
   direction = "row",
   theme = "light",
+  onItemClick,
 }: INavigationListProps) => {
   const pathname = usePathname();
 
   return (
-    <Stack direction={direction} alignItems="center" gap={4}>
+    <Stack
+      direction={direction}
+      alignItems={direction === "row" ? "center" : "flex-start"}
+      gap={4}
+    >
       {pages
         .filter((page) => page.isActive)
         .map((page) => {
@@ -45,6 +51,7 @@ export const NavigationList = ({
                   color: hoverColor,
                 },
               }}
+              onClick={onItemClick}
             >
               <Typography>{page.name}</Typography>
             </Box>

@@ -33,15 +33,17 @@ export const PlanPeriodSelector = ({
 
     switch (selectedPlan) {
       case 0:
-        anualPeriodRef.current.style = "color:white;";
-        monthlyPeriodRef.current.style = "color:#474747;";
+        anualPeriodRef.current.setAttribute("style", "color:white;");
+        monthlyPeriodRef.current.setAttribute("style", "color:#474747;");
+
         selectedBoxWidth = anualRects.width;
         selectedBoxLeft = anualRects.x - containerRects.x;
         break;
 
       case 1:
-        anualPeriodRef.current.style = "color:#474747;";
-        monthlyPeriodRef.current.style = "color:white;";
+        anualPeriodRef.current.setAttribute("style", "color:#474747;");
+        monthlyPeriodRef.current.setAttribute("style", "color:white;");
+
         selectedBoxWidth = monthlyRects.width;
         selectedBoxLeft = monthlyRects.x - containerRects.x;
         break;
@@ -50,7 +52,10 @@ export const PlanPeriodSelector = ({
         return;
     }
 
-    selectedBoxRef.current.style = `width: ${selectedBoxWidth}px; left:${selectedBoxLeft}px; height: ${containerRects.height}px;`;
+    selectedBoxRef.current.setAttribute(
+      "style",
+      `width: ${selectedBoxWidth}px; left:${selectedBoxLeft}px; height: ${containerRects.height}px;`
+    );
   }, [selectedPlan]);
 
   return (

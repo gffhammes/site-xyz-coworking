@@ -12,7 +12,7 @@ export const BenefitsSection = ({ service }: IBenefitsSectionProps) => {
     <div id="beneficios">
       <ResponsiveComponent
         xs={<MobileBenefitsSection service={service} />}
-        md={<DesktopBenefitsSection service={service} />}
+        lg={<DesktopBenefitsSection service={service} />}
       />
     </div>
   );

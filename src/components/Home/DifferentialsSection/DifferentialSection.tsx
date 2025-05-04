@@ -8,10 +8,10 @@ import { CarouselDots } from "./CarouselDots";
 import { DifferentialImage } from "./DifferentialImage";
 import { CarouselControls } from "./CarouselControls";
 
-import image1 from "../../../public/images/rearview-businesswoman-enjoying-her-great-results.jpg";
-import image4 from "../../../public/images/group-friends-having-lunch-together-restaurant.jpg";
-import image3 from "../../../public/images/medium-shot-smiley-colleagues-job.jpg";
-import image2 from "../../../public/images/business-people-office-break.jpg";
+import image1 from "../../../../public/images/rearview-businesswoman-enjoying-her-great-results.jpg";
+import image4 from "../../../../public/images/group-friends-having-lunch-together-restaurant.jpg";
+import image3 from "../../../../public/images/medium-shot-smiley-colleagues-job.jpg";
+import image2 from "../../../../public/images/business-people-office-break.jpg";
 
 export interface IDifferentialSectionProps {}
 

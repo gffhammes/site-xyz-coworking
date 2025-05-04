@@ -1,10 +1,10 @@
-import { ServicesSection } from "@/components/ServicesSection/ServicesSection";
-import { HeroSection } from "@/components/HeroSection/HeroSection";
-import { PhraseSection } from "@/components/PhraseSection/PhraseSection";
+import { PhraseSection } from "@/components/Home/PhraseSection/PhraseSection";
 import { Stack } from "@mui/material";
-import { DifferentialSection } from "@/components/DifferentialsSection/DifferentialSection";
+import { DifferentialSection } from "@/components/Home/DifferentialsSection/DifferentialSection";
 import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
 import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
+import { HeroSection } from "@/components/Home/HeroSection/HeroSection";
+import { ServicesSection } from "@/components/Home/ServicesSection/ServicesSection";
 
 export default function Home() {
   return (

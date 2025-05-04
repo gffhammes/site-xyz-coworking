@@ -1,12 +1,9 @@
 "use client";
 
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import { XYZLogo } from "../common/XYZLogo";
 import { heroSectionData } from "./HeroSection";
-import heroBg from "../../../public/images/hero.jpg";
-import { Parallax, Background } from "react-parallax";
 import Image from "next/image";
-import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
+import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 
 export interface IMobileHeroSectionProps {}
 
@@ -80,7 +77,13 @@ export const MobileHeroSection = (props: IMobileHeroSectionProps) => {
           }}
         />
 
-        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" priority />
+        <Image
+          fill
+          src={heroSectionData.image}
+          alt="Hero"
+          objectFit="cover"
+          priority
+        />
       </Box>
 
       <Box

@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { DesktopServiceCard } from "@/components/ServicesSection/DesktopServiceCard";
 import { servicesIntroductionData } from "../ServicesIntroduction/ServicesIntroduction";
 import { servicesItems } from "@/data/services";
+import { DesktopServiceCard } from "@/components/Home/ServicesSection/DesktopServiceCard";
 
 export interface IServicesPageDesktopServicesSectionProps {}
 

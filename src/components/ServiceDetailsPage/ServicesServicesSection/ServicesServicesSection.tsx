@@ -1,6 +1,3 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
-import { DesktopServiceCard } from "@/components/ServicesSection/DesktopServiceCard";
-import { ServicesPageServiceCard } from "./ServicesPageServiceCard";
 import { ResponsiveComponent } from "@/components/common/ResponsiveComponent";
 import { ServicesPageMobileServicesSection } from "./ServicesPageMobileServicesSection";
 import { ServicesPageDesktopServicesSection } from "./ServicesPageDesktopServicesSection";

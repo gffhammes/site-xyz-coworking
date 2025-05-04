@@ -1,13 +1,10 @@
 "use client";
 
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import { XYZLogo } from "../common/XYZLogo";
 import { heroSectionData } from "./HeroSection";
-import heroBg from "../../../public/images/hero.jpg";
-import { Parallax, Background } from "react-parallax";
 import Image from "next/image";
-import { NavigationList } from "../common/NavigationList";
-import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
+import { NavigationList } from "@/components/common/NavigationList";
+import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 
 export interface IDesktopHeroSectionProps {}
 
@@ -87,7 +84,13 @@ export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
           }}
         />
 
-        <Image fill src={heroBg.src} alt="Hero" objectFit="cover" priority />
+        <Image
+          fill
+          src={heroSectionData.image}
+          alt="Hero"
+          objectFit="cover"
+          priority
+        />
       </Box>
 
       <Box

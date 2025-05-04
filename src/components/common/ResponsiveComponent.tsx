@@ -18,9 +18,9 @@ export const ResponsiveComponent = ({
 }: IResponsiveComponentProps) => {
   const components = {
     xs: xs || sm || md || lg || xl,
-    sm: sm || md || lg || xl || xs,
-    md: md || lg || xl || sm || xs,
-    lg: lg || xl || md || sm || xs,
+    sm: sm || xs || md || lg || xl,
+    md: md || sm || xs || lg || xl,
+    lg: lg || md || sm || xs || xl,
     xl: xl || lg || md || sm || xs,
   };
 

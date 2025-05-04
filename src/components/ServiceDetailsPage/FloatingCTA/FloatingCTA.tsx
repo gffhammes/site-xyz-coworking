@@ -40,7 +40,7 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
       sx={{
         position: "fixed",
         bottom: 0,
-        zIndex: 9999,
+        zIndex: 99,
         width: "100%",
         transform: show ? "none" : "translateY(200%)",
         transition: `${appearDuration}ms ease all`,

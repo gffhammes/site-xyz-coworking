@@ -1,10 +1,8 @@
 "use client";
 
 import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
-import { XYZLogo } from "../common/XYZLogo";
-import { Menu } from "../common/Menu";
-import Link from "next/link";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
+import { Menu } from "../common/Menu/Menu";
 
 export interface IHeaderProps {}
 
