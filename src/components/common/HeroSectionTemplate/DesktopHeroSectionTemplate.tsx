@@ -1,14 +1,18 @@
-"use client";
-
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import { heroSectionData } from "./HeroSection";
+import { Box, Container, Stack } from "@mui/material";
+import { XYZLogoWithLink } from "../XYZLogoWithLink";
+import { NavigationList } from "../NavigationList";
+import { ReactElement } from "react";
 import Image from "next/image";
-import { NavigationList } from "@/components/common/NavigationList";
-import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 
-export interface IDesktopHeroSectionProps {}
+export interface IDesktopHeroSectionTemplateProps {
+  content: ReactElement;
+  bgImage: string;
+}
 
-export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
+export const DesktopHeroSectionTemplate = ({
+  content,
+  bgImage,
+}: IDesktopHeroSectionTemplateProps) => {
   return (
     <Box style={{ height: "110svh", width: "100%", position: "relative" }}>
       <Box sx={{ height: "90svh" }}>
@@ -25,37 +29,14 @@ export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
           }}
         >
           <Container sx={{ height: "100%" }}>
-            <Stack
-              gap={8}
-              sx={{ height: "100%" }}
-              justifyContent="space-between"
-            >
+            <Stack height="100%" gap={10}>
               <Stack direction="row" justifyContent="space-between">
                 <XYZLogoWithLink width="5rem" color="white" />
 
                 <NavigationList theme="dark" />
               </Stack>
 
-              <Stack justifyContent="center" flex="1 1 100%" gap={4}>
-                <Stack gap={2}>
-                  <Typography variant="h1" maxWidth="30ch">
-                    {heroSectionData.h1}
-                  </Typography>
-
-                  <Typography maxWidth="60ch">
-                    {heroSectionData.subtitle}
-                  </Typography>
-                </Stack>
-
-                <Stack
-                  gap={1}
-                  direction="row"
-                  sx={{ position: "relative", zIndex: 1, width: "100%" }}
-                >
-                  <Button variant="contained">agendar visita</Button>
-                  <Button variant="outlined">Descubra o xyz</Button>
-                </Stack>
-              </Stack>
+              {content}
             </Stack>
           </Container>
         </Stack>
@@ -84,13 +65,7 @@ export const DesktopHeroSection = (props: IDesktopHeroSectionProps) => {
           }}
         />
 
-        <Image
-          fill
-          src={heroSectionData.image}
-          alt="Hero"
-          objectFit="cover"
-          priority
-        />
+        <Image fill src={bgImage} alt="Hero" objectFit="cover" priority />
       </Box>
 
       <Box

@@ -1,23 +1,17 @@
-"use client";
-
-import {
-  Box,
-  Button,
-  Container,
-  Select,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { servicesHeroSectionData } from "./ServicesHeroSection";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import { XYZLogoWithLink } from "../XYZLogoWithLink";
 import Image from "next/image";
-import { ServicesSelect } from "./ServicesSelect";
-import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
+import { ReactElement } from "react";
 
-export interface IMobileServicesHeroSectionProps {}
+export interface IMobileHeroSectionTemplateProps {
+  content: ReactElement;
+  bgImage: string;
+}
 
-export const MobileServicesHeroSection = (
-  props: IMobileServicesHeroSectionProps
-) => {
+export const MobileHeroSectionTemplate = ({
+  content,
+  bgImage,
+}: IMobileHeroSectionTemplateProps) => {
   return (
     <Box style={{ height: "100svh", width: "100%", position: "relative" }}>
       <Box sx={{ height: "95svh" }}>
@@ -27,7 +21,7 @@ export const MobileServicesHeroSection = (
             height: "100%",
             overflow: "hidden",
             pt: 4,
-            pb: 8,
+            pb: 4,
             alignItems: "flex-end",
             position: "relative",
             zIndex: 1,
@@ -42,17 +36,7 @@ export const MobileServicesHeroSection = (
             >
               <XYZLogoWithLink width="5rem" color="white" />
 
-              <Stack alignItems="flex-start" gap={8}>
-                <Stack gap={2}>
-                  <Typography variant="h1" maxWidth="16ch">
-                    {servicesHeroSectionData.h1}
-                  </Typography>
-
-                  <Typography>{servicesHeroSectionData.subtitle}</Typography>
-                </Stack>
-
-                <ServicesSelect />
-              </Stack>
+              {content}
             </Stack>
           </Container>
         </Stack>
@@ -81,13 +65,7 @@ export const MobileServicesHeroSection = (
           }}
         />
 
-        <Image
-          fill
-          src={servicesHeroSectionData.bgImage}
-          alt="Hero"
-          objectFit="cover"
-          priority
-        />
+        <Image fill src={bgImage} alt="Hero" objectFit="cover" priority />
       </Box>
 
       <Box
