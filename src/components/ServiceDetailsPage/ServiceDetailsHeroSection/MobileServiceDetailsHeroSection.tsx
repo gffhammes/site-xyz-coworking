@@ -10,10 +10,10 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
-import { IServiceServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/services";
 
 export interface IMobileServiceDetailsHeroSectionProps {
-  service: IServiceServiceItem;
+  service: IServiceItem;
 }
 
 export const MobileServiceDetailsHeroSection = ({

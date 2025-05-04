@@ -4,7 +4,7 @@ import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
 import { ServicesHeroSection } from "@/components/ServicesPage/ServicesHeroSection/ServicesHeroSection";
 import { ServicesIntroduction } from "@/components/ServicesPage/ServicesIntroduction/ServicesIntroduction";
 import { ServicesServicesSection } from "@/components/ServicesPage/ServicesServicesSection/ServicesServicesSection";
-import { IServiceServiceItem, servicesItems } from "@/data/services";
+import { IServiceItem, servicesItems } from "@/data/services";
 import { notFound } from "next/navigation";
 import { ServiceDetailsHeroSection } from "@/components/ServiceDetailsPage/ServiceDetailsHeroSection/ServiceDetailsHeroSection";
 import { BenefitsSection } from "@/components/ServiceDetailsPage/BenefitsSection/BenefitsSection";
@@ -50,7 +50,7 @@ export default async function Servicos({
   return (
     <div>
       <main>
-        <Stack gap={{ xs: 20, pb: 20 }}>
+        <Stack gap={{ xs: 10, md: 20 }} sx={{ pb: { xs: 0, md: 20 } }}>
           <Stack>
             <ServiceDetailsHeroSection service={service} />
 
@@ -60,6 +60,8 @@ export default async function Servicos({
           <StepperSection service={service} />
 
           <PlansSection service={service} />
+
+          <AdvantagesSection />
 
           <ReviewsSection />
         </Stack>

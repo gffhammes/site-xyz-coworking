@@ -8,10 +8,7 @@ export const MobileAdvantagesSection = (
 ) => {
   return (
     <Box sx={{ position: "relative" }}>
-      <Container
-        maxWidth="sm"
-        sx={{ position: "relative", zIndex: 1, pt: 5, pb: 10 }}
-      >
+      <Container maxWidth="sm" sx={{ position: "relative", zIndex: 1 }}>
         <Stack gap={4} alignItems="flex-start">
           <Stack gap={2}>
             <Typography variant="h2">{advantageSectionData.h2}</Typography>
@@ -33,7 +30,11 @@ export const MobileAdvantagesSection = (
                 `}
                 columnGap={2}
               >
-                <item.Icon fontSize="large" sx={{ gridArea: "icon" }} />
+                <item.Icon
+                  fontSize="large"
+                  sx={{ gridArea: "icon" }}
+                  color="secondary"
+                />
 
                 <Typography sx={{ gridArea: "title" }} fontWeight={700}>
                   {item.title}

@@ -1,26 +1,17 @@
-import { IServiceServiceItem } from "@/data/services";
-import { Box, Container, Stack, Typography } from "@mui/material";
-import { ServiceStepper } from "./ServiceStepper";
+import { IServiceItem } from "@/data/services";
+import { MobileStepperSection } from "./MobileStepperSection";
+import { ResponsiveComponent } from "@/components/common/ResponsiveComponent";
+import { DesktopStepperSection } from "./DesktopStepperSection";
 
 export interface IStepperSectionProps {
-  service: IServiceServiceItem;
+  service: IServiceItem;
 }
 
 export const StepperSection = ({ service }: IStepperSectionProps) => {
-  const { stepsSection } = service.detailsPage;
-
   return (
-    <Box id="passos">
-      <Container>
-        <Stack gap={4}>
-          <Stack gap={2}>
-            <Typography variant="h2">{stepsSection.h2}</Typography>
-            <Typography>{stepsSection.subtitle}</Typography>
-          </Stack>
-
-          <ServiceStepper steps={stepsSection.items} />
-        </Stack>
-      </Container>
-    </Box>
+    <ResponsiveComponent
+      xs={<MobileStepperSection service={service} />}
+      md={<DesktopStepperSection service={service} />}
+    />
   );
 };

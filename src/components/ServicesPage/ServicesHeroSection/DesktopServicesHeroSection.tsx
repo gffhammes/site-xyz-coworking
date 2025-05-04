@@ -47,31 +47,21 @@ export const DesktopServicesHeroSection = (
               alignItems="center"
               justifyContent="center"
               sx={{ height: "100%" }}
+              gap={12}
             >
-              <Stack
-                gap={8}
-                sx={{ height: "100%" }}
-                justifyContent="space-between"
-              >
-                <Stack
-                  justifyContent="center"
-                  flex="1 1 100%"
-                  alignItems="flex-start"
-                  gap={4}
-                >
-                  <Stack gap={2}>
-                    <Typography variant="h1" maxWidth="20ch">
-                      {servicesHeroSectionData.h1}
-                    </Typography>
+              <Stack justifyContent="center" alignItems="flex-start" gap={4}>
+                <Stack gap={2}>
+                  <Typography variant="h1" maxWidth="19ch">
+                    {servicesHeroSectionData.h1}
+                  </Typography>
 
-                    <Typography maxWidth="40ch">
-                      {servicesHeroSectionData.subtitle}
-                    </Typography>
-                  </Stack>
+                  <Typography maxWidth="40ch">
+                    {servicesHeroSectionData.subtitle}
+                  </Typography>
                 </Stack>
               </Stack>
 
-              <Box sx={{ flex: "0 0 28rem" }}>
+              <Box sx={{ flex: "0 0 30rem" }}>
                 <Paper
                   sx={{
                     p: 4,

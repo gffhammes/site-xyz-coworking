@@ -36,6 +36,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#ED005B",
+      light: "#ebb8cc",
     },
   },
   components: {

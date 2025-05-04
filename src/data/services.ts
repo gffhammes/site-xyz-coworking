@@ -9,13 +9,20 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 
-export interface IServiceServiceItem {
+export interface IServicePlan {
+  label: string;
+  period: string;
+  price: number;
+  included: string[];
+}
+
+export interface IServiceItem {
   title: string;
   seoTitle: string;
   description: string;
   image: string;
   target: string;
-  heroText?: string;
+  heroText: string;
   homeCard: {
     title: string;
     description: string;
@@ -37,12 +44,12 @@ export interface IServiceServiceItem {
       subtitle: string;
       items: string[];
     };
-    included: string[];
-    price: number;
+    plans: IServicePlan[];
+    plansMessage?: string;
   };
 }
 
-export const servicesItems: IServiceServiceItem[] = [
+export const servicesItems: IServiceItem[] = [
   {
     title: "Endereço Fiscal e Comercial",
     seoTitle: "Endereço Fiscal e Comercial em Balneário Camboriú",
@@ -50,7 +57,7 @@ export const servicesItems: IServiceServiceItem[] = [
       "Formalize sua empresa com um endereço de prestígio em Balneário Camboriú, sem custos elevados. Ideal para empresas em início e negócios digitais que buscam credibilidade e presença no mercado.",
     image: enderecoImg.src,
     target: "endereco-fiscal-e-comercial",
-    heroText: "Um endereço para minha empresa",
+    heroText: "Um endereço para<br/>minha empresa",
     homeCard: {
       title: "Endereço Fiscal",
       description:
@@ -95,13 +102,33 @@ export const servicesItems: IServiceServiceItem[] = [
           "Pronto! Você já pode registrar ou transferir seu CNPJ",
         ],
       },
-      included: [
-        "Endereço fiscal e/ou comercial válido para CNPJ",
-        "Atendimento e triagem de correspondências",
-        "Aviso de recebimento por e-mail ou WhatsApp",
-        "Uso do endereço em materiais de marketing e site",
+      plansMessage: ` Economize <strong>R$258</strong>
+                <br />
+                no plano anual`,
+      plans: [
+        {
+          price: 1290,
+          label: "Anual",
+          period: "Ano",
+          included: [
+            "Endereço fiscal e/ou comercial válido para CNPJ",
+            "Atendimento e triagem de correspondências",
+            "Aviso de recebimento por e-mail ou WhatsApp",
+            "Uso do endereço em materiais de marketing e site",
+          ],
+        },
+        {
+          price: 129,
+          label: "Mensal",
+          period: "Mês",
+          included: [
+            "Endereço fiscal e/ou comercial válido para CNPJ",
+            "Atendimento e triagem de correspondências",
+            "Aviso de recebimento por e-mail ou WhatsApp",
+            "Uso do endereço em materiais de marketing e site",
+          ],
+        },
       ],
-      price: 89,
     },
   },
   {
@@ -111,7 +138,7 @@ export const servicesItems: IServiceServiceItem[] = [
       "Garanta total privacidade e uma estrutura sofisticada para o seu trabalho. Um espaço exclusivo para você, com a credibilidade que seu negócio precisa, ideal para empreendedores e empresas que buscam profissionalismo.",
     image: salaImg.src,
     target: "salas-privativas",
-    heroText: "Uma sala privativa para meu negócio",
+    heroText: "Uma sala privativa<br/>para meu negócio",
     homeCard: {
       title: "Salas Privativas",
       description:
@@ -147,14 +174,33 @@ export const servicesItems: IServiceServiceItem[] = [
           "Leve seu notebook e comece a trabalhar no mesmo dia",
         ],
       },
-      included: [
-        "Sala privativa mobiliada",
-        "Internet de alta velocidade",
-        "Limpeza e manutenção inclusas",
-        "Recepção para seus clientes",
-        "Copa compartilhada",
+
+      plans: [
+        {
+          price: 8900,
+          label: "Anual",
+          period: "Ano",
+          included: [
+            "Sala privativa mobiliada",
+            "Internet de alta velocidade",
+            "Limpeza e manutenção inclusas",
+            "Recepção para seus clientes",
+            "Copa compartilhada",
+          ],
+        },
+        {
+          price: 890,
+          label: "Mensal",
+          period: "Mês",
+          included: [
+            "Sala privativa mobiliada",
+            "Internet de alta velocidade",
+            "Limpeza e manutenção inclusas",
+            "Recepção para seus clientes",
+            "Copa compartilhada",
+          ],
+        },
       ],
-      price: 890,
     },
   },
   {
@@ -164,7 +210,7 @@ export const servicesItems: IServiceServiceItem[] = [
       "Ambientes projetados para causar impacto, com tecnologia e conforto, perfeitos para decisões importantes e reuniões de alto nível. Ideal para empresas e profissionais que buscam um local estratégico para fechar negócios.",
     image: reunioesImg.src,
     target: "salas-reuniao",
-    heroText: "Uma sala para reunião de negócios",
+    heroText: "Uma sala para<br/>reunião de negócios",
     homeCard: {
       title: "Reserva de Sala",
       description:
@@ -200,13 +246,31 @@ export const servicesItems: IServiceServiceItem[] = [
           "Chegue e aproveite o ambiente pronto para uso",
         ],
       },
-      included: [
-        "Sala de reunião equipada com TV e ar-condicionado",
-        "Wi-Fi de alta velocidade",
-        "Recepção de clientes",
-        "Água, café e estrutura de apoio",
+
+      plans: [
+        {
+          price: 8900,
+          label: "Anual",
+          period: "Ano",
+          included: [
+            "Sala de reunião equipada com TV e ar-condicionado",
+            "Wi-Fi de alta velocidade",
+            "Recepção de clientes",
+            "Água, café e estrutura de apoio",
+          ],
+        },
+        {
+          price: 890,
+          label: "Mensal",
+          period: "Mês",
+          included: [
+            "Sala de reunião equipada com TV e ar-condicionado",
+            "Wi-Fi de alta velocidade",
+            "Recepção de clientes",
+            "Água, café e estrutura de apoio",
+          ],
+        },
       ],
-      price: 69,
     },
   },
   {
@@ -216,7 +280,7 @@ export const servicesItems: IServiceServiceItem[] = [
       "Ambientes dinâmicos e inspiradores para quem busca flexibilidade e produtividade, com infraestrutura de alto padrão para freelancers e pequenas empresas.",
     image: estacoesImg.src,
     target: "estacoes-trabalho",
-    heroText: "Uma estação de trabalho compartilhada",
+    heroText: "Uma estação de<br/>trabalho compartilhada",
     homeCard: {
       title: "Estações de Trabalho",
       description:
@@ -252,13 +316,33 @@ export const servicesItems: IServiceServiceItem[] = [
           "Comece a usar sua estação quando quiser",
         ],
       },
-      included: [
-        "Mesa individual e cadeira ergonômica",
-        "Internet rápida e estável",
-        "Acesso à copa, recepção e áreas comuns",
-        "Limpeza e manutenção",
+
+      plans: [
+        {
+          price: 8900,
+          label: "Anual",
+          period: "Ano",
+
+          included: [
+            "Mesa individual e cadeira ergonômica",
+            "Internet rápida e estável",
+            "Acesso à copa, recepção e áreas comuns",
+            "Limpeza e manutenção",
+          ],
+        },
+        {
+          price: 890,
+          label: "Mensal",
+          period: "Mês",
+
+          included: [
+            "Mesa individual e cadeira ergonômica",
+            "Internet rápida e estável",
+            "Acesso à copa, recepção e áreas comuns",
+            "Limpeza e manutenção",
+          ],
+        },
       ],
-      price: 49,
     },
   },
 ];

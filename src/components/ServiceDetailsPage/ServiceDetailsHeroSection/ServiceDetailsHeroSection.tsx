@@ -2,10 +2,10 @@ import { ResponsiveComponent } from "@/components/common/ResponsiveComponent";
 import { DesktopServiceDetailsHeroSection } from "./DesktopServiceDetailsHeroSection";
 import { MobileServiceDetailsHeroSection } from "./MobileServiceDetailsHeroSection";
 import heroBg from "../../../../public/images/business-people-office-break.jpg";
-import { IServiceServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/services";
 
 export interface IServiceDetailsHeroSectionProps {
-  service: IServiceServiceItem;
+  service: IServiceItem;
 }
 
 export const ServiceDetailsHeroSection = ({

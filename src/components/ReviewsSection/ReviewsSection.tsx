@@ -12,3 +12,8 @@ export const ReviewsSection = (props: IReviewsSectionProps) => {
     />
   );
 };
+
+export const reviewsSectionData = {
+  h2: "Veja o que falam sobre nós",
+  description: "",
+};

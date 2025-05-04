@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Carousel } from "../Carousel/Carousel";
+import { reviewsSectionData } from "./ReviewsSection";
 
 export interface IDesktopReviewsSectionProps {}
 
@@ -48,13 +49,27 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
                   ...borderToUse(),
                 }}
               >
-                <Rating value={item.rating} readOnly />
+                {index === 0 ? (
+                  <Stack
+                    alignItems="center"
+                    justifyContent="center"
+                    height="100%"
+                  >
+                    <Typography variant="h2">
+                      {reviewsSectionData.h2}
+                    </Typography>
+                  </Stack>
+                ) : (
+                  <>
+                    <Rating value={item.rating} readOnly />
 
-                <Typography fontWeight={700} fontSize={20}>
-                  {item.name}
-                </Typography>
+                    <Typography fontWeight={700} fontSize={20}>
+                      {item.name}
+                    </Typography>
 
-                <Typography className="ellipsis">{item.review}</Typography>
+                    <Typography className="ellipsis">{item.review}</Typography>
+                  </>
+                )}
               </Box>
             );
           })}

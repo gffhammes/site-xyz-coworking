@@ -3,17 +3,22 @@ import { useEffect, useState } from "react";
 export function useFloatingCardTrigger(startId: string, endId: string) {
   const [show, setShow] = useState(false);
 
+  const screenPercentage = 0.8;
+
   useEffect(() => {
     const startElem = document.getElementById(startId);
     const endElem = document.getElementById(endId);
     if (!startElem || !endElem) return;
 
     const handleScroll = () => {
-      const startRect = startElem.getBoundingClientRect();
-      const endRect = endElem.getBoundingClientRect();
+      const startElementRect = startElem.getBoundingClientRect();
+      const endElementRect = endElem.getBoundingClientRect();
 
-      const passedStart = startRect.top <= window.innerHeight * 0.5;
-      const notReachedEnd = endRect.top > 0;
+      const passedStart =
+        startElementRect.top <= window.innerHeight * screenPercentage;
+
+      const notReachedEnd =
+        endElementRect.top > window.innerHeight * screenPercentage;
 
       setShow(passedStart && notReachedEnd);
     };

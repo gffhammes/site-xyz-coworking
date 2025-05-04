@@ -1,4 +1,5 @@
 import { Stack, Typography } from "@mui/material";
+import parse from "html-react-parser";
 
 export interface IServiceStepperProps {
   steps: string[];
@@ -6,23 +7,32 @@ export interface IServiceStepperProps {
 
 export const ServiceStepper = ({ steps }: IServiceStepperProps) => {
   return (
-    <Stack gap={3}>
+    <Stack gap={{ xs: 3, md: 8 }} direction={{ xs: "column", md: "row" }}>
       {steps.map((step, index) => (
-        <Stack key={step} direction="row" gap={1}>
+        <Stack key={step} direction={{ xs: "row", md: "column" }} gap={1}>
           <Stack
             sx={{
-              height: "2rem",
-              width: "2rem",
-              borderRadius: "2rem",
+              height: { xs: "2rem", md: "4rem" },
+              width: { xs: "2rem", md: "4rem" },
+              borderRadius: { xs: "2rem", md: "4rem" },
               backgroundColor: "primary.main",
               flex: "0 0 auto",
             }}
             alignItems="center"
             justifyContent="center"
           >
-            <Typography lineHeight={1}>{index + 1}</Typography>
+            <Typography
+              lineHeight={1}
+              fontWeight="bold"
+              fontSize={{ xs: 16, md: 32 }}
+            >
+              {index + 1}
+            </Typography>
           </Stack>
-          <Typography>{step}</Typography>
+
+          <Typography fontWeight="bold" sx={{ mt: 0.5 }} maxWidth="25ch">
+            {parse(step)}
+          </Typography>
         </Stack>
       ))}
     </Stack>

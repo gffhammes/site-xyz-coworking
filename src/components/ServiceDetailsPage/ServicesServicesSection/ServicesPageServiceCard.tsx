@@ -2,10 +2,10 @@ import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import parse from "html-react-parser";
 import Link from "next/link";
-import { IServiceServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/services";
 
 export interface IServicesPageServiceCardProps {
-  serviceData: IServiceServiceItem;
+  serviceData: IServiceItem;
 }
 
 export const ServicesPageServiceCard = ({

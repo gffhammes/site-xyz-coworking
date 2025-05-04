@@ -16,6 +16,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { scrollTo } from "@/utils/utils";
 import { servicesItems } from "@/data/services";
+import parse from "html-react-parser";
 
 export interface IServicesSelectProps {
   align?: "center" | "flex-start";
@@ -29,8 +30,15 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
   };
 
   return (
-    <Stack>
-      <Typography>O que você busca?</Typography>
+    <Stack gap={2} alignItems="center" width="100%">
+      <Typography
+        fontWeight="bold"
+        textTransform="uppercase"
+        fontSize={{ xs: 12, md: 16 }}
+        letterSpacing={1.3}
+      >
+        O que você busca?
+      </Typography>
 
       <Box
         display="grid"
@@ -38,6 +46,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
         rowGap={1}
         gridTemplateColumns="1fr 1fr"
         gridAutoRows="1fr"
+        width="100%"
       >
         {servicesItems.map((option) => {
           return (
@@ -47,17 +56,21 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
               justifyContent="center"
               sx={{
                 py: 1,
-                px: 1,
+                px: { xs: 1, md: 2 },
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
                 color: "rgba(255, 255, 255, 0.7)",
                 backdropFilter: "blur(10px)",
                 borderRadius: 2,
+                transition: ".3s ease all",
+                "&:hover": {
+                  backgroundColor: "rgba(240, 181, 43, 0.553)",
+                },
               }}
               component={Link}
               href={`/servicos/${option.target}`}
             >
-              <Typography textAlign="center" fontSize={14}>
-                {option.heroText}
+              <Typography textAlign="center" fontSize={{ xs: 14, md: 16 }}>
+                {parse(option.heroText)}
               </Typography>
             </Stack>
           );

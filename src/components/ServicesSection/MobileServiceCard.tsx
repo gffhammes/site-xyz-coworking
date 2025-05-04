@@ -1,4 +1,4 @@
-import { IServiceServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/services";
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import parse from "html-react-parser";
@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export interface IMobileServiceCardProps {
-  serviceData: IServiceServiceItem;
+  serviceData: IServiceItem;
   isActive?: boolean;
 }
 

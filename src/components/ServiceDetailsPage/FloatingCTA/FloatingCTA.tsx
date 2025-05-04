@@ -4,7 +4,6 @@ import { useFloatingCardTrigger } from "@/hooks/useFloatingCTATrigger";
 import { scrollTo } from "@/utils/utils";
 import {
   Box,
-  Button,
   ButtonBase,
   Collapse,
   Container,
@@ -16,7 +15,7 @@ import { useEffect, useState } from "react";
 export interface IFloatingCTAProps {}
 
 export const FloatingCTA = (props: IFloatingCTAProps) => {
-  const { show: showTrigger } = useFloatingCardTrigger("beneficios", "passos");
+  const { show: showTrigger } = useFloatingCardTrigger("beneficios", "planos");
   const [show, setShow] = useState(false);
   const [collapse, setCollapse] = useState(false);
 
@@ -26,13 +25,13 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
 
       setTimeout(() => {
         setCollapse(true);
-      }, 500);
+      }, appearDuration);
     } else {
       setCollapse(false);
 
       setTimeout(() => {
         setShow(false);
-      }, 500);
+      }, appearDuration);
     }
   }, [showTrigger]);
 
@@ -40,11 +39,12 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
     <Box
       sx={{
         position: "fixed",
-        bottom: "1rem",
+        bottom: 0,
         zIndex: 9999,
         width: "100%",
         transform: show ? "none" : "translateY(200%)",
-        transition: "500ms ease all",
+        transition: `${appearDuration}ms ease all`,
+        pb: "7svh",
       }}
     >
       <Container>
@@ -61,10 +61,15 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
           }}
         >
           <Stack direction="row" alignItems="center">
-            <Collapse in={collapse} orientation="horizontal" timeout={500}>
+            <Collapse
+              in={collapse}
+              orientation="horizontal"
+              timeout={collapseDuration}
+            >
               <Typography
                 color="primary"
                 fontWeight="bold"
+                whiteSpace="nowrap"
                 sx={{ pl: 1, pr: 2 }}
               >
                 R$129/mês
@@ -76,7 +81,7 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
                 px: 2,
                 py: 1,
                 minWidth: 40,
-                transition: `500ms ease all`,
+                transition: `${collapseDuration}ms ease all`,
                 borderRadius: 20,
                 backgroundColor: "primary.main",
               }}
@@ -86,10 +91,10 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
               <Collapse
                 in={collapse}
                 orientation="horizontal"
-                timeout={500}
+                timeout={collapseDuration}
                 style={{ whiteSpace: "nowrap" }}
               >
-                <Typography>VER PLANOS</Typography>
+                <Typography fontWeight="bold">VER PLANOS</Typography>
               </Collapse>
             </Box>
           </Stack>
@@ -98,3 +103,6 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
     </Box>
   );
 };
+
+const appearDuration = 500;
+const collapseDuration = 300;

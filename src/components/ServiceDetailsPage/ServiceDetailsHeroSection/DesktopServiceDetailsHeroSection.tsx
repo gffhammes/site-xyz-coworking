@@ -12,11 +12,11 @@ import Image from "next/image";
 import { XYZLogo } from "@/components/common/XYZLogo";
 import { NavigationList } from "@/components/common/NavigationList";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
-import { IServiceServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/services";
 import parse from "html-react-parser";
 
 export interface IDesktopServiceDetailsHeroSectionProps {
-  service: IServiceServiceItem;
+  service: IServiceItem;
 }
 
 export const DesktopServiceDetailsHeroSection = ({

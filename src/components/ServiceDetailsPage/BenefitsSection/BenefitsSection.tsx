@@ -1,34 +1,19 @@
-import { IServiceServiceItem } from "@/data/services";
-import { Box, Container, Stack, Typography } from "@mui/material";
-import parse from "html-react-parser";
+import { IServiceItem } from "@/data/services";
+import { MobileBenefitsSection } from "./MobileBenefitsSection";
+import { DesktopBenefitsSection } from "./DesktopBenefitsSection";
+import { ResponsiveComponent } from "@/components/common/ResponsiveComponent";
 
 export interface IBenefitsSectionProps {
-  service: IServiceServiceItem;
+  service: IServiceItem;
 }
 
 export const BenefitsSection = ({ service }: IBenefitsSectionProps) => {
-  const { benefitsSection } = service.detailsPage;
   return (
-    <Box id="beneficios">
-      <Container>
-        <Stack gap={4}>
-          <Stack gap={2}>
-            <Typography variant="h2">{benefitsSection.h2}</Typography>
-
-            <Typography>{benefitsSection.subtitle}</Typography>
-          </Stack>
-
-          <Stack gap={3}>
-            {benefitsSection.items.map((item) => (
-              <Stack direction="row" gap={1}>
-                {item.icon && <item.icon color="secondary" />}
-
-                <Typography maxWidth="30ch">{parse(item.text)}</Typography>
-              </Stack>
-            ))}
-          </Stack>
-        </Stack>
-      </Container>
-    </Box>
+    <div id="beneficios">
+      <ResponsiveComponent
+        xs={<MobileBenefitsSection service={service} />}
+        md={<DesktopBenefitsSection service={service} />}
+      />
+    </div>
   );
 };

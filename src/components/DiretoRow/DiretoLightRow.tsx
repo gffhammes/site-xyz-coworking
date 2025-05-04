@@ -39,6 +39,7 @@ export const DiretoLightRow = (props: IDiretoLightRowProps) => {
               style={{
                 objectFit: "contain",
               }}
+              unoptimized
             />
           </Stack>
         </Stack>
