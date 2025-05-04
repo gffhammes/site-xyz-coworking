@@ -1,7 +1,11 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
 import { Animate } from "../common/Animate";
-import { differentialItems, imageSize } from "./DifferentialSection";
+import {
+  differentialItems,
+  mdImageSize,
+  xsImageSize,
+} from "./DifferentialSection";
 
 export interface IDifferentialImageProps {
   selectedIndex: number;
@@ -29,9 +33,9 @@ export const DifferentialImage = ({
       >
         <Box
           sx={{
-            height: imageSize,
-            width: imageSize,
-            borderRadius: imageSize,
+            height: { xs: xsImageSize, md: mdImageSize },
+            width: { xs: xsImageSize, md: mdImageSize },
+            borderRadius: { xs: xsImageSize, md: mdImageSize },
             transform: `translate(40%, 10%)`,
             overflow: "hidden",
           }}

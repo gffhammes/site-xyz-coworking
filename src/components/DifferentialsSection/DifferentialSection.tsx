@@ -53,21 +53,27 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
         position: "relative",
         width: "100%",
         overflow: "hidden",
-        height: `calc(${circleSize} + (${imageSize}/ 8))`,
+        height: {
+          xs: `calc(${xsCircleSize} + (${xsImageSize}/ 8))`,
+          md: `calc(${mdCircleSize} + (${mdImageSize}/ 8))`,
+        },
       }}
     >
       <Container maxWidth="sm">
         <Box sx={{ position: "relative" }}>
           <Box
             sx={{
-              height: circleSize,
-              width: circleSize,
-              borderRadius: circleSize,
+              height: { xs: xsCircleSize, md: mdCircleSize },
+              width: { xs: xsCircleSize, md: mdCircleSize },
+              borderRadius: { xs: xsCircleSize, md: mdCircleSize },
               backgroundColor: "#363636",
               position: "absolute",
               top: 0,
               left: 0,
-              transform: `translate(-${xTranslateCircle}, 0%)`,
+              transform: {
+                xs: `translate(-${xsXTranslateCircle}, 0%)`,
+                md: `translate(-${mdXTranslateCircle}, 0%)`,
+              },
             }}
           >
             <CarouselControls
@@ -82,7 +88,7 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
           <Box
             sx={{
               position: "relative",
-              height: circleSize,
+              height: { xs: xsCircleSize, md: mdCircleSize },
               width: "100%",
               pointerEvents: "none",
             }}
@@ -93,10 +99,13 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
               sx={{
                 overflow: "hidden",
                 position: "relative",
-                height: circleSize,
-                width: circleSize,
-                borderRadius: circleSize,
-                transform: `translateX(-${xTranslateCircle})`,
+                height: { xs: xsCircleSize, md: mdCircleSize },
+                width: { xs: xsCircleSize, md: mdCircleSize },
+                borderRadius: { xs: xsCircleSize, md: mdCircleSize },
+                transform: {
+                  xs: `translateX(-${xsXTranslateCircle})`,
+                  md: `translateX(-${mdXTranslateCircle})`,
+                },
               }}
             >
               <Box
@@ -135,9 +144,13 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
   );
 };
 
-export const circleSize = "40rem";
-export const imageSize = "20rem";
-export const xTranslateCircle = "15%";
+export const mdCircleSize = "40rem";
+export const mdImageSize = "20rem";
+export const mdXTranslateCircle = "15%";
+
+export const xsCircleSize = "30rem";
+export const xsImageSize = "15rem";
+export const xsXTranslateCircle = "15%";
 // export const yTranslateCircle = "25%";
 
 export const differentialItems: IDifferentialItem[] = [

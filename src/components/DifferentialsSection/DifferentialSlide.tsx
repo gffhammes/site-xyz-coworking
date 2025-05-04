@@ -11,7 +11,7 @@ import {
 import { motion, usePresenceData } from "motion/react";
 import { forwardRef } from "react";
 import parse from "html-react-parser";
-import { differentialItems, xTranslateCircle } from "./DifferentialSection";
+import { differentialItems, mdXTranslateCircle } from "./DifferentialSection";
 
 export interface IDifferentialSlideProps {
   index: number;
@@ -33,7 +33,7 @@ export const DifferentialSlide = forwardRef(function Slide(
         zIndex: 1,
         color: "white",
         transition: ".3s ease all",
-        transform: `translateX(${xTranslateCircle})`,
+        transform: `translateX(${mdXTranslateCircle})`,
         height: "100%",
         justifyContent: "center",
       }}

@@ -14,7 +14,6 @@ export const MobileServicesSection = (props: IMobileServicesSectionProps) => {
         position: "relative",
         zIndex: 1,
         scrollSnapAlign: "center",
-        pt: 10,
       }}
     >
       <Stack gap={4}>
