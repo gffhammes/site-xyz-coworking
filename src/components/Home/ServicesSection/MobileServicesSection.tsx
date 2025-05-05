@@ -2,7 +2,7 @@
 
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { MobileServiceCard } from "./MobileServiceCard";
-import { servicesItems } from "@/data/services";
+import { services } from "@/data/balneario-camboriu/services";
 import { Carousel } from "@/components/Carousel/Carousel";
 
 export interface IMobileServicesSectionProps {}
@@ -33,7 +33,7 @@ export const MobileServicesSection = (props: IMobileServicesSectionProps) => {
         <Carousel
           options={{ loop: true, align: "center" }}
           slides={({ selectedIndex }) =>
-            servicesItems.map((item, index) => (
+            services.map((item, index) => (
               <Box key={item.title} sx={{ flex: "0 0 80%", px: 1 }}>
                 <MobileServiceCard serviceData={item} />
               </Box>

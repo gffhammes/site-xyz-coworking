@@ -1,4 +1,4 @@
-import { IServicePlan } from "@/data/services";
+import { IServicePlan } from "@/data/types";
 import { Stack, Typography } from "@mui/material";
 
 export interface IPlanCardPriceProps {

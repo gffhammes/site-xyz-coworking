@@ -1,16 +1,14 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
 import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
-import { ServicesHeroSection } from "@/components/ServicesPage/ServicesHeroSection/ServicesHeroSection";
-import { ServicesIntroduction } from "@/components/ServicesPage/ServicesIntroduction/ServicesIntroduction";
-import { ServicesServicesSection } from "@/components/ServicesPage/ServicesServicesSection/ServicesServicesSection";
-import { IServiceItem, servicesItems } from "@/data/services";
+
 import { notFound } from "next/navigation";
 import { ServiceDetailsHeroSection } from "@/components/ServiceDetailsPage/ServiceDetailsHeroSection/ServiceDetailsHeroSection";
 import { BenefitsSection } from "@/components/ServiceDetailsPage/BenefitsSection/BenefitsSection";
 import { StepperSection } from "@/components/ServiceDetailsPage/StepperSection/StepperSection";
 import { FloatingCTA } from "@/components/ServiceDetailsPage/FloatingCTA/FloatingCTA";
 import { PlansSection } from "@/components/ServiceDetailsPage/PlansSection/PlansSection";
+import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 
 export async function generateMetadata({
   params,
@@ -19,7 +17,9 @@ export async function generateMetadata({
 }) {
   const { servico } = await params;
 
-  const service = servicesItems.find((service) => service.target === servico);
+  const service = balnearioData.services.find(
+    (service) => service.target === servico
+  );
 
   if (!service) return {};
 
@@ -43,7 +43,9 @@ export default async function Servicos({
 }) {
   const { servico } = await params;
 
-  const service = servicesItems.find((service) => service.target === servico);
+  const service = balnearioData.services.find(
+    (service) => service.target === servico
+  );
 
   if (!service) return notFound();
 
@@ -73,7 +75,7 @@ export default async function Servicos({
 }
 
 export async function generateStaticParams() {
-  return servicesItems.map((service) => ({
+  return balnearioData.services.map((service) => ({
     servico: service.target,
   }));
 }

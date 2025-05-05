@@ -1,7 +1,7 @@
-import { IServiceItem } from "@/data/services";
 import { MobileBenefitsSection } from "./MobileBenefitsSection";
 import { DesktopBenefitsSection } from "./DesktopBenefitsSection";
 import { ResponsiveComponent } from "@/components/common/ResponsiveComponent";
+import { IServiceItem } from "@/data/types";
 
 export interface IBenefitsSectionProps {
   service: IServiceItem;

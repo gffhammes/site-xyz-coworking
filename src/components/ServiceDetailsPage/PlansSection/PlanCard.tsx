@@ -1,7 +1,7 @@
-import { IServicePlan, IServiceItem } from "@/data/services";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { PlanCardPrice } from "./PlanCardPrice";
 import { PlanCardIncluded } from "./PlanCardIncluded";
+import { IServicePlan } from "@/data/types";
 
 export interface IPlanCardProps {
   selectedPlan: IServicePlan;

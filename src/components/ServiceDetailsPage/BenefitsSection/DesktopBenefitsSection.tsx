@@ -1,6 +1,6 @@
-import { IServiceItem } from "@/data/services";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { BenefitCard } from "./BenefitCard";
+import { IServiceItem } from "@/data/types";
 
 export interface IDesktopBenefitsSectionProps {
   service: IServiceItem;

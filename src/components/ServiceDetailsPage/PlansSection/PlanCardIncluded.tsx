@@ -1,6 +1,6 @@
-import { IServicePlan } from "@/data/services";
 import { Stack, Typography } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import { IServicePlan } from "@/data/types";
 
 export interface IPlanCardIncludedProps {
   selectedPlan: IServicePlan;

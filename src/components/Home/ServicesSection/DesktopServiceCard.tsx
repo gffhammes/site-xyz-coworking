@@ -1,4 +1,4 @@
-import { IServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/balneario-camboriu/services";
 import { Stack, Typography } from "@mui/material";
 
 import parse from "html-react-parser";

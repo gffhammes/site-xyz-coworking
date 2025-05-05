@@ -1,5 +1,5 @@
-import { IServiceItem } from "@/data/services";
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
+import { IServiceItem } from "@/data/types";
 import { Button, Stack, Typography } from "@mui/material";
 import parse from "html-react-parser";
 

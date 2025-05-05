@@ -1,11 +1,11 @@
 "use client";
 
-import { IServiceItem } from "@/data/services";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import { PlanPeriodSelector } from "./PlanPeriodSelector";
 import { PlanCard } from "./PlanCard";
 import parse from "html-react-parser";
+import { IServiceItem } from "@/data/types";
 
 export interface IPlansSectionProps {
   service: IServiceItem;

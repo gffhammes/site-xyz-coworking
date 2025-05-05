@@ -2,7 +2,7 @@
 
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { DesktopServiceCard } from "./DesktopServiceCard";
-import { servicesItems } from "@/data/services";
+import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 
 export interface IDesktopServicesSectionProps {}
 
@@ -32,7 +32,7 @@ export const DesktopServicesSection = (props: IDesktopServicesSectionProps) => {
           </Stack>
 
           <Box display="grid" gridTemplateColumns="1fr" gap={4}>
-            {servicesItems.map((item, index) => (
+            {balnearioData.services.map((item, index) => (
               <Box key={item.title}>
                 <DesktopServiceCard serviceData={item} />
               </Box>

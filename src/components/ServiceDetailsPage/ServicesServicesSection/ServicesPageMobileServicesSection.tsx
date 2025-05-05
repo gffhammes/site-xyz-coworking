@@ -1,7 +1,8 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { ServicesPageServiceCard } from "./ServicesPageServiceCard";
 import { ServicesIntroduction } from "../ServicesIntroduction/ServicesIntroduction";
-import { servicesItems } from "@/data/services";
+import { services } from "@/data/balneario-camboriu/services";
+import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 
 export interface IServicesPageMobileServicesSectionProps {}
 
@@ -27,7 +28,7 @@ export const ServicesPageMobileServicesSection = (
             justifyContent="center"
             width="100%"
           >
-            {servicesItems.map((item, index) => (
+            {balnearioData.services.map((item, index) => (
               <Box
                 key={item.title}
                 flex={{ xs: "0 0 100%", md: "0 0 20rem" }}

@@ -15,8 +15,9 @@ import { servicesHeroSectionData } from "./ServicesHeroSection";
 import { useState } from "react";
 import Link from "next/link";
 import { scrollTo } from "@/utils/utils";
-import { servicesItems } from "@/data/services";
+import { services } from "@/data/balneario-camboriu/services";
 import parse from "html-react-parser";
+import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 
 export interface IServicesSelectProps {
   align?: "center" | "flex-start";
@@ -48,7 +49,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
         gridAutoRows="1fr"
         width="100%"
       >
-        {servicesItems.map((option) => {
+        {balnearioData.services.map((option) => {
           return (
             <Stack
               key={option.target}

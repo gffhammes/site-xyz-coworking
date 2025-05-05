@@ -1,4 +1,4 @@
-import { IServicePlan, IServiceItem } from "@/data/services";
+import { IServicePlan } from "@/data/types";
 import { Box, Stack, Typography } from "@mui/material";
 import { useEffect, useRef } from "react";
 

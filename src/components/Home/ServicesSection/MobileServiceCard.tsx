@@ -1,4 +1,4 @@
-import { IServiceItem } from "@/data/services";
+import { IServiceItem } from "@/data/types";
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import parse from "html-react-parser";
