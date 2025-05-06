@@ -1,7 +1,9 @@
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
+import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 import { IServiceItem } from "@/data/types";
 import { Button, Stack, Typography } from "@mui/material";
 import parse from "html-react-parser";
+import { ServiceDetailsHeroSectionButtons } from "./ServiceDetailsHeroSectionButtons";
 
 export interface IServiceDetailsHeroSectionProps {
   service: IServiceItem;
@@ -37,10 +39,7 @@ export const ServiceDetailsHeroSection = ({
           </Stack>
 
           <Stack width="100%" gap={1}>
-            <Button variant="contained">
-              {service.detailsPage.heroCTAText}
-            </Button>
-            <Button variant="outlined">CONHECER MAIS</Button>
+            <ServiceDetailsHeroSectionButtons service={service} />
           </Stack>
         </Stack>
       }
@@ -72,10 +71,7 @@ export const ServiceDetailsHeroSection = ({
             </Typography>
           </Stack>
           <Stack direction="row" gap={1}>
-            <Button variant="contained">
-              {service.detailsPage.heroCTAText}
-            </Button>
-            <Button variant="outlined">CONHECER MAIS</Button>
+            <ServiceDetailsHeroSectionButtons service={service} />
           </Stack>
         </Stack>
       }

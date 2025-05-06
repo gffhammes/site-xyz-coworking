@@ -12,6 +12,7 @@ export const HomeHeroSectionButtons = (props: IHomeHeroSectionButtonsProps) => {
       <WhatsappLinkButton
         variant="contained"
         customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+        fullWidth
       >
         agendar visita
       </WhatsappLinkButton>
