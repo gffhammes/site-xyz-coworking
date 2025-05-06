@@ -57,31 +57,33 @@ export const enderecoFiscal: IServiceItem = {
         "Pronto! Você já pode registrar ou transferir seu CNPJ",
       ],
     },
-    plansMessage: ` Economize <strong>R$258</strong>
-                <br />
-                no plano anual`,
+    plansMessage: `Economize <strong>R$378</strong>
+<br />
+no plano anual`,
     plans: [
       {
-        price: 1290,
+        price: 1890,
         label: "Anual",
         period: "Ano",
         included: [
           "Endereço fiscal e/ou comercial válido para CNPJ",
           "Atendimento e triagem de correspondências",
-          "Aviso de recebimento por e-mail ou WhatsApp",
-          "Uso do endereço em materiais de marketing e site",
+          "50% de desconto no aluguel de salas de reunião e estações de coworking",
         ],
+        whatsappMessage:
+          "Olá! Vim do site e tenho interesse em contratar o plano anual de endereço fiscal.",
       },
       {
-        price: 129,
+        price: 189,
         label: "Mensal",
         period: "Mês",
         included: [
           "Endereço fiscal e/ou comercial válido para CNPJ",
           "Atendimento e triagem de correspondências",
-          "Aviso de recebimento por e-mail ou WhatsApp",
-          "Uso do endereço em materiais de marketing e site",
+          "50% de desconto no aluguel de salas de reunião e estações de coworking",
         ],
+        whatsappMessage:
+          "Olá! Vim do site e tenho interesse em contratar o plano mensal de endereço fiscal.",
       },
     ],
   },

@@ -1,3 +1,5 @@
+"use client";
+
 import { IServicePlan } from "@/data/types";
 import { Box, Stack, Typography } from "@mui/material";
 import { useEffect, useRef } from "react";
@@ -28,8 +30,13 @@ export const PlanPeriodSelector = ({
     const monthlyRects = monthlyPeriodRef.current.getClientRects()[0];
     const containerRects = containerRef.current.getClientRects()[0];
 
+    if (!anualRects) return;
+    if (!monthlyRects) return;
+    if (!containerRects) return;
+
     let selectedBoxLeft = 0;
     let selectedBoxWidth = 0;
+    const containerHeight = containerRects.height;
 
     switch (selectedPlan) {
       case 0:
@@ -49,14 +56,16 @@ export const PlanPeriodSelector = ({
         break;
 
       default:
-        return;
+        break;
     }
 
     selectedBoxRef.current.setAttribute(
       "style",
-      `width: ${selectedBoxWidth}px; left:${selectedBoxLeft}px; height: ${containerRects.height}px;`
+      `width: ${selectedBoxWidth}px; left:${selectedBoxLeft}px; height: ${containerHeight}px;`
     );
   }, [selectedPlan]);
+
+  if (plans.length === 1) return null;
 
   return (
     <Stack
@@ -81,7 +90,7 @@ export const PlanPeriodSelector = ({
           cursor: "pointer",
         }}
       >
-        <Typography>ANUAL</Typography>
+        <Typography textTransform="uppercase">{plans[0].label}</Typography>
       </Box>
 
       <Box
@@ -96,7 +105,7 @@ export const PlanPeriodSelector = ({
           cursor: "pointer",
         }}
       >
-        <Typography>MENSAL</Typography>
+        <Typography textTransform="uppercase">{plans[1].label}</Typography>
       </Box>
 
       <Box

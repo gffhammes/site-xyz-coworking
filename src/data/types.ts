@@ -6,6 +6,7 @@ export interface IServicePlan {
   period: string;
   price: number;
   included: string[];
+  whatsappMessage?: string;
 }
 
 export interface IServiceItem {

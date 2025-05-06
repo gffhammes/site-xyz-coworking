@@ -29,19 +29,19 @@ export const estacoesTrabalho: IServiceItem = {
         "Saia do isolamento e descubra a energia de trabalhar em um espaço compartilhado, moderno e rodeado de oportunidades.",
       items: [
         {
-          text: "Estações individuais em ambiente compartilhado",
+          text: "<strong>Estações individuais</strong> em ambiente compartilhado",
           icon: SensorOccupiedIcon,
         },
         {
-          text: "Ideal para freelancers, nômades digitais e autônomos",
+          text: "Ideal para <strong>freelancers, nômades digitais e autônomos</strong>",
           icon: WorkIcon,
         },
         {
-          text: "Networking, trocas e negócios com outros profissionais",
+          text: "<strong>Networking, trocas e negócios</strong> com outros profissionais",
           icon: HubIcon,
         },
         {
-          text: "Mobílias ergonômicas, internet rápida e café à vontade",
+          text: "<strong>Mobílias ergonômicas, internet rápida</strong> e café à vontade",
           icon: WifiIcon,
         },
       ],
@@ -59,28 +59,18 @@ export const estacoesTrabalho: IServiceItem = {
 
     plans: [
       {
-        price: 8900,
-        label: "Anual",
-        period: "Ano",
+        price: 120,
+        label: "Diária",
+        period: "Dia",
 
         included: [
           "Mesa individual e cadeira ergonômica",
           "Internet rápida e estável",
           "Acesso à copa, recepção e áreas comuns",
-          "Limpeza e manutenção",
+          "Café à vontade",
         ],
-      },
-      {
-        price: 890,
-        label: "Mensal",
-        period: "Mês",
-
-        included: [
-          "Mesa individual e cadeira ergonômica",
-          "Internet rápida e estável",
-          "Acesso à copa, recepção e áreas comuns",
-          "Limpeza e manutenção",
-        ],
+        whatsappMessage:
+          "Olá! Vim pelo site e gostaria de reservar uma estação de trabalho.",
       },
     ],
   },

@@ -56,29 +56,32 @@ export const salasReuniao: IServiceItem = {
         "Chegue e aproveite o ambiente pronto para uso",
       ],
     },
-
     plans: [
       {
-        price: 8900,
-        label: "Anual",
-        period: "Ano",
+        price: 500,
+        label: "Período",
+        period: "Período",
         included: [
           "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
           "Recepção de clientes",
           "Água, café e estrutura de apoio",
         ],
+        whatsappMessage:
+          "Olá! Vim pelo site e gostaria de reservar um período em uma sala de reunião.",
       },
       {
-        price: 890,
-        label: "Mensal",
-        period: "Mês",
+        price: 800,
+        label: "Diária",
+        period: "Dia",
         included: [
           "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
           "Recepção de clientes",
           "Água, café e estrutura de apoio",
         ],
+        whatsappMessage:
+          "Olá! Vim pelo site e gostaria de reservar uma diária em uma sala de reunião.",
       },
     ],
   },
