@@ -17,7 +17,7 @@ export const MobilePlansSection = ({ service }: IMobilePlansSectionProps) => {
   const [selectedPlan, setSelectedPlan] = useState<number>(0);
 
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 10 }} id="planos">
+    <Box>
       <Container>
         <Stack gap={4}>
           <Stack alignItems="center" gap={2}>

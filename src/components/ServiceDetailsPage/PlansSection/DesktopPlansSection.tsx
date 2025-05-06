@@ -17,7 +17,7 @@ export const DesktopPlansSection = ({ service }: IDesktopPlansSectionProps) => {
   const [selectedPlan, setSelectedPlan] = useState<number>(0);
 
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 10 }} id="planos">
+    <Box>
       <Container maxWidth={false} sx={{ maxWidth: 500 }}>
         <Stack gap={4}>
           <Stack alignItems="flex-end" gap={2}>
