@@ -15,7 +15,7 @@ import { servicesHeroSectionData } from "./ServicesHeroSection";
 import { useState } from "react";
 import Link from "next/link";
 import { scrollTo } from "@/utils/utils";
-import { services } from "@/data/balneario-camboriu/services";
+import { services } from "@/data/balneario-camboriu/services/services";
 import parse from "html-react-parser";
 import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 

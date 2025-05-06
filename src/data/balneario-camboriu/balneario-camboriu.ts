@@ -1,4 +1,4 @@
-import { services } from "./services";
+import { services } from "./services/services";
 
 const contact = {
   whatsappNumber: "554799816902",

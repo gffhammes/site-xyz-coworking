@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { servicesIntroductionData } from "../ServicesIntroduction/ServicesIntroduction";
-import { services } from "@/data/balneario-camboriu/services";
+import { services } from "@/data/balneario-camboriu/services/services";
 import { DesktopServiceCard } from "@/components/Home/ServicesSection/DesktopServiceCard";
 import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 

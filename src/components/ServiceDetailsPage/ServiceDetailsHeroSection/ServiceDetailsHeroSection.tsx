@@ -23,7 +23,7 @@ export const ServiceDetailsHeroSection = ({
                 style={{
                   fontSize: 12,
                   textTransform: "uppercase",
-                  letterSpacing: 1.1,
+                  letterSpacing: 4,
                   filter: "opacity(.4)",
                 }}
               >
@@ -56,7 +56,7 @@ export const ServiceDetailsHeroSection = ({
                 style={{
                   fontSize: 12,
                   textTransform: "uppercase",
-                  letterSpacing: 1.1,
+                  letterSpacing: 4,
                   filter: "opacity(.4)",
                 }}
               >

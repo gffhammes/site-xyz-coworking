@@ -29,6 +29,7 @@ export const DesktopBenefitsSection = ({
           <Box
             display="grid"
             gridTemplateColumns="repeat(2, 14rem)"
+            gridAutoRows="1fr"
             gap={3}
             sx={{ flex: "0 0 auto" }}
           >

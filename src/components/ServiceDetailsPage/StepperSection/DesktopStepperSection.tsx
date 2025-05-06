@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { ServiceStepper } from "./ServiceStepper";
 import { IServiceItem } from "@/data/types";
+import parse from "html-react-parser";
 
 export interface IDesktopStepperSectionProps {
   service: IServiceItem;
@@ -16,12 +17,12 @@ export const DesktopStepperSection = ({
       <Container>
         <Stack gap={12} alignItems="center">
           <Stack gap={2} alignItems="center">
-            <Typography variant="h2" textAlign="center" maxWidth="21ch">
-              {stepsSection.h2}
+            <Typography variant="h2" textAlign="center">
+              {parse(stepsSection.h2)}
             </Typography>
 
             <Typography textAlign="center" maxWidth="46ch">
-              {stepsSection.subtitle}
+              {parse(stepsSection.subtitle)}
             </Typography>
           </Stack>
 

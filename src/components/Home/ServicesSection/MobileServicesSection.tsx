@@ -2,7 +2,7 @@
 
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { MobileServiceCard } from "./MobileServiceCard";
-import { services } from "@/data/balneario-camboriu/services";
+import { services } from "@/data/balneario-camboriu/services/services";
 import { Carousel } from "@/components/Carousel/Carousel";
 
 export interface IMobileServicesSectionProps {}

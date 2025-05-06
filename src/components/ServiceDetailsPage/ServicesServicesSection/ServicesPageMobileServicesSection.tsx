@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { ServicesPageServiceCard } from "./ServicesPageServiceCard";
 import { ServicesIntroduction } from "../ServicesIntroduction/ServicesIntroduction";
-import { services } from "@/data/balneario-camboriu/services";
+import { services } from "@/data/balneario-camboriu/services/services";
 import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 
 export interface IServicesPageMobileServicesSectionProps {}
