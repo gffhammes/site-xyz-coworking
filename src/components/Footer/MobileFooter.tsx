@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { FooterMap } from "./FooterMap";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { getMainWhatsappLink } from "@/utils/utils";
 
 export interface IMobileFooterProps {}
 
@@ -45,6 +46,11 @@ export const MobileFooter = (props: IMobileFooterProps) => {
                   label="AGENDAR"
                   color="primary"
                   variant="outlined"
+                  component="a"
+                  href={getMainWhatsappLink(
+                    "Olá, vim pelo site e gostaria de agendar uma visita!"
+                  )}
+                  target="_blank"
                   icon={
                     <Box
                       sx={{

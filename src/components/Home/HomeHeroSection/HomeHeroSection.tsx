@@ -1,6 +1,8 @@
 import heroBg from "../../../../public/images/hero.jpg";
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
+import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 import { Button, Stack, Typography } from "@mui/material";
+import { HomeHeroSectionButtons } from "./HomeHeroSectionButtons";
 
 export interface IHomeHeroSectionProps {}
 
@@ -21,8 +23,7 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
             gap={1}
             sx={{ position: "relative", zIndex: 1, width: "100%" }}
           >
-            <Button variant="contained">agendar visita</Button>
-            <Button variant="outlined">Descubra o xyz</Button>
+            <HomeHeroSectionButtons />
           </Stack>
         </Stack>
       }
@@ -41,8 +42,7 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
             direction="row"
             sx={{ position: "relative", zIndex: 1, width: "100%" }}
           >
-            <Button variant="contained">agendar visita</Button>
-            <Button variant="outlined">Descubra o xyz</Button>
+            <HomeHeroSectionButtons />
           </Stack>
         </Stack>
       }

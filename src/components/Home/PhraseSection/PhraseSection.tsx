@@ -1,12 +1,13 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import image1 from "../../../../public/images/bc1.jpeg";
 import image2 from "../../../../public/images/bc2.jpeg";
+import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 
 export interface IPhraseSectionProps {}
 
 export const PhraseSection = (props: IPhraseSectionProps) => {
   return (
-    <Box>
+    <Box id="home-content">
       <Container>
         <Stack
           alignItems="center"
@@ -27,7 +28,12 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
             }}
           />
 
-          <Button variant="contained">Agendar visita</Button>
+          <WhatsappLinkButton
+            variant="contained"
+            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+          >
+            agendar visita
+          </WhatsappLinkButton>
         </Stack>
       </Container>
 

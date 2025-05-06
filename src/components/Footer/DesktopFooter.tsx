@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { FooterMap } from "./FooterMap";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { getMainWhatsappLink } from "@/utils/utils";
 
 export interface IDesktopFooterProps {}
 
@@ -42,6 +43,11 @@ export const DesktopFooter = (props: IDesktopFooterProps) => {
                 </Typography>
 
                 <Chip
+                  component="a"
+                  href={getMainWhatsappLink(
+                    "Olá, vim pelo site e gostaria de agendar uma visita!"
+                  )}
+                  target="_blank"
                   label="AGENDAR"
                   color="primary"
                   variant="outlined"

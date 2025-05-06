@@ -12,6 +12,7 @@ import { motion, usePresenceData } from "motion/react";
 import { forwardRef } from "react";
 import parse from "html-react-parser";
 import { differentialItems, mdXTranslateCircle } from "./DifferentialSection";
+import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 
 export interface IDifferentialSlideProps {
   index: number;
@@ -58,9 +59,13 @@ export const DifferentialSlide = forwardRef(function Slide(
           {parse(selectedItem.description)}
         </Typography>
 
-        <Button variant="contained" sx={{ mt: 2 }}>
-          CONHECER
-        </Button>
+        <WhatsappLinkButton
+          variant="contained"
+          customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+          sx={{ mt: 2 }}
+        >
+          agendar visita
+        </WhatsappLinkButton>
       </Stack>
     </Stack>
   );

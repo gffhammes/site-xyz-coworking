@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { advantageSectionData } from "./AdvantagesSection";
+import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 
 export interface IDesktopAdvantagesSectionProps {}
 
@@ -50,7 +51,12 @@ export const DesktopAdvantagesSection = (
             ))}
           </Box>
 
-          <Button variant="contained">agendar visita</Button>
+          <WhatsappLinkButton
+            variant="contained"
+            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+          >
+            agendar visita
+          </WhatsappLinkButton>
         </Stack>
       </Container>
     </Box>

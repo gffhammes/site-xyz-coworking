@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { Carousel } from "../Carousel/Carousel";
 import { reviewsSectionData } from "./ReviewsSection";
+import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 
 export interface IDesktopReviewsSectionProps {}
 
@@ -75,47 +76,17 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
           })}
         </Box>
 
-        <Button color="secondary" variant="contained">
-          QUERO TRABALHAR NO MELHOR COWORKING DE BC{" "}
-        </Button>
+        <WhatsappLinkButton
+          color="secondary"
+          variant="contained"
+          customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+          sx={{ mt: 2 }}
+        >
+          QUERO TRABALHAR NO MELHOR COWORKING DE BC
+        </WhatsappLinkButton>
       </Stack>
     </Container>
   );
-
-  // return (
-  //   <Box
-  //     sx={{
-  //       position: "relative",
-  //       "&::before": {
-  //         content: '""',
-  //         position: "absolute",
-  //         backgroundColor: "#ffffff",
-  //         height: "100%",
-  //         width: "100%",
-  //         top: 0,
-  //         left: 0,
-  //         zIndex: 0,
-  //       },
-  //     }}
-  //   >
-  //     <Stack
-  //       gap={4}
-  //       sx={{
-  //         borderRadius: "5rem 5rem 0 0",
-  //         backgroundColor: "#f4f4f4",
-  //         position: "relative",
-  //         zIndex: 9,
-  //         py: 10,
-  //       }}
-  //     >
-  //       {/* <Container sx={{ px: 6 }}>
-  //         <Typography variant="h2" maxWidth="15ch">
-  //           Veja o que falam sobre nós
-  //         </Typography>
-  //       </Container> */}
-  //     </Stack>
-  //   </Box>
-  // );
 };
 
 export interface IReviewItem {
