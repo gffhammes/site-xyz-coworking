@@ -84,5 +84,6 @@ export const salasReuniao: IServiceItem = {
           "Olá! Vim pelo site e gostaria de reservar uma diária em uma sala de reunião.",
       },
     ],
+    floatingCtaMessage: "R$500/período",
   },
 };

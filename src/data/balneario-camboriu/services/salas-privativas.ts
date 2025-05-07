@@ -59,21 +59,9 @@ export const salasPrivativas: IServiceItem = {
 
     plans: [
       {
-        price: 8900,
-        label: "Anual",
-        period: "Ano",
-        included: [
-          "Sala privativa mobiliada",
-          "Internet de alta velocidade",
-          "Limpeza e manutenção inclusas",
-          "Recepção para seus clientes",
-          "Copa compartilhada",
-        ],
-      },
-      {
-        price: 890,
+        price: 2490,
         label: "Mensal",
-        period: "Mês",
+        period: "MÊS",
         included: [
           "Sala privativa mobiliada",
           "Internet de alta velocidade",
@@ -81,7 +69,11 @@ export const salasPrivativas: IServiceItem = {
           "Recepção para seus clientes",
           "Copa compartilhada",
         ],
+        customPriceText: "A partir de",
+        whatsappMessage:
+          "Olá! Vim pelo site e gostaria de conhecer as opções de salas privativas.",
       },
     ],
+    floatingCtaMessage: "A partir de 2490/mês",
   },
 };

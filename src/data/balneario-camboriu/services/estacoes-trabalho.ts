@@ -73,5 +73,6 @@ export const estacoesTrabalho: IServiceItem = {
           "Olá! Vim pelo site e gostaria de reservar uma estação de trabalho.",
       },
     ],
+    floatingCtaMessage: "R$120/dia",
   },
 };

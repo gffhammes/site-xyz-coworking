@@ -18,12 +18,16 @@ export const DesktopPlansSection = ({ service }: IDesktopPlansSectionProps) => {
 
   return (
     <Box>
-      <Container maxWidth={false} sx={{ maxWidth: 500 }}>
+      <Container maxWidth={false} sx={{ maxWidth: 450 }}>
         <Stack gap={4}>
           <Stack alignItems="flex-end" gap={2}>
             <Stack
               direction="row"
-              justifyContent="space-between"
+              justifyContent={
+                service.detailsPage.plans.length === 1
+                  ? "center"
+                  : "space-between"
+              }
               width="100%"
               gap={12}
             >

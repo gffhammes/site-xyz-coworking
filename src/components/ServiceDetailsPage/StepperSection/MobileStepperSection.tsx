@@ -16,8 +16,12 @@ export const MobileStepperSection = ({
       <Container>
         <Stack gap={4}>
           <Stack gap={2}>
-            <Typography variant="h2">{stepsSection.h2}</Typography>
-            <Typography>{stepsSection.subtitle}</Typography>
+            <Typography variant="h2">
+              {stepsSection.h2.replaceAll("<br/>", " ")}
+            </Typography>
+            <Typography>
+              {stepsSection.subtitle.replaceAll("<br/>", " ")}
+            </Typography>
           </Stack>
 
           <ServiceStepper steps={stepsSection.items} />

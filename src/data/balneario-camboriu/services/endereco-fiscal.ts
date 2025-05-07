@@ -86,5 +86,6 @@ no plano anual`,
           "Olá! Vim do site e tenho interesse em contratar o plano mensal de endereço fiscal.",
       },
     ],
+    floatingCtaMessage: "R$189/mês",
   },
 };

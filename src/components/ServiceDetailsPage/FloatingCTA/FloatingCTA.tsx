@@ -1,5 +1,6 @@
 "use client";
 
+import { IServiceItem } from "@/data/types";
 import { useFloatingCardTrigger } from "@/hooks/useFloatingCTATrigger";
 import { scrollTo } from "@/utils/utils";
 import {
@@ -12,9 +13,11 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 
-export interface IFloatingCTAProps {}
+export interface IFloatingCTAProps {
+  service: IServiceItem;
+}
 
-export const FloatingCTA = (props: IFloatingCTAProps) => {
+export const FloatingCTA = ({ service }: IFloatingCTAProps) => {
   const { show: showTrigger } = useFloatingCardTrigger("beneficios", "planos");
   const [show, setShow] = useState(false);
   const [collapse, setCollapse] = useState(false);
@@ -72,7 +75,7 @@ export const FloatingCTA = (props: IFloatingCTAProps) => {
                 whiteSpace="nowrap"
                 sx={{ pl: 1, pr: 2 }}
               >
-                R$129/mês
+                {service.detailsPage.floatingCtaMessage}
               </Typography>
             </Collapse>
 

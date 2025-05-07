@@ -7,6 +7,7 @@ export interface IServicePlan {
   price: number;
   included: string[];
   whatsappMessage?: string;
+  customPriceText?: string;
 }
 
 export interface IServiceItem {
@@ -39,5 +40,6 @@ export interface IServiceItem {
     };
     plans: IServicePlan[];
     plansMessage?: string;
+    floatingCtaMessage: string;
   };
 }

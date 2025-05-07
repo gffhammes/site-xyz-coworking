@@ -68,7 +68,7 @@ export default async function Servicos({
           <ReviewsSection />
         </Stack>
 
-        <FloatingCTA />
+        <FloatingCTA service={service} />
       </main>
     </div>
   );
