@@ -5,6 +5,7 @@ import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSect
 import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
 import { HomeHeroSection } from "@/components/Home/HomeHeroSection/HomeHeroSection";
 import { ServicesSection } from "@/components/Home/ServicesSection/ServicesSection";
+import { MapSection } from "@/components/MapSection/MapSection";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
             <PhraseSection />
           </Stack>
 
-          <Stack gap={20} sx={{ pb: { xs: 0, md: 20 } }}>
+          <Stack gap={20} sx={{ pb: { xs: 0, md: 0 } }}>
             <ServicesSection />
 
             <AdvantagesSection />
@@ -25,6 +26,8 @@ export default function Home() {
             <DifferentialSection />
 
             <ReviewsSection />
+
+            <MapSection />
           </Stack>
         </Stack>
       </main>

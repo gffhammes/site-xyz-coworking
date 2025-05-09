@@ -38,7 +38,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
         fontSize={{ xs: 12, md: 16 }}
         letterSpacing={1.3}
       >
-        O que você busca?
+        {servicesHeroSectionData.selectLabel}
       </Typography>
 
       <Box
@@ -77,52 +77,6 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
           );
         })}
       </Box>
-    </Stack>
-  );
-
-  return (
-    <Stack
-      width={align === "center" ? "100%" : "30rem"}
-      gap={4}
-      alignItems={align}
-    >
-      <Stack
-        gap={2}
-        width={align === "center" ? "100%" : "30rem"}
-        alignItems={align}
-      >
-        <Typography>O que você busca?</Typography>
-
-        <FormControl fullWidth>
-          <Select
-            value={String(value)}
-            onChange={handleChange}
-            sx={{
-              color: "primary.main",
-              ".MuiOutlinedInput-notchedOutline": {
-                borderColor: "primary.main",
-              },
-              "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                borderColor: "primary.main",
-              },
-              "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "primary.light",
-              },
-              ".MuiSvgIcon-root": {
-                color: "primary.main",
-              },
-            }}
-          >
-            {/* {servicesHeroSectionData.selectOptions.map((option, index) => (
-              <MenuItem value={index}>{option.label}</MenuItem>
-            ))} */}
-          </Select>
-        </FormControl>
-      </Stack>
-
-      <Button fullWidth={align === "center"} variant="contained">
-        {servicesHeroSectionData.buttonText}
-      </Button>
     </Stack>
   );
 };

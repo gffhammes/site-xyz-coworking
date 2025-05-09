@@ -8,127 +8,113 @@ import {
   Typography,
 } from "@mui/material";
 import { FooterMap } from "./FooterMap";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { getMainWhatsappLink } from "@/utils/utils";
+import { NavigationList } from "../common/NavigationList";
+import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
+import { socials } from "./Footer";
+import { FooterInfoTemplate } from "./FooterInfoTemplate";
 
 export interface IDesktopFooterProps {}
 
 export const DesktopFooter = (props: IDesktopFooterProps) => {
   return (
-    <Box
-      component="footer"
-      sx={{
-        backgroundColor: "#363636",
-        color: "white",
-      }}
-    >
+    <>
       <Box
         sx={{
           position: "relative",
-          zIndex: 9,
-          overflow: "hidden",
+          backgroundColor: "#363636",
+          height: "20svh",
           width: "100%",
         }}
       >
         <Box
           sx={{
-            background: "linear-gradient(0deg, #363636 80%,#ffffff 80%)",
+            height: "100%",
+            width: "100%",
+            backgroundColor: "white",
+            position: "absolute",
+            bottom: 0,
+            borderRadius: "0 0 20rem 20rem",
           }}
-        >
-          <Container>
-            <Stack direction="row" gap={4}>
-              <Stack gap={2} sx={{ pt: 20, pb: 10 }} alignItems="flex-start">
-                <Typography variant="h2" maxWidth="19ch" fontSize={16}>
-                  Venha conhecer o nosso espaço em Balneário Camboriú!
-                </Typography>
+        />
+      </Box>
 
-                <Chip
-                  component="a"
-                  href={getMainWhatsappLink(
-                    "Olá, vim pelo site e gostaria de agendar uma visita!"
-                  )}
-                  target="_blank"
-                  label="AGENDAR"
-                  color="primary"
-                  variant="outlined"
-                  icon={
-                    <Box
+      <Box component="footer">
+        <Box sx={{ backgroundColor: "#363636", color: "white" }}>
+          <Container sx={{ py: 10 }}>
+            <Stack gap={10}>
+              <Stack direction="row" alignItems="center" gap={10}>
+                <XYZLogoWithLink height="10rem" color="white" />
+
+                <Stack direction="row" gap={2}>
+                  {socials.map((social) => (
+                    <Stack
+                      key={social.name}
+                      component="a"
+                      href={social.href}
+                      target="_blank"
+                      alignItems="center"
+                      justifyContent="center"
                       sx={{
-                        fontSize: 18,
-                        height: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        pl: 0.5,
+                        fontSize: 32,
+                        height: "4rem",
+                        width: "4rem",
+                        borderRadius: "4rem",
+                        backgroundColor: "rgba(255, 255, 255, 0.2)",
                       }}
                     >
-                      <WhatsAppIcon fontSize="inherit" />
-                    </Box>
-                  }
-                  clickable
-                  sx={{
-                    fontWeight: 700,
-                  }}
-                />
+                      <social.icon fontSize="inherit" />
+                    </Stack>
+                  ))}
+                </Stack>
               </Stack>
 
-              <Box sx={{ position: "relative", flex: "1 1 100%" }}>
-                <Box
-                  sx={{
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    borderRadius: "2rem",
-                    overflow: "hidden",
-                    boxShadow: 10,
-                  }}
-                >
-                  <FooterMap />
-                </Box>
+              <Box
+                gap={8}
+                display="grid"
+                gridTemplateColumns={{
+                  xs: "1fr",
+                  sm: "1fr 1fr",
+                  lg: "auto auto auto auto",
+                }}
+                justifyContent="center"
+              >
+                <FooterInfoTemplate title="Mapa do Site">
+                  <NavigationList direction="column" gap={0.5} theme="dark" />
+                </FooterInfoTemplate>
+
+                <FooterInfoTemplate title="Horário de Funcionamento">
+                  <Typography>
+                    - Segunda à sexta das 8h às 22h
+                    <br />
+                    - Sábado das 8h às 13h
+                    <br />
+                    *Acesso 24h para clientes
+                  </Typography>
+                </FooterInfoTemplate>
+
+                <FooterInfoTemplate title="Endereço">
+                  <Typography>
+                    Rua 55 (Praça Higino Pio), n° 50 - Sala 01
+                    <br />
+                    Centro, Balneário Camboriú/SC
+                  </Typography>
+                </FooterInfoTemplate>
+
+                <FooterInfoTemplate title="Contato">
+                  <Typography>
+                    Telefone: (47) 3461-3100
+                    <br />
+                    WhatsApp: (47) 3032-1893
+                    <br />
+                    E-mail: atendimento@xyz.hubcommerce.com.br
+                  </Typography>
+                </FooterInfoTemplate>
               </Box>
             </Stack>
           </Container>
         </Box>
-
-        <Container sx={{ py: 10, backgroundColor: "#363636" }}>
-          <Stack gap={8} direction="row" justifyContent="center">
-            <Stack>
-              <Typography sx={titleSx}>Endereço</Typography>
-              <Typography>
-                Rua 55 (Praça Higino Pio), n° 50 - Sala 01
-                <br />
-                Centro, Balneário Camboriú/SC
-              </Typography>
-            </Stack>
-
-            <Stack>
-              <Typography sx={titleSx}>Horário de Funcionamento</Typography>
-              <Typography>
-                - Segunda à sexta das 8h às 22h
-                <br />
-                - Sábado das 8h às 13h
-                <br />
-                *Acesso 24h para clientes
-              </Typography>
-            </Stack>
-
-            <Stack>
-              <Typography sx={titleSx}>Contato</Typography>
-              <Typography>
-                Telefone: (47) 3461-3100
-                <br />
-                WhatsApp: (47) 3032-1893
-                <br />
-                E-mail: atendimento@xyz.hubcommerce.com.br
-              </Typography>
-            </Stack>
-          </Stack>
-        </Container>
       </Box>
-    </Box>
+    </>
   );
-};
-
-const titleSx: SxProps = {
-  fontWeight: 700,
-  fontSize: 20,
 };

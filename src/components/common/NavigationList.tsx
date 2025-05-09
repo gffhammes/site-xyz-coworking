@@ -9,12 +9,14 @@ export interface INavigationListProps {
   direction?: "row" | "column";
   theme?: "light" | "dark";
   onItemClick?: () => void;
+  gap?: number;
 }
 
 export const NavigationList = ({
   direction = "row",
   theme = "light",
   onItemClick,
+  gap = 4,
 }: INavigationListProps) => {
   const pathname = usePathname();
 
@@ -22,7 +24,7 @@ export const NavigationList = ({
     <Stack
       direction={direction}
       alignItems={direction === "row" ? "center" : "flex-start"}
-      gap={4}
+      gap={gap}
     >
       {pages
         .filter((page) => page.isActive)

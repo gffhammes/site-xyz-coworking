@@ -5,30 +5,12 @@ export interface IMobileReviewsSectionProps {}
 
 export const MobileReviewsSection = (props: IMobileReviewsSectionProps) => {
   return (
-    <Box
-      sx={{
-        position: "relative",
-
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          backgroundColor: "#ffffff",
-          height: "100%",
-          width: "100%",
-          top: 0,
-          left: 0,
-          zIndex: 0,
-        },
-      }}
-    >
+    <Box>
       <Stack
         gap={4}
         sx={{
-          borderRadius: "5rem 5rem 0 0",
-          backgroundColor: "#f4f4f4",
           position: "relative",
           zIndex: 9,
-          py: 10,
         }}
       >
         <Container sx={{ px: 6 }}>
