@@ -33,7 +33,7 @@ export const ServicesPageMobileServicesSection = (
                 key={item.title}
                 flex={{ xs: "0 0 100%", md: "0 0 20rem" }}
                 height="100%"
-                id={item.target}
+                id={item.slug}
                 sx={{ scrollMarginTop: "10svh" }}
               >
                 <ServicesPageServiceCard serviceData={item} />

@@ -11,7 +11,7 @@ export const salasPrivativas: IServiceItem = {
   description:
     "Garanta total privacidade e uma estrutura sofisticada para o seu trabalho. Um espaço exclusivo para você, com a credibilidade que seu negócio precisa, ideal para empreendedores e empresas que buscam profissionalismo.",
   image: salaImg.src,
-  target: "salas-privativas",
+  slug: "salas-privativas",
   heroText: "Uma sala privativa<br/>para meu negócio",
   homeCard: {
     title: "Salas Privativas",

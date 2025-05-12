@@ -11,7 +11,7 @@ export const enderecoFiscal: IServiceItem = {
   description:
     "Formalize sua empresa com um endereço de prestígio em Balneário Camboriú, sem custos elevados. Ideal para empresas em início e negócios digitais que buscam credibilidade e presença no mercado.",
   image: enderecoImg.src,
-  target: "endereco-fiscal-e-comercial",
+  slug: "endereco-fiscal-e-comercial",
   heroText: "Um endereço para<br/>minha empresa",
   homeCard: {
     title: "Endereço Fiscal",

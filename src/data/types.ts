@@ -15,7 +15,7 @@ export interface IServiceItem {
   seoTitle: string;
   description: string;
   image: string;
-  target: string;
+  slug: string;
   heroText: string;
   homeCard: {
     title: string;

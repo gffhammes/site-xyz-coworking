@@ -3,6 +3,7 @@ import { XYZLogoWithLink } from "../XYZLogoWithLink";
 import { NavigationList } from "../NavigationList";
 import { ReactElement } from "react";
 import Image from "next/image";
+import { DesktopMenu } from "../Menu/DesktopMenu";
 
 export interface IDesktopHeroSectionTemplateProps {
   content: ReactElement;
@@ -33,7 +34,7 @@ export const DesktopHeroSectionTemplate = ({
               <Stack direction="row" justifyContent="space-between">
                 <XYZLogoWithLink width="5rem" color="white" />
 
-                <NavigationList theme="dark" />
+                <DesktopMenu theme="dark" />
               </Stack>
 
               {content}
@@ -59,7 +60,7 @@ export const DesktopHeroSectionTemplate = ({
             position: "absolute",
             top: 0,
             left: 0,
-            background: "linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8))",
+            background: "linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.8))",
             zIndex: 1,
             mixBlendMode: "hard-light",
           }}

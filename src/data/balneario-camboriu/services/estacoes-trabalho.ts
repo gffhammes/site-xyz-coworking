@@ -11,7 +11,7 @@ export const estacoesTrabalho: IServiceItem = {
   description:
     "Ambientes dinâmicos e inspiradores para quem busca flexibilidade e produtividade, com infraestrutura de alto padrão para freelancers e pequenas empresas.",
   image: estacoesImg.src,
-  target: "estacoes-trabalho",
+  slug: "estacoes-trabalho",
   heroText: "Uma estação de<br/>trabalho compartilhada",
   homeCard: {
     title: "Estações de Trabalho",

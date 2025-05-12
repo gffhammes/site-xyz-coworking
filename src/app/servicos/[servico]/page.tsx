@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { servico } = await params;
 
   const service = balnearioData.services.find(
-    (service) => service.target === servico
+    (service) => service.slug === servico
   );
 
   if (!service) return {};
@@ -44,7 +44,7 @@ export default async function Servicos({
   const { servico } = await params;
 
   const service = balnearioData.services.find(
-    (service) => service.target === servico
+    (service) => service.slug === servico
   );
 
   if (!service) return notFound();
@@ -76,7 +76,7 @@ export default async function Servicos({
 
 export async function generateStaticParams() {
   return balnearioData.services.map((service) => ({
-    servico: service.target,
+    servico: service.slug,
   }));
 }
 

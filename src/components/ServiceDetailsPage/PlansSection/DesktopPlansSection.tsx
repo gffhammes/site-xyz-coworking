@@ -43,8 +43,8 @@ export const DesktopPlansSection = ({ service }: IDesktopPlansSectionProps) => {
             </Stack>
 
             {plansMessage && (
-              <Typography color="secondary" textAlign="center" lineHeight={1}>
-                {parse(plansMessage.replaceAll("<br />", " "))}
+              <Typography color="secondary" textAlign="right" lineHeight={1}>
+                {parse(plansMessage)}
               </Typography>
             )}
           </Stack>

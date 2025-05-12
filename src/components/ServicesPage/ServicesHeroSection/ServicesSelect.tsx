@@ -52,7 +52,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
         {balnearioData.services.map((option) => {
           return (
             <Stack
-              key={option.target}
+              key={option.slug}
               alignItems="center"
               justifyContent="center"
               sx={{
@@ -68,7 +68,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
                 },
               }}
               component={Link}
-              href={`/servicos/${option.target}`}
+              href={`/servicos/${option.slug}`}
             >
               <Typography textAlign="center" fontSize={{ xs: 14, md: 16 }}>
                 {parse(option.heroText)}

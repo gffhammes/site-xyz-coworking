@@ -24,7 +24,7 @@ export const ServicesPageServiceCard = ({
         height: "100%",
       }}
       component={Link}
-      href={`/servicos/${serviceData.target}`}
+      href={`/servicos/${serviceData.slug}`}
     >
       <Stack
         alignItems="flex-start"

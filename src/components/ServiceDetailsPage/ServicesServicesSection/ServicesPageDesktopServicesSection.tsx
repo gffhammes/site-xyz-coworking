@@ -35,7 +35,7 @@ export const ServicesPageDesktopServicesSection = (
           <Box display="grid" gridTemplateColumns="1fr" gap={4}>
             {balnearioData.services.map((item, index) => (
               <Box key={item.title}>
-                <DesktopServiceCard serviceData={item} key={item.target} />
+                <DesktopServiceCard serviceData={item} key={item.slug} />
               </Box>
             ))}
           </Box>

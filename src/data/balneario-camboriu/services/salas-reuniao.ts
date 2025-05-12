@@ -11,7 +11,7 @@ export const salasReuniao: IServiceItem = {
   description:
     "Ambientes projetados para causar impacto, com tecnologia e conforto, perfeitos para decisões importantes e reuniões de alto nível. Ideal para empresas e profissionais que buscam um local estratégico para fechar negócios.",
   image: reunioesImg.src,
-  target: "salas-reuniao",
+  slug: "salas-reuniao",
   heroText: "Uma sala para<br/>reunião de negócios",
   homeCard: {
     title: "Reserva de Sala",
