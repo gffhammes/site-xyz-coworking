@@ -10,8 +10,13 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
     <Box sx={{ mb: -10 }}>
       <Stack gap={4}>
         <Container>
-          <Stack gap={2} alignItems="flex-start">
-            <Typography variant="h2" maxWidth="25ch" fontSize={16}>
+          <Stack gap={2} alignItems="center">
+            <Typography
+              textAlign="center"
+              variant="h2"
+              maxWidth="25ch"
+              fontSize={16}
+            >
               Venha conhecer o nosso espaço em Balneário Camboriú!
             </Typography>
 

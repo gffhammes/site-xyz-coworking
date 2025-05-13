@@ -1,5 +1,4 @@
-import { ResponsiveComponent } from "@/components/common/ResponsiveComponent";
-import heroBg from "../../../../public/images/business-people-office-break.jpg";
+import heroBg from "../../../../public/images/servicos.webp";
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { ServicesSelect } from "./ServicesSelect";

@@ -1,6 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import image1 from "../../../../public/images/bc1.jpeg";
-import image2 from "../../../../public/images/bc2.jpeg";
+import image2 from "../../../../public/images/bc2.webp";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 
 export interface IPhraseSectionProps {}
@@ -27,13 +27,6 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
               },
             }}
           />
-
-          <WhatsappLinkButton
-            variant="contained"
-            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-          >
-            agendar visita
-          </WhatsappLinkButton>
         </Stack>
       </Container>
 
@@ -41,7 +34,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
         sx={{
           width: "100%",
           position: "relative",
-          mt: -2,
+          mt: { xs: 0, md: -2 },
           overflow: "hidden",
           height: image1Size,
         }}
@@ -74,12 +67,28 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           }}
         ></Box>
       </Box>
+
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mt: { xs: -5, md: -10 },
+        }}
+      >
+        <WhatsappLinkButton
+          variant="contained"
+          color="secondary"
+          customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+        >
+          agendar visita
+        </WhatsappLinkButton>
+      </Container>
     </Box>
   );
 };
 
-const image1Size = { xs: "17rem", md: "35rem" };
-const image2Size = { xs: "15rem", md: "30rem" };
+const image1Size = { xs: "17rem", md: "27rem" };
+const image2Size = { xs: "15rem", md: "22rem" };
 
 const data = {
   text: "Aqui, seu trabalho<br/><strong>atinge outro nível</strong>",

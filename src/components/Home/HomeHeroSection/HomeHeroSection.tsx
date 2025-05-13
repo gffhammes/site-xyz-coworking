@@ -1,7 +1,6 @@
-import heroBg from "../../../../public/images/hero.jpg";
+import heroBg from "../../../../public/images/home-hero.webp";
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
-import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
-import { Button, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { HomeHeroSectionButtons } from "./HomeHeroSectionButtons";
 
 export interface IHomeHeroSectionProps {}

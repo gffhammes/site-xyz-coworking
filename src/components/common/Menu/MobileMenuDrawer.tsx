@@ -1,6 +1,7 @@
 import { Box, Container, Drawer, IconButton, Stack } from "@mui/material";
 import { NavigationList } from "../NavigationList";
 import CloseIcon from "@mui/icons-material/Close";
+import { MenuCTA } from "./MenuCTA";
 
 export interface IMobileMenuDrawerProps {
   isOpen: boolean;
@@ -24,7 +25,10 @@ export const MobileMenuDrawer = ({
             <CloseIcon />
           </IconButton>
         </Box>
+
         <NavigationList direction="column" onItemClick={handleClose} />
+
+        <MenuCTA theme="light" />
       </Stack>
     </Drawer>
   );

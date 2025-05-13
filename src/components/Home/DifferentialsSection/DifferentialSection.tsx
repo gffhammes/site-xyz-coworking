@@ -1,17 +1,16 @@
 "use client";
 
-import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { DifferentialSlide } from "./DifferentialSlide";
-import { CarouselDots } from "./CarouselDots";
 import { DifferentialImage } from "./DifferentialImage";
 import { CarouselControls } from "./CarouselControls";
 
-import image1 from "../../../../public/images/rearview-businesswoman-enjoying-her-great-results.jpg";
-import image4 from "../../../../public/images/group-friends-having-lunch-together-restaurant.jpg";
-import image3 from "../../../../public/images/medium-shot-smiley-colleagues-job.jpg";
-import image2 from "../../../../public/images/business-people-office-break.jpg";
+import image1 from "../../../../public/images/endereco-estrategico.webp";
+import image2 from "../../../../public/images/infraestrutura.webp";
+import image3 from "../../../../public/images/medium-shot-smiley-colleagues-job.webp";
+import image4 from "../../../../public/images/servicos.webp";
 
 export interface IDifferentialSectionProps {}
 

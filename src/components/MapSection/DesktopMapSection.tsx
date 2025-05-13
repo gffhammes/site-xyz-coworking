@@ -52,7 +52,6 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
             sx={{
               position: "relative",
               flex: "1 1 100%",
-              zIndex: 999,
             }}
           >
             <Box

@@ -1,5 +1,5 @@
 import { IServiceItem } from "@/data/types";
-import reunioesImg from "../../../../public/images/reuniao.jpg";
+import reunioesImg from "../../../../public/images/sala-reuniao.webp";
 import TvIcon from "@mui/icons-material/Tv";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import GroupsIcon from "@mui/icons-material/Groups";
