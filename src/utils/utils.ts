@@ -27,8 +27,9 @@ export const validateEmail = (email: string) => {
     );
 };
 
-export const getMainWhatsappLink = (customText?: string) => {
+export const getWhatsappLink = (customText?: string) => {
   const phone = balnearioData.contact.whatsappNumber;
+
   const text =
     customText ??
     "Olá! Vim pelo site e gostaria de mais informações sobre o XYZ Coworking.";
@@ -38,4 +39,27 @@ export const getMainWhatsappLink = (customText?: string) => {
   return link;
 };
 
-export const mainWhatsappLink = getMainWhatsappLink();
+export const whatsappLink = getWhatsappLink();
+
+export const getFormattedPhoneNumber = (phoneNumber: string) => {
+  const digits = phoneNumber.replace(/\D/g, "");
+
+  const localNumber = digits.startsWith("55") ? digits.slice(2) : digits;
+
+  const prefixCut = digits.length === 12 ? 6 : 7;
+
+  // Extrai DDD, prefixo e sufixo
+  const ddd = localNumber.slice(0, 2);
+  const prefix = localNumber.slice(2, prefixCut);
+  const suffix = localNumber.slice(prefixCut, 11);
+
+  return `(${ddd}) ${prefix}-${suffix}`;
+};
+
+export const formattedPhoneNumber = getFormattedPhoneNumber(
+  balnearioData.contact.phoneNumber
+);
+
+export const formattedWhatsApp = getFormattedPhoneNumber(
+  balnearioData.contact.whatsappNumber
+);

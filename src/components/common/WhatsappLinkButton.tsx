@@ -1,4 +1,4 @@
-import { getMainWhatsappLink, mainWhatsappLink } from "@/utils/utils";
+import { getWhatsappLink, whatsappLink } from "@/utils/utils";
 import { Button, ButtonProps } from "@mui/material";
 import Link from "next/link";
 
@@ -11,8 +11,8 @@ export const WhatsappLinkButton = ({
   ...props
 }: IWhatsappLinkButtonProps) => {
   const buttonHref = customMessage
-    ? getMainWhatsappLink(customMessage)
-    : mainWhatsappLink;
+    ? getWhatsappLink(customMessage)
+    : whatsappLink;
 
   return (
     <a href={buttonHref} target="_blank">

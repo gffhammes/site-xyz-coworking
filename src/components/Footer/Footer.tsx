@@ -5,7 +5,7 @@ import { MobileFooter } from "./MobileFooter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { mainWhatsappLink } from "@/utils/utils";
+import { whatsappLink } from "@/utils/utils";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 
@@ -31,7 +31,7 @@ export const socials = [
   {
     icon: WhatsAppIcon,
     name: "WhatsApp",
-    href: mainWhatsappLink,
+    href: whatsappLink,
   },
   {
     icon: InstagramIcon,

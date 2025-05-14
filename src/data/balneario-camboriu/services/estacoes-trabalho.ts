@@ -4,6 +4,7 @@ import SensorOccupiedIcon from "@mui/icons-material/SensorOccupied";
 import WorkIcon from "@mui/icons-material/Work";
 import HubIcon from "@mui/icons-material/Hub";
 import WifiIcon from "@mui/icons-material/Wifi";
+import { membroX } from "./membro-x";
 
 export const estacoesTrabalho: IServiceItem = {
   title: "Estações de Trabalho",
@@ -73,6 +74,9 @@ export const estacoesTrabalho: IServiceItem = {
           "Olá! Vim pelo site e gostaria de reservar uma estação de trabalho.",
       },
     ],
+    plansMessage:
+      "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
+    plansMessageTarget: membroX.slug,
     floatingCtaMessage: "R$120/dia",
   },
 };

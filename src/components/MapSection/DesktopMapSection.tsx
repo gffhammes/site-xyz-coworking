@@ -1,6 +1,6 @@
 import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import { FooterMap } from "../Footer/FooterMap";
-import { getMainWhatsappLink } from "@/utils/utils";
+import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export interface IDesktopMapSectionProps {}
@@ -22,7 +22,7 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
 
             <Chip
               component="a"
-              href={getMainWhatsappLink(
+              href={getWhatsappLink(
                 "Olá, vim pelo site e gostaria de agendar uma visita!"
               )}
               target="_blank"

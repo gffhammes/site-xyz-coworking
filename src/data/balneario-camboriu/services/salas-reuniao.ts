@@ -4,6 +4,7 @@ import TvIcon from "@mui/icons-material/Tv";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import GroupsIcon from "@mui/icons-material/Groups";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
+import { membroX } from "./membro-x";
 
 export const salasReuniao: IServiceItem = {
   title: "Salas de Reunião",
@@ -84,6 +85,9 @@ export const salasReuniao: IServiceItem = {
           "Olá! Vim pelo site e gostaria de reservar uma diária em uma sala de reunião.",
       },
     ],
+    plansMessage:
+      "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
     floatingCtaMessage: "R$500/período",
+    plansMessageTarget: membroX.slug,
   },
 };

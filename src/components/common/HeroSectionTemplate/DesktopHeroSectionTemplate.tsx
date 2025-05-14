@@ -66,7 +66,14 @@ export const DesktopHeroSectionTemplate = ({
           }}
         />
 
-        <Image fill src={bgImage} alt="Hero" objectFit="cover" priority />
+        <Image
+          fill
+          src={bgImage}
+          alt="Hero"
+          objectFit="cover"
+          priority
+          unoptimized
+        />
       </Box>
 
       <Box

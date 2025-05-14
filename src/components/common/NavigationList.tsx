@@ -70,7 +70,7 @@ export interface IPage {
   openInNewTab?: boolean;
 }
 
-export const pages = [
+export const pages: IPage[] = [
   {
     name: "Home",
     target: "/",
@@ -81,12 +81,12 @@ export const pages = [
     target: "/servicos",
     isActive: true,
   },
-  {
-    name: "Blog",
-    target: "https://bc.xyzcoworking.com/blog/",
-    isActive: true,
-    openInNewTab: true,
-  },
+  // {
+  //   name: "Blog",
+  //   target: "https://bc.xyzcoworking.com/blog/",
+  //   isActive: true,
+  //   openInNewTab: true,
+  // },
   {
     name: "Contato",
     target: "/contato",

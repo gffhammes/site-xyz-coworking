@@ -6,13 +6,14 @@ import { PlanPeriodSelector } from "./PlanPeriodSelector";
 import { PlanCard } from "./PlanCard";
 import parse from "html-react-parser";
 import { IServiceItem } from "@/data/types";
+import Link from "next/link";
 
 export interface IDesktopPlansSectionProps {
   service: IServiceItem;
 }
 
 export const DesktopPlansSection = ({ service }: IDesktopPlansSectionProps) => {
-  const { plans, plansMessage } = service.detailsPage;
+  const { plans, plansMessage, plansMessageTarget } = service.detailsPage;
 
   const [selectedPlan, setSelectedPlan] = useState<number>(0);
 
@@ -20,7 +21,12 @@ export const DesktopPlansSection = ({ service }: IDesktopPlansSectionProps) => {
     <Box>
       <Container maxWidth={false} sx={{ maxWidth: 450 }}>
         <Stack gap={4}>
-          <Stack alignItems="flex-end" gap={2}>
+          <Stack
+            gap={2}
+            alignItems={
+              service.detailsPage.plans.length === 1 ? "center" : "flex-end"
+            }
+          >
             <Stack
               direction="row"
               justifyContent={
@@ -43,7 +49,15 @@ export const DesktopPlansSection = ({ service }: IDesktopPlansSectionProps) => {
             </Stack>
 
             {plansMessage && (
-              <Typography color="secondary" textAlign="right" lineHeight={1}>
+              <Typography
+                color="secondary"
+                lineHeight={1}
+                textAlign={
+                  service.detailsPage.plans.length === 1 ? "center" : "right"
+                }
+                component={plansMessageTarget ? Link : "span"}
+                href={plansMessageTarget}
+              >
                 {parse(plansMessage)}
               </Typography>
             )}

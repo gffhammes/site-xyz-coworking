@@ -4,6 +4,7 @@ import MedicalInformationIcon from "@mui/icons-material/MedicalInformation";
 import DomainVerificationIcon from "@mui/icons-material/DomainVerification";
 import Groups2Icon from "@mui/icons-material/Groups2";
 import WifiIcon from "@mui/icons-material/Wifi";
+import { membroX } from "./membro-x";
 
 export const salasAtendimento: IServiceItem = {
   title: "Salas de Atendimento",
@@ -104,5 +105,6 @@ export const salasAtendimento: IServiceItem = {
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
     floatingCtaMessage: "R$100/hora",
+    plansMessageTarget: membroX.slug,
   },
 };

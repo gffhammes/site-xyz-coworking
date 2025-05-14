@@ -40,6 +40,7 @@ export interface IServiceItem {
     };
     plans: IServicePlan[];
     plansMessage?: string;
+    plansMessageTarget?: string;
     floatingCtaMessage: string;
   };
 }

@@ -2,6 +2,8 @@ import { Box, Container, Stack, SxProps, Typography } from "@mui/material";
 import { NavigationList } from "../common/NavigationList";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
 import { socials } from "./Footer";
+import { FooterInfoTemplate } from "./FooterInfoTemplate";
+import { FooterInfos } from "./FooterInfos";
 
 export interface IMobileFooterProps {}
 
@@ -71,42 +73,7 @@ export const MobileFooter = (props: IMobileFooterProps) => {
               </Stack>
 
               <Stack gap={4}>
-                <Stack>
-                  <Typography sx={titleSx}>Endereço</Typography>
-                  <Typography>
-                    Rua 55 (Praça Higino Pio), n° 50 - Sala 01
-                    <br />
-                    Centro, Balneário Camboriú/SC
-                  </Typography>
-                </Stack>
-
-                <Stack>
-                  <Typography sx={titleSx}>Horário de Funcionamento</Typography>
-                  <Typography>
-                    - Segunda à sexta das 8h às 22h
-                    <br />
-                    - Sábado das 8h às 13h
-                    <br />
-                    *Acesso 24h para clientes
-                  </Typography>
-                </Stack>
-
-                <Stack>
-                  <Typography sx={titleSx}>Contato</Typography>
-                  <Typography>
-                    Telefone: (47) 3461-3100
-                    <br />
-                    WhatsApp: (47) 3032-1893
-                    <br />
-                    E-mail: atendimento@xyz.hubcommerce.com.br
-                  </Typography>
-                </Stack>
-
-                <Stack>
-                  <Typography sx={titleSx}>Mapa do Site</Typography>
-
-                  <NavigationList direction="column" gap={0.5} theme="dark" />
-                </Stack>
+                <FooterInfos />
               </Stack>
             </Stack>
           </Container>
