@@ -2,6 +2,7 @@ import { Box, IconButton, Stack } from "@mui/material";
 import { CarouselDots } from "./CarouselDots";
 import SouthIcon from "@mui/icons-material/South";
 import NorthIcon from "@mui/icons-material/North";
+import { mdCircleSize, xsCircleSize } from "./DifferentialSection";
 
 export interface ICarouselControlsProps {
   scrollPrev: () => void;
@@ -19,32 +20,63 @@ export const CarouselControls = ({
   scrollTo,
 }: ICarouselControlsProps) => {
   return (
-    <Box sx={{ color: "primary.main" }}>
-      <IconButton
-        sx={{
-          position: "absolute",
-          top: "2rem",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-        onClick={() => scrollPrev()}
-        color="inherit"
-      >
-        <NorthIcon />
-      </IconButton>
+    <Box
+      sx={{
+        color: "primary.main",
 
-      <IconButton
-        sx={{
-          position: "absolute",
-          bottom: "2rem",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-        onClick={() => scrollNext()}
-        color="inherit"
+        height: { xs: xsCircleSize, md: mdCircleSize },
+        width: { xs: xsCircleSize, md: mdCircleSize },
+        borderRadius: { xs: xsCircleSize, md: mdCircleSize },
+        position: "absolute",
+        overflow: "hidden",
+      }}
+    >
+      <Stack
+        alignItems="center"
+        sx={{ position: "absolute", top: 0, height: "100%", width: "100%" }}
       >
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            height: "10rem",
+            width: "100%",
+            cursor: "pointer",
+            transition: ".5s ease all",
+            background:
+              "linear-gradient(rgba(240, 181, 43, 0.4),rgba(240, 181, 43, 0))",
+            opacity: 0,
+
+            "&:hover": {
+              opacity: 1,
+            },
+          }}
+          onClick={() => scrollPrev()}
+        />
+
+        <NorthIcon />
+
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            height: "10rem",
+            width: "100%",
+            cursor: "pointer",
+            transition: ".5s ease all",
+            background:
+              "linear-gradient(0deg, rgba(240, 181, 43, 0.4),rgba(240, 181, 43, 0))",
+            opacity: 0,
+
+            "&:hover": {
+              opacity: 1,
+            },
+          }}
+          onClick={() => scrollNext()}
+        />
+
         <SouthIcon />
-      </IconButton>
+      </Stack>
 
       <CarouselDots
         scrollSnaps={scrollSnaps}
@@ -52,18 +84,5 @@ export const CarouselControls = ({
         scrollTo={scrollTo}
       />
     </Box>
-
-    // <Stack
-    //   sx={{
-    //     position: "absolute",
-    //     top: 0,
-    //     left: "50%",
-    //     zIndex: 1,
-    //     pointerEvents: "all",
-    //   }}
-    //   alignItems="center"
-    // >
-
-    // </Stack>
   );
 };
