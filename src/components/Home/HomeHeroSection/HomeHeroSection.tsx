@@ -86,7 +86,6 @@ const subtitleAnimateProps: IAnimateProps = {
   transition: {
     duration: 1,
     type: "spring",
-    delay: 0.25,
   },
 };
 
@@ -96,7 +95,7 @@ const buttonsAnimateProps: IAnimateProps = {
   transition: {
     duration: 1,
     type: "spring",
-    delay: 0.5,
+    delay: 0.25,
   },
   style: {
     width: "100%",
