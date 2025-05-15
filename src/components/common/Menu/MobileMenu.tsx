@@ -20,7 +20,12 @@ export const MobileMenu = ({
   return (
     <>
       <Box sx={{ m: "-5px", color }}>
-        <IconButton size="small" onClick={handleOpen} color="inherit">
+        <IconButton
+          size="small"
+          onClick={handleOpen}
+          color="inherit"
+          aria-label="Menu"
+        >
           <MenuIcon />
         </IconButton>
       </Box>

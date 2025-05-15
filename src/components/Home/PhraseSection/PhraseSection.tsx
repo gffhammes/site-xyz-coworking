@@ -97,13 +97,20 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           mt: { xs: -5, md: -10 },
         }}
       >
-        <WhatsappLinkButton
-          variant="contained"
-          color="secondary"
-          customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+        <Animate
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30%" }}
+          transition={{ duration: 1, type: "spring" }}
         >
-          agendar visita
-        </WhatsappLinkButton>
+          <WhatsappLinkButton
+            variant="contained"
+            // color="secondary"
+            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+          >
+            agendar visita
+          </WhatsappLinkButton>
+        </Animate>
       </Container>
     </Box>
   );

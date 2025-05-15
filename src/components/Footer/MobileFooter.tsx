@@ -65,6 +65,7 @@ export const MobileFooter = (props: IMobileFooterProps) => {
                         borderRadius: "4rem",
                         backgroundColor: "rgba(255, 255, 255, 0.2)",
                       }}
+                      aria-label={`Acesse nosso ${social.name}`}
                     >
                       <social.icon fontSize="inherit" />
                     </Stack>

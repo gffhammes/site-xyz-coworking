@@ -59,13 +59,14 @@ export const DifferentialSlide = forwardRef(function Slide(
           {parse(selectedItem.description)}
         </Typography>
 
-        <WhatsappLinkButton
-          variant="contained"
-          customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-          sx={{ mt: 2 }}
-        >
-          agendar visita
-        </WhatsappLinkButton>
+        <Box sx={{ pt: 2 }}>
+          <WhatsappLinkButton
+            variant="contained"
+            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+          >
+            agendar visita
+          </WhatsappLinkButton>
+        </Box>
       </Stack>
     </Stack>
   );

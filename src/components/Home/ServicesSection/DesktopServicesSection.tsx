@@ -53,7 +53,10 @@ export const DesktopServicesSection = (props: IDesktopServicesSectionProps) => {
                   initial={{ opacity: 0, x: -20 }}
                   transition={{ duration: 2, type: "spring" }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-30%" }}
+                  viewport={{
+                    once: true,
+                    margin: index === 0 ? "-50%" : "-30%",
+                  }}
                 >
                   <DesktopServiceCard serviceData={item} />
                 </Animate>

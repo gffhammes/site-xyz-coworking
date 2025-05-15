@@ -48,6 +48,9 @@ const theme = createTheme({
           fontSize: 16,
           lineHeight: 1,
         },
+        containedSecondary: {
+          color: "black",
+        },
         outlined: {
           borderRadius: "40rem",
           padding: "1rem 1.75rem",

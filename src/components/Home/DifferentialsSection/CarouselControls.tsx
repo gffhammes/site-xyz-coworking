@@ -29,6 +29,7 @@ export const CarouselControls = ({
         }}
         onClick={() => scrollPrev()}
         color="inherit"
+        aria-label="slide anterior"
       >
         <NorthIcon />
       </IconButton>
@@ -42,6 +43,7 @@ export const CarouselControls = ({
         }}
         onClick={() => scrollNext()}
         color="inherit"
+        aria-label="próximo slide"
       >
         <SouthIcon />
       </IconButton>
@@ -52,18 +54,5 @@ export const CarouselControls = ({
         scrollTo={scrollTo}
       />
     </Box>
-
-    // <Stack
-    //   sx={{
-    //     position: "absolute",
-    //     top: 0,
-    //     left: "50%",
-    //     zIndex: 1,
-    //     pointerEvents: "all",
-    //   }}
-    //   alignItems="center"
-    // >
-
-    // </Stack>
   );
 };
