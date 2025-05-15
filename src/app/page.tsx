@@ -1,11 +1,35 @@
 import { PhraseSection } from "@/components/Home/PhraseSection/PhraseSection";
 import { Stack } from "@mui/material";
-import { DifferentialSection } from "@/components/Home/DifferentialsSection/DifferentialSection";
-import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
-import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
 import { HomeHeroSection } from "@/components/Home/HomeHeroSection/HomeHeroSection";
-import { ServicesSection } from "@/components/Home/ServicesSection/ServicesSection";
-import { MapSection } from "@/components/MapSection/MapSection";
+import dynamic from "next/dynamic";
+
+const DynamicServicesSection = dynamic(() =>
+  import("../components/Home/ServicesSection/ServicesSection").then(
+    (mod) => mod.ServicesSection
+  )
+);
+
+const DynamicAdvantagesSection = dynamic(() =>
+  import("../components/AdvantagesSection/AdvantagesSection").then(
+    (mod) => mod.AdvantagesSection
+  )
+);
+
+const DynamicDifferentialsSection = dynamic(() =>
+  import("../components/Home/DifferentialsSection/DifferentialSection").then(
+    (mod) => mod.DifferentialSection
+  )
+);
+
+const DynamicReviewsSection = dynamic(() =>
+  import("../components/ReviewsSection/ReviewsSection").then(
+    (mod) => mod.ReviewsSection
+  )
+);
+
+const DynamicMapSection = dynamic(() =>
+  import("../components/MapSection/MapSection").then((mod) => mod.MapSection)
+);
 
 export default function Home() {
   return (
@@ -19,15 +43,15 @@ export default function Home() {
           </Stack>
 
           <Stack gap={20} sx={{ pb: { xs: 0, md: 0 } }}>
-            <ServicesSection />
+            <DynamicServicesSection />
 
-            <AdvantagesSection />
+            <DynamicAdvantagesSection />
 
-            <DifferentialSection />
+            <DynamicDifferentialsSection />
 
-            <ReviewsSection />
+            <DynamicReviewsSection />
 
-            <MapSection />
+            <DynamicMapSection />
           </Stack>
         </Stack>
       </main>
