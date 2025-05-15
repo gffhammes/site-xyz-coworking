@@ -10,6 +10,7 @@ export const FooterMap = (props: IFooterMapProps) => {
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
       id="Mapa"
+      title="Mapa"
     ></iframe>
   );
 };
