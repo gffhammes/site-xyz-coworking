@@ -9,6 +9,7 @@ import {
 import { Carousel } from "../Carousel/Carousel";
 import { reviewsSectionData } from "./ReviewsSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { Animate } from "../common/Animate";
 
 export interface IDesktopReviewsSectionProps {}
 
@@ -50,40 +51,67 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
                   ...borderToUse(),
                 }}
               >
-                {index === 0 ? (
-                  <Stack
-                    alignItems="center"
-                    justifyContent="center"
-                    height="100%"
-                  >
-                    <Typography variant="h2">
-                      {reviewsSectionData.h2}
-                    </Typography>
-                  </Stack>
-                ) : (
-                  <>
-                    <Rating value={item.rating} readOnly />
+                <Animate
+                  initial={{ opacity: 0 }}
+                  transition={{
+                    duration: 1,
+                    type: "spring",
+                    delay: index * 0.25,
+                  }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{
+                    once: true,
+                    margin:
+                      index === 0 || index === 1 || index === 2
+                        ? "-30%"
+                        : "-10%",
+                  }}
+                  style={{ height: "100%" }}
+                >
+                  {index === 0 ? (
+                    <Stack
+                      alignItems="center"
+                      justifyContent="center"
+                      height="100%"
+                    >
+                      <Typography variant="h2">
+                        {reviewsSectionData.h2}
+                      </Typography>
+                    </Stack>
+                  ) : (
+                    <>
+                      <Rating value={item.rating} readOnly />
 
-                    <Typography fontWeight={700} fontSize={20}>
-                      {item.name}
-                    </Typography>
+                      <Typography fontWeight={700} fontSize={20}>
+                        {item.name}
+                      </Typography>
 
-                    <Typography className="ellipsis">{item.review}</Typography>
-                  </>
-                )}
+                      <Typography className="ellipsis">
+                        {item.review}
+                      </Typography>
+                    </>
+                  )}
+                </Animate>
               </Box>
             );
           })}
         </Box>
 
-        <WhatsappLinkButton
-          color="secondary"
-          variant="contained"
-          customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-          sx={{ mt: 2 }}
+        <Animate
+          initial={{ opacity: 0, y: 10 }}
+          transition={{ duration: 1, type: "spring" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30%" }}
         >
-          QUERO TRABALHAR NO MELHOR COWORKING DE BC
-        </WhatsappLinkButton>
+          <WhatsappLinkButton
+            color="secondary"
+            variant="contained"
+            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+            sx={{ mt: 2 }}
+          >
+            Quero trabalhar em um ambiente feito para crescer
+          </WhatsappLinkButton>
+        </Animate>
       </Stack>
     </Container>
   );

@@ -1,7 +1,3 @@
-import { Box, Chip, Container, Stack, Typography } from "@mui/material";
-import { FooterMap } from "../Footer/FooterMap";
-import { getWhatsappLink } from "@/utils/utils";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { ResponsiveComponent } from "../common/ResponsiveComponent";
 import { MobileMapSection } from "./MobileMapSection";
 import { DesktopMapSection } from "./DesktopMapSection";

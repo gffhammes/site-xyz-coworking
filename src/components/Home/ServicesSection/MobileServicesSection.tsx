@@ -49,7 +49,7 @@ export const MobileServicesSection = (props: IMobileServicesSectionProps) => {
 
         <Animate
           initial={{ opacity: 0, y: 10 }}
-          transition={{ duration: 3, type: "spring" }}
+          transition={{ duration: 2, type: "spring" }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-30%" }}
         >

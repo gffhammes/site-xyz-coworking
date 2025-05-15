@@ -2,6 +2,8 @@ import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import { FooterMap } from "../Footer/FooterMap";
 import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Animate } from "../common/Animate";
+import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 
 export interface IDesktopMapSectionProps {}
 
@@ -16,36 +18,32 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
             alignItems="flex-start"
             flex={"0 0 30rem"}
           >
-            <Typography variant="h2" maxWidth="25ch" fontSize={16}>
-              Venha conhecer o nosso espaço em Balneário Camboriú!
-            </Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography variant="h2" maxWidth="25ch" fontSize={16}>
+                Venha conhecer o nosso espaço em Balneário Camboriú!
+              </Typography>
+            </Animate>
 
-            <Chip
-              component="a"
-              href={getWhatsappLink(
-                "Olá, vim pelo site e gostaria de agendar uma visita!"
-              )}
-              target="_blank"
-              label="AGENDAR"
-              color="primary"
-              icon={
-                <Box
-                  sx={{
-                    fontSize: 18,
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    pl: 0.5,
-                  }}
-                >
-                  <WhatsAppIcon fontSize="inherit" />
-                </Box>
-              }
-              clickable
-              sx={{
-                fontWeight: 700,
-              }}
-            />
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+              style={{ width: "100%" }}
+            >
+              <WhatsappLinkButton
+                variant="contained"
+                startIcon={<WhatsAppIcon fontSize="inherit" />}
+                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              >
+                agendar
+              </WhatsappLinkButton>
+            </Animate>
           </Stack>
 
           <Box
@@ -62,6 +60,7 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
                 borderRadius: "2rem",
                 overflow: "hidden",
                 boxShadow: 10,
+                zIndex: 99,
               }}
             >
               <FooterMap />

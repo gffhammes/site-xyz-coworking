@@ -63,7 +63,7 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
         <Box sx={{ position: "relative" }}>
           <Animate
             initial={{ opacity: 0 }}
-            transition={{ duration: 4, type: "spring" }}
+            transition={{ duration: 2, type: "spring" }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-30%" }}
           >
