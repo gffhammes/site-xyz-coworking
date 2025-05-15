@@ -45,7 +45,7 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
           sx={{
             position: "relative",
             flex: { xs: "1 1 15rem", sm: "1 1 20rem" },
-            zIndex: 999,
+            zIndex: 900,
           }}
         >
           <Box
