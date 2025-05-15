@@ -59,7 +59,7 @@ export const ServicesHeroSection = (props: IServicesHeroSectionProps) => {
                 sx={{
                   p: 4,
                   borderRadius: 4,
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
                   backdropFilter: "blur(20px)",
                   border: "1px solid rgba(255, 255, 255, 0.5)",
                   color: "white",

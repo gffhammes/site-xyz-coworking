@@ -58,8 +58,8 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
               sx={{
                 py: 1,
                 px: { xs: 1, md: 2 },
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                color: "rgba(255, 255, 255, 0.7)",
+                backgroundColor: "rgba(255, 255, 255, 0.3)",
+                color: "rgba(255, 255, 255, 0.9)",
                 backdropFilter: "blur(10px)",
                 borderRadius: 2,
                 transition: ".3s ease all",
