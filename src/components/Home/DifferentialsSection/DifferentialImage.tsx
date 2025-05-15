@@ -47,6 +47,7 @@ export const DifferentialImage = ({
             priority
             objectFit="cover"
             sizes="600px"
+            unoptimized
           />
         </Box>
       </Animate>

@@ -30,6 +30,7 @@ export const CarouselDots = ({
 
         return (
           <Box
+            key={snap}
             sx={{
               height: ".5rem",
               width: ".5rem",

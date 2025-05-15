@@ -4,6 +4,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { MobileServiceCard } from "./MobileServiceCard";
 import { services } from "@/data/balneario-camboriu/services/services";
 import { Carousel } from "@/components/Carousel/Carousel";
+import { Animate } from "@/components/common/Animate";
 
 export interface IMobileServicesSectionProps {}
 
@@ -19,27 +20,50 @@ export const MobileServicesSection = (props: IMobileServicesSectionProps) => {
       <Stack gap={4}>
         <Container>
           <Stack gap={2} alignItems="center">
-            <Typography textAlign="center" variant="h2" maxWidth="20ch">
-              Tudo o que você precisa para crescer
-            </Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography textAlign="center" variant="h2">
+                Tudo o que você
+                <br />
+                precisa para crescer
+              </Typography>
+            </Animate>
 
-            <Typography textAlign="center">
-              Do endereço fiscal à sala privativa — escolha o serviço que faz
-              sentido pro seu negócio.
-            </Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography textAlign="center">
+                Do endereço fiscal à sala privativa — escolha
+                <br />o serviço que faz sentido pro seu negócio.
+              </Typography>
+            </Animate>
           </Stack>
         </Container>
 
-        <Carousel
-          options={{ loop: true, align: "center" }}
-          slides={({ selectedIndex }) =>
-            services.map((item, index) => (
-              <Box key={item.title} sx={{ flex: "0 0 80%", px: 1 }}>
-                <MobileServiceCard serviceData={item} />
-              </Box>
-            ))
-          }
-        />
+        <Animate
+          initial={{ opacity: 0, y: 10 }}
+          transition={{ duration: 3, type: "spring" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30%" }}
+        >
+          <Carousel
+            options={{ loop: true, align: "center" }}
+            slides={({ selectedIndex }) =>
+              services.map((item, index) => (
+                <Box key={item.title} sx={{ flex: "0 0 80%", px: 1 }}>
+                  <MobileServiceCard serviceData={item} />
+                </Box>
+              ))
+            }
+          />
+        </Animate>
       </Stack>
     </Box>
   );

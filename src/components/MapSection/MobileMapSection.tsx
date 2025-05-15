@@ -2,50 +2,42 @@ import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import { FooterMap } from "../Footer/FooterMap";
 import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { Animate } from "../common/Animate";
 
 export interface IMobileMapSectionProps {}
 
 export const MobileMapSection = (props: IMobileMapSectionProps) => {
   return (
     <Box sx={{ mb: -10 }}>
-      <Stack gap={4}>
+      <Stack gap={10} sx={{ backgroundColor: "#f4f4f4", pt: 10 }}>
         <Container>
           <Stack gap={2} alignItems="center">
-            <Typography
-              textAlign="center"
-              variant="h2"
-              maxWidth="25ch"
-              fontSize={16}
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
             >
-              Venha conhecer o nosso espaço em Balneário Camboriú!
-            </Typography>
+              <Typography textAlign="center" variant="h2" maxWidth="25ch">
+                Venha conhecer o nosso espaço em Balneário Camboriú!
+              </Typography>
+            </Animate>
 
-            <Chip
-              component="a"
-              href={getWhatsappLink(
-                "Olá, vim pelo site e gostaria de agendar uma visita!"
-              )}
-              target="_blank"
-              label="AGENDAR"
-              color="primary"
-              icon={
-                <Box
-                  sx={{
-                    fontSize: 18,
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    pl: 0.5,
-                  }}
-                >
-                  <WhatsAppIcon fontSize="inherit" />
-                </Box>
-              }
-              clickable
-              sx={{
-                fontWeight: 700,
-              }}
-            />
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <WhatsappLinkButton
+                variant="contained"
+                startIcon={<WhatsAppIcon fontSize="inherit" />}
+                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              >
+                agendar
+              </WhatsappLinkButton>
+            </Animate>
           </Stack>
         </Container>
 
@@ -70,7 +62,6 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
           </Box>
         </Box>
       </Stack>
-      <Container></Container>
     </Box>
   );
 };

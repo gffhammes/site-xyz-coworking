@@ -1,5 +1,6 @@
 import { Box, Container, Rating, Stack, Typography } from "@mui/material";
 import { Carousel } from "../Carousel/Carousel";
+import { Animate } from "../common/Animate";
 
 export interface IMobileReviewsSectionProps {}
 
@@ -14,26 +15,40 @@ export const MobileReviewsSection = (props: IMobileReviewsSectionProps) => {
         }}
       >
         <Container sx={{ px: 6 }}>
-          <Typography variant="h2" maxWidth="15ch">
-            Veja o que falam sobre nós
-          </Typography>
+          <Animate
+            initial={{ opacity: 0, y: 10 }}
+            transition={{ duration: 1, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-30%" }}
+          >
+            <Typography variant="h2" maxWidth="15ch">
+              Veja o que falam sobre nós
+            </Typography>
+          </Animate>
         </Container>
 
-        <Carousel
-          showArrows
-          options={{ loop: true, align: "center" }}
-          slides={reviewsItems.map((item) => (
-            <Box key={item.name} sx={{ flex: "0 0 100%", px: 6 }}>
-              <Rating value={item.rating} readOnly />
+        <Animate
+          initial={{ opacity: 0, y: 10 }}
+          transition={{ duration: 1, type: "spring" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30%" }}
+        >
+          <Carousel
+            showArrows
+            options={{ loop: true, align: "center" }}
+            slides={reviewsItems.map((item) => (
+              <Box key={item.name} sx={{ flex: "0 0 100%", px: 6 }}>
+                <Rating value={item.rating} readOnly />
 
-              <Typography fontWeight={700} fontSize={20}>
-                {item.name}
-              </Typography>
+                <Typography fontWeight={700} fontSize={20}>
+                  {item.name}
+                </Typography>
 
-              <Typography className="ellipsis">{item.review}</Typography>
-            </Box>
-          ))}
-        />
+                <Typography className="ellipsis">{item.review}</Typography>
+              </Box>
+            ))}
+          />
+        </Animate>
       </Stack>
     </Box>
   );

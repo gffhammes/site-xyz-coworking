@@ -46,7 +46,7 @@ export const advantageItems: IAdvantageItem[] = [
 ];
 
 export const advantageSectionData = {
-  h2: "Vantagens que fazem diferença no seu dia a dia",
+  h2: "Vantagens que fazem<br/>diferença no seu dia a dia",
   subtitle:
     "Mais que estrutura — criamos um ambiente pra você trabalhar com conforto, flexibilidade e conexão.",
 

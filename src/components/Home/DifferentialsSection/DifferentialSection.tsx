@@ -11,6 +11,7 @@ import image1 from "../../../../public/images/endereco-estrategico.webp";
 import image2 from "../../../../public/images/infraestrutura.webp";
 import image3 from "../../../../public/images/medium-shot-smiley-colleagues-job.webp";
 import image4 from "../../../../public/images/servicos.webp";
+import { Animate } from "@/components/common/Animate";
 
 export interface IDifferentialSectionProps {}
 
@@ -60,29 +61,36 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
     >
       <Container maxWidth="sm">
         <Box sx={{ position: "relative" }}>
-          <Box
-            sx={{
-              height: { xs: xsCircleSize, md: mdCircleSize },
-              width: { xs: xsCircleSize, md: mdCircleSize },
-              borderRadius: { xs: xsCircleSize, md: mdCircleSize },
-              backgroundColor: "#363636",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              transform: {
-                xs: `translate(-${xsXTranslateCircle}, 0%)`,
-                md: `translate(-${mdXTranslateCircle}, 0%)`,
-              },
-            }}
+          <Animate
+            initial={{ opacity: 0 }}
+            transition={{ duration: 4, type: "spring" }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-30%" }}
           >
-            <CarouselControls
-              scrollPrev={scrollPrev}
-              scrollNext={scrollNext}
-              scrollSnaps={scrollSnaps}
-              selectedIndex={selectedIndex}
-              scrollTo={scrollTo}
-            />
-          </Box>
+            <Box
+              sx={{
+                height: { xs: xsCircleSize, md: mdCircleSize },
+                width: { xs: xsCircleSize, md: mdCircleSize },
+                borderRadius: { xs: xsCircleSize, md: mdCircleSize },
+                backgroundColor: "#363636",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                transform: {
+                  xs: `translate(-${xsXTranslateCircle}, 0%)`,
+                  md: `translate(-${mdXTranslateCircle}, 0%)`,
+                },
+              }}
+            >
+              <CarouselControls
+                scrollPrev={scrollPrev}
+                scrollNext={scrollNext}
+                scrollSnaps={scrollSnaps}
+                selectedIndex={selectedIndex}
+                scrollTo={scrollTo}
+              />
+            </Box>
+          </Animate>
 
           <Box
             sx={{
