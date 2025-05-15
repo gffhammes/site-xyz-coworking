@@ -59,6 +59,10 @@ export const DesktopBenefitsSection = ({
                 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-30%" }}
+                style={{
+                  height: "100%",
+                  width: "100%",
+                }}
               >
                 <BenefitCard item={item} />
               </Animate>
