@@ -1,3 +1,4 @@
+import { Animate } from "@/components/common/Animate";
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 
 export interface IServicesIntroductionProps {}
@@ -7,16 +8,34 @@ export const ServicesIntroduction = (props: IServicesIntroductionProps) => {
     <Box>
       <Container>
         <Stack gap={2} alignItems={{ xs: "flex-start", md: "center" }}>
-          <Typography
-            textAlign={{ xs: "left", md: "center" }}
-            maxWidth="31ch"
-            variant="h2"
+          <Animate
+            initial={{ opacity: 0, y: 10 }}
+            transition={{ duration: 1, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-30%" }}
           >
-            {servicesIntroductionData.h2}
-          </Typography>
-          <Typography textAlign={{ xs: "left", md: "center" }} maxWidth="64ch">
-            {servicesIntroductionData.text}
-          </Typography>
+            <Typography
+              textAlign={{ xs: "left", md: "center" }}
+              maxWidth="31ch"
+              variant="h2"
+            >
+              {servicesIntroductionData.h2}
+            </Typography>
+          </Animate>
+
+          <Animate
+            initial={{ opacity: 0, y: 10 }}
+            transition={{ duration: 1, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-30%" }}
+          >
+            <Typography
+              textAlign={{ xs: "left", md: "center" }}
+              maxWidth="64ch"
+            >
+              {servicesIntroductionData.text}
+            </Typography>
+          </Animate>
         </Stack>
       </Container>
     </Box>

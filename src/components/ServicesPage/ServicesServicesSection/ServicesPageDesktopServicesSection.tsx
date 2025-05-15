@@ -3,6 +3,7 @@ import { servicesIntroductionData } from "../ServicesIntroduction/ServicesIntrod
 import { services } from "@/data/balneario-camboriu/services/services";
 import { DesktopServiceCard } from "@/components/Home/ServicesSection/DesktopServiceCard";
 import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
+import { Animate } from "@/components/common/Animate";
 
 export interface IServicesPageDesktopServicesSectionProps {}
 
@@ -23,19 +24,40 @@ export const ServicesPageDesktopServicesSection = (
             gap={2}
             sx={{ flex: "0 0 auto", position: "sticky", top: "30svh", py: 4 }}
           >
-            <Typography variant="h2" maxWidth="22ch">
-              {servicesIntroductionData.h2}
-            </Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography variant="h2" maxWidth="22ch">
+                {servicesIntroductionData.h2}
+              </Typography>
+            </Animate>
 
-            <Typography maxWidth="38ch">
-              {servicesIntroductionData.text}
-            </Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography maxWidth="38ch">
+                {servicesIntroductionData.text}
+              </Typography>
+            </Animate>
           </Stack>
 
           <Box display="grid" gridTemplateColumns="1fr" gap={4}>
             {balnearioData.services.map((item, index) => (
               <Box key={item.title}>
-                <DesktopServiceCard serviceData={item} key={item.slug} />
+                <Animate
+                  initial={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 2, type: "spring" }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-30%" }}
+                >
+                  <DesktopServiceCard serviceData={item} key={item.slug} />
+                </Animate>
               </Box>
             ))}
           </Box>

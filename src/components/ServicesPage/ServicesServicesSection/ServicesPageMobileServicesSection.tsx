@@ -3,6 +3,7 @@ import { ServicesPageServiceCard } from "./ServicesPageServiceCard";
 import { ServicesIntroduction } from "../ServicesIntroduction/ServicesIntroduction";
 import { services } from "@/data/balneario-camboriu/services/services";
 import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
+import { Animate } from "@/components/common/Animate";
 
 export interface IServicesPageMobileServicesSectionProps {}
 
@@ -29,15 +30,22 @@ export const ServicesPageMobileServicesSection = (
             width="100%"
           >
             {balnearioData.services.map((item, index) => (
-              <Box
+              <Animate
                 key={item.title}
-                flex={{ xs: "0 0 100%", md: "0 0 20rem" }}
-                height="100%"
-                id={item.slug}
-                sx={{ scrollMarginTop: "10svh" }}
+                initial={{ opacity: 0, x: -20 }}
+                transition={{ duration: 2, type: "spring" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-30%" }}
               >
-                <ServicesPageServiceCard serviceData={item} />
-              </Box>
+                <Box
+                  flex={{ xs: "0 0 100%", md: "0 0 20rem" }}
+                  height="100%"
+                  id={item.slug}
+                  sx={{ scrollMarginTop: "10svh" }}
+                >
+                  <ServicesPageServiceCard serviceData={item} />
+                </Box>
+              </Animate>
             ))}
           </Stack>
         </Container>

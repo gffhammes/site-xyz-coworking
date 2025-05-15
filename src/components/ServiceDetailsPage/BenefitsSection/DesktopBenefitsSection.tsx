@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { BenefitCard } from "./BenefitCard";
 import { IServiceItem } from "@/data/types";
+import { Animate } from "@/components/common/Animate";
 
 export interface IDesktopBenefitsSectionProps {
   service: IServiceItem;
@@ -21,9 +22,23 @@ export const DesktopBenefitsSection = ({
           justifyContent="center"
         >
           <Stack gap={2} sx={{ flex: "0 0 23rem" }}>
-            <Typography variant="h2">{benefitsSection.h2}</Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography variant="h2">{benefitsSection.h2}</Typography>
+            </Animate>
 
-            <Typography>{benefitsSection.subtitle}</Typography>
+            <Animate
+              initial={{ opacity: 0, y: 10 }}
+              transition={{ duration: 1, type: "spring" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30%" }}
+            >
+              <Typography>{benefitsSection.subtitle}</Typography>
+            </Animate>
           </Stack>
 
           <Box
@@ -33,8 +48,20 @@ export const DesktopBenefitsSection = ({
             gap={3}
             sx={{ flex: "0 0 auto" }}
           >
-            {benefitsSection.items.map((item) => (
-              <BenefitCard key={item.text} item={item} />
+            {benefitsSection.items.map((item, index) => (
+              <Animate
+                key={item.text}
+                initial={{ opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  type: "spring",
+                  delay: index % 2 === 0 ? 0 : 0.5,
+                }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-30%" }}
+              >
+                <BenefitCard item={item} />
+              </Animate>
             ))}
           </Box>
         </Stack>
