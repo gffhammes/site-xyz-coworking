@@ -12,11 +12,11 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
       mobileContent={
         <Stack alignItems="flex-start" gap={4}>
           <Stack gap={2}>
-            <Animate {...h1AnimateProps}>
-              <Typography variant="h1" maxWidth="16ch">
-                {heroSectionData.h1}
-              </Typography>
-            </Animate>
+            {/* <Animate {...h1AnimateProps}> */}
+            <Typography variant="h1" maxWidth="16ch">
+              {heroSectionData.h1}
+            </Typography>
+            {/* </Animate> */}
 
             <Animate {...subtitleAnimateProps}>
               <Typography>{heroSectionData.subtitle}</Typography>
