@@ -25,14 +25,24 @@ export async function generateMetadata({
 
   return {
     title: service.seoTitle || service.title,
-    description: service.description || service.description,
-    // Se quiser, pode reativar o Open Graph:
-    // openGraph: {
-    //   title: service.seoTitle || service.title,
-    //   description: service.seoDescription || service.description,
-    //   url: `https://www.seusite.com.br/servicos/${service.target}`,
-    //   type: 'article',
-    // },
+    description: service.description,
+    openGraph: {
+      title: service.seoTitle || service.title,
+      description: service.description,
+      url: `https://www.bc.xyzcoworking.com/servicos/${service.slug}`,
+      images: [
+        {
+          media: "(prefers-color-scheme: light)",
+          url: "/images/light-theme-favicon.ico",
+          href: "/images/light-theme-favicon.ico",
+        },
+        {
+          media: "(prefers-color-scheme: dark)",
+          url: "/images/dark-theme-favicon.ico",
+          href: "/images/dark-theme-favicon.ico",
+        },
+      ],
+    },
   };
 }
 
