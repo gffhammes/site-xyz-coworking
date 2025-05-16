@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title:
@@ -34,6 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <GoogleTagManager gtmId="GTM-525V4R3J" />
+
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
