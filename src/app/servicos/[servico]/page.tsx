@@ -29,7 +29,7 @@ export async function generateMetadata({
     openGraph: {
       title: service.seoTitle || service.title,
       description: service.description,
-      url: `https://www.bc.xyzcoworking.com/servicos/${service.slug}`,
+      url: `https://bc.xyzcoworking.com/servicos/${service.slug}`,
       images: [
         {
           url: service.image,
