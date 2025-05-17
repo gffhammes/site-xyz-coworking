@@ -32,14 +32,8 @@ export async function generateMetadata({
       url: `https://www.bc.xyzcoworking.com/servicos/${service.slug}`,
       images: [
         {
-          media: "(prefers-color-scheme: light)",
-          url: "/images/light-theme-favicon.ico",
-          href: "/images/light-theme-favicon.ico",
-        },
-        {
-          media: "(prefers-color-scheme: dark)",
-          url: "/images/dark-theme-favicon.ico",
-          href: "/images/dark-theme-favicon.ico",
+          url: service.image,
+          href: service.image,
         },
       ],
     },
