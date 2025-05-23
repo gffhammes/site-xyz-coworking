@@ -12,11 +12,9 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
       mobileContent={
         <Stack alignItems="flex-start" gap={4}>
           <Stack gap={2}>
-            {/* <Animate {...h1AnimateProps}> */}
             <Typography variant="h1" maxWidth="16ch">
               {heroSectionData.h1}
             </Typography>
-            {/* </Animate> */}
 
             <Animate {...subtitleAnimateProps}>
               <Typography>{heroSectionData.subtitle}</Typography>
@@ -36,11 +34,9 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
       desktopContent={
         <Stack justifyContent="center" gap={4} height="100%">
           <Stack gap={2}>
-            <Animate {...h1AnimateProps}>
-              <Typography variant="h1" maxWidth="30ch">
-                {heroSectionData.h1}
-              </Typography>
-            </Animate>
+            <Typography variant="h1" maxWidth="30ch">
+              {heroSectionData.h1}
+            </Typography>
 
             <Animate {...subtitleAnimateProps}>
               <Typography maxWidth="60ch">

@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <GTMScript id="GTM-525V4R3J" />
+      <GTMScript id="GTM-T588QKB9" />
 
       <body>
         <AppRouterCacheProvider>
