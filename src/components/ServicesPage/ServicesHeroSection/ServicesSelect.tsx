@@ -69,8 +69,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
               }}
               component={Link}
               href={`/servicos/${option.slug}`}
-              data-section="hero"
-              data-action={`ver-${option.slug}`}
+              id={`hero-ver-${option.slug}`}
             >
               <Typography textAlign="center" fontSize={{ xs: 14, md: 16 }}>
                 {parse(option.heroText)}

@@ -13,8 +13,7 @@ export const HomeHeroSectionButtons = (props: IHomeHeroSectionButtonsProps) => {
         variant="contained"
         customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
         fullWidth
-        data-section="hero"
-        data-action="contato"
+        id="hero-contato"
       >
         agendar visita
       </WhatsappLinkButton>
@@ -22,8 +21,7 @@ export const HomeHeroSectionButtons = (props: IHomeHeroSectionButtonsProps) => {
       <Button
         variant="outlined"
         onClick={() => scrollTo("home-content", 200)}
-        data-section="hero"
-        data-action="ver-mais"
+        id="hero-ver-mais"
       >
         Descubra o xyz
       </Button>

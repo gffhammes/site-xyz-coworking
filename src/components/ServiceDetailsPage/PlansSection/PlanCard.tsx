@@ -32,8 +32,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
             href={buttonHref}
             target="_blank"
             variant="contained"
-            data-section="card-preco"
-            data-action="contato"
+            id={`card-preco-contato-${selectedPlan.label}`}
           >
             CONTRATAR AGORA
           </Button>

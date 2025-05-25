@@ -53,8 +53,7 @@ export const DifferentialSlide = forwardRef(function Slide(
           <WhatsappLinkButton
             variant="contained"
             customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-            data-section="diferenciais"
-            data-action={`contato-slide-${index}`}
+            id={`diferenciais-contato-slide-${index}`}
           >
             agendar visita
           </WhatsappLinkButton>
