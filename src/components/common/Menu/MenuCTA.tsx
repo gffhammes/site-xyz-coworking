@@ -16,7 +16,7 @@ export const MenuCTA = ({ theme }: IMenuCTAProps) => {
       LinkComponent="a"
       href={getWhatsappLink()}
       target="_blank"
-      id="header-contato"
+      id="click-header-contato"
     >
       contato
     </Button>

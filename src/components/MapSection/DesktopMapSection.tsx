@@ -40,7 +40,7 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
                 variant="contained"
                 startIcon={<WhatsAppIcon fontSize="inherit" />}
                 customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-                id="mapa-contato"
+                id="click-mapa-contato"
               >
                 agendar
               </WhatsappLinkButton>

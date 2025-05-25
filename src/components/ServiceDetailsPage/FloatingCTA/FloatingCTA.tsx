@@ -90,7 +90,7 @@ export const FloatingCTA = ({ service }: IFloatingCTAProps) => {
               }}
               component={ButtonBase}
               onClick={() => scrollTo("planos")}
-              id="botao-flutuante-ver-planos"
+              id="click-botao-flutuante-ver-planos"
             >
               <Collapse
                 in={collapse}

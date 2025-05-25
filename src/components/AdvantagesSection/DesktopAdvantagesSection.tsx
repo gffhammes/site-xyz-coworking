@@ -83,7 +83,7 @@ export const DesktopAdvantagesSection = (
             <WhatsappLinkButton
               variant="contained"
               customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-              id="vantagens-contato"
+              id="click-vantagens-contato"
             >
               agendar visita
             </WhatsappLinkButton>

@@ -34,7 +34,7 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
                 variant="contained"
                 startIcon={<WhatsAppIcon fontSize="inherit" />}
                 customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-                id="mapa-contato"
+                id="click-mapa-contato"
               >
                 agendar
               </WhatsappLinkButton>
