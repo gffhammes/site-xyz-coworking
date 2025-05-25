@@ -29,6 +29,8 @@ export const DesktopServiceCard = ({
       direction="row"
       component={Link}
       href={`/servicos/${serviceData.slug}`}
+      data-section="servicos"
+      data-action={`ver-${serviceData.slug}`}
     >
       <Stack
         alignItems="flex-start"

@@ -1,4 +1,4 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { advantageSectionData } from "./AdvantagesSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 import { Animate } from "../common/Animate";
@@ -80,6 +80,8 @@ export const MobileAdvantagesSection = (
             <WhatsappLinkButton
               variant="contained"
               customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              data-section="vantagens"
+              data-action="contato"
             >
               agendar visita
             </WhatsappLinkButton>

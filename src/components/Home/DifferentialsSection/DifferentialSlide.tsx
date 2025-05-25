@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { motion, usePresenceData } from "motion/react";
+import { Box, Stack, Typography } from "@mui/material";
 import { forwardRef } from "react";
 import parse from "html-react-parser";
 import { differentialItems, mdXTranslateCircle } from "./DifferentialSection";
@@ -23,8 +15,6 @@ export const DifferentialSlide = forwardRef(function Slide(
   { index, isActiveSlide }: IDifferentialSlideProps,
   ref: React.Ref<HTMLDivElement>
 ) {
-  const direction = usePresenceData();
-
   const selectedItem = differentialItems[index];
 
   return (
@@ -63,6 +53,8 @@ export const DifferentialSlide = forwardRef(function Slide(
           <WhatsappLinkButton
             variant="contained"
             customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+            data-section="diferenciais"
+            data-action={`contato-slide-${index}`}
           >
             agendar visita
           </WhatsappLinkButton>

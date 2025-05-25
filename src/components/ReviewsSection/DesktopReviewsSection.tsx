@@ -108,6 +108,8 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
             variant="contained"
             customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
             sx={{ mt: 2 }}
+            data-section="reviews"
+            data-action="contato"
           >
             Quero trabalhar em um ambiente feito para crescer
           </WhatsappLinkButton>

@@ -105,8 +105,10 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
         >
           <WhatsappLinkButton
             variant="contained"
-            // color="secondary"
+            color="secondary"
             customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+            data-section="fotos-circulares"
+            data-action="contato"
           >
             agendar visita
           </WhatsappLinkButton>

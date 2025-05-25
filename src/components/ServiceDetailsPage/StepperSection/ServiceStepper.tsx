@@ -24,7 +24,7 @@ export const ServiceStepper = ({ steps }: IServiceStepperProps) => {
           initial: { opacity: 0, x: -20 },
           transition: { duration: 1, type: "spring" },
           whileInView: { opacity: 1, x: 0 },
-          viewport: { once: true, margin: "-30%" },
+          viewport: { once: true },
         };
   };
 

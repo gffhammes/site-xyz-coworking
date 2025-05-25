@@ -1,5 +1,5 @@
 import { IServiceItem } from "@/data/types";
-import { Box, Stack, Typography, useTheme } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 import parse from "html-react-parser";
 import Image from "next/image";
@@ -7,13 +7,9 @@ import Link from "next/link";
 
 export interface IMobileServiceCardProps {
   serviceData: IServiceItem;
-  isActive?: boolean;
 }
 
-export const MobileServiceCard = ({
-  serviceData,
-  isActive,
-}: IMobileServiceCardProps) => {
+export const MobileServiceCard = ({ serviceData }: IMobileServiceCardProps) => {
   return (
     <Stack
       sx={{
@@ -28,6 +24,8 @@ export const MobileServiceCard = ({
       }}
       component={Link}
       href={`/servicos/${serviceData.slug}`}
+      data-section="servicos"
+      data-action={`ver-${serviceData.slug}`}
     >
       <Stack
         alignItems="flex-start"

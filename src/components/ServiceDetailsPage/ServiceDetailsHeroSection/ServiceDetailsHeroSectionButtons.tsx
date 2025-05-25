@@ -18,11 +18,18 @@ export const ServiceDetailsHeroSectionButtons = ({
         variant="contained"
         customMessage={`Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`}
         fullWidth
+        data-section="hero"
+        data-action="contato"
       >
         {service.detailsPage.heroCTAText}
       </WhatsappLinkButton>
 
-      <Button variant="outlined" onClick={() => scrollTo("beneficios", 200)}>
+      <Button
+        variant="outlined"
+        onClick={() => scrollTo("beneficios", 200)}
+        data-section="hero"
+        data-action="ver-mais"
+      >
         CONHECER MAIS
       </Button>
     </>
