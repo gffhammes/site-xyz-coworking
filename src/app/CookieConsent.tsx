@@ -30,23 +30,24 @@ export const CookieConsent = () => {
   return (
     <>
       {status === "notAccepted" && (
-        <Container maxWidth={false}>
+        <Container
+          maxWidth={false}
+          sx={{ position: "fixed", bottom: 16, zIndex: 1300 }}
+        >
           <Paper
             elevation={3}
             sx={{
-              position: "fixed",
-              bottom: 16,
               p: 2,
               display: "flex",
               alignItems: "center",
               maxWidth: 700,
-              zIndex: 1300,
+              flexDirection: { xs: "column", sm: "row" },
+              gap: 2,
             }}
-            component="section"
             aria-live="polite"
             role="region"
           >
-            <Box sx={{ flex: 1, mr: 2 }}>
+            <Box sx={{ flex: 1 }}>
               <Typography variant="body2" color="text.secondary">
                 Utilizamos ferramentas de terceiros que utilizam cookies, para
                 melhorar sua experiência. Ao clicar em aceitar, você concorda
