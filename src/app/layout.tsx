@@ -27,6 +27,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification: {
+    google: "BUPbm-P0z-x4MGsnxgx1zKXwFSOTUTmZAXXtR2Yx-e8",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +39,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <GTMScript gtmId="GTM-525V4R3J" />
       <GTMScript gtmId="GTM-T588QKB9" />
 
       <body>
