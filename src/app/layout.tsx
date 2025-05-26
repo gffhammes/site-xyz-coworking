@@ -5,8 +5,7 @@ import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
-import { GoogleTagManager } from "@next/third-parties/google";
-import { GTMScript } from "./GTMScript";
+import { CookieConsent } from "./CookieConsent";
 
 export const metadata: Metadata = {
   title:
@@ -39,14 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <GTMScript gtmId="GTM-T588QKB9" />
-
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <Header />
             {children}
             <Footer />
+            <CookieConsent />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
