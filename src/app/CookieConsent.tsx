@@ -2,11 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Script from "next/script";
-import { Box, Button, Typography, Paper, Container } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  Paper,
+  Container,
+  useScrollTrigger,
+} from "@mui/material";
 
 const localStorageId = "cookie-consent";
 
 export const CookieConsent = () => {
+  const scrollTrigger = useScrollTrigger({ disableHysteresis: true });
+
   const [status, setStatus] = useState<"idle" | "accepted" | "notAccepted">(
     "idle"
   );
@@ -26,6 +35,12 @@ export const CookieConsent = () => {
 
     localStorage.setItem(localStorageId, "true");
   };
+
+  useEffect(() => {
+    if (scrollTrigger) {
+      handleAccept();
+    }
+  }, [scrollTrigger]);
 
   return (
     <>
@@ -49,38 +64,35 @@ export const CookieConsent = () => {
           >
             <Box sx={{ flex: 1 }}>
               <Typography variant="body2" color="text.secondary">
-                Utilizamos ferramentas de terceiros que utilizam cookies, para
-                melhorar sua experiência. Ao clicar em aceitar, você concorda
-                com o uso de cookies em nosso site.
+                Nós utilizamos cookies para garantir que você tenha a melhor
+                experiência em nosso site. Ao continuar navegando, assumimos que
+                você concorda com a utilização desses cookies.
               </Typography>
             </Box>
 
             <Button variant="contained" onClick={handleAccept}>
-              Aceitar
+              OK
             </Button>
           </Paper>
         </Container>
       )}
 
-      {status === "accepted" && (
-        <>
-          {/* GTM Script */}
-          <Script
-            id="gtm-script"
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
-          />
-          {/* Data Layer */}
-          <Script id="gtm-init" strategy="afterInteractive">
-            {`
+      {/* GTM Script */}
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+      />
+
+      {/* Data Layer */}
+      <Script id="gtm-init" strategy="afterInteractive">
+        {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${gtmId}');
             `}
-          </Script>
-        </>
-      )}
+      </Script>
     </>
   );
 };
