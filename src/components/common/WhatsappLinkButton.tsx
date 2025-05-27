@@ -8,6 +8,7 @@ export interface IWhatsappLinkButtonProps extends ButtonProps {
 
 export const WhatsappLinkButton = ({
   customMessage,
+  id,
   ...props
 }: IWhatsappLinkButtonProps) => {
   const buttonHref = customMessage
@@ -15,7 +16,7 @@ export const WhatsappLinkButton = ({
     : whatsappLink;
 
   return (
-    <a href={buttonHref} target="_blank">
+    <a href={buttonHref} target="_blank" id={id} style={{ display: "block" }}>
       <Button {...props} />
     </a>
   );

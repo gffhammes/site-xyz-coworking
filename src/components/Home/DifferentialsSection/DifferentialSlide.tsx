@@ -5,6 +5,7 @@ import { forwardRef } from "react";
 import parse from "html-react-parser";
 import { differentialItems, mdXTranslateCircle } from "./DifferentialSection";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
+import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 
 export interface IDifferentialSlideProps {
   index: number;
@@ -50,13 +51,17 @@ export const DifferentialSlide = forwardRef(function Slide(
         </Typography>
 
         <Box sx={{ pt: 2 }}>
-          <WhatsappLinkButton
-            variant="contained"
-            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-            id={`diferenciais-contato-slide-${index}`}
+          <TrackingWrapper
+            section="diferenciais"
+            action={`contato-slide-${index + 1}`}
           >
-            agendar visita
-          </WhatsappLinkButton>
+            <WhatsappLinkButton
+              variant="contained"
+              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+            >
+              agendar visita
+            </WhatsappLinkButton>
+          </TrackingWrapper>
         </Box>
       </Stack>
     </Stack>

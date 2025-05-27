@@ -63,3 +63,26 @@ export const formattedPhoneNumber = getFormattedPhoneNumber(
 export const formattedWhatsApp = getFormattedPhoneNumber(
   balnearioData.contact.whatsappNumber
 );
+interface IGetElementIdArgs {
+  section: string;
+  action: string;
+}
+
+export const getElementId = ({
+  section,
+  action,
+}: IGetElementIdArgs): string => {
+  if (typeof window === "undefined") {
+    return "";
+  }
+
+  const pathname = window.location.pathname;
+  const page =
+    pathname
+      .replace(/^\/|\/$/g, "") // remove barras no início/fim
+      .replace(/\//g, "-") // troca / por -
+      .replace(/\s+/g, "-") // troca espaços por -
+      .toLowerCase() || "home";
+
+  return `click---${page}---${section}---${action}`;
+};

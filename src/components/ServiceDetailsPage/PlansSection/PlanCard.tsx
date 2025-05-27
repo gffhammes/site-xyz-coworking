@@ -4,6 +4,7 @@ import { PlanCardIncluded } from "./PlanCardIncluded";
 import { IServicePlan } from "@/data/types";
 import { getWhatsappLink } from "@/utils/utils";
 import { Animate } from "@/components/common/Animate";
+import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 
 export interface IPlanCardProps {
   selectedPlan: IServicePlan;
@@ -27,15 +28,19 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
             <PlanCardIncluded selectedPlan={selectedPlan} />
           </Stack>
 
-          <Button
-            LinkComponent="a"
-            href={buttonHref}
-            target="_blank"
-            variant="contained"
-            id={`card-preco-contato-${selectedPlan.label}`}
+          <TrackingWrapper
+            section="card-preco"
+            action={`contato-${selectedPlan.label}`}
           >
-            CONTRATAR AGORA
-          </Button>
+            <Button
+              LinkComponent="a"
+              href={buttonHref}
+              target="_blank"
+              variant="contained"
+            >
+              CONTRATAR AGORA
+            </Button>
+          </TrackingWrapper>
         </Stack>
       </Box>
     </Animate>

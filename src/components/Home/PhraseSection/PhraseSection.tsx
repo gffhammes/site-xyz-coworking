@@ -3,6 +3,7 @@ import image1 from "../../../../public/images/bc1.jpeg";
 import image2 from "../../../../public/images/bc2.webp";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 import { Animate } from "@/components/common/Animate";
+import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 
 export interface IPhraseSectionProps {}
 
@@ -103,14 +104,15 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           viewport={{ once: true, margin: "-30%" }}
           transition={{ duration: 1, type: "spring" }}
         >
-          <WhatsappLinkButton
-            variant="contained"
-            color="secondary"
-            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-            id="click-fotos-circulares-contato"
-          >
-            agendar visita
-          </WhatsappLinkButton>
+          <TrackingWrapper section="fotos-circulares" action="contato">
+            <WhatsappLinkButton
+              variant="contained"
+              color="secondary"
+              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+            >
+              agendar visita
+            </WhatsappLinkButton>
+          </TrackingWrapper>
         </Animate>
       </Container>
     </Box>

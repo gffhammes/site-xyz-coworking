@@ -1,5 +1,6 @@
 "use client";
 
+import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 import { IServiceItem } from "@/data/types";
 import { useFloatingCardTrigger } from "@/hooks/useFloatingCTATrigger";
 import { scrollTo } from "@/utils/utils";
@@ -79,28 +80,29 @@ export const FloatingCTA = ({ service }: IFloatingCTAProps) => {
               </Typography>
             </Collapse>
 
-            <Box
-              sx={{
-                px: 2,
-                py: 1,
-                minWidth: 40,
-                transition: `${collapseDuration}ms ease all`,
-                borderRadius: 20,
-                backgroundColor: "primary.main",
-              }}
-              component={ButtonBase}
-              onClick={() => scrollTo("planos")}
-              id="click-botao-flutuante-ver-planos"
-            >
-              <Collapse
-                in={collapse}
-                orientation="horizontal"
-                timeout={collapseDuration}
-                style={{ whiteSpace: "nowrap" }}
+            <TrackingWrapper section="botao-flutuante" action="ver-planos">
+              <Box
+                sx={{
+                  px: 2,
+                  py: 1,
+                  minWidth: 40,
+                  transition: `${collapseDuration}ms ease all`,
+                  borderRadius: 20,
+                  backgroundColor: "primary.main",
+                }}
+                component={ButtonBase}
+                onClick={() => scrollTo("planos")}
               >
-                <Typography fontWeight="bold">VER PLANOS</Typography>
-              </Collapse>
-            </Box>
+                <Collapse
+                  in={collapse}
+                  orientation="horizontal"
+                  timeout={collapseDuration}
+                  style={{ whiteSpace: "nowrap" }}
+                >
+                  <Typography fontWeight="bold">VER PLANOS</Typography>
+                </Collapse>
+              </Box>
+            </TrackingWrapper>
           </Stack>
         </Box>
       </Container>

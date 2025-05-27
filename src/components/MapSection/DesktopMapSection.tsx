@@ -4,6 +4,7 @@ import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Animate } from "../common/Animate";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IDesktopMapSectionProps {}
 
@@ -36,14 +37,15 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
               viewport={{ once: true, margin: "-30%" }}
               style={{ width: "100%" }}
             >
-              <WhatsappLinkButton
-                variant="contained"
-                startIcon={<WhatsAppIcon fontSize="inherit" />}
-                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-                id="click-mapa-contato"
-              >
-                agendar
-              </WhatsappLinkButton>
+              <TrackingWrapper section="mapa" action="contato">
+                <WhatsappLinkButton
+                  variant="contained"
+                  startIcon={<WhatsAppIcon fontSize="inherit" />}
+                  customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+                >
+                  agendar
+                </WhatsappLinkButton>
+              </TrackingWrapper>
             </Animate>
           </Stack>
 

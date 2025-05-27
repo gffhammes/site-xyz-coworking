@@ -4,6 +4,7 @@ import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 import { Animate } from "../common/Animate";
+import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IMobileMapSectionProps {}
 
@@ -30,14 +31,15 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30%" }}
             >
-              <WhatsappLinkButton
-                variant="contained"
-                startIcon={<WhatsAppIcon fontSize="inherit" />}
-                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-                id="click-mapa-contato"
-              >
-                agendar
-              </WhatsappLinkButton>
+              <TrackingWrapper section="mapa" action="contato">
+                <WhatsappLinkButton
+                  variant="contained"
+                  startIcon={<WhatsAppIcon fontSize="inherit" />}
+                  customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+                >
+                  agendar
+                </WhatsappLinkButton>
+              </TrackingWrapper>
             </Animate>
           </Stack>
         </Container>

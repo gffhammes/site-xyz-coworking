@@ -1,5 +1,6 @@
 "use client";
 
+import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 import { IServiceItem } from "@/data/types";
 import { scrollTo } from "@/utils/utils";
@@ -14,22 +15,21 @@ export const ServiceDetailsHeroSectionButtons = ({
 }: IServiceDetailsHeroSectionButtonsProps) => {
   return (
     <>
-      <WhatsappLinkButton
-        variant="contained"
-        customMessage={`Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`}
-        fullWidth
-        id="click-hero-contato"
-      >
-        {service.detailsPage.heroCTAText}
-      </WhatsappLinkButton>
+      <TrackingWrapper section="hero" action="contato">
+        <WhatsappLinkButton
+          variant="contained"
+          customMessage={`Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`}
+          fullWidth
+        >
+          {service.detailsPage.heroCTAText}
+        </WhatsappLinkButton>
+      </TrackingWrapper>
 
-      <Button
-        variant="outlined"
-        onClick={() => scrollTo("beneficios", 200)}
-        id="click-hero-ver-mais"
-      >
-        CONHECER MAIS
-      </Button>
+      <TrackingWrapper section="hero" action="ver-mais">
+        <Button variant="outlined" onClick={() => scrollTo("beneficios", 200)}>
+          CONHECER MAIS
+        </Button>
+      </TrackingWrapper>
     </>
   );
 };

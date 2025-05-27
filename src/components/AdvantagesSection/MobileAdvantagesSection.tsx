@@ -3,6 +3,7 @@ import { advantageSectionData } from "./AdvantagesSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 import { Animate } from "../common/Animate";
 import parse from "html-react-parser";
+import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IMobileAdvantagesSectionProps {}
 
@@ -77,13 +78,14 @@ export const MobileAdvantagesSection = (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-30%" }}
           >
-            <WhatsappLinkButton
-              variant="contained"
-              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-              id="click-vantagens-contato"
-            >
-              agendar visita
-            </WhatsappLinkButton>
+            <TrackingWrapper section="vantagens" action="contato">
+              <WhatsappLinkButton
+                variant="contained"
+                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              >
+                agendar visita
+              </WhatsappLinkButton>
+            </TrackingWrapper>
           </Animate>
         </Stack>
       </Container>

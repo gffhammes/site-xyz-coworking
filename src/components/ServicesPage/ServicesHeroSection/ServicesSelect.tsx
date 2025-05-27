@@ -18,6 +18,7 @@ import { scrollTo } from "@/utils/utils";
 import { services } from "@/data/balneario-camboriu/services/services";
 import parse from "html-react-parser";
 import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
+import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 
 export interface IServicesSelectProps {
   align?: "center" | "flex-start";
@@ -51,30 +52,31 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
       >
         {balnearioData.services.map((option) => {
           return (
-            <Stack
-              key={option.slug}
-              alignItems="center"
-              justifyContent="center"
-              sx={{
-                py: 1,
-                px: { xs: 1, md: 2 },
-                backgroundColor: "rgba(255, 255, 255, 0.3)",
-                color: "rgba(255, 255, 255, 0.9)",
-                backdropFilter: "blur(10px)",
-                borderRadius: 2,
-                transition: ".3s ease all",
-                "&:hover": {
-                  backgroundColor: "rgba(240, 181, 43, 0.553)",
-                },
-              }}
-              component={Link}
-              href={`/servicos/${option.slug}`}
-              id={`hero-ver-${option.slug}`}
-            >
-              <Typography textAlign="center" fontSize={{ xs: 14, md: 16 }}>
-                {parse(option.heroText)}
-              </Typography>
-            </Stack>
+            <TrackingWrapper section="hero" action={`ver-${option.slug}`}>
+              <Stack
+                key={option.slug}
+                alignItems="center"
+                justifyContent="center"
+                sx={{
+                  py: 1,
+                  px: { xs: 1, md: 2 },
+                  backgroundColor: "rgba(255, 255, 255, 0.3)",
+                  color: "rgba(255, 255, 255, 0.9)",
+                  backdropFilter: "blur(10px)",
+                  borderRadius: 2,
+                  transition: ".3s ease all",
+                  "&:hover": {
+                    backgroundColor: "rgba(240, 181, 43, 0.553)",
+                  },
+                }}
+                component={Link}
+                href={`/servicos/${option.slug}`}
+              >
+                <Typography textAlign="center" fontSize={{ xs: 14, md: 16 }}>
+                  {parse(option.heroText)}
+                </Typography>
+              </Stack>
+            </TrackingWrapper>
           );
         })}
       </Box>

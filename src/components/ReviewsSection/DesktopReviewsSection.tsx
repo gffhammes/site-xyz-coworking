@@ -10,6 +10,7 @@ import { Carousel } from "../Carousel/Carousel";
 import { reviewsSectionData } from "./ReviewsSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 import { Animate } from "../common/Animate";
+import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IDesktopReviewsSectionProps {}
 
@@ -103,15 +104,16 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-30%" }}
         >
-          <WhatsappLinkButton
-            color="secondary"
-            variant="contained"
-            customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
-            sx={{ mt: 2 }}
-            id="click-reviews-contato"
-          >
-            Quero trabalhar em um ambiente feito para crescer
-          </WhatsappLinkButton>
+          <TrackingWrapper section="reviews" action="contato">
+            <WhatsappLinkButton
+              color="secondary"
+              variant="contained"
+              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              sx={{ mt: 2 }}
+            >
+              Quero trabalhar em um ambiente feito para crescer
+            </WhatsappLinkButton>
+          </TrackingWrapper>
         </Animate>
       </Stack>
     </Container>
