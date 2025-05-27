@@ -9,17 +9,18 @@ export interface IMenuCTAProps {
 
 export const MenuCTA = ({ theme }: IMenuCTAProps) => {
   return (
-    <Button
-      variant="outlined"
-      color={theme === "dark" ? "primary" : "secondary"}
-      size="small"
-      startIcon={<WhatsAppIcon />}
-      LinkComponent="a"
-      href={getWhatsappLink()}
-      target="_blank"
-      id="click-header-contato"
-    >
-      contato
-    </Button>
+    <TrackingWrapper section="header" action="contato">
+      <Button
+        variant="outlined"
+        color={theme === "dark" ? "primary" : "secondary"}
+        size="small"
+        startIcon={<WhatsAppIcon />}
+        LinkComponent="a"
+        href={getWhatsappLink()}
+        target="_blank"
+      >
+        contato
+      </Button>
+    </TrackingWrapper>
   );
 };

@@ -4,6 +4,7 @@ import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
 import { socials } from "./Footer";
 import { FooterInfoTemplate } from "./FooterInfoTemplate";
 import { FooterInfos } from "./FooterInfos";
+import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IMobileFooterProps {}
 
@@ -51,24 +52,30 @@ export const MobileFooter = (props: IMobileFooterProps) => {
 
                 <Stack direction="row" gap={2}>
                   {socials.map((social) => (
-                    <Stack
+                    <TrackingWrapper
                       key={social.name}
-                      component="a"
-                      href={social.href}
-                      target="_blank"
-                      alignItems="center"
-                      justifyContent="center"
-                      sx={{
-                        fontSize: 32,
-                        height: "4rem",
-                        width: "4rem",
-                        borderRadius: "4rem",
-                        backgroundColor: "rgba(255, 255, 255, 0.2)",
-                      }}
-                      aria-label={`Acesse nosso ${social.name}`}
+                      section="footer"
+                      action={`ir-para-${social.name}`}
                     >
-                      <social.icon fontSize="inherit" />
-                    </Stack>
+                      <Stack
+                        key={social.name}
+                        component="a"
+                        href={social.href}
+                        target="_blank"
+                        alignItems="center"
+                        justifyContent="center"
+                        sx={{
+                          fontSize: 32,
+                          height: "4rem",
+                          width: "4rem",
+                          borderRadius: "4rem",
+                          backgroundColor: "rgba(255, 255, 255, 0.2)",
+                        }}
+                        aria-label={`Acesse nosso ${social.name}`}
+                      >
+                        <social.icon fontSize="inherit" />
+                      </Stack>
+                    </TrackingWrapper>
                   ))}
                 </Stack>
               </Stack>

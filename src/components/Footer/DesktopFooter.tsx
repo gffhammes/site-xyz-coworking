@@ -2,6 +2,7 @@ import { Box, Container, Stack } from "@mui/material";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
 import { socials } from "./Footer";
 import { FooterInfos } from "./FooterInfos";
+import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IDesktopFooterProps {}
 
@@ -37,23 +38,28 @@ export const DesktopFooter = (props: IDesktopFooterProps) => {
 
                 <Stack direction="row" gap={2}>
                   {socials.map((social) => (
-                    <Stack
+                    <TrackingWrapper
                       key={social.name}
-                      component="a"
-                      href={social.href}
-                      target="_blank"
-                      alignItems="center"
-                      justifyContent="center"
-                      sx={{
-                        fontSize: 32,
-                        height: "4rem",
-                        width: "4rem",
-                        borderRadius: "4rem",
-                        backgroundColor: "rgba(255, 255, 255, 0.2)",
-                      }}
+                      section="footer"
+                      action={`ir-para-${social.name}`}
                     >
-                      <social.icon fontSize="inherit" />
-                    </Stack>
+                      <Stack
+                        component="a"
+                        href={social.href}
+                        target="_blank"
+                        alignItems="center"
+                        justifyContent="center"
+                        sx={{
+                          fontSize: 32,
+                          height: "4rem",
+                          width: "4rem",
+                          borderRadius: "4rem",
+                          backgroundColor: "rgba(255, 255, 255, 0.2)",
+                        }}
+                      >
+                        <social.icon fontSize="inherit" />
+                      </Stack>
+                    </TrackingWrapper>
                   ))}
                 </Stack>
               </Stack>
