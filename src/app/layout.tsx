@@ -6,6 +6,7 @@ import theme from "@/theme";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { CookieConsent } from "./CookieConsent";
+import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton/WhatsappFloatingButton";
 
 export const metadata: Metadata = {
   title:
@@ -43,6 +44,8 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <Header />
             {children}
+
+            <WhatsappFloatingButton />
             <Footer />
             <CookieConsent />
           </ThemeProvider>
