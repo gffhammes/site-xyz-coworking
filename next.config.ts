@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_SITE_KEY: process.env.NEXT_PUBLIC_SITE_KEY,
+  },
 };
 
 export default nextConfig;
