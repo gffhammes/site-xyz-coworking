@@ -44,3 +44,18 @@ export interface IServiceItem {
     floatingCtaMessage: string;
   };
 }
+
+export interface ISiteData {
+  contact: {
+    phoneNumber: string;
+    whatsappNumber: string;
+    email: string;
+  };
+  services: IServiceItem[];
+  workingHours: string[];
+  address: {
+    line1: string;
+    line2: string;
+    href: string;
+  };
+}
