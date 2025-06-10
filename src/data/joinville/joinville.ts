@@ -23,4 +23,8 @@ export const joinvilleData: ISiteData = {
   services,
   workingHours,
   address,
+  homeMetaData: {
+    metaTitle: "Joinville",
+    metaDescription: "Joinville",
+  },
 };

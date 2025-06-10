@@ -7,12 +7,11 @@ import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { CookieConsent } from "./CookieConsent";
 import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton/WhatsappFloatingButton";
+import { siteData } from "@/data/sites";
 
 export const metadata: Metadata = {
-  title:
-    "Coworking em Balneário Camboriú | XYZ Coworking - Endereço Fiscal, Salas e Estações",
-  description:
-    "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
+  title: siteData.homeMetaData.metaTitle,
+  description: siteData.homeMetaData.metaDescription,
   icons: {
     icon: [
       {

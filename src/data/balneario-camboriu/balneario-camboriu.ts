@@ -23,4 +23,10 @@ export const balnearioData: ISiteData = {
   services,
   workingHours,
   address,
+  homeMetaData: {
+    metaTitle:
+      "Coworking em Balneário Camboriú | XYZ Coworking - Endereço Fiscal, Salas e Estações",
+    metaDescription:
+      "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
+  },
 };

@@ -58,4 +58,8 @@ export interface ISiteData {
     line2: string;
     href: string;
   };
+  homeMetaData: {
+    metaTitle: string;
+    metaDescription: string;
+  };
 }
