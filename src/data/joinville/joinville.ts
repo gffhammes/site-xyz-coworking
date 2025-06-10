@@ -24,7 +24,8 @@ export const joinvilleData: ISiteData = {
   workingHours,
   address,
   homeMetaData: {
-    metaTitle: "Joinville",
-    metaDescription: "Joinville",
+    metaTitle: "Coworking em Joinville | Estrutura Profissional e Networking",
+    metaDescription:
+      "Encontre seu espaço de trabalho ideal em Joinville. Coworking com internet rápida, salas equipadas, planos flexíveis e ambiente perfeito para networking.",
   },
 };
