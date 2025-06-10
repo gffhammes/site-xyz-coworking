@@ -6,8 +6,8 @@ import {
   formattedWhatsApp,
   getWhatsappLink,
 } from "@/utils/utils";
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 import parse from "html-react-parser";
+import { siteData } from "@/data/sites";
 
 export interface IFooterInfosProps {}
 
@@ -21,7 +21,7 @@ export const FooterInfos = (props: IFooterInfosProps) => {
       <FooterInfoTemplate title="Horário de Funcionamento">
         <Typography>
           {parse(
-            balnearioData.workingHours.reduce(
+            siteData.workingHours.reduce(
               (previousValue, currentValue, index) => {
                 if (index === 0) return `- ${currentValue}`;
 
@@ -34,17 +34,17 @@ export const FooterInfos = (props: IFooterInfosProps) => {
       </FooterInfoTemplate>
 
       <FooterInfoTemplate title="Endereço">
-        <a href={balnearioData.address.href} target="_blank">
+        <a href={siteData.address.href} target="_blank">
           <Typography>
-            {balnearioData.address.line1} <br />
-            {balnearioData.address.line2}
+            {siteData.address.line1} <br />
+            {siteData.address.line2}
           </Typography>
         </a>
       </FooterInfoTemplate>
 
       <FooterInfoTemplate title="Contato">
         <Stack alignItems="flex-start">
-          <a href={`tel:${balnearioData.contact.phoneNumber}`}>
+          <a href={`tel:${siteData.contact.phoneNumber}`}>
             <Typography>Telefone: {formattedPhoneNumber}</Typography>
           </a>
 
@@ -52,8 +52,8 @@ export const FooterInfos = (props: IFooterInfosProps) => {
             <Typography>WhatsApp: {formattedWhatsApp}</Typography>
           </a>
 
-          <a href={`mailto:${balnearioData.contact.email}`}>
-            <Typography>E-mail: {balnearioData.contact.email}</Typography>
+          <a href={`mailto:${siteData.contact.email}`}>
+            <Typography>E-mail: {siteData.contact.email}</Typography>
           </a>
         </Stack>
       </FooterInfoTemplate>

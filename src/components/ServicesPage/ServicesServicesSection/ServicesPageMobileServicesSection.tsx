@@ -1,9 +1,8 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { ServicesPageServiceCard } from "./ServicesPageServiceCard";
 import { ServicesIntroduction } from "../ServicesIntroduction/ServicesIntroduction";
-import { services } from "@/data/balneario-camboriu/services/services";
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 import { Animate } from "@/components/common/Animate";
+import { siteData } from "@/data/sites";
 
 export interface IServicesPageMobileServicesSectionProps {}
 
@@ -29,7 +28,7 @@ export const ServicesPageMobileServicesSection = (
             justifyContent="center"
             width="100%"
           >
-            {balnearioData.services.map((item, index) => (
+            {siteData.services.map((item, index) => (
               <Animate
                 key={item.title}
                 initial={{ opacity: 0, x: -20 }}

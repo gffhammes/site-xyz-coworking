@@ -14,11 +14,9 @@ import {
 import { servicesHeroSectionData } from "./ServicesHeroSection";
 import { useState } from "react";
 import Link from "next/link";
-import { scrollTo } from "@/utils/utils";
-import { services } from "@/data/balneario-camboriu/services/services";
 import parse from "html-react-parser";
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
+import { siteData } from "@/data/sites";
 
 export interface IServicesSelectProps {
   align?: "center" | "flex-start";
@@ -50,7 +48,7 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
         gridAutoRows="1fr"
         width="100%"
       >
-        {balnearioData.services.map((option) => {
+        {siteData.services.map((option) => {
           return (
             <TrackingWrapper section="hero" action={`ver-${option.slug}`}>
               <Stack

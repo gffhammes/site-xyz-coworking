@@ -2,7 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { servicesIntroductionData } from "../ServicesIntroduction/ServicesIntroduction";
 import { services } from "@/data/balneario-camboriu/services/services";
 import { DesktopServiceCard } from "@/components/Home/ServicesSection/DesktopServiceCard";
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
+import { siteData } from "@/data/sites";
 
 export interface IServicesPageDesktopServicesSectionProps {}
 
@@ -33,7 +33,7 @@ export const ServicesPageDesktopServicesSection = (
           </Stack>
 
           <Box display="grid" gridTemplateColumns="1fr" gap={4}>
-            {balnearioData.services.map((item, index) => (
+            {siteData.services.map((item, index) => (
               <Box key={item.title}>
                 <DesktopServiceCard serviceData={item} key={item.slug} />
               </Box>

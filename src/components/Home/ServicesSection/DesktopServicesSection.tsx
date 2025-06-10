@@ -2,8 +2,8 @@
 
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { DesktopServiceCard } from "./DesktopServiceCard";
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
 import { Animate } from "@/components/common/Animate";
+import { siteData } from "@/data/sites";
 
 export interface IDesktopServicesSectionProps {}
 
@@ -47,7 +47,7 @@ export const DesktopServicesSection = (props: IDesktopServicesSectionProps) => {
           </Stack>
 
           <Box display="grid" gridTemplateColumns="1fr" gap={4}>
-            {balnearioData.services.map((item, index) => (
+            {siteData.services.map((item, index) => (
               <Box key={item.title}>
                 <Animate
                   initial={{ opacity: 0, x: -20 }}

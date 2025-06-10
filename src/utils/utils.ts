@@ -1,4 +1,4 @@
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
+import { siteData } from "@/data/sites";
 
 export const scrollTo = (id: string, offset?: number) => {
   const target = document.getElementById(id);
@@ -28,7 +28,7 @@ export const validateEmail = (email: string) => {
 };
 
 export const getWhatsappLink = (customText?: string) => {
-  const phone = balnearioData.contact.whatsappNumber;
+  const phone = siteData.contact.whatsappNumber;
 
   const text =
     customText ??
@@ -57,11 +57,11 @@ export const getFormattedPhoneNumber = (phoneNumber: string) => {
 };
 
 export const formattedPhoneNumber = getFormattedPhoneNumber(
-  balnearioData.contact.phoneNumber
+  siteData.contact.phoneNumber
 );
 
 export const formattedWhatsApp = getFormattedPhoneNumber(
-  balnearioData.contact.whatsappNumber
+  siteData.contact.whatsappNumber
 );
 interface IGetElementIdArgs {
   section: string;

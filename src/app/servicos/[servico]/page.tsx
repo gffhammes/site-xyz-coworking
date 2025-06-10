@@ -8,7 +8,7 @@ import { BenefitsSection } from "@/components/ServiceDetailsPage/BenefitsSection
 import { StepperSection } from "@/components/ServiceDetailsPage/StepperSection/StepperSection";
 import { FloatingCTA } from "@/components/ServiceDetailsPage/FloatingCTA/FloatingCTA";
 import { PlansSection } from "@/components/ServiceDetailsPage/PlansSection/PlansSection";
-import { balnearioData } from "@/data/balneario-camboriu/balneario-camboriu";
+import { siteData } from "@/data/sites";
 
 export async function generateMetadata({
   params,
@@ -17,9 +17,7 @@ export async function generateMetadata({
 }) {
   const { servico } = await params;
 
-  const service = balnearioData.services.find(
-    (service) => service.slug === servico
-  );
+  const service = siteData.services.find((service) => service.slug === servico);
 
   if (!service) return {};
 
@@ -47,9 +45,7 @@ export default async function Servicos({
 }) {
   const { servico } = await params;
 
-  const service = balnearioData.services.find(
-    (service) => service.slug === servico
-  );
+  const service = siteData.services.find((service) => service.slug === servico);
 
   if (!service) return notFound();
 
@@ -79,7 +75,7 @@ export default async function Servicos({
 }
 
 export async function generateStaticParams() {
-  return balnearioData.services.map((service) => ({
+  return siteData.services.map((service) => ({
     servico: service.slug,
   }));
 }
