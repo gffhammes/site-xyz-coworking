@@ -44,7 +44,7 @@ export const FooterInfos = (props: IFooterInfosProps) => {
 
       <FooterInfoTemplate title="Contato">
         <Stack alignItems="flex-start">
-          <a href={`tel:${balnearioData.contact.email}`}>
+          <a href={`tel:${balnearioData.contact.phoneNumber}`}>
             <Typography>Telefone: {formattedPhoneNumber}</Typography>
           </a>
 
