@@ -1,8 +1,9 @@
-import heroBg from "../../../../public/images/home-hero.webp";
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
 import { Stack, Typography } from "@mui/material";
 import { HomeHeroSectionButtons } from "./HomeHeroSectionButtons";
 import { Animate, IAnimateProps } from "@/components/common/Animate";
+import { siteData } from "@/data/sites";
+import parse from "html-react-parser";
 
 export interface IHomeHeroSectionProps {}
 
@@ -13,11 +14,11 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
         <Stack alignItems="flex-start" gap={4}>
           <Stack gap={2}>
             <Typography variant="h1" maxWidth="16ch">
-              {heroSectionData.h1}
+              {siteData.homeData.heroSection.h1}
             </Typography>
 
             <Animate {...subtitleAnimateProps}>
-              <Typography>{heroSectionData.subtitle}</Typography>
+              <Typography>{siteData.homeData.heroSection.subtitle}</Typography>
             </Animate>
           </Stack>
 
@@ -35,12 +36,12 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
         <Stack justifyContent="center" gap={4} height="100%">
           <Stack gap={2}>
             <Typography variant="h1" maxWidth="30ch">
-              {heroSectionData.h1}
+              {parse(siteData.homeData.heroSection.h1)}
             </Typography>
 
             <Animate {...subtitleAnimateProps}>
               <Typography maxWidth="60ch">
-                {heroSectionData.subtitle}
+                {siteData.homeData.heroSection.subtitle}
               </Typography>
             </Animate>
           </Stack>
@@ -56,15 +57,9 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
           </Animate>
         </Stack>
       }
-      bgImage={heroBg.src}
+      bgImage={siteData.homeData.heroSection.image}
     />
   );
-};
-
-export const heroSectionData = {
-  h1: `Seu escritório de alto padrão, no coração de Balneário Camboriú`,
-  subtitle: `Espaços projetados para refletir o sucesso de sua empresa, combinando design moderno, infraestrutura de ponta e a melhor localização em Balneário Camboriú. Feito para quem busca excelência.`,
-  image: heroBg.src,
 };
 
 const h1AnimateProps: IAnimateProps = {

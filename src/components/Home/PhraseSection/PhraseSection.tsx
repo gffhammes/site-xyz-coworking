@@ -1,9 +1,8 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import image1 from "../../../../public/images/bc1.jpeg";
-import image2 from "../../../../public/images/bc2.webp";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 import { Animate } from "@/components/common/Animate";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
+import { siteData } from "@/data/sites";
 
 export interface IPhraseSectionProps {}
 
@@ -23,7 +22,9 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
             sx={{ position: "relative", zIndex: 10, scrollSnapAlign: "center" }}
           >
             <Typography
-              dangerouslySetInnerHTML={{ __html: data.text }}
+              dangerouslySetInnerHTML={{
+                __html: siteData.homeData.phraseSection.text,
+              }}
               textAlign="center"
               sx={{
                 textTransform: "uppercase",
@@ -59,7 +60,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
               height: image1Size,
               width: image1Size,
               borderRadius: image1Size,
-              backgroundImage: `url('${image2.src}')`,
+              backgroundImage: `url('${siteData.homeData.phraseSection.image1}')`,
               backgroundSize: "cover",
               position: "absolute",
               top: 0,
@@ -80,7 +81,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
               height: image2Size,
               width: image2Size,
               borderRadius: image2Size,
-              backgroundImage: `url('${image1.src}')`,
+              backgroundImage: `url('${siteData.homeData.phraseSection.image2}')`,
               backgroundSize: "cover",
               position: "absolute",
               top: 0,
@@ -121,7 +122,3 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
 
 const image1Size = { xs: "17rem", md: "27rem" };
 const image2Size = { xs: "15rem", md: "22rem" };
-
-const data = {
-  text: "Aqui, seu trabalho<br/><strong>atinge outro nível</strong>",
-};

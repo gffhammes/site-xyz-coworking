@@ -1,5 +1,8 @@
 import { ISiteData } from "../types";
 import { services } from "./services/services";
+import heroBg from "../../../public/images/XYZ - Jvll-4.jpg";
+import image1 from "../../../public/images/XYZ - Jvll-05.jpg";
+import image2 from "../../../public/images/XYZ - Jvll-16.jpg";
 
 const contact = {
   phoneNumber: "5547999990294",
@@ -23,9 +26,19 @@ export const joinvilleData: ISiteData = {
   services,
   workingHours,
   address,
-  homeMetaData: {
+  homeData: {
     metaTitle: "Coworking em Joinville | Estrutura Profissional e Networking",
     metaDescription:
       "Encontre seu espaço de trabalho ideal em Joinville. Coworking com internet rápida, salas equipadas, planos flexíveis e ambiente perfeito para networking.",
+    heroSection: {
+      h1: `Coworking de alto padrão<br/>no centro de Joinville`,
+      subtitle: `Estrutura completa para empresas e profissionais que valorizam eficiência, privacidade e imagem sólida. Salas equipadas, internet rápida e ambiente corporativo, no endereço mais estratégico de Joinville.`,
+      image: heroBg.src,
+    },
+    phraseSection: {
+      text: "Seu desempenho profissional<br/><strong>começa com o ambiente certo</strong>",
+      image1: image1.src,
+      image2: image2.src,
+    },
   },
 };

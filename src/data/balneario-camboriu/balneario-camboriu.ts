@@ -1,5 +1,8 @@
 import { ISiteData } from "../types";
 import { services } from "./services/services";
+import heroBg from "../../../public/images/home-hero.webp";
+import image1 from "../../../public/images/bc1.jpeg";
+import image2 from "../../../public/images/bc2.webp";
 
 const contact = {
   phoneNumber: "5547999990294",
@@ -23,10 +26,20 @@ export const balnearioData: ISiteData = {
   services,
   workingHours,
   address,
-  homeMetaData: {
+  homeData: {
     metaTitle:
       "Coworking em Balneário Camboriú | XYZ Coworking - Endereço Fiscal, Salas e Estações",
     metaDescription:
       "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
+    heroSection: {
+      h1: `Seu escritório de alto padrão, no coração de Balneário Camboriú`,
+      subtitle: `Espaços projetados para refletir o sucesso de sua empresa, combinando design moderno, infraestrutura de ponta e a melhor localização em Balneário Camboriú. Feito para quem busca excelência.`,
+      image: heroBg.src,
+    },
+    phraseSection: {
+      text: "Seu desempenho profissional<br/><strong>começa com o ambiente certo</strong>",
+      image1: image1.src,
+      image2: image2.src,
+    },
   },
 };

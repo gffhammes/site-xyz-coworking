@@ -10,8 +10,8 @@ import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton/What
 import { siteData } from "@/data/sites";
 
 export const metadata: Metadata = {
-  title: siteData.homeMetaData.metaTitle,
-  description: siteData.homeMetaData.metaDescription,
+  title: siteData.homeData.metaTitle,
+  description: siteData.homeData.metaDescription,
   icons: {
     icon: [
       {
