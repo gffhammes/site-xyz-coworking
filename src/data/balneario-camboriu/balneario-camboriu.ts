@@ -11,7 +11,7 @@ const contact = {
 };
 
 const workingHours = [
-  "Segunda a sexta-feira das 8h as 19h",
+  "Segunda a sexta-feira das 8h30 às 19h",
   "Acesso 24h para clientes",
 ];
 
