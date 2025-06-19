@@ -8,53 +8,53 @@ import { membroX } from "./membro-x";
 
 export const estacoesTrabalho: IServiceItem = {
   title: "Estações de Trabalho",
-  seoTitle: "Estações de Trabalho em Balneário Camboriú",
+  seoTitle: "Estações de Trabalho em Joinville",
   description:
-    "Ambientes dinâmicos e inspiradores para quem busca flexibilidade e produtividade, com infraestrutura de alto padrão para freelancers e pequenas empresas.",
+    "Espaços compartilhados e funcionais, ideais para profissionais que buscam estrutura, foco e flexibilidade para trabalhar com eficiência em Joinville.",
   image: estacoesImg.src,
   slug: "estacoes-trabalho",
-  heroText: "Uma estação de<br/>trabalho compartilhada",
+  heroText: "Uma estação de<br/><strong>trabalho compartilhada</strong>",
   homeCard: {
     title: "Estações de Trabalho",
     description:
-      "Esqueça a solidão do home office! Aqui, você trabalha cercado de boas ideias e grandes oportunidades.",
+      "Foco e produtividade em um ambiente profissional. Ideal para quem quer fugir do home office e manter uma rotina eficiente.",
   },
   detailsPage: {
-    h1: "O ambiente ideal para fazer conexões<br/>que levam seu negócio mais longe",
+    h1: "Flexibilidade e estrutura<br/>para sua rotina de trabalho",
     subtitle:
-      "Tenha acesso a um espaço de trabalho completo, sem os custos de manter um escritório.<br/>Conecte-se, produza mais e esteja cercado por oportunidades todos os dias.",
+      "Trabalhe com conforto, internet rápida e todos os recursos que você precisa —<br/>sem os custos e a solidão de um escritório em casa.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
-      h2: "Conecte-se com um ambiente que impulsiona sua produtividade",
+      h2: "Espaços compartilhados com estrutura de verdade",
       subtitle:
-        "Saia do isolamento e descubra a energia de trabalhar em um espaço compartilhado, moderno e rodeado de oportunidades.",
+        "Ideal para quem busca um ambiente profissional, com conforto e flexibilidade para trabalhar, atender clientes e fazer contatos relevantes.",
       items: [
         {
-          text: "<strong>Estações individuais</strong> em ambiente compartilhado",
+          text: "<strong>Estações individuais</strong> com mesa, cadeira ergonômica e conforto",
           icon: SensorOccupiedIcon,
         },
         {
-          text: "Ideal para <strong>freelancers, nômades digitais e autônomos</strong>",
+          text: "Perfeito para <strong>profissionais autônomos, híbridos e freelancers</strong>",
           icon: WorkIcon,
         },
         {
-          text: "<strong>Networking, trocas e negócios</strong> com outros profissionais",
+          text: "<strong>Conexões profissionais</strong> e troca com outros negócios",
           icon: HubIcon,
         },
         {
-          text: "<strong>Mobílias ergonômicas, internet rápida</strong> e café à vontade",
+          text: "<strong>Internet rápida, café à vontade</strong> e áreas de apoio",
           icon: WifiIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Do cadastro à mesa<br/>em poucos cliques",
+      h2: "Do cadastro à mesa<br/>em poucos minutos",
       subtitle:
-        "É só escolher o plano, preencher os dados e começar a trabalhar num ambiente que vai elevar sua produtividade.",
+        "Escolha seu plano, preencha seus dados e comece a usar sua estação quando quiser — com tudo pronto para você produzir.",
       items: [
         "Escolha seu plano diário ou mensal",
-        "Assine o contrato em poucos minutos",
-        "Comece a usar sua estação quando quiser",
+        "Assine o contrato online",
+        "Chegue e comece a trabalhar",
       ],
     },
 
@@ -63,7 +63,6 @@ export const estacoesTrabalho: IServiceItem = {
         price: 120,
         label: "Diária",
         period: "Dia",
-
         included: [
           "Mesa individual e cadeira ergonômica",
           "Internet rápida e estável",
@@ -71,7 +70,7 @@ export const estacoesTrabalho: IServiceItem = {
           "Café à vontade",
         ],
         whatsappMessage:
-          "Olá! Vim pelo site e gostaria de reservar uma estação de trabalho.",
+          "Olá! Tenho interesse em reservar uma estação de trabalho em Joinville.",
       },
     ],
     plansMessage:

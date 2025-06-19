@@ -9,33 +9,33 @@ import { membroX } from "./membro-x";
 export const salasAtendimento: IServiceItem = {
   title: "Salas de Atendimento",
   seoTitle:
-    "Salas de Atendimento em Balneário Camboriú com privacidade e estrutura completa",
+    "Salas de Atendimento em Joinville com privacidade e estrutura profissional",
   description:
-    "Receba seus pacientes ou clientes com profissionalismo, conforto e total privacidade. Nossas salas de atendimento em Balneário Camboriú são prontas para uso, com recepção, internet e mobília completa.",
+    "Realize atendimentos presenciais com privacidade, conforto e uma imagem profissional. Salas prontas para uso em Joinville, com recepção, internet e mobília completa — ideais para psicólogos, terapeutas, consultores e outros especialistas.",
   image: salaImg.src,
   slug: "salas-atendimento",
-  heroText: "Uma sala para<br/>fazer atendimentos",
+  heroText: "Uma sala para<br/><strong>fazer atendimentos</strong>",
   homeCard: {
     title: "Salas de Atendimento",
     description:
-      "Perfeitas para psicólogos, terapeutas, consultores e outros profissionais que precisam de um espaço reservado e profissional.",
+      "Perfeitas para profissionais que precisam de um espaço reservado, com estrutura completa e imagem profissional.",
   },
   detailsPage: {
-    h1: "Seu consultório pronto para<br/>uso em Balneário Camboriú",
+    h1: "Seu espaço de atendimento<br/>pronto para uso em Joinville",
     subtitle:
-      "Ofereça uma experiência mais profissional e acolhedora para seus atendimentos<br/>presenciais, com total privacidade, estrutura completa e localização estratégica.",
+      "Ofereça uma experiência mais profissional, com privacidade, conforto<br/>e toda a estrutura que seu atendimento presencial exige.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
-      h2: "Mais profissionalismo, conforto e privacidade para seus atendimentos",
+      h2: "Privacidade e estrutura profissional para seus atendimentos",
       subtitle:
-        "Ideal para quem precisa de um ambiente reservado, com estrutura profissional e pronto para começar hoje mesmo.",
+        "Evite improvisos. Atenda com tranquilidade em um ambiente silencioso, bem equipado e pronto para acolher seus pacientes ou clientes.",
       items: [
         {
           text: "<strong>Ambiente ideal</strong> para psicólogos, terapeutas, coaches e consultores",
           icon: MedicalInformationIcon,
         },
         {
-          text: "<strong>Privacidade e conforto</strong> para atender com excelência",
+          text: "<strong>Privacidade e conforto</strong> para atendimentos presenciais",
           icon: DomainVerificationIcon,
         },
         {
@@ -49,13 +49,13 @@ export const salasAtendimento: IServiceItem = {
       ],
     },
     stepsSection: {
-      h2: "Comece a atender com mais<br/>profissionalismo em poucos passos",
+      h2: "Comece a atender com estrutura<br/>e segurança profissional",
       subtitle:
-        "Evite improvisos. Veja como é fácil garantir seu espaço e começar a atender presencialmente com mais estrutura e credibilidade.",
+        "Escolha a modalidade ideal, preencha seus dados e comece a usar a sala no mesmo dia — com tudo pronto para receber seus clientes.",
       items: [
-        "Escolha a sala ideal para seu tipo de atendimento",
-        "Envie seus dados e assine o contrato digital",
-        "Receba seus clientes com conforto e privacidade no mesmo dia",
+        "Escolha o modelo ideal: hora, período ou diária",
+        "Preencha seus dados e assine o contrato digital",
+        "Comece a atender com conforto e credibilidade",
       ],
     },
     plans: [
@@ -71,7 +71,7 @@ export const salasAtendimento: IServiceItem = {
           "Ambiente silencioso e reservado",
         ],
         whatsappMessage:
-          "Olá! Vi no site as Salas de Atendimento e gostaria de reservar uma hora.",
+          "Olá! Tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
       },
       {
         price: 400,
@@ -85,7 +85,7 @@ export const salasAtendimento: IServiceItem = {
           "Ambiente silencioso e reservado",
         ],
         whatsappMessage:
-          "Olá! Vi no site as Salas de Atendimento e gostaria de reservar um período.",
+          "Olá! Tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
       },
       {
         price: 720,
@@ -99,7 +99,7 @@ export const salasAtendimento: IServiceItem = {
           "Ambiente silencioso e reservado",
         ],
         whatsappMessage:
-          "Olá! Vi no site as Salas de Atendimento e gostaria de reservar uma diária.",
+          "Olá! Tenho interesse em reservar uma diária em uma sala de atendimento em Joinville.",
       },
     ],
     plansMessage:

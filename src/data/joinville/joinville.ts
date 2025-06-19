@@ -5,20 +5,21 @@ import image1 from "../../../public/images/XYZ - Jvll-05.webp";
 import image2 from "../../../public/images/XYZ - Jvll-16.webp";
 
 const contact = {
-  phoneNumber: "5547999990294",
-  whatsappNumber: "5547999990294",
-  email: "jamal@xyzcoworking.com",
+  phoneNumber: "554734613100",
+  whatsappNumber: "554734613100",
+  email: "contato@xyzcoworking.com",
 };
 
 const workingHours = [
-  "Segunda a sexta-feira das 8h as 19h",
+  "Segunda a sexta-feira das 8h às 22h",
+  "Sábados das 8h às 12h",
   "Acesso 24h para clientes",
 ];
 
 const address = {
-  line1: "Rua 55 (Praça Higino Pio), n° 50 - Sala 01",
-  line2: "Centro, Balneário Camboriú/SC",
-  href: "https://www.google.com/maps/place/R.+55,+50+-+Centro,+Balne%C3%A1rio+Cambori%C3%BA+-+SC,+88330-681,+Brazil/@-26.9859901,-48.6354357,15.61z/data=!4m6!3m5!1s0x94d8b6015f1e5f4d:0xf16002cdc8ee5e78!8m2!3d-26.9866223!4d-48.6339933!16s%2Fg%2F11cpjygcv2?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+  line1: "Rua Dr. João Colin, 1285",
+  line2: "América, Joinville/SC",
+  href: "https://www.google.com/maps/place/XYZ+Coworking+Joinville/data=!4m2!3m1!1s0x0:0x3e0f2b9cb71f2b71?sa=X&ved=1t:2428&ictx=111",
 };
 
 export const joinvilleData: ISiteData = {

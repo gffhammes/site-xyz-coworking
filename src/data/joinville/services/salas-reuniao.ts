@@ -8,53 +8,53 @@ import { membroX } from "./membro-x";
 
 export const salasReuniao: IServiceItem = {
   title: "Salas de Reunião",
-  seoTitle: "Salas de Reunião em Balneário Camboriú",
+  seoTitle: "Salas de Reunião em Joinville",
   description:
-    "Ambientes projetados para causar impacto, com tecnologia e conforto, perfeitos para decisões importantes e reuniões de alto nível. Ideal para empresas e profissionais que buscam um local estratégico para fechar negócios.",
+    "Estrutura completa para reuniões profissionais em Joinville. Ambientes climatizados, com TV, Wi-Fi e recepção, prontos para transmitir credibilidade e fechar negócios com eficiência.",
   image: reunioesImg.src,
   slug: "salas-reuniao",
-  heroText: "Uma sala para<br/>reunião de negócios",
+  heroText: "Uma sala para<br/><strong>reunião de negócios</strong>",
   homeCard: {
     title: "Reserva de Sala",
     description:
-      "Precisa de uma sala para uma reunião? Você pode agendar por hora para seu conforto e de seus clientes!",
+      "Agende sua reunião em um ambiente profissional, com estrutura completa e localização estratégica.",
   },
   detailsPage: {
-    h1: "As salas perfeitas para destacar sua<br/>empresa e fechar grandes negócios",
+    h1: "Salas sob medida para<br/>reuniões de alto nível",
     subtitle:
-      "Reuniões estratégicas pedem um ambiente à altura. Nossas salas oferecem<br/>conforto, tecnologia e a imagem certa para fechar grandes negócios.",
+      "Ambientes corporativos e bem localizados, ideais para reuniões presenciais,<br/>atendimentos e videoconferências com estrutura completa.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
-      h2: "Ambientes pensados para fechar negócios de verdade",
+      h2: "Infraestrutura de verdade para reuniões que exigem presença",
       subtitle:
-        "Suas reuniões não precisam mais acontecer em cafés ou improvisos. Aqui, você tem estrutura, conforto e presença para impressionar.",
+        "Nada de improviso ou ruído. Tenha à disposição um espaço planejado para conversas estratégicas, negociações e apresentações com impacto.",
       items: [
         {
-          text: "Espaços com <strong>climatização, TV, Wi-Fi e cafézinho</strong>",
+          text: "Espaços com <strong>climatização, TV, Wi-Fi e café</strong> disponíveis",
           icon: TvIcon,
         },
         {
-          text: "<strong>Atendimento personalizado</strong> para você e seus convidados",
+          text: "<strong>Recepção profissional</strong> para você e seus convidados",
           icon: WorkspacePremiumIcon,
         },
         {
-          text: "Ideal para <strong>reuniões presenciais</strong> ou <strong>videoconferências</strong>",
+          text: "Ideal para <strong>atendimentos presenciais</strong> ou <strong>reuniões remotas</strong>",
           icon: GroupsIcon,
         },
         {
-          text: "<strong>Agendamento fácil e prático,</strong> por hora ou período",
+          text: "<strong>Agendamento simples</strong> por hora, período ou diária",
           icon: EventAvailableIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Reserve seu espaço para reuniões<br/>com agilidade e praticidade",
+      h2: "Agende sua sala<br/>com rapidez e segurança",
       subtitle:
-        "Você escolhe o horário, a estrutura já está pronta. É só agendar e causar uma ótima impressão em cada reunião.",
+        "Escolha o melhor horário, faça sua reserva e conte com um ambiente pronto para causar uma boa impressão.",
       items: [
-        "Escolha o melhor horário para sua reunião",
-        "Faça a reserva online ou via WhatsApp",
-        "Chegue e aproveite o ambiente pronto para uso",
+        "Escolha o horário da sua reunião",
+        "Reserve online ou via WhatsApp",
+        "Chegue e aproveite a estrutura profissional",
       ],
     },
     plans: [
@@ -69,7 +69,7 @@ export const salasReuniao: IServiceItem = {
           "Água, café e estrutura de apoio",
         ],
         whatsappMessage:
-          "Olá! Vim pelo site e gostaria de reservar um período em uma sala de reunião.",
+          "Olá! Gostaria de reservar um período em uma sala de reunião em Joinville.",
       },
       {
         price: 800,
@@ -82,7 +82,7 @@ export const salasReuniao: IServiceItem = {
           "Água, café e estrutura de apoio",
         ],
         whatsappMessage:
-          "Olá! Vim pelo site e gostaria de reservar uma diária em uma sala de reunião.",
+          "Olá! Gostaria de reservar uma diária em uma sala de reunião em Joinville.",
       },
     ],
     plansMessage:

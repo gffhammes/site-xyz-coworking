@@ -7,53 +7,53 @@ import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 
 export const salasPrivativas: IServiceItem = {
   title: "Salas Privativas",
-  seoTitle: "Salas Privativas em Balneário Camboriú",
+  seoTitle: "Salas Privativas em Joinville",
   description:
-    "Garanta total privacidade e uma estrutura sofisticada para o seu trabalho. Um espaço exclusivo para você, com a credibilidade que seu negócio precisa, ideal para empreendedores e empresas que buscam profissionalismo.",
+    "Garanta privacidade, foco e uma estrutura completa para o seu negócio. As salas privativas são ideais para empresas e profissionais que precisam de um ambiente exclusivo, pronto para transmitir profissionalismo e eficiência.",
   image: salaImg.src,
   slug: "salas-privativas",
-  heroText: "Uma sala privativa<br/>para meu negócio",
+  heroText: "Uma sala privativa<br/><strong>para meu negócio</strong>",
   homeCard: {
     title: "Salas Privativas",
     description:
-      "Ideal para pequenas empresas, startups e autônomos que precisam de um espaço exclusivo.",
+      "Ideal para pequenas empresas, consultores e prestadores de serviço que precisam de um espaço exclusivo, com estrutura profissional.",
   },
   detailsPage: {
-    h1: "Um espaço só seu, com a<br/>estrutura que sua empresa merece",
+    h1: "Seu próprio espaço, com<br/>estrutura de escritório de verdade",
     subtitle:
-      "Trabalhe com mais foco, profissionalismo e privacidade. Nossas salas privativas são ideais para<br/>quem quer um espaço só seu, pronto para impressionar clientes e manter a produtividade em alta.",
+      "Mais do que privacidade. Aqui, você trabalha com foco, segurança e a imagem certa para seu negócio.<br/>Salas prontas para uso, em uma localização estratégica de Joinville.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
-      h2: "Mais que um espaço — é seu escritório com status e privacidade",
+      h2: "Salas privativas que entregam conforto, eficiência e imagem profissional",
       subtitle:
-        "Profissionalize sua operação com um ambiente exclusivo, preparado para quem leva o negócio a sério e quer receber clientes com autoridade.",
+        "Tudo o que você espera de um escritório próprio — sem se preocupar com aluguel comercial, condomínio, limpeza ou infraestrutura.",
       items: [
         {
-          text: "<strong>Ambiente exclusivo</strong> para você e sua equipe performarem",
+          text: "<strong>Ambiente exclusivo</strong> para sua equipe ou atendimento individual",
           icon: GroupWorkIcon,
         },
         {
-          text: "<strong>Pronto para usar,</strong> com internet, mobília e climatização",
+          text: "<strong>Pronta para usar:</strong> internet rápida, mobília e climatização inclusas",
           icon: RocketLaunchIcon,
         },
         {
-          text: "<strong>Mais profissionalismo</strong> e concentração para a sua rotina",
+          text: "<strong>Mais foco e produtividade</strong> para sua rotina de trabalho",
           icon: ChecklistIcon,
         },
         {
-          text: "<strong>Recepcionista para seus clientes</strong> em horário comercial",
+          text: "<strong>Recepção profissional</strong> para seus clientes em horário comercial",
           icon: RecordVoiceOverIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Tenha sua sala exclusiva pronta<br/>para usar em poucos passos",
+      h2: "Tenha sua sala pronta<br/>para trabalhar em poucas horas",
       subtitle:
-        "Sem enrolação. Veja como é rápido garantir sua estrutura completa e começar a trabalhar com mais foco, privacidade e profissionalismo.",
+        "Sem burocracia. Escolha o espaço ideal, assine o contrato digitalmente e comece a usar no mesmo dia — com tudo funcionando.",
       items: [
-        "Escolha a sala ideal para o seu perfil",
-        "Assine o contrato digital",
-        "Leve seu notebook e comece a trabalhar no mesmo dia",
+        "Escolha a sala que atende sua demanda",
+        "Assine o contrato de forma digital",
+        "Leve seu notebook e comece a usar na hora",
       ],
     },
 
@@ -71,7 +71,7 @@ export const salasPrivativas: IServiceItem = {
         ],
         customPriceText: "A partir de",
         whatsappMessage:
-          "Olá! Vim pelo site e gostaria de conhecer as opções de salas privativas.",
+          "Olá! Tenho interesse em conhecer as opções de salas privativas em Joinville.",
       },
     ],
     floatingCtaMessage: "A partir de 2490/mês",
