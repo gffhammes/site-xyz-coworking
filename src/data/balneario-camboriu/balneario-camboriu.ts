@@ -1,8 +1,8 @@
 import { ISiteData } from "../types";
 import { services } from "./services/services";
-import heroBg from "../../../public/images/home-hero.webp";
-import image1 from "../../../public/images/bc1.jpeg";
-import image2 from "../../../public/images/bc2.webp";
+import heroBg from "../../../public/images/XYZ - BC-10.webp";
+import image1 from "../../../public/images/XYZ - BC-3.webp";
+import image2 from "../../../public/images/XYZ - BC-4.webp";
 
 const contact = {
   phoneNumber: "5547999990294",

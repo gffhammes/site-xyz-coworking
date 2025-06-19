@@ -1,4 +1,4 @@
-import salaImg from "../../../../public/images/salas-privativas.jpg";
+import salaImg from "../../../../public/images/XYZ - BC-45.webp";
 import { IServiceItem } from "@/data/types";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
