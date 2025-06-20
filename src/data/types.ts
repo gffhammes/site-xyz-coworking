@@ -71,5 +71,9 @@ export interface ISiteData {
       image1: string;
       image2: string;
     };
+    mapSection: {
+      h2: string;
+      mapAddress: string;
+    };
   };
 }

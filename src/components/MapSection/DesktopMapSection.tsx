@@ -5,6 +5,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Animate } from "../common/Animate";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 import { TrackingWrapper } from "../common/TrackingWrapper";
+import { siteData } from "@/data/sites";
 
 export interface IDesktopMapSectionProps {}
 
@@ -26,7 +27,7 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
               viewport={{ once: true, margin: "-30%" }}
             >
               <Typography variant="h2" maxWidth="25ch" fontSize={16}>
-                Venha conhecer o nosso espaço em Balneário Camboriú!
+                {siteData.homeData.mapSection.h2}
               </Typography>
             </Animate>
 
