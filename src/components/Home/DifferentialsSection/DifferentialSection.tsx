@@ -8,8 +8,8 @@ import { DifferentialImage } from "./DifferentialImage";
 import { CarouselControls } from "./CarouselControls";
 
 import image1 from "../../../../public/images/endereco-estrategico.webp";
-import image2 from "../../../../public/images/infraestrutura.webp";
-import image3 from "../../../../public/images/medium-shot-smiley-colleagues-job.webp";
+import image2 from "../../../../public/images/infra-bc.webp";
+import image3 from "../../../../public/images/conexao-bc.webp";
 import image4 from "../../../../public/images/servicos.webp";
 import { Animate } from "@/components/common/Animate";
 

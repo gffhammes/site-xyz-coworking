@@ -1,4 +1,4 @@
-import membroImg from "../../../../public/images/membro.webp";
+import membroImg from "../../../../public/images/membro-x-jlle.webp";
 import { IServiceItem } from "@/data/types";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
