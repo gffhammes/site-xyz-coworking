@@ -58,9 +58,15 @@ const theme = createTheme({
           fontSize: 16,
           lineHeight: 1,
         },
+        text: {
+          borderRadius: "40rem",
+          padding: "1rem 1.75rem",
+          fontSize: 16,
+          lineHeight: 1,
+        },
         sizeSmall: {
           padding: ".5rem 1rem",
-          // fontSize: 12,
+          fontSize: 14,
         },
       },
       // defaultProps: {

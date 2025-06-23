@@ -2,6 +2,7 @@ import { Box, Container, Drawer, IconButton, Stack } from "@mui/material";
 import { NavigationList } from "../NavigationList";
 import CloseIcon from "@mui/icons-material/Close";
 import { MenuCTA } from "./MenuCTA";
+import { MenuClientsAccess } from "./MenuClientsAccess";
 
 export interface IMobileMenuDrawerProps {
   isOpen: boolean;
@@ -28,7 +29,10 @@ export const MobileMenuDrawer = ({
 
         <NavigationList direction="column" onItemClick={handleClose} />
 
-        <MenuCTA theme="light" />
+        <Stack gap={2}>
+          <MenuClientsAccess />
+          <MenuCTA theme="light" />
+        </Stack>
       </Stack>
     </Drawer>
   );
