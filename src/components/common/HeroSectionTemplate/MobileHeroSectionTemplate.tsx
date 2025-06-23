@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import { XYZLogoWithLink } from "../XYZLogoWithLink";
 import Image from "next/image";
 import { ReactElement } from "react";
@@ -14,7 +14,14 @@ export const MobileHeroSectionTemplate = ({
   bgImage,
 }: IMobileHeroSectionTemplateProps) => {
   return (
-    <Box style={{ height: "100svh", width: "100%", position: "relative" }}>
+    <Box
+      style={{
+        height: "100svh",
+        width: "100%",
+        position: "relative",
+        overflow: "hidden", // garante que nada extrapole
+      }}
+    >
       <Box sx={{ height: "95svh" }}>
         <Stack
           sx={{
@@ -25,7 +32,7 @@ export const MobileHeroSectionTemplate = ({
             pb: 4,
             alignItems: "flex-end",
             position: "relative",
-            zIndex: 1,
+            zIndex: 2, // sobe acima da imagem e gradiente
             color: "white",
           }}
         >
@@ -51,32 +58,38 @@ export const MobileHeroSectionTemplate = ({
         </Stack>
       </Box>
 
+      {/* Fundo com imagem e gradiente */}
       <Box
         sx={{
-          height: "100%",
-          width: "100%",
           position: "absolute",
           top: 0,
           left: 0,
+          height: "100svh",
+          width: "100%",
           zIndex: 0,
         }}
       >
+        {/* Gradiente sem mixBlendMode para performance */}
         <Box
           sx={{
-            height: "100%",
-            width: "100%",
             position: "absolute",
-            top: 0,
-            left: 0,
-            background: "linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,1))",
+            inset: 0,
+            background: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,1))",
+            pointerEvents: "none",
             zIndex: 1,
-            mixBlendMode: "hard-light",
           }}
         />
-
-        <Image fill src={bgImage} alt="Hero" objectFit="cover" priority />
+        <Image
+          fill
+          src={bgImage}
+          alt="Hero"
+          objectFit="cover"
+          priority
+          sizes="100vw"
+        />
       </Box>
 
+      {/* Curva branca inferior */}
       <Box
         sx={{
           height: "5svh",
@@ -85,6 +98,7 @@ export const MobileHeroSectionTemplate = ({
           position: "absolute",
           bottom: 0,
           borderRadius: "5rem 5rem 0 0",
+          zIndex: 3,
         }}
       />
     </Box>
