@@ -62,15 +62,6 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
   );
 };
 
-const h1AnimateProps: IAnimateProps = {
-  animate: { opacity: 1 },
-  initial: { opacity: 0 },
-  transition: {
-    duration: 1,
-    type: "spring",
-  },
-};
-
 const subtitleAnimateProps: IAnimateProps = {
   animate: { opacity: 1, y: 0 },
   initial: { opacity: 0, y: 10 },
