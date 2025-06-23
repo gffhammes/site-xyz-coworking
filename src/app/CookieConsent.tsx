@@ -1,5 +1,6 @@
 "use client";
 
+import { GoogleTagManager } from "@next/third-parties/google";
 import { useState, useEffect } from "react";
 import Script from "next/script";
 import {
@@ -10,6 +11,7 @@ import {
   Container,
   useScrollTrigger,
 } from "@mui/material";
+import { siteKey } from "@/data/sites";
 
 const localStorageId = "cookie-consent";
 
@@ -41,6 +43,8 @@ export const CookieConsent = () => {
       handleAccept();
     }
   }, [scrollTrigger]);
+
+  const mustInstantiateGTM = siteKey === "bc";
 
   return (
     <>
@@ -77,24 +81,30 @@ export const CookieConsent = () => {
         </Container>
       )}
 
-      {/* GTM Script */}
-      <Script
-        id="gtm-script"
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
-      />
-
-      {/* Data Layer */}
-      <Script id="gtm-init" strategy="afterInteractive">
-        {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${gtmId}');
-            `}
-      </Script>
+      {mustInstantiateGTM && (
+        <>
+          <GoogleTagManager gtmId={gtmId} />
+        </>
+      )}
     </>
   );
 };
 
 export const gtmId = "GTM-T588QKB9";
+
+// {/* GTM Script */}
+//       <Script
+//         id="gtm-script"
+//         strategy="afterInteractive"
+//         src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+//       />
+
+//       {/* Data Layer */}
+//       <Script id="gtm-init" strategy="afterInteractive">
+//         {`
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+//           gtag('config', ${gtmId});
+//         `}
+//       </Script>
