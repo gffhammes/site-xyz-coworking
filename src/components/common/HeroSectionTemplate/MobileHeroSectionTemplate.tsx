@@ -69,7 +69,6 @@ export const MobileHeroSectionTemplate = ({
           zIndex: 0,
         }}
       >
-        {/* Gradiente sem mixBlendMode para performance */}
         <Box
           sx={{
             position: "absolute",
@@ -85,11 +84,10 @@ export const MobileHeroSectionTemplate = ({
           alt="Hero"
           objectFit="cover"
           priority
-          sizes="100vw"
+          sizes="100vh"
         />
       </Box>
 
-      {/* Curva branca inferior */}
       <Box
         sx={{
           height: "5svh",
