@@ -2,7 +2,6 @@
 
 import { GoogleTagManager } from "@next/third-parties/google";
 import { useState, useEffect } from "react";
-import Script from "next/script";
 import {
   Box,
   Button,
@@ -14,6 +13,7 @@ import {
 import { siteKey } from "@/data/sites";
 
 const localStorageId = "cookie-consent";
+export const gtmId = "GTM-T588QKB9";
 
 export const CookieConsent = () => {
   const scrollTrigger = useScrollTrigger({ disableHysteresis: true });
@@ -21,7 +21,9 @@ export const CookieConsent = () => {
   const [status, setStatus] = useState<"idle" | "accepted" | "notAccepted">(
     "idle"
   );
+  const [shouldLoadGTM, setShouldLoadGTM] = useState(false);
 
+  // Verifica consentimento
   useEffect(() => {
     const consent = localStorage.getItem(localStorageId);
 
@@ -32,9 +34,9 @@ export const CookieConsent = () => {
     }
   }, []);
 
+  // Aceita via clique ou scroll
   const handleAccept = () => {
     setStatus("accepted");
-
     localStorage.setItem(localStorageId, "true");
   };
 
@@ -44,11 +46,29 @@ export const CookieConsent = () => {
     }
   }, [scrollTrigger]);
 
-  const mustInstantiateGTM = siteKey === "bc";
+  useEffect(() => {
+    if (status === "accepted") {
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(
+          () => {
+            setShouldLoadGTM(true);
+          },
+          { timeout: 3000 }
+        );
+      } else {
+        setTimeout(() => {
+          setShouldLoadGTM(true);
+        }, 2000);
+      }
+    }
+  }, [status]);
+
+  const mustShowBanner = status === "notAccepted";
+  const mustInstantiateGTM = siteKey === "bc" && shouldLoadGTM;
 
   return (
     <>
-      {status === "notAccepted" && (
+      {mustShowBanner && (
         <Container
           maxWidth={false}
           sx={{ position: "fixed", bottom: 16, zIndex: 1300 }}
@@ -58,13 +78,12 @@ export const CookieConsent = () => {
             sx={{
               p: 2,
               display: "flex",
-              alignItems: "center",
+              alignItems: { xs: "flex-end", sm: "center" },
               maxWidth: 700,
               flexDirection: { xs: "column", sm: "row" },
               gap: 2,
             }}
             aria-live="polite"
-            role="region"
           >
             <Box sx={{ flex: 1 }}>
               <Typography variant="body2" color="text.secondary">
@@ -81,30 +100,7 @@ export const CookieConsent = () => {
         </Container>
       )}
 
-      {mustInstantiateGTM && (
-        <>
-          <GoogleTagManager gtmId={gtmId} />
-        </>
-      )}
+      {mustInstantiateGTM && <GoogleTagManager gtmId={gtmId} />}
     </>
   );
 };
-
-export const gtmId = "GTM-T588QKB9";
-
-// {/* GTM Script */}
-//       <Script
-//         id="gtm-script"
-//         strategy="afterInteractive"
-//         src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
-//       />
-
-//       {/* Data Layer */}
-//       <Script id="gtm-init" strategy="afterInteractive">
-//         {`
-//           window.dataLayer = window.dataLayer || [];
-//           function gtag(){dataLayer.push(arguments);}
-//           gtag('js', new Date());
-//           gtag('config', ${gtmId});
-//         `}
-//       </Script>

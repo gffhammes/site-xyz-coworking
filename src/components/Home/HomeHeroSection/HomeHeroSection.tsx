@@ -14,7 +14,7 @@ export const HomeHeroSection = (props: IHomeHeroSectionProps) => {
         <Stack alignItems="flex-start" gap={4}>
           <Stack gap={2}>
             <Typography variant="h1" maxWidth="16ch">
-              {siteData.homeData.heroSection.h1}
+              {siteData.homeData.heroSection.h1.replaceAll("<br/>", " ")}
             </Typography>
 
             <Animate {...subtitleAnimateProps}>
