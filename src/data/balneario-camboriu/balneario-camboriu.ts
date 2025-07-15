@@ -3,6 +3,7 @@ import { services } from "./services/services";
 import heroBg from "../../../public/images/XYZ - BC-10.webp";
 import image1 from "../../../public/images/XYZ - BC-3.webp";
 import image2 from "../../../public/images/XYZ - BC-4.webp";
+import servicesHeroImage from "../../../public/images/servicos.webp";
 
 const contact = {
   phoneNumber: "5547999990294",
@@ -46,5 +47,8 @@ export const balnearioData: ISiteData = {
       mapAddress:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.3829084970307!2d-48.633878200000005!3d-26.9864346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b79f380266d3%3A0x7d8e0a6192564183!2sXYZ%20Coworking%20em%20Balne%C3%A1rio%20Cambori%C3%BA!5e0!3m2!1spt-BR!2sbr!4v1750453008820!5m2!1spt-BR!2sbr",
     },
+  },
+  servicesPage: {
+    heroImage: servicesHeroImage.src,
   },
 };

@@ -1,4 +1,4 @@
-import enderecoImg from "../../../../public/images/otimizadas-9.webp";
+import enderecoImg from "../../../../public/images/Equipe-117.jpg";
 import PlaceIcon from "@mui/icons-material/Place";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import VerifiedIcon from "@mui/icons-material/Verified";

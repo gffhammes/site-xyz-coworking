@@ -3,6 +3,7 @@ import { services } from "./services/services";
 import heroBg from "../../../public/images/XYZ - Jvll-4.webp";
 import image1 from "../../../public/images/XYZ - Jvll-05.webp";
 import image2 from "../../../public/images/XYZ - Jvll-16.webp";
+import servicesHeroImage from "../../../public/images/Equipe-23.jpg";
 
 const contact = {
   phoneNumber: "554734613100",
@@ -46,5 +47,8 @@ export const joinvilleData: ISiteData = {
       mapAddress:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7154.277218530113!2d-48.85373371322125!3d-26.289606217782428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb02f97e5bc11%3A0x3e0f2b9cb71f2b71!2sXYZ%20Coworking%20Joinville!5e0!3m2!1sen!2sus!4v1750452963249!5m2!1sen!2sus",
     },
+  },
+  servicesPage: {
+    heroImage: servicesHeroImage.src,
   },
 };

@@ -1,5 +1,5 @@
 import { IServiceItem } from "@/data/types";
-import estacoesImg from "../../../../public/images/estacoes-trabalho.jpg";
+import estacoesImg from "../../../../public/images/Equipe-82.jpg";
 import SensorOccupiedIcon from "@mui/icons-material/SensorOccupied";
 import WorkIcon from "@mui/icons-material/Work";
 import HubIcon from "@mui/icons-material/Hub";

@@ -1,15 +1,15 @@
-import heroBg from "../../../../public/images/servicos.webp";
 import { HeroSectionTemplate } from "@/components/common/HeroSectionTemplate/HeroSectionTemplate";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { ServicesSelect } from "./ServicesSelect";
 import { Animate, IAnimateProps } from "@/components/common/Animate";
+import { siteData } from "@/data/sites";
 
 export interface IServicesHeroSectionProps {}
 
 export const ServicesHeroSection = (props: IServicesHeroSectionProps) => {
   return (
     <HeroSectionTemplate
-      bgImage={heroBg.src}
+      bgImage={siteData.servicesPage.heroImage}
       mobileContent={
         <Stack alignItems="flex-start" gap={8}>
           <Stack gap={2}>
@@ -81,7 +81,6 @@ export const servicesHeroSectionData = {
   selectLabel: "Selecione o que você busca:",
 
   buttonText: "Conhecer",
-  bgImage: heroBg.src,
 };
 
 const h1AnimateProps: IAnimateProps = {

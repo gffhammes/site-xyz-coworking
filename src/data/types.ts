@@ -76,4 +76,7 @@ export interface ISiteData {
       mapAddress: string;
     };
   };
+  servicesPage: {
+    heroImage: string;
+  };
 }
