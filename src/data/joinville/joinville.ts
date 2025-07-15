@@ -33,7 +33,7 @@ export const joinvilleData: ISiteData = {
     metaDescription:
       "Encontre seu espaço de trabalho ideal em Joinville. Coworking com internet rápida, salas equipadas, planos flexíveis e ambiente perfeito para networking.",
     heroSection: {
-      h1: `Coworking de alto padrão<br/>no centro de Joinville`,
+      h1: `O ponto de encontro para negócios e conexões em Joinville`,
       subtitle: `Estrutura completa para empresas e profissionais que valorizam eficiência, privacidade e imagem sólida. Salas equipadas, internet rápida e ambiente corporativo, no endereço mais estratégico de Joinville.`,
       image: heroBg.src,
     },

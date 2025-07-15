@@ -33,7 +33,7 @@ export const balnearioData: ISiteData = {
     metaDescription:
       "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
     heroSection: {
-      h1: `Seu escritório de alto padrão, no coração de Balneário Camboriú`,
+      h1: `No coração de Balneário Camboriú, o espaço onde seu negócio se conecta e cresce`,
       subtitle: `Espaços projetados para refletir o sucesso de sua empresa, combinando design moderno, infraestrutura de ponta e a melhor localização em Balneário Camboriú. Feito para quem busca excelência.`,
       image: heroBg.src,
     },
