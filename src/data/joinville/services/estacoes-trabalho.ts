@@ -52,7 +52,7 @@ export const estacoesTrabalho: IServiceItem = {
       subtitle:
         "Escolha seu plano, preencha seus dados e comece a usar sua estação quando quiser — com tudo pronto para você produzir.",
       items: [
-        "Escolha seu plano diário ou mensal",
+        "Reserve uma data",
         "Assine o contrato online",
         "Chegue e comece a trabalhar",
       ],
@@ -60,7 +60,7 @@ export const estacoesTrabalho: IServiceItem = {
 
     plans: [
       {
-        price: 120,
+        price: 75,
         label: "Diária",
         period: "Dia",
         included: [
@@ -76,6 +76,6 @@ export const estacoesTrabalho: IServiceItem = {
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
     plansMessageTarget: membroX.slug,
-    floatingCtaMessage: "R$120/dia",
+    floatingCtaMessage: "R$75/dia",
   },
 };
