@@ -36,7 +36,7 @@ export const DifferentialImage = ({
             height: { xs: xsImageSize, md: mdImageSize },
             width: { xs: xsImageSize, md: mdImageSize },
             borderRadius: { xs: xsImageSize, md: mdImageSize },
-            transform: `translate(40%, 10%)`,
+            transform: `translate(30%, 20%)`,
             overflow: "hidden",
           }}
         >
