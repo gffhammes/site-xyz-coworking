@@ -44,7 +44,6 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
         sx={{
           width: "100%",
           position: "relative",
-          mt: { xs: 0, md: -2 },
           overflow: "hidden",
           height: image1Size,
         }}
