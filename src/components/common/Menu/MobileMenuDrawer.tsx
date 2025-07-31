@@ -1,5 +1,5 @@
 import { Box, Container, Drawer, IconButton, Stack } from "@mui/material";
-import { NavigationList } from "../NavigationList";
+import { NavigationList } from "../NavigationList/NavigationList";
 import CloseIcon from "@mui/icons-material/Close";
 import { MenuCTA } from "./MenuCTA";
 import { MenuClientsAccess } from "./MenuClientsAccess";

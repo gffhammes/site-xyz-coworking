@@ -1,6 +1,6 @@
 import { Box, Container, Stack } from "@mui/material";
 import { XYZLogoWithLink } from "../XYZLogoWithLink";
-import { NavigationList } from "../NavigationList";
+import { NavigationList } from "../NavigationList/NavigationList";
 import { ReactElement } from "react";
 import Image from "next/image";
 import { DesktopMenu } from "../Menu/DesktopMenu";

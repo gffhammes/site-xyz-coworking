@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import { FooterInfoTemplate } from "./FooterInfoTemplate";
-import { NavigationList } from "../common/NavigationList";
+import { NavigationList } from "../common/NavigationList/NavigationList";
 import {
   formattedPhoneNumber,
   formattedWhatsApp,

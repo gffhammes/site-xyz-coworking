@@ -1,5 +1,5 @@
 import { Button, Stack } from "@mui/material";
-import { NavigationList } from "../NavigationList";
+import { NavigationList } from "../NavigationList/NavigationList";
 import { MenuCTA } from "./MenuCTA";
 import { MenuClientsAccess } from "./MenuClientsAccess";
 

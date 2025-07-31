@@ -1,4 +1,4 @@
-import { NavigationList } from "../NavigationList";
+import { NavigationList } from "../NavigationList/NavigationList";
 import { ResponsiveComponent } from "../ResponsiveComponent";
 import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";

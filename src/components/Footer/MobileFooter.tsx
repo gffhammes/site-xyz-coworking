@@ -1,5 +1,5 @@
 import { Box, Container, Stack, SxProps, Typography } from "@mui/material";
-import { NavigationList } from "../common/NavigationList";
+import { NavigationList } from "../common/NavigationList/NavigationList";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
 import { socials } from "./Footer";
 import { FooterInfoTemplate } from "./FooterInfoTemplate";
