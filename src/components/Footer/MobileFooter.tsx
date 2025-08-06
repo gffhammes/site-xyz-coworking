@@ -50,7 +50,12 @@ export const MobileFooter = (props: IMobileFooterProps) => {
               <Stack alignItems="center" gap={4}>
                 <XYZLogoWithLink height="7rem" color="white" />
 
-                <Stack direction="row" gap={2}>
+                <Stack
+                  direction="row"
+                  flexWrap="wrap"
+                  justifyContent="center"
+                  gap={2}
+                >
                   {socials.map((social) => (
                     <TrackingWrapper
                       key={social.name}

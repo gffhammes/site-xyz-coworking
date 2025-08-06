@@ -53,4 +53,10 @@ export const joinvilleData: ISiteData = {
     heroImage: servicesHeroImage.src,
   },
   tabelaDePrecos: tabelaDePrecosJoinville,
+  socials: {
+    instagram: "https://www.instagram.com/coworkingxyz/",
+    linkedin: "https://www.linkedin.com/company/coworkingxyz",
+    tiktok: "https://www.tiktok.com/@xyz.coworking0",
+    youtube: "https://www.youtube.com/@XYZcoworking1/shorts",
+  },
 };

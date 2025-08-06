@@ -83,4 +83,10 @@ export interface ISiteData {
     servico: string;
     valor2025: string;
   }[];
+  socials: {
+    instagram: string;
+    linkedin: string;
+    tiktok: string;
+    youtube: string;
+  };
 }
