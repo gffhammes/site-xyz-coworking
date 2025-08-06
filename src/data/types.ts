@@ -79,4 +79,8 @@ export interface ISiteData {
   servicesPage: {
     heroImage: string;
   };
+  tabelaDePrecos?: {
+    servico: string;
+    valor2025: string;
+  }[];
 }

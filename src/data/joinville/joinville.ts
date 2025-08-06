@@ -4,6 +4,7 @@ import heroBg from "../../../public/images/XYZ - Jvll-4.webp";
 import image1 from "../../../public/images/XYZ - Jvll-05.webp";
 import image2 from "../../../public/images/XYZ - Jvll-16.webp";
 import servicesHeroImage from "../../../public/images/Equipe-23.jpg";
+import { tabelaDePrecosJoinville } from "./tabela-de-precos";
 
 const contact = {
   phoneNumber: "554734613100",
@@ -51,4 +52,5 @@ export const joinvilleData: ISiteData = {
   servicesPage: {
     heroImage: servicesHeroImage.src,
   },
+  tabelaDePrecos: tabelaDePrecosJoinville,
 };
