@@ -54,8 +54,8 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
         width: "100%",
         overflow: "hidden",
         height: {
-          xs: `calc(${xsCircleSize} + (${xsImageSize}/ 8))`,
-          md: `calc(${mdCircleSize} + (${mdImageSize}/ 8))`,
+          xs: `calc(${xsCircleSize} + (${xsImageSize}/ 4))`,
+          md: `calc(${mdCircleSize} + (${mdImageSize}/ 4))`,
         },
       }}
     >
