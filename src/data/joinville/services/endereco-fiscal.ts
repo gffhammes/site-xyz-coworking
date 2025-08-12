@@ -86,6 +86,6 @@ export const enderecoFiscal: IServiceItem = {
       //     "Olá! Tenho interesse no plano mensal de endereço fiscal em Joinville.",
       // },
     ],
-    floatingCtaMessage: "R$189/mês",
+    floatingCtaMessage: "R$1290/ano",
   },
 };
