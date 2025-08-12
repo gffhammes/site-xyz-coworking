@@ -105,7 +105,7 @@ export const salasAtendimento: IServiceItem = {
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
-    floatingCtaMessage: "R$100/hora",
+    floatingCtaMessage: "R$75/hora",
     plansMessageTarget: membroX.slug,
   },
 };
