@@ -57,12 +57,12 @@ export const enderecoFiscal: IServiceItem = {
         "Use o endereço para registrar ou transferir seu CNPJ",
       ],
     },
-    plansMessage: `Economize <strong>R$378</strong>
-<br />
-no plano anual`,
+    //     plansMessage: `Economize <strong>R$378</strong>
+    // <br />
+    // no plano anual`,
     plans: [
       {
-        price: 1890,
+        price: 1290,
         label: "Anual",
         period: "Ano",
         included: [
@@ -73,18 +73,18 @@ no plano anual`,
         whatsappMessage:
           "Olá! Tenho interesse no plano anual de endereço fiscal em Joinville.",
       },
-      {
-        price: 189,
-        label: "Mensal",
-        period: "Mês",
-        included: [
-          "Endereço fiscal e/ou comercial válido para CNPJ",
-          "Triagem e notificação de correspondências",
-          "50% de desconto no uso de salas de reunião e coworking",
-        ],
-        whatsappMessage:
-          "Olá! Tenho interesse no plano mensal de endereço fiscal em Joinville.",
-      },
+      // {
+      //   price: 189,
+      //   label: "Mensal",
+      //   period: "Mês",
+      //   included: [
+      //     "Endereço fiscal e/ou comercial válido para CNPJ",
+      //     "Triagem e notificação de correspondências",
+      //     "50% de desconto no uso de salas de reunião e coworking",
+      //   ],
+      //   whatsappMessage:
+      //     "Olá! Tenho interesse no plano mensal de endereço fiscal em Joinville.",
+      // },
     ],
     floatingCtaMessage: "R$189/mês",
   },

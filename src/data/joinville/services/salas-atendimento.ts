@@ -60,7 +60,7 @@ export const salasAtendimento: IServiceItem = {
     },
     plans: [
       {
-        price: 100,
+        price: 75,
         label: "Hora",
         period: "HORA",
         included: [
@@ -69,38 +69,39 @@ export const salasAtendimento: IServiceItem = {
           "Recepção para seus clientes",
           "Copa compartilhada",
           "Ambiente silencioso e reservado",
+          "Até 5 pessoas",
         ],
         whatsappMessage:
           "Olá! Tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
       },
-      {
-        price: 400,
-        label: "Período",
-        period: "PERÍODO",
-        included: [
-          "Sala mobiliada e climatizada",
-          "Internet de alta velocidade",
-          "Recepção para seus clientes",
-          "Copa compartilhada",
-          "Ambiente silencioso e reservado",
-        ],
-        whatsappMessage:
-          "Olá! Tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
-      },
-      {
-        price: 720,
-        label: "Diária",
-        period: "Diária",
-        included: [
-          "Sala mobiliada e climatizada",
-          "Internet de alta velocidade",
-          "Recepção para seus clientes",
-          "Copa compartilhada",
-          "Ambiente silencioso e reservado",
-        ],
-        whatsappMessage:
-          "Olá! Tenho interesse em reservar uma diária em uma sala de atendimento em Joinville.",
-      },
+      // {
+      //   price: 400,
+      //   label: "Período",
+      //   period: "PERÍODO",
+      //   included: [
+      //     "Sala mobiliada e climatizada",
+      //     "Internet de alta velocidade",
+      //     "Recepção para seus clientes",
+      //     "Copa compartilhada",
+      //     "Ambiente silencioso e reservado",
+      //   ],
+      //   whatsappMessage:
+      //     "Olá! Tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
+      // },
+      // {
+      //   price: 720,
+      //   label: "Diária",
+      //   period: "Diária",
+      //   included: [
+      //     "Sala mobiliada e climatizada",
+      //     "Internet de alta velocidade",
+      //     "Recepção para seus clientes",
+      //     "Copa compartilhada",
+      //     "Ambiente silencioso e reservado",
+      //   ],
+      //   whatsappMessage:
+      //     "Olá! Tenho interesse em reservar uma diária em uma sala de atendimento em Joinville.",
+      // },
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",

@@ -59,7 +59,7 @@ export const salasPrivativas: IServiceItem = {
 
     plans: [
       {
-        price: 2490,
+        price: 1800,
         label: "Mensal",
         period: "MÊS",
         included: [
@@ -74,6 +74,6 @@ export const salasPrivativas: IServiceItem = {
           "Olá! Tenho interesse em conhecer as opções de salas privativas em Joinville.",
       },
     ],
-    floatingCtaMessage: "A partir de 2490/mês",
+    floatingCtaMessage: "A partir de 1800/mês",
   },
 };
