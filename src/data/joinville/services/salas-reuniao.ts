@@ -59,7 +59,22 @@ export const salasReuniao: IServiceItem = {
     },
     plans: [
       {
-        price: 500,
+        price: 75,
+        label: "Hora",
+        period: "Hora",
+        included: [
+          "Sala de reunião equipada com TV e ar-condicionado",
+          "Wi-Fi de alta velocidade",
+          "Recepção de clientes",
+          "Água, café e estrutura de apoio",
+          "Até 6 pessoas",
+          "Para salas com maior capacidade, entre em contato",
+        ],
+        whatsappMessage:
+          "Olá! Gostaria de reservar uma hora em uma sala de reunião em Joinville.",
+      },
+      {
+        price: 378,
         label: "Período",
         period: "Período",
         included: [
@@ -67,27 +82,29 @@ export const salasReuniao: IServiceItem = {
           "Wi-Fi de alta velocidade",
           "Recepção de clientes",
           "Água, café e estrutura de apoio",
+          "Até 6 pessoas",
+          "Para salas com maior capacidade, entre em contato",
         ],
         whatsappMessage:
           "Olá! Gostaria de reservar um período em uma sala de reunião em Joinville.",
       },
-      {
-        price: 800,
-        label: "Diária",
-        period: "Dia",
-        included: [
-          "Sala de reunião equipada com TV e ar-condicionado",
-          "Wi-Fi de alta velocidade",
-          "Recepção de clientes",
-          "Água, café e estrutura de apoio",
-        ],
-        whatsappMessage:
-          "Olá! Gostaria de reservar uma diária em uma sala de reunião em Joinville.",
-      },
+      // {
+      //   price: 800,
+      //   label: "Diária",
+      //   period: "Dia",
+      //   included: [
+      //     "Sala de reunião equipada com TV e ar-condicionado",
+      //     "Wi-Fi de alta velocidade",
+      //     "Recepção de clientes",
+      //     "Água, café e estrutura de apoio",
+      //   ],
+      //   whatsappMessage:
+      //     "Olá! Gostaria de reservar uma diária em uma sala de reunião em Joinville.",
+      // },
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
-    floatingCtaMessage: "R$500/período",
+    floatingCtaMessage: "R$75/hora",
     plansMessageTarget: membroX.slug,
   },
 };
