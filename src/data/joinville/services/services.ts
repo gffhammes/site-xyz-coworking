@@ -5,6 +5,7 @@ import { membroX } from "./membro-x";
 import { salasAtendimento } from "./salas-atendimento";
 import { salasPrivativas } from "./salas-privativas";
 import { salasReuniao } from "./salas-reuniao";
+import { sessaoFotografica } from "./sessao-fotografica";
 
 export const services: IServiceItem[] = [
   enderecoFiscal,
@@ -13,4 +14,5 @@ export const services: IServiceItem[] = [
   estacoesTrabalho,
   salasAtendimento,
   membroX,
+  sessaoFotografica,
 ];
