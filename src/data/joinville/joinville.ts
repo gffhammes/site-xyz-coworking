@@ -7,14 +7,14 @@ import servicesHeroImage from "../../../public/images/Equipe-23.jpg";
 import { tabelaDePrecosJoinville } from "./tabela-de-precos";
 
 const contact = {
-  phoneNumber: "554734613100",
+  phoneNumber: "554730321893",
   whatsappNumber: "554734613100",
   email: "contato@xyzcoworking.com",
 };
 
 const workingHours = [
   "Segunda a sexta-feira das 8h às 22h",
-  "Sábados das 8h às 12h",
+  "Sábados das 8h às 14h",
   "Acesso 24h para clientes",
 ];
 

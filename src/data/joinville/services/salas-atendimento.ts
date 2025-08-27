@@ -60,6 +60,7 @@ export const salasAtendimento: IServiceItem = {
     },
     plans: [
       {
+        customPriceText: "A partir de",
         price: 75,
         label: "Hora",
         period: "HORA",
@@ -76,6 +77,7 @@ export const salasAtendimento: IServiceItem = {
           "Olá! Tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
       },
       {
+        customPriceText: "A partir de",
         price: 378,
         label: "Período",
         period: "PERÍODO",
@@ -108,7 +110,7 @@ export const salasAtendimento: IServiceItem = {
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
-    floatingCtaMessage: "R$75/hora",
+    floatingCtaMessage: "A partir de 75/hora",
     plansMessageTarget: membroX.slug,
   },
 };

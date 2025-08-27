@@ -41,7 +41,7 @@ export const salasPrivativas: IServiceItem = {
           icon: ChecklistIcon,
         },
         {
-          text: "<strong>Recepção profissional</strong> para seus clientes em horário comercial",
+          text: "<strong>Recepção profissional</strong> para seus clientes até as 22h",
           icon: RecordVoiceOverIcon,
         },
       ],

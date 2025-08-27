@@ -22,7 +22,7 @@ export const membroX: IServiceItem = {
   detailsPage: {
     h1: "Credibilidade e economia<br/>para o seu negócio o ano todo",
     subtitle:
-      "Com o plano Membro X, sua empresa tem um endereço profissional para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em coworking e salas.",
+      "Com o plano Membro X, sua empresa tem um endereço comercial para divulgar no Google e redes sociais,<br/>recebe correspondências e encomendas com segurança e ainda economiza com descontos em coworking e salas.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Mais presença no mercado, menos custo fixo",
@@ -38,7 +38,7 @@ export const membroX: IServiceItem = {
           icon: LocalPostOfficeIcon,
         },
         {
-          text: "<strong>50% de desconto</strong> no uso de coworking, salas de reunião e salas de atendimento",
+          text: "<strong>50% de desconto</strong> no uso dos espaços do coworking",
           icon: DiscountIcon,
         },
         {
@@ -52,14 +52,14 @@ export const membroX: IServiceItem = {
       subtitle:
         "O processo é rápido e prático. Com poucos passos, você garante seu endereço comercial e todos os benefícios do plano.",
       items: [
-        "Envie um documento com foto e comprovante de residência de um dos sócios",
+        "Envie um documento com foto e comprovante de residência",
         "Receba o contrato digital e o boleto da anuidade",
         "Assine e comece a usar seu novo endereço nos canais da sua empresa",
       ],
     },
     plans: [
       {
-        price: 1297,
+        price: 684,
         label: "Anual",
         period: "ANO",
         included: [
@@ -74,6 +74,6 @@ export const membroX: IServiceItem = {
           "Olá! Vi o plano Membro X no site e gostaria de saber mais sobre como funciona em Joinville.",
       },
     ],
-    floatingCtaMessage: "R$1297/ano",
+    floatingCtaMessage: "R$684/ano",
   },
 };
