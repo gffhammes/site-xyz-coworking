@@ -3,9 +3,10 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { forwardRef } from "react";
 import parse from "html-react-parser";
-import { differentialItems, mdXTranslateCircle } from "./DifferentialSection";
+import { mdXTranslateCircle } from "./DifferentialSection";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
+import { siteData } from "@/data/sites";
 
 export interface IDifferentialSlideProps {
   index: number;
@@ -16,7 +17,7 @@ export const DifferentialSlide = forwardRef(function Slide(
   { index, isActiveSlide }: IDifferentialSlideProps,
   ref: React.Ref<HTMLDivElement>
 ) {
-  const selectedItem = differentialItems[index];
+  const selectedItem = siteData.homeData.diferencialSection.differentialItems[index];
 
   return (
     <Stack

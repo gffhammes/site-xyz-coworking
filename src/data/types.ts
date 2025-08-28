@@ -1,3 +1,4 @@
+import { IDifferentialItem } from "@/components/Home/DifferentialsSection/DifferentialSection";
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
@@ -66,6 +67,9 @@ export interface ISiteData {
       subtitle: string;
       image: string;
     };
+    diferencialSection: {
+    differentialItems: IDifferentialItem[]
+    }
     phraseSection: {
       text: string;
       image1: string;

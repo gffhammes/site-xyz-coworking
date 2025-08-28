@@ -6,12 +6,8 @@ import { useCallback, useEffect, useState } from "react";
 import { DifferentialSlide } from "./DifferentialSlide";
 import { DifferentialImage } from "./DifferentialImage";
 import { CarouselControls } from "./CarouselControls";
-
-import image1 from "../../../../public/images/endereco-estrategico.webp";
-import image2 from "../../../../public/images/infra-bc.webp";
-import image3 from "../../../../public/images/conexao-bc.webp";
-import image4 from "../../../../public/images/servicos.webp";
 import { Animate } from "@/components/common/Animate";
+import { siteData } from "@/data/sites";
 
 export interface IDifferentialSectionProps {}
 
@@ -123,7 +119,7 @@ export const DifferentialSection = (props: IDifferentialSectionProps) => {
                   height: "100%",
                 }}
               >
-                {differentialItems.map((item, index) => (
+                {siteData.homeData.diferencialSection.differentialItems.map((item, index) => (
                   <Box
                     key={index}
                     sx={{
@@ -160,34 +156,7 @@ export const xsImageSize = "15rem";
 export const xsXTranslateCircle = "15%";
 // export const yTranslateCircle = "25%";
 
-export const differentialItems: IDifferentialItem[] = [
-  {
-    title: "Endereço estratégico<br/>e sofisticado",
-    description:
-      "Ter um escritório bem localizado muda a forma como seu negócio é visto.",
-    image: image1.src,
-  },
-  {
-    title: "Infraestrutura<br/>impecável",
-    description:
-      "Cadeiras ergonômicas, internet ultra rápida e climatização total. ",
-    image: image2.src,
-  },
-  {
-    title: "Ambiente exclusivo<br/>para negócios",
-    description:
-      "Conecte-se a outros profissionais de sucesso e expanda sua rede.",
-    image: image3.src,
-  },
-  {
-    title: "Networking que<br/>abre portas",
-    description:
-      "Trabalhar cercado de mentes brilhantes pode ser o impulso que faltava para sua empresa crescer. Conexões reais acontecem aqui.",
-    image: image4.src,
-  },
-];
-
-interface IDifferentialItem {
+export interface IDifferentialItem {
   title: string;
   description: string;
   image: string;

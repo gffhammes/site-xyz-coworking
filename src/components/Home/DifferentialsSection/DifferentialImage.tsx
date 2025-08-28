@@ -2,10 +2,10 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 import { Animate } from "../../common/Animate";
 import {
-  differentialItems,
   mdImageSize,
   xsImageSize,
 } from "./DifferentialSection";
+import { siteData } from "@/data/sites";
 
 export interface IDifferentialImageProps {
   selectedIndex: number;
@@ -41,7 +41,7 @@ export const DifferentialImage = ({
           }}
         >
           <Image
-            src={differentialItems[selectedIndex].image}
+            src={siteData.homeData.diferencialSection.differentialItems[selectedIndex].image}
             alt="Imagem"
             fill
             objectFit="cover"
