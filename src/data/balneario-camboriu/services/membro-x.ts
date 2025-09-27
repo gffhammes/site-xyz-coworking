@@ -34,7 +34,8 @@ export const membroX: IServiceItem = {
           icon: LocationOnIcon,
         },
         {
-          text: "<strong>Gestão de correspondências e encomendas</strong> com retirada em horário comercial",
+          text: "<strong>Gestão de correspondências e encomendas</strong>  “Plano All-In” 1.890/anual",
+
           icon: LocalPostOfficeIcon,
         },
         {
@@ -59,14 +60,14 @@ export const membroX: IServiceItem = {
     },
     plans: [
       {
-        price: 1297,
+        price: 1.890,
         label: "Anual",
         period: "ANO",
         included: [
           "Endereço comercial qualificado em Balneário Camboriú",
           "Uso do endereço no Google Meu Negócio, redes e materiais",
           "Gestão de correspondências e encomendas (até 40x40x40cm e 5kg)",
-          "Retirada em horário comercial",
+         
           "50% de desconto em salas e coworking",
         ],
         customPriceText: "Investimento único",
@@ -74,6 +75,6 @@ export const membroX: IServiceItem = {
           "Olá! Vi o plano Membro X no site e gostaria de mais informações.",
       },
     ],
-    floatingCtaMessage: "R$1297/ano",
+    floatingCtaMessage: "R$1.890/ano",
   },
 };
