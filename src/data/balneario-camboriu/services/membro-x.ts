@@ -68,7 +68,7 @@ export const membroX: IServiceItem = {
           "Gestão de correspondências e encomendas com notificação de recebimento.",
           "Utilização dos espaços de coworking com 50% de desconto.",
           "Recepção com atendimento personalizado, ambiente climatizado, água e café com torrefação especial à vontade.",
-          "Acesso total à comunidade <strong>Membro X</strong>, com agenda de encontros, grupo de WhatsApp e sistema de reservas.",
+          "Acesso total à comunidade Membro X, com agenda de encontros, grupo de WhatsApp e sistema de reservas.",
         
         ],
         customPriceText: "Investimento único",
