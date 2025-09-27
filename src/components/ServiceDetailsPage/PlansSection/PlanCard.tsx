@@ -18,13 +18,19 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
       initial={{ opacity: 0, y: 10 }}
       transition={{ duration: 2, type: "spring" }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-30%" }}
+      viewport={{ once: true, margin: "0px" }} // Ajuste para não cortar no mobile
     >
-      <Box sx={{ backgroundColor: "#363636", borderRadius: 8, p: 4 }}>
+      <Box
+        sx={{
+          backgroundColor: "#363636",
+          borderRadius: 8,
+          p: { xs: 3, sm: 4 }, // padding menor no mobile, maior no desktop
+          overflow: "visible", // garante que o botão não seja cortado
+        }}
+      >
         <Stack gap={4}>
           <Stack gap={4}>
             <PlanCardPrice selectedPlan={selectedPlan} />
-
             <PlanCardIncluded selectedPlan={selectedPlan} />
           </Stack>
 
@@ -37,6 +43,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
               href={buttonHref}
               target="_blank"
               variant="contained"
+              sx={{ mt: { xs: 2, sm: 0 } }} // margem superior no mobile
             >
               CONTRATAR AGORA
             </Button>
