@@ -24,9 +24,9 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
         sx={{
           backgroundColor: "#363636",
           borderRadius: 8,
-          p: { xs: 3, sm: 4 },
-          pb: { xs: 6, sm: 4 },  // espaço extra embaixo no mobile
-          overflow: "visible",
+          p: { xs: 3, sm: 4 },      // padding geral responsivo
+          pb: { xs: 6, sm: 4 },     // padding extra embaixo no mobile
+          overflow: "visible",      // garante que o botão não seja cortado
         }}
       >
         <Stack gap={4}>
@@ -44,7 +44,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
               href={buttonHref}
               target="_blank"
               variant="contained"
-              sx={{ mt: { xs: 2, sm: 0 } }}
+              sx={{ mt: 0 }} // não empurra conteúdo acima
             >
               CONTRATAR AGORA
             </Button>
