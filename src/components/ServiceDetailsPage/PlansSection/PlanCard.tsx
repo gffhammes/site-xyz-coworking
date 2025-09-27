@@ -18,21 +18,13 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
       initial={{ opacity: 0, y: 10 }}
       transition={{ duration: 2, type: "spring" }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "50px 0px 50px 0px" }} // margem para não cortar no mobile
+      viewport={{ once: true, margin: "-30%" }}
     >
-      <Box
-        sx={{
-          backgroundColor: "#363636",
-          borderRadius: 8,
-          p: { xs: 3, sm: 4 },      // padding geral
-          pb: { xs: 10, sm: 4 },    // padding inferior maior no mobile
-          overflow: "visible",      // garante que o botão não seja cortado
-          minHeight: "auto",        // altura flexível
-        }}
-      >
+      <Box sx={{ backgroundColor: "#363636", borderRadius: 8, p: 4 }}>
         <Stack gap={4}>
           <Stack gap={4}>
             <PlanCardPrice selectedPlan={selectedPlan} />
+
             <PlanCardIncluded selectedPlan={selectedPlan} />
           </Stack>
 
