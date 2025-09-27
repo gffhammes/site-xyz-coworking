@@ -67,6 +67,8 @@ export const membroX: IServiceItem = {
           "Endereço fiscal e comercial para o seu CNPJ em um coworking que,desde 2006,é referência em Santa Catarina.",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
           "Utilização dos espaços de coworking com 50% de desconto.",
+          "Recepção com atendimento personalizado, ambiente climatizado, água e café com torrefação especial à vontade.",
+          "Acesso total à comunidade <strong>Membro X</strong>, com agenda de encontros, grupo de WhatsApp e sistema de reservas.",
         
         ],
         customPriceText: "Investimento único",
