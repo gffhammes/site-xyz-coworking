@@ -60,21 +60,20 @@ export const membroX: IServiceItem = {
     },
     plans: [
       {
-        price: 1.390,
+        price: 1890,
         label: "Anual",
         period: "ANO",
         included: [
-          "Endereço comercial qualificado em Balneário Camboriú",
-          "Uso do endereço no Google Meu Negócio, redes e materiais",
-          "Gestão de correspondências e encomendas (até 40x40x40cm e 5kg)",
-         
-          "50% de desconto em salas e coworking",
+          "Endereço fiscal e comercial para o seu CNPJ em um coworking que,desde 2006,é referência em Santa Catarina.",
+          "Gestão de correspondências e encomendas com notificação de recebimento.",
+          "Utilização dos espaços de coworking com 50% de desconto.",
+        
         ],
         customPriceText: "Investimento único",
         whatsappMessage:
           "Olá! Vi o plano Membro X no site e gostaria de mais informações.",
       },
     ],
-    floatingCtaMessage: "R$1.890/ano",
+    floatingCtaMessage: "R$1890/ano",
   },
 };
