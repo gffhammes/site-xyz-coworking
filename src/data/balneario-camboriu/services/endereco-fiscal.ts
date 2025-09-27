@@ -69,7 +69,7 @@ no plano anual`,
           "Endereço fiscal e comercial para o seu CNPJ em um coworking que, desde 2006, é referência em Santa Catarina.",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
           "Utilização dos espaços de coworking com 30% de desconto",
-          "Utilização dos espaços de coworking com 30% de desconto por hora,período ou diária.",
+       
         ],
         whatsappMessage:
           "Olá! Vim do site e tenho interesse em contratar o plano anual de endereço fiscal.",
