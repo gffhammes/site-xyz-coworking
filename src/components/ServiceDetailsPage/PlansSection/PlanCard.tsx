@@ -37,7 +37,6 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
               href={buttonHref}
               target="_blank"
               variant="contained"
-              sx={{ mb: { xs: 3, sm: 0 } }} // margem inferior extra no mobile
             >
               CONTRATAR AGORA
             </Button>
