@@ -60,7 +60,7 @@ export const membroX: IServiceItem = {
     },
     plans: [
       {
-        price: 1.890,
+        price: 1.390,
         label: "Anual",
         period: "ANO",
         included: [
