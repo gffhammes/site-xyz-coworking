@@ -57,24 +57,25 @@ export const enderecoFiscal: IServiceItem = {
         "Pronto! Você já pode registrar ou transferir seu CNPJ",
       ],
     },
-    plansMessage: `Economize <strong>R$378</strong>
+    plansMessage: `Economize <strong>R$398</strong>
 <br />
 no plano anual`,
     plans: [
       {
-        price: 1890,
+        price: 1390,
         label: "Anual",
         period: "Ano",
         included: [
-          "Endereço fiscal e/ou comercial válido para CNPJ",
-          "Atendimento e triagem de correspondências",
-          "50% de desconto no aluguel de salas de reunião e estações de coworking",
+          "Endereço fiscal e comercial para o seu CNPJ em um coworking que, desde 2006, é referência em Santa Catarina.",
+          "Gestão de correspondências e encomendas com notificação de recebimento.",
+          "Utilização dos espaços de coworking com <strong>30%</strong> de desconto",
+       
         ],
         whatsappMessage:
           "Olá! Vim do site e tenho interesse em contratar o plano anual de endereço fiscal.",
       },
       {
-        price: 189,
+        price: 149,
         label: "Mensal",
         period: "Mês",
         included: [
@@ -86,6 +87,6 @@ no plano anual`,
           "Olá! Vim do site e tenho interesse em contratar o plano mensal de endereço fiscal.",
       },
     ],
-    floatingCtaMessage: "R$189/mês",
+    floatingCtaMessage: "R$149/mês",
   },
 };

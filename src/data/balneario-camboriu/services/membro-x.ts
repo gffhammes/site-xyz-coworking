@@ -5,6 +5,7 @@ import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
 import DiscountIcon from "@mui/icons-material/Discount";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 
+
 export const membroX: IServiceItem = {
   title: "Membro X",
   seoTitle:
@@ -20,7 +21,7 @@ export const membroX: IServiceItem = {
       "Plano anual com endereço comercial qualificado e vantagens exclusivas para economizar e fortalecer sua presença online.",
   },
   detailsPage: {
-    h1: "Mais credibilidade e presença<br/>para o seu negócio durante todo o ano",
+    h1: "Mais credibilidade e presença<br/>para o seu negócio",
     subtitle:
       "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking.",
     heroCTAText: "ENTRAR EM CONTATO",
@@ -34,7 +35,8 @@ export const membroX: IServiceItem = {
           icon: LocationOnIcon,
         },
         {
-          text: "<strong>Gestão de correspondências e encomendas</strong> com retirada em horário comercial",
+          text: "<strong>Gestão de correspondências e encomendas</strong>  “Plano All-In” 1.890/anual",
+
           icon: LocalPostOfficeIcon,
         },
         {
@@ -59,21 +61,22 @@ export const membroX: IServiceItem = {
     },
     plans: [
       {
-        price: 1297,
+        price: 1890,
         label: "Anual",
         period: "ANO",
         included: [
-          "Endereço comercial qualificado em Balneário Camboriú",
-          "Uso do endereço no Google Meu Negócio, redes e materiais",
-          "Gestão de correspondências e encomendas (até 40x40x40cm e 5kg)",
-          "Retirada em horário comercial",
-          "50% de desconto em salas e coworking",
+          "Endereço fiscal e comercial para o seu CNPJ em um coworking que,desde 2006,é referência em Santa Catarina.",
+          "Gestão de correspondências e encomendas com notificação de recebimento.",
+          "Utilização dos espaços de coworking com <strong>50%</strong> de desconto.",
+          "Recepção com atendimento personalizado, ambiente climatizado, água e café com torrefação especial à vontade.",
+          "Acesso total à comunidade <strong>Membro X</strong>, com agenda de encontros, grupo de WhatsApp e sistema de reservas.",
+        
         ],
         customPriceText: "Investimento único",
         whatsappMessage:
           "Olá! Vi o plano Membro X no site e gostaria de mais informações.",
       },
     ],
-    floatingCtaMessage: "R$1297/ano",
+    floatingCtaMessage: "R$1890/ano",
   },
 };
