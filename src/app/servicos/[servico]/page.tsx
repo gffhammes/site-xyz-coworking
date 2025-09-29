@@ -79,21 +79,3 @@ export async function generateStaticParams() {
     servico: service.slug,
   }));
 }
-
-{
-  /* <Stack gap={{ xs: 20 }}>
-          <Stack>
-            <ServicesHeroSection />
-
-            <ServicesIntroduction />
-          </Stack>
-
-          <Stack gap={20} sx={{ pb: { xs: 0, md: 20 } }}>
-            <ServicesServicesSection />
-
-            <AdvantagesSection />
-
-            <ReviewsSection />
-          </Stack>
-        </Stack> */
-}

@@ -61,15 +61,11 @@ export const pages: IPage[] = [
       target: service.slug,
     })),
   },
-  // {
-  //   name: "Blog",
-  //   target: "https://bc.xyzcoworking.com/blog/",
-  //   isActive: true,
-  //   openInNewTab: true,
-  // },
-  // {
-  //   name: "Contato",
-  //   target: "/contato",
-  //   isActive: false,
-  // },
+  {
+    name: "Blog",
+    target: "/blog",
+    // target: "https://bc.xyzcoworking.com/blog/",
+    isActive: true,
+    openInNewTab: true,
+  },
 ];
