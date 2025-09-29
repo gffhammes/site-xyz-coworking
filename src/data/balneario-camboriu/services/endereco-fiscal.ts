@@ -68,7 +68,7 @@ no plano anual`,
         included: [
           "Endereço fiscal e comercial para o seu CNPJ em um coworking que, desde 2006, é referência em Santa Catarina.",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
-          "Utilização dos espaços de coworking com 30% de desconto",
+          "Utilização dos espaços de coworking com <strong>30%</strong> de desconto",
        
         ],
         whatsappMessage:

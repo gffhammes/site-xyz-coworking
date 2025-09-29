@@ -24,6 +24,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
         <Stack gap={4}>
           <Stack gap={4}>
             <PlanCardPrice selectedPlan={selectedPlan} />
+
             <PlanCardIncluded selectedPlan={selectedPlan} />
           </Stack>
 
@@ -36,8 +37,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
               href={buttonHref}
               target="_blank"
               variant="contained"
-              fullWidth       // garante largura total
-              sx={{ display: "block", mt: 2, mb: 2 }} // respiro acima e abaixo
+              sx={{ mb: { xs: 3, sm: 0 } }} // margem inferior extra no mobile
             >
               CONTRATAR AGORA
             </Button>

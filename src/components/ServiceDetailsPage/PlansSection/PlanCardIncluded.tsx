@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { IServicePlan } from "@/data/types";
+import parse from "html-react-parser";
 
 export interface IPlanCardIncludedProps {
   selectedPlan: IServicePlan;
@@ -13,7 +14,7 @@ export const PlanCardIncluded = ({ selectedPlan }: IPlanCardIncludedProps) => {
         <Stack key={item} direction="row" sx={{ color: "white" }} gap={1}>
           <CheckCircleOutlineIcon fontSize="small" sx={{ mt: 0.5 }} />
 
-          <Typography>{item}</Typography>
+          <Typography>{parse(item)}</Typography>
         </Stack>
       ))}
     </Stack>
