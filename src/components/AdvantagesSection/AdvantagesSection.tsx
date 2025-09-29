@@ -26,7 +26,7 @@ export interface IAdvantageItem {
 
 export const advantageItems: IAdvantageItem[] = [
   {
-    title: "",
+    title: "Flexibilidade total.",
     description:
       "Seu trabalho não tem horário fixo? Aqui você tem acesso ao seu espaço a qualquer hora do dia (ou da noite).",
     Icon: UpdateOutlinedIcon,
