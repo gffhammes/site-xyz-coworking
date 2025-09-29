@@ -23,7 +23,7 @@ export const membroX: IServiceItem = {
   detailsPage: {
     h1: "Mais credibilidade e presença<br/>para o seu negócio",
     subtitle:
-      "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking.",
+      "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking. O ano todo.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Presença comercial qualificada, mais confiança e economia real",
