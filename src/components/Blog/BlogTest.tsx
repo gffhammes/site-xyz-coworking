@@ -3,24 +3,22 @@
 import { blogArticles, blogCategories, IBlogPost } from "@/data/blog-articles";
 import {
   Box,
-  ButtonBase,
   Chip,
   Container,
   Pagination,
   Stack,
   Typography,
 } from "@mui/material";
-import Image from "next/image";
-import Link from "next/link";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { useEffect, useMemo, useState } from "react";
+import { BlogArticleCard } from "./BlogArticleCard";
+import { CustomSelect } from "../Forms/CustomSelect";
 
 export interface IBlogTestProps {}
 
 export const BlogTest = (props: IBlogTestProps) => {
   const [page, setPage] = useState(0);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [sort, setSort] = useState("");
+  const [sort, setSort] = useState<TSortOptions>("newest-to-oldest");
 
   const pageSize = 9;
 
@@ -36,18 +34,24 @@ export const BlogTest = (props: IBlogTestProps) => {
     return articlesToShow;
   }, [selectedCategories]);
 
-  const articlesToShow = useMemo(() => {
-    let articlesToShow = filteredArticles;
+  const sortedArticles = useMemo(() => {
+    const articles = sortPostsByDate(filteredArticles, sort);
+
+    return articles;
+  }, [filteredArticles, sort]);
+
+  const currentPageArticles = useMemo(() => {
+    let articlesToShow = sortedArticles;
 
     const initialIndex = page * pageSize;
     const finalIndex = (page + 1) * pageSize;
 
     return articlesToShow.slice(initialIndex, finalIndex);
-  }, [filteredArticles, page]);
+  }, [sortedArticles, page]);
 
   const pagesQuantity = useMemo(
     () => Math.ceil(filteredArticles.length / pageSize),
-    [articlesToShow]
+    [filteredArticles]
   );
 
   useEffect(() => {
@@ -57,6 +61,20 @@ export const BlogTest = (props: IBlogTestProps) => {
   return (
     <Box sx={{ width: "100%" }}>
       <Container>
+        <CustomSelect
+          options={[
+            { label: "Do mais novo ao mais antigo", value: "newest-to-oldest" },
+            { label: "Do mais antigo ao mais novo", value: "oldest-to-newest" },
+          ]}
+          currentValue={sort}
+          displayKey="label"
+          valueKey="value"
+          label="Ordenar"
+          onChange={(value) => {
+            setSort(value as TSortOptions);
+          }}
+        />
+
         <Stack direction="row" flexWrap="wrap" width="100%" overflow="hidden">
           {blogCategories.map((category) => {
             const isSelected = selectedCategories.includes(category);
@@ -79,6 +97,8 @@ export const BlogTest = (props: IBlogTestProps) => {
             );
           })}
         </Stack>
+
+        <Typography>{`${filteredArticles.length} artigo(s) encontrado(s)`}</Typography>
       </Container>
 
       <Container id="blog-content">
@@ -88,73 +108,8 @@ export const BlogTest = (props: IBlogTestProps) => {
           gridAutoRows="1fr"
           gap={4}
         >
-          {articlesToShow.map((article) => (
-            <Link
-              key={article.id}
-              href={`/blog/${article.slug}`}
-              style={{ height: "100%" }}
-              target="_blank"
-            >
-              <ButtonBase
-                sx={{
-                  width: "20rem",
-                  height: "100%",
-                  borderRadius: 3,
-                  pb: 2,
-                  pt: 1,
-                  px: 1,
-                  transition: ".3s ease all",
-                  "&:hover": {
-                    backgroundColor: "#e3e3e3",
-                  },
-                }}
-                component={Stack}
-              >
-                <Box
-                  sx={{
-                    position: "relative",
-                    width: "100%",
-                    aspectRatio: "1 / 1",
-                    borderRadius: 8,
-                    overflow: "hidden",
-                    flexShrink: 0,
-                  }}
-                >
-                  <Image
-                    src={article.featuredImage}
-                    alt="Imagem"
-                    fill
-                    objectFit="cover"
-                  />
-                </Box>
-
-                <Stack
-                  direction="column"
-                  sx={{ pt: 1, height: "100%", width: "100%" }}
-                  // justifyContent="space-between"
-                  alignItems="flex-start"
-                  gap={2}
-                >
-                  <Stack alignItems="flex-start">
-                    <Chip
-                      label={article.category}
-                      size="small"
-                      variant="outlined"
-                    />
-
-                    <Typography fontWeight="bold" fontSize={20}>
-                      {article.title}
-                    </Typography>
-                  </Stack>
-
-                  <Stack direction="row" color="secondary.main">
-                    <Typography fontWeight="bold">Leia mais</Typography>
-
-                    <ArrowOutwardIcon />
-                  </Stack>
-                </Stack>
-              </ButtonBase>
-            </Link>
+          {currentPageArticles.map((article) => (
+            <BlogArticleCard key={article.id} article={article} />
           ))}
         </Box>
       </Container>
@@ -171,4 +126,46 @@ export const BlogTest = (props: IBlogTestProps) => {
       </Container>
     </Box>
   );
+};
+
+function parseWpDateToTs(d?: string | Date | number): number {
+  if (!d) return 0;
+  if (typeof d === "number") return d;
+  if (d instanceof Date) return d.getTime();
+
+  const s = d.trim();
+
+  // regex que aceita "YYYY-MM-DD HH:MM:SS" ou "YYYY-MM-DDTHH:MM:SS" ou só "YYYY-MM-DD"
+  const m = s.match(
+    /^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}):(\d{2}))?$/
+  );
+  if (m) {
+    const year = Number(m[1]);
+    const month = Number(m[2]) - 1; // JS month 0-11
+    const day = Number(m[3]);
+    const hour = Number(m[4] ?? "0");
+    const minute = Number(m[5] ?? "0");
+    const second = Number(m[6] ?? "0");
+    // Usamos Date.UTC para gerar um timestamp consistente (ms since epoch)
+    return Date.UTC(year, month, day, hour, minute, second);
+  }
+
+  // fallback: tenta um parse mais permissivo (substitui espaço por T)
+  const isoLike = s.replace(" ", "T");
+  const parsed = Date.parse(isoLike);
+  return isNaN(parsed) ? 0 : parsed;
+}
+
+type TSortOptions = "oldest-to-newest" | "newest-to-oldest";
+
+const sortPostsByDate = (
+  posts: IBlogPost[],
+  order: TSortOptions = "newest-to-oldest"
+): IBlogPost[] => {
+  return [...posts].sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+
+    return order === "oldest-to-newest" ? dateA - dateB : dateB - dateA;
+  });
 };
