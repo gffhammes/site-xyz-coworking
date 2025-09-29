@@ -21,7 +21,7 @@ export const membroX: IServiceItem = {
       "Plano anual com endereço comercial qualificado e vantagens exclusivas para economizar e fortalecer sua presença online.",
   },
   detailsPage: {
-    h1: "Mais credibilidade e presença<br/>para o seu negócio durante todo o ano",
+    h1: "Mais credibilidade e presença<br/>para o seu negócio",
     subtitle:
       "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking.",
     heroCTAText: "ENTRAR EM CONTATO",
