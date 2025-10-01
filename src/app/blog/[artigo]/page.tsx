@@ -138,7 +138,7 @@ const options = {
 export async function generateMetadata({
   params,
 }: {
-  params: { artigo: string };
+  params: Promise<{ artigo: string }>;
 }) {
   const { artigo } = await params;
 
@@ -160,7 +160,7 @@ export async function generateMetadata({
 export default async function Artigo({
   params,
 }: {
-  params: { artigo: string };
+  params: Promise<{ artigo: string }>;
 }) {
   const { artigo } = await params;
   const article = await fetchArticle(artigo);
