@@ -11,7 +11,7 @@ export const membroX: IServiceItem = {
   seoTitle:
     "Membro X — Endereço Comercial e Benefícios Exclusivos em Balneário Camboriú",
   description:
-    "Mais presença, mais confiança e muito mais economia. Com o plano Membro X, sua empresa ganha um endereço comercial qualificado e acesso a uma série de vantagens exclusivas por um preço fixo anual.",
+    "Aumente sua presença profissional em Florianópolis com um endereço comercial qualificado e benefícios exclusivos. Ideal para negócios digitais, autônomos e empresas que buscam economia e credibilidade em um dos maiores polos de inovação do país.",
   image: membroImg.src,
   slug: "membro-x",
   heroText: "Um plano com<br/>vários benefícios",

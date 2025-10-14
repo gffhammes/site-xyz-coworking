@@ -9,7 +9,7 @@ export const enderecoFiscal: IServiceItem = {
   title: "Endereço Fiscal e Comercial",
   seoTitle: "Endereço Fiscal e Comercial em Balneário Camboriú",
   description:
-    "Formalize sua empresa com um endereço de prestígio em Balneário Camboriú, sem custos elevados. Ideal para empresas em início e negócios digitais que buscam credibilidade e presença no mercado.",
+    "Garanta um endereço de prestígio na capital de Santa Catarina e referência em qualidade de vida e inovação. Ideal para empresas em crescimento e negócios digitais que buscam credibilidade, regularização e presença em um dos mercados mais promissores do país, sem custos elevados.",
   image: enderecoImg.src,
   slug: "endereco-fiscal-e-comercial",
   heroText: "Um endereço para<br/>minha empresa",
@@ -19,9 +19,9 @@ export const enderecoFiscal: IServiceItem = {
       "Perfeito para quem quer registrar sua empresa em um <strong>endereço estratégico</strong> e atender clientes com <strong>mais autoridade.</strong>",
   },
   detailsPage: {
-    h1: "O primeiro passo para sua<br/>empresa existir de verdade",
+    h1: "Mais que um endereço fiscal:<br/> uma posição estratégica",
     subtitle:
-      "Com nosso endereço fiscal e comercial, sua empresa ganha legitimidade, passa mais<br/>confiança e pode operar de forma 100% regular — sem precisar arcar com os altos custos.",
+      "Regularize sua empresa, conquiste credibilidade e aproveite a força de um espaço físico em um dos maiores polos de inovação do país.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Por que centenas de empresas confiam no nosso endereço?",
@@ -41,20 +41,20 @@ export const enderecoFiscal: IServiceItem = {
           icon: VerifiedIcon,
         },
         {
-          text: "Ideal para <strong>negócios digitais</strong> ou empresas em <strong>início de operação</strong>",
+          text: "Ideal para <strong>negócios digitais</strong> ou empresas em <strong>start-ups</strong>",
           icon: TrendingUpIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Abrir ou transferir seu<br/>CNPJ nunca foi tão simples",
+      h2: "Abrir ou transferir seu CNPJ em Florianópolis nunca foi tão fácil<br/>",
       subtitle:
-        "É rápido e fácil começar a usar nosso endereço como sede da sua empresa — com zero burocracia e 100% segurança.",
+        "Regularize sua empresa em Florianópolis com um endereço fiscal validado pela Receita Federal e pronto para uso imediato.",
       items: [
-        "Escolha o plano que melhor se adapta ao seu negócio",
-        "Envie a documentação da sua empresa",
+        "Escolha o plano ideal para seu negócio",
+        "Envie a documentação requisitada",
         "Assine o contrato digitalmente",
-        "Pronto! Você já pode registrar ou transferir seu CNPJ",
+        "Feito! Você já pode registrar ou transferir seu CNPJ",
       ],
     },
     plansMessage: `Economize <strong>R$398</strong>

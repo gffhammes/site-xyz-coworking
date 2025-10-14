@@ -19,9 +19,9 @@ export const enderecoFiscal: IServiceItem = {
       "Perfeito para registrar sua empresa em um <strong>endereço confiável</strong>, fortalecer sua <strong>imagem profissional</strong> e operar com segurança jurídica.",
   },
   detailsPage: {
-    h1: "O endereço que fortalece<br/>sua empresa desde o início",
+    h1: "Mais que um endereço fiscal:<br/>uma posição estratégica",
     subtitle:
-      "Com nosso endereço fiscal e comercial, sua empresa conquista regularização,<br/>transmite confiança e reduz custos operacionais — sem precisar alugar uma sala física.",
+      "Regularize sua empresa, conquiste credibilidade e aproveite a força de um espaço físico em um dos maiores polos de inovação do país.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Por que empresas em Joinville estão escolhendo nosso endereço?",

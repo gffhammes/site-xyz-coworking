@@ -49,7 +49,7 @@ export const joinvilleData: ISiteData = {
       image: heroBg.src,
     },
     phraseSection: {
-      text: "Seu desempenho profissional<br/><strong>começa com o ambiente certo</strong>",
+      text: "Conectado ao mundo, nossa internet  ultra-rápida garante que você trabalhe de qualquer lugar sem falhas<br/><strong>TRABALHE DE FORMA MAIS INTELIGENTE!</strong>",
       image1: image1.src,
       image2: image2.src,
     },

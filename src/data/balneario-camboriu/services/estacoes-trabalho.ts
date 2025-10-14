@@ -10,7 +10,7 @@ export const estacoesTrabalho: IServiceItem = {
   title: "Estações de Trabalho",
   seoTitle: "Estações de Trabalho em Balneário Camboriú",
   description:
-    "Ambientes dinâmicos e inspiradores para quem busca flexibilidade e produtividade, com infraestrutura de alto padrão para freelancers e pequenas empresas.",
+    "Espaços compartilhados e bem estruturados, ideais para profissionais que valorizam foco e flexibilidade. Uma solução prática para quem busca produtividade em um ambiente colaborativo e inspirador.",
   image: estacoesImg.src,
   slug: "estacoes-trabalho",
   heroText: "Uma estação de<br/>trabalho compartilhada",

@@ -9,7 +9,7 @@ export const salasPrivativas: IServiceItem = {
   title: "Salas Privativas",
   seoTitle: "Salas Privativas em Balneário Camboriú",
   description:
-    "Garanta total privacidade e uma estrutura sofisticada para o seu trabalho. Um espaço exclusivo para você, com a credibilidade que seu negócio precisa, ideal para empreendedores e empresas que buscam profissionalismo.",
+    "Tenha total privacidade e um espaço exclusivo, com estrutura completa para o seu negócio unindo sofisticação, profissionalismo e a presença em um dos ecossistemas mais promissores do país. Ideal para empreendedores e empresas que valorizam credibilidade.",
   image: salaImg.src,
   slug: "salas-privativas",
   heroText: "Uma sala privativa<br/>para meu negócio",
