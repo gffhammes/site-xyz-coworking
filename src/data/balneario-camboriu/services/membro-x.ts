@@ -61,7 +61,7 @@ export const membroX: IServiceItem = {
     },
     plans: [
       {
-        price: 1890,
+        price: 684,
         label: "Anual",
         period: "ANO",
         included: [
@@ -77,6 +77,6 @@ export const membroX: IServiceItem = {
           "Olá! Vi o plano Membro X no site e gostaria de mais informações.",
       },
     ],
-    floatingCtaMessage: "R$1890/ano",
+    floatingCtaMessage: "R$684/ano",
   },
 };

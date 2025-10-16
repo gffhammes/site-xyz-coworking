@@ -60,7 +60,7 @@ export const salasAtendimento: IServiceItem = {
     },
     plans: [
       {
-        price: 100,
+        price: 75,
         label: "Hora",
         period: "HORA",
         included: [
@@ -74,7 +74,7 @@ export const salasAtendimento: IServiceItem = {
           "Olá! Vi no site as Salas de Atendimento e gostaria de reservar uma hora.",
       },
       {
-        price: 400,
+        price: 189,
         label: "Período",
         period: "PERÍODO",
         included: [
@@ -88,7 +88,7 @@ export const salasAtendimento: IServiceItem = {
           "Olá! Vi no site as Salas de Atendimento e gostaria de reservar um período.",
       },
       {
-        price: 720,
+        price: 365,
         label: "Diária",
         period: "Diária",
         included: [
@@ -104,7 +104,7 @@ export const salasAtendimento: IServiceItem = {
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
-    floatingCtaMessage: "R$100/hora",
+    floatingCtaMessage: "R$75/hora",
     plansMessageTarget: membroX.slug,
   },
 };

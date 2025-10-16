@@ -60,7 +60,7 @@ export const estacoesTrabalho: IServiceItem = {
 
     plans: [
       {
-        price: 120,
+        price: 68,
         label: "Diária",
         period: "Dia",
 
@@ -77,6 +77,6 @@ export const estacoesTrabalho: IServiceItem = {
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
     plansMessageTarget: membroX.slug,
-    floatingCtaMessage: "R$120/dia",
+    floatingCtaMessage: "R$68/dia",
   },
 };

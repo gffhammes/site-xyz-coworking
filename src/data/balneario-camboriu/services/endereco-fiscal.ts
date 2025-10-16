@@ -62,7 +62,7 @@ export const enderecoFiscal: IServiceItem = {
 no plano anual`,
     plans: [
       {
-        price: 1390,
+        price: 1290,
         label: "Anual",
         period: "Ano",
         included: [
@@ -75,7 +75,7 @@ no plano anual`,
           "Olá! Vim do site e tenho interesse em contratar o plano anual de endereço fiscal.",
       },
       {
-        price: 149,
+        price: 129,
         label: "Mensal",
         period: "Mês",
         included: [
@@ -87,6 +87,6 @@ no plano anual`,
           "Olá! Vim do site e tenho interesse em contratar o plano mensal de endereço fiscal.",
       },
     ],
-    floatingCtaMessage: "R$149/mês",
+    floatingCtaMessage: "R$129/mês",
   },
 };

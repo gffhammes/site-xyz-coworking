@@ -58,8 +58,10 @@ export const salasReuniao: IServiceItem = {
       ],
     },
     plans: [
+
+
       {
-        price: 500,
+        price: 336,
         label: "Período",
         period: "Período",
         included: [
@@ -72,7 +74,7 @@ export const salasReuniao: IServiceItem = {
           "Olá! Vim pelo site e gostaria de reservar um período em uma sala de reunião.",
       },
       {
-        price: 800,
+        price: 592,
         label: "Diária",
         period: "Dia",
         included: [
@@ -87,7 +89,7 @@ export const salasReuniao: IServiceItem = {
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
-    floatingCtaMessage: "R$500/período",
+    floatingCtaMessage: "R$336/período",
     plansMessageTarget: membroX.slug,
   },
 };
