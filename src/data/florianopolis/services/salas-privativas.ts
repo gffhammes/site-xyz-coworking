@@ -9,7 +9,7 @@ export const salasPrivativas: IServiceItem = {
   title: "Salas Privativas",
   seoTitle: "Salas Privativas em Balneário Camboriú",
   description:
-    "Garanta total privacidade e uma estrutura sofisticada para o seu trabalho. Um espaço exclusivo para você, com a credibilidade que seu negócio precisa, ideal para empreendedores e empresas que buscam profissionalismo.",
+    "Tenha total privacidade e um espaço exclusivo, com estrutura completa para o seu negócio unindo sofisticação, profissionalismo e a presença em um dos ecossistemas mais promissores do país. Ideal para empreendedores e empresas que valorizam credibilidade.",
   image: salaImg.src,
   slug: "salas-privativas",
   heroText: "Uma sala privativa<br/>para meu negócio",
@@ -19,9 +19,9 @@ export const salasPrivativas: IServiceItem = {
       "Ideal para pequenas empresas, startups e autônomos que precisam de um espaço exclusivo.",
   },
   detailsPage: {
-    h1: "Um espaço só seu, com a<br/>estrutura que sua empresa merece",
+    h1: "Seu escritório em Florianópolis, com <br/> estrutura de empresa de verdade",
     subtitle:
-      "Trabalhe com mais foco, profissionalismo e privacidade. Nossas salas privativas são ideais para<br/>quem quer um espaço só seu, pronto para impressionar clientes e manter a produtividade em alta.",
+      "Trabalhe com conforto, privacidade e a imagem profissional que seu negócio merece. Salas prontas para uso, em localização estratégica e Trabalhe com conforto, privacidade e a imagem profissional que seu negócio merece. Salas prontas para uso, em localização estratégica e com tudo o que você precisa para receber seus clientes.com tudo o que você precisa para receber seus clientes.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Mais que um espaço — é seu escritório com status e privacidade",
@@ -29,31 +29,31 @@ export const salasPrivativas: IServiceItem = {
         "Profissionalize sua operação com um ambiente exclusivo, preparado para quem leva o negócio a sério e quer receber clientes com autoridade.",
       items: [
         {
-          text: "<strong>Ambiente exclusivo</strong> para você e sua equipe performarem",
+          text: "<strong>Ambiente exclusivo</strong> para você trabalhar com conforto e total privacidade",
           icon: GroupWorkIcon,
         },
         {
-          text: "<strong>Pronto para usar,</strong> com internet, mobília e climatização",
+          text: "<strong>Pronto para usar,</strong> com internet rápida, climatização e mobiliário completo",
           icon: RocketLaunchIcon,
         },
         {
-          text: "<strong>Mais profissionalismo</strong> e concentração para a sua rotina",
+          text: "<strong>Foco e produtividade</strong> em um espaço projetado para o seu desempenho",
           icon: ChecklistIcon,
         },
         {
-          text: "<strong>Recepcionista para seus clientes</strong> em horário comercial",
+          text: "<strong>Recepção profissional</strong> para receber seus clientes com excelência",
           icon: RecordVoiceOverIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Tenha sua sala exclusiva pronta<br/>para usar em poucos passos",
+      h2: "Tenha sua sala exclusiva <br/> em poucas horas",
       subtitle:
-        "Sem enrolação. Veja como é rápido garantir sua estrutura completa e começar a trabalhar com mais foco, privacidade e profissionalismo.",
+        "Sem burocracia. Escolha o espaço ideal, assine o contrato digital e comece a trabalhar no mesmo dia — com toda a estrutura pronta para atender sua rotina com conforto e profissionalismo.",
       items: [
-        "Escolha a sala ideal para o seu perfil",
-        "Assine o contrato digital",
-        "Leve seu notebook e comece a trabalhar no mesmo dia",
+        "Escolha a sala ideal para o seu estilo de trabalho",
+        "Assine o contrato digital de forma simples e rápida",
+        "Leve seu notebook e comece a produzir no mesmo dia",
       ],
     },
 

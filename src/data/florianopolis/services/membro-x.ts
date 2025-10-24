@@ -11,7 +11,7 @@ export const membroX: IServiceItem = {
   seoTitle:
     "Membro X — Endereço Comercial e Benefícios Exclusivos em Balneário Camboriú",
   description:
-    "Mais presença, mais confiança e muito mais economia. Com o plano Membro X, sua empresa ganha um endereço comercial qualificado e acesso a uma série de vantagens exclusivas por um preço fixo anual.",
+    "Aumente sua presença profissional em Florianópolis com um endereço comercial qualificado e benefícios exclusivos. Ideal para negócios digitais, autônomos e empresas que buscam economia e credibilidade em um dos maiores polos de inovação do país.",
   image: membroImg.src,
   slug: "membro-x",
   heroText: "Um plano com<br/>vários benefícios",
@@ -23,7 +23,7 @@ export const membroX: IServiceItem = {
   detailsPage: {
     h1: "Mais credibilidade e presença<br/>para o seu negócio",
     subtitle:
-      "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking.",
+      "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking o ano todo.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Presença comercial qualificada, mais confiança e economia real",
@@ -61,7 +61,7 @@ export const membroX: IServiceItem = {
     },
     plans: [
       {
-        price: 1890,
+        price: 684,
         label: "Anual",
         period: "ANO",
         included: [
@@ -77,6 +77,6 @@ export const membroX: IServiceItem = {
           "Olá! Vi o plano Membro X no site e gostaria de mais informações.",
       },
     ],
-    floatingCtaMessage: "R$1890/ano",
+    floatingCtaMessage: "R$684/ano",
   },
 };

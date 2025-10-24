@@ -10,19 +10,19 @@ export const estacoesTrabalho: IServiceItem = {
   title: "Estações de Trabalho",
   seoTitle: "Estações de Trabalho em Balneário Camboriú",
   description:
-    "Ambientes dinâmicos e inspiradores para quem busca flexibilidade e produtividade, com infraestrutura de alto padrão para freelancers e pequenas empresas.",
+    "Espaços compartilhados e bem estruturados, ideais para profissionais que valorizam foco e flexibilidade. Uma solução prática para quem busca produtividade em um ambiente colaborativo e inspirador.",
   image: estacoesImg.src,
   slug: "estacoes-trabalho",
-  heroText: "Uma estação de<br/>trabalho compartilhada",
+  heroText: "Inspiração e produtividade em um só lugar",
   homeCard: {
     title: "Estações de Trabalho",
     description:
       "Esqueça a solidão do home office! Aqui, você trabalha cercado de boas ideias e grandes oportunidades.",
   },
   detailsPage: {
-    h1: "O ambiente ideal para fazer conexões<br/>que levam seu negócio mais longe",
+    h1: "Inspiração e produtividade em um só lugar",
     subtitle:
-      "Tenha acesso a um espaço de trabalho completo, sem os custos de manter um escritório.<br/>Conecte-se, produza mais e esteja cercado por oportunidades todos os dias.",
+      "Trabalhe em um ambiente moderno, cercado pela energia criativa de Florianópolis.<br/> Conforto, estrutura completa e o equilíbrio perfeito entre foco e qualidade de vida.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Conecte-se com um ambiente que impulsiona sua produtividade",
@@ -34,7 +34,7 @@ export const estacoesTrabalho: IServiceItem = {
           icon: SensorOccupiedIcon,
         },
         {
-          text: "Ideal para <strong>freelancers, nômades digitais e autônomos</strong>",
+          text: "Ambiente inspirador para profissionais<strong> autônomos, híbridos e equipes</strong>",
           icon: WorkIcon,
         },
         {
@@ -42,25 +42,25 @@ export const estacoesTrabalho: IServiceItem = {
           icon: HubIcon,
         },
         {
-          text: "<strong>Mobílias ergonômicas, internet rápida</strong> e café à vontade",
+          text: "<strong>Conforto e conectividade </strong> com internet rápida e café sempre disponível",
           icon: WifiIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Do cadastro à mesa<br/>em poucos cliques",
+      h2: "Da reserva ao trabalho em instantes",
       subtitle:
-        "É só escolher o plano, preencher os dados e começar a trabalhar num ambiente que vai elevar sua produtividade.",
+        "Escolha o plano ideal, finalize sua reserva e comece a trabalhar em um espaço completo — com tudo pronto para você focar no que importa.",
       items: [
-        "Escolha seu plano diário ou mensal",
-        "Assine o contrato em poucos minutos",
-        "Comece a usar sua estação quando quiser",
+        "Escolha seu plano diário, semanal ou mensal",
+        "Confirme a reserva online em poucos cliques",
+        "Chegue e aproveite sua estação pronta para uso",
       ],
     },
 
     plans: [
       {
-        price: 120,
+        price: 68,
         label: "Diária",
         period: "Dia",
 
@@ -77,6 +77,6 @@ export const estacoesTrabalho: IServiceItem = {
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
     plansMessageTarget: membroX.slug,
-    floatingCtaMessage: "R$120/dia",
+    floatingCtaMessage: "R$68/dia",
   },
 };
