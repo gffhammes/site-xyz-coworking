@@ -1,10 +1,12 @@
 import { balnearioData } from "./balneario-camboriu/balneario-camboriu";
+import { florianopolisData } from "./florianopolis/florianopolis";
 import { joinvilleData } from "./joinville/joinville";
 
 export const sites = {
   bc: balnearioData,
   joinville: joinvilleData,
-  //   floripa: floripaData,
+  florianopolis: florianopolisData,
+  
 };
 
 export type SiteKey = keyof typeof sites;
