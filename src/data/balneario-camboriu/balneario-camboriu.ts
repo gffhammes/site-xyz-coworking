@@ -27,6 +27,7 @@ const address = {
 };
 
 export const balnearioData: ISiteData = {
+  gtmId: "GTM-T588QKB9",
   contact,
   services,
   workingHours,
@@ -47,30 +48,32 @@ export const balnearioData: ISiteData = {
       image2: image2.src,
     },
     diferencialSection: {
-      differentialItems: [{
-    title: "Endereço estratégico<br/>e sofisticado",
-    description:
-      "Ter um escritório bem localizado muda a forma como seu negócio é visto.",
-    image: diferencialimage1.src,
-  },
-  {
-    title: "Infraestrutura<br/>impecável",
-    description:
-      "Cadeiras ergonômicas, internet ultra rápida e climatização total. ",
-    image: diferencialimage2.src,
-  },
-  {
-    title: "Ambiente exclusivo<br/>para negócios",
-    description:
-      "Conecte-se a outros profissionais de sucesso e expanda sua rede.",
-    image: diferencialimage3.src,
-  },
-  {
-    title: "Networking que<br/>abre portas",
-    description:
-      "Trabalhar cercado de mentes brilhantes pode ser o impulso que faltava para sua empresa crescer. Conexões reais acontecem aqui.",
-    image: diferencialimage4.src,
-  },]
+      differentialItems: [
+        {
+          title: "Endereço estratégico<br/>e sofisticado",
+          description:
+            "Ter um escritório bem localizado muda a forma como seu negócio é visto.",
+          image: diferencialimage1.src,
+        },
+        {
+          title: "Infraestrutura<br/>impecável",
+          description:
+            "Cadeiras ergonômicas, internet ultra rápida e climatização total. ",
+          image: diferencialimage2.src,
+        },
+        {
+          title: "Ambiente exclusivo<br/>para negócios",
+          description:
+            "Conecte-se a outros profissionais de sucesso e expanda sua rede.",
+          image: diferencialimage3.src,
+        },
+        {
+          title: "Networking que<br/>abre portas",
+          description:
+            "Trabalhar cercado de mentes brilhantes pode ser o impulso que faltava para sua empresa crescer. Conexões reais acontecem aqui.",
+          image: diferencialimage4.src,
+        },
+      ],
     },
     mapSection: {
       h2: "Venha conhecer o nosso espaço em Balneário Camboriú!",

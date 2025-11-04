@@ -47,6 +47,7 @@ export interface IServiceItem {
 }
 
 export interface ISiteData {
+  gtmId: string;
   contact: {
     phoneNumber: string;
     whatsappNumber: string;
@@ -68,8 +69,8 @@ export interface ISiteData {
       image: string;
     };
     diferencialSection: {
-    differentialItems: IDifferentialItem[]
-    }
+      differentialItems: IDifferentialItem[];
+    };
     phraseSection: {
       text: string;
       image1: string;

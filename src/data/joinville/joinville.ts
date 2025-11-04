@@ -14,8 +14,6 @@ import diferencialimage6 from "../../../public/images/fachada.jpg";
 import diferencialimage7 from "../../../public/images/infraestrutura.jpg";
 import diferencialimage8 from "../../../public/images/network-abre-portas.jpg";
 
-
-
 const contact = {
   phoneNumber: "554730321893",
   whatsappNumber: "554734613100",
@@ -35,6 +33,7 @@ const address = {
 };
 
 export const joinvilleData: ISiteData = {
+  gtmId: "GTM-T364HBZH",
   contact,
   services,
   workingHours,
@@ -54,30 +53,32 @@ export const joinvilleData: ISiteData = {
       image2: image2.src,
     },
     diferencialSection: {
-      differentialItems: [{
-    title: "Endereço estratégico<br/>e sofisticado",
-    description:
-      "Ter um escritório bem localizado muda a forma como seu negócio é visto.",
-    image: diferencialimage6.src,
-  },
-  {
-    title: "Infraestrutura<br/>impecável",
-    description:
-      "Cadeiras ergonômicas, internet ultra rápida e climatização total. ",
-    image: diferencialimage7.src,
-  },
-  {
-    title: "Ambiente exclusivo<br/>para negócios",
-    description:
-      "Conecte-se a outros profissionais de sucesso e expanda sua rede.",
-    image: diferencialimage5.src,
-  },
-  {
-    title: "Networking que<br/>abre portas",
-    description:
-      "Trabalhar cercado de mentes brilhantes pode ser o impulso que faltava para sua empresa crescer. Conexões reais acontecem aqui.",
-    image: diferencialimage8.src,
-  },]
+      differentialItems: [
+        {
+          title: "Endereço estratégico<br/>e sofisticado",
+          description:
+            "Ter um escritório bem localizado muda a forma como seu negócio é visto.",
+          image: diferencialimage6.src,
+        },
+        {
+          title: "Infraestrutura<br/>impecável",
+          description:
+            "Cadeiras ergonômicas, internet ultra rápida e climatização total. ",
+          image: diferencialimage7.src,
+        },
+        {
+          title: "Ambiente exclusivo<br/>para negócios",
+          description:
+            "Conecte-se a outros profissionais de sucesso e expanda sua rede.",
+          image: diferencialimage5.src,
+        },
+        {
+          title: "Networking que<br/>abre portas",
+          description:
+            "Trabalhar cercado de mentes brilhantes pode ser o impulso que faltava para sua empresa crescer. Conexões reais acontecem aqui.",
+          image: diferencialimage8.src,
+        },
+      ],
     },
     mapSection: {
       h2: "Venha conhecer o nosso espaço em Joinville!",
