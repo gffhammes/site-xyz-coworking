@@ -1,5 +1,5 @@
 import { IServiceItem } from "@/data/types";
-import reunioesfloripaImg from "../../../../public/images/reuniaofloripa.jpeg";
+import reunioesfloripaImg from "../../../../public/images/salareuniaonova.png";
 import TvIcon from "@mui/icons-material/Tv";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import GroupsIcon from "@mui/icons-material/Groups";
@@ -65,6 +65,8 @@ export const salasReuniao: IServiceItem = {
         label: "Hora",
         period: "Hora",
         included: [
+          "Até 6 pessoas",
+          "Para salas com maior capacidade entre em contato",
           "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
           "Recepção de clientes",

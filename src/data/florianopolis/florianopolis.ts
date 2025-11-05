@@ -3,7 +3,7 @@ import { services } from "./services/services";
 import heroBg from "../../../public/images/XYZ - BC-10.webp";
 import image1 from "../../../public/images/XYZ - BC-3.webp";
 import image2 from "../../../public/images/XYZ - BC-4.webp";
-import servicesHeroImage from "../../../public/images/servicos.webp";
+import servicesHeroImage from "../../../public/images/servicos.png";
 import diferencialimage1 from "../../../public/images/enderecofiscalfloripa.jpeg";
 import diferencialimage2 from "../../../public/images/membrox.jpeg";
 import diferencialimage3 from "../../../public/images/exclusivoambiente.png";
@@ -15,8 +15,8 @@ import circulodireito from "../../../public/images/circulodireito.jpeg";
 
 
 const contact = {
-  phoneNumber: "(47) 3461-3100",
-  whatsappNumber: "(48) 9838-0483",
+  phoneNumber: "(48)9838-0483",
+  whatsappNumber: "(48)9838-0483",
   email: "contatofloripa@xyzworking,com",
 };
 

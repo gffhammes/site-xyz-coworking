@@ -1,4 +1,4 @@
-import membrofloripaImg from "../../../../public/images/membrox.jpeg";
+import membrofloripaImg from "../../../../public/images/DSC02319.png";
 import { IServiceItem } from "@/data/types";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";

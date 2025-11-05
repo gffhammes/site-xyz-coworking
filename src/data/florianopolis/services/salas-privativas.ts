@@ -1,4 +1,4 @@
-import privativafloripaImg from "../../../../public/images/privativafloripa.jpeg";
+import privativafloripaImg from "../../../../public/images/DSC022401.png";
 import { IServiceItem } from "@/data/types";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
