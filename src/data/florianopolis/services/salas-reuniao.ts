@@ -1,5 +1,5 @@
 import { IServiceItem } from "@/data/types";
-import reunioesImg from "../../../../public/images/XYZ - BC-30.webp";
+import reunioesfloripaImg from "../../../../public/images/reuniaofloripa.jpeg";
 import TvIcon from "@mui/icons-material/Tv";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import GroupsIcon from "@mui/icons-material/Groups";
@@ -11,7 +11,7 @@ export const salasReuniao: IServiceItem = {
   seoTitle: "Salas de Reunião em Balneário Camboriú",
   description:
     "Estrutura completa para encontros profissionais, com ambientes climatizados, TV, Wi-Fi e recepção. O espaço ideal para transmitir credibilidade, acolher clientes e fechar negócios com eficiência.",
-  image: reunioesImg.src,
+  image: reunioesfloripaImg.src,
   slug: "salas-reuniao",
   heroText: "Uma sala para<br/>reunião de negócios",
   homeCard: {
@@ -61,9 +61,9 @@ export const salasReuniao: IServiceItem = {
 
 
       {
-        price: 336,
-        label: "Período",
-        period: "Período",
+        price: 85,
+        label: "Hora",
+        period: "Hora",
         included: [
           "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
@@ -74,9 +74,9 @@ export const salasReuniao: IServiceItem = {
           "Olá! Vim pelo site e gostaria de reservar um período em uma sala de reunião.",
       },
       {
-        price: 592,
-        label: "Diária",
-        period: "Dia",
+        price: 336,
+        label: "Período",
+        period: "Período",
         included: [
           "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
@@ -89,7 +89,7 @@ export const salasReuniao: IServiceItem = {
     ],
     plansMessage:
       "Seja um Membro X e<br/>ganhe <strong>50% de desconto</strong>",
-    floatingCtaMessage: "R$336/período",
+    floatingCtaMessage: "R$85/Hora",
     plansMessageTarget: membroX.slug,
   },
 };

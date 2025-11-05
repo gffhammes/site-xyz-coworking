@@ -1,4 +1,5 @@
 import enderecoImg from "../../../../public/images/XYZ - BC-64.webp";
+import enderecofiscalfloripa from "../../../../public/images/enderecofiscalfloripa.jpeg";
 import PlaceIcon from "@mui/icons-material/Place";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -7,10 +8,10 @@ import { IServiceItem } from "@/data/types";
 
 export const enderecoFiscal: IServiceItem = {
   title: "Endereço Fiscal e Comercial",
-  seoTitle: "Endereço Fiscal e Comercial em Balneário Camboriú",
+  seoTitle: "Endereço Fiscal e Comercial em Florianópolis",
   description:
     "Garanta um endereço de prestígio na capital de Santa Catarina e referência em qualidade de vida e inovação. Ideal para empresas em crescimento e negócios digitais que buscam credibilidade, regularização e presença em um dos mercados mais promissores do país, sem custos elevados.",
-  image: enderecoImg.src,
+  image: enderecofiscalfloripa.src,
   slug: "endereco-fiscal-e-comercial",
   heroText: "Um endereço para<br/>minha empresa",
   homeCard: {
@@ -29,7 +30,7 @@ export const enderecoFiscal: IServiceItem = {
         "Não é só um endereço bonito. É a base que dá legitimidade ao seu CNPJ, transmite confiança e permite que sua empresa funcione de forma regular e profissional desde o primeiro dia.",
       items: [
         {
-          text: "CNPJ ativo com <strong>endereço de prestígio</strong> em Balneário Camboriú",
+          text: "CNPJ ativo com <strong>endereço de prestígio</strong> em Florianópolis",
           icon: PlaceIcon,
         },
         {
@@ -41,7 +42,7 @@ export const enderecoFiscal: IServiceItem = {
           icon: VerifiedIcon,
         },
         {
-          text: "Ideal para <strong>negócios digitais</strong> ou empresas em <strong>start-ups</strong>",
+          text: "Startups e negócios criativos instalados na <strong> Av. Hercilio Luz</strog> podem garantir <strong>isenção de IPTU</strong> por ate 3 anos, conforme a nova Lei Municipal.",
           icon: TrendingUpIcon,
         },
       ],

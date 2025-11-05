@@ -1,4 +1,4 @@
-import membroImg from "../../../../public/images/membro.webp";
+import membrofloripaImg from "../../../../public/images/membrox.jpeg";
 import { IServiceItem } from "@/data/types";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
@@ -12,7 +12,7 @@ export const membroX: IServiceItem = {
     "Membro X — Endereço Comercial e Benefícios Exclusivos em Balneário Camboriú",
   description:
     "Aumente sua presença profissional em Florianópolis com um endereço comercial qualificado e benefícios exclusivos. Ideal para negócios digitais, autônomos e empresas que buscam economia e credibilidade em um dos maiores polos de inovação do país.",
-  image: membroImg.src,
+  image: membrofloripaImg.src,
   slug: "membro-x",
   heroText: "Um plano com<br/>vários benefícios",
   homeCard: {
