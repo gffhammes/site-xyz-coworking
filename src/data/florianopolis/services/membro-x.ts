@@ -21,30 +21,30 @@ export const membroX: IServiceItem = {
       "Plano anual com endereço comercial qualificado e vantagens exclusivas para economizar e fortalecer sua presença online.",
   },
   detailsPage: {
-    h1: "Mais credibilidade e presença<br/>para o seu negócio",
+    h1: "Fortaleça sua presença na capital <br/> com o Membro X",
     subtitle:
-      "Com o Membro X, sua empresa ganha um endereço estratégico para divulgar no Google e redes sociais,<br/>recebe correspondências com segurança e ainda economiza com descontos em salas e coworking o ano todo.",
+      "Com o plano Membro X, sua empresa ganha mais credibilidade, um endereço comercial para divulgar, recebimento seguro de correspondências, vantagens exclusivas em coworking e salas de reunião o ano todo.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
-      h2: "Presença comercial qualificada, mais confiança e economia real",
+      h2: "Presença profissional sólida e benefícios que geram valor",
       subtitle:
-        "Tenha todos os benefícios de um endereço comercial em Balneário Camboriú — com gestão de correspondências, presença no Google e vantagens que reduzem seus custos operacionais.",
+        "Tenha todos os benefícios de um endereço comercial — com gestão de correspondências, presença no Google e vantagens exclusivas que fortalecem sua marca e reduzem <br> custos ao longo do ano.",
       items: [
         {
-          text: "<strong>Endereço comercial estratégico</strong> para Google Meu Negócio, redes sociais e materiais profissionais",
+          text: "<strong>Endereço comercial de prestígio </strong> para destacar sua empresa nos canais digitais e materiais corporativos",
           icon: LocationOnIcon,
         },
         {
-          text: "<strong>Gestão de correspondências e encomendas</strong>  “Plano All-In” 1.890/anual",
+          text: "<strong>Gestão completa de correspondências e encomendas, </strong>com suporte e organização garantidos",
 
           icon: LocalPostOfficeIcon,
         },
         {
-          text: "<strong>50% de desconto</strong> no uso de coworking, salas de reunião e salas de atendimento",
+          text: "<strong>50% de desconto</strong> para uso de coworking, salas de reunião e atendimento",
           icon: DiscountIcon,
         },
         {
-          text: "<strong>Mais presença e credibilidade</strong> para sua empresa — sem precisar manter um espaço físico fixo",
+          text: "<strong>Mais visibilidade e credibilidade</strong> para sua marca, com a estrutura e o prestígio de um endereço profissional",
           icon: VerifiedUserIcon,
         },
       ],
@@ -52,11 +52,11 @@ export const membroX: IServiceItem = {
     stepsSection: {
       h2: "Como se tornar um Membro X",
       subtitle:
-        "Sem burocracia. Com poucos passos, você garante todos os benefícios e começa a usar seu endereço comercial com credibilidade e praticidade.",
+        "Torne-se um Membro X de forma simples e rápida. Em poucos passos, você garante seu endereço comercial e começa a aproveitar todos os benefícios <br> com praticidade e segurança.",
       items: [
-        "Envie um documento com foto e um comprovante de residência de um dos sócios",
-        "Receba e assine o contrato digital (junto com o boleto da anuidade)",
-        "Acesse o app, agende espaços e comece a usar o endereço comercial nas suas redes e no Google",
+        "Envie um documento com foto e um comprovante de residência",
+        "Receba o contrato digital e o boleto da anuidade",
+        "Assine e comece a usar seu endereço comercial em todos os canais da sua empresa",
       ],
     },
     plans: [

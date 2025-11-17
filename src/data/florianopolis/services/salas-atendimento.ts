@@ -1,4 +1,4 @@
-import salaImg from "../../../../public/images/sala-atendimento.webp";
+import salaImg from "../../../../public/images/IMG_3139.png";
 import { IServiceItem } from "@/data/types";
 import MedicalInformationIcon from "@mui/icons-material/MedicalInformation";
 import DomainVerificationIcon from "@mui/icons-material/DomainVerification";
