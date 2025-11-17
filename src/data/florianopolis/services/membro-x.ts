@@ -31,7 +31,7 @@ export const membroX: IServiceItem = {
         "Tenha todos os benefícios de um endereço comercial — com gestão de correspondências, presença no Google e vantagens exclusivas que fortalecem sua marca e reduzem <br> custos ao longo do ano.",
       items: [
         {
-          text: "<strong>Endereço comercial de prestígio </strong> para destacar sua empresa nos canais digitais e materiais corporativos",
+          text: "<strong>Endereço comercial de prestígio  </strong>  para destacar sua empresa nos canais digitais e materiais corporativos",
           icon: LocationOnIcon,
         },
         {

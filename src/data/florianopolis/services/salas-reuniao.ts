@@ -42,7 +42,7 @@ export const salasReuniao: IServiceItem = {
           icon: GroupsIcon,
         },
         {
-          text: "<strong>Agendamento fácil e prático,</strong> Reserve por hora, período ou diária — tudo de forma simples e digital.",
+          text: "<strong>Reserve por hora, período ou diária</strong> — tudo de forma simples e digital.",
           icon: EventAvailableIcon,
         },
       ],

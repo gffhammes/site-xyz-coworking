@@ -21,41 +21,41 @@ export const salasAtendimento: IServiceItem = {
       "Perfeitas para psicólogos, terapeutas, consultores e outros profissionais que precisam de um espaço reservado e profissional.",
   },
   detailsPage: {
-    h1: "Fortaleça sua presença na </br>capital com o Membro X",
+    h1: "Seu espaço de atendimento pronto para <br> uso em Florianópolis",
     subtitle:
-      "Com o plano Membro X, sua empresa ganha mais credibilidade, um endereço comercial para divulgar,</br> recebimento seguro de correspondências, vantagens exclusivas em coworking e salas de reunião o ano todo.",
+      "Atenda seus clientes em um ambiente profissional e acolhedor, com privacidade, conforto e toda <br> a estrutura necessária para um atendimento de alto padrão.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
-      h2: "Mais profissionalismo, conforto e privacidade para seus atendimentos",
+      h2: "Ambiente acolhedor e estrutura completa para seus atendimentos",
       subtitle:
-        "Ideal para quem precisa de um ambiente reservado, com estrutura profissional e pronto para começar hoje mesmo.",
+        "Atenda com conforto e profissionalismo em um espaço silencioso, climatizado e totalmente preparado para receber seus pacientes ou clientes com excelência.",
       items: [
         {
-          text: "<strong>Endereço comercial de prestígio</strong>para destacar sua empresa nos canais digitais e materiais corporativos",
+          text: "<strong>Espaço ideal para psicólogos,</strong> terapeutas, coaches e consultores",
           icon: MedicalInformationIcon,
         },
         {
-          text: "<strong>Gestão completa de correspondências e encomendas</strong>com suporte e organização garantidos",
+          text: "<strong>Privacidade e conforto</strong>para atendimentos presenciais com foco total no seu cliente",
           icon: DomainVerificationIcon,
         },
         {
-          text: "<strong>Descontos de 50%</strong>para uso de coworking, salas de reunião e atendimento",
+          text: "<strong>Recepção treinada </strong>para acolher seus pacientes de maneira profissional",
           icon: Groups2Icon,
         },
         {
-          text: "<strong>Mais visibilidade e credibilidade</strong> para sua marca, com a estrutura e o prestígio de um endereço profissional",
+          text: "<strong>Infraestrutura completa,</strong> com internet de alta velocidade e climatização",
           icon: WifiIcon,
         },
       ],
     },
     stepsSection: {
-      h2: "Como se  tornar um Membro X",
+      h2: "Comece a atender em Florianópolis com estrutura e segurança profissional",
       subtitle:
-        "Torne-se um Membro X de forma simples e rápida.<br> Em poucos passos, você garante seu endereço comercial e começa a aproveitar todos os benefícios com praticidade e segurança.",
+        "Escolha a modalidade ideal, preencha seus dados e comece a usar sua sala ainda hoje — com tudo pronto para receber seus clientes com conforto e credibilidade.",
       items: [
-        "Envie um documento com foto e um comprovante de residência",
-        "Receba o contrato digital e o boleto da anuidade",
-        "Assine e comece a usar seu endereço comercial em todos os canais da sua empresa",
+        "Escolha o modelo ideal: hora, período ou diária",
+        "Preencha seus dados e assine o contrato digital",
+        "Comece a atender em Florianópolis com total praticidade e profissionalismo",
       ],
     },
     plans: [
