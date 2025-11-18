@@ -9,7 +9,7 @@ import { membroX } from "./membro-x";
 export const salasAtendimento: IServiceItem = {
   title: "Salas de Atendimento",
   seoTitle:
-    "Salas de Atendimento em Balneário Camboriú com privacidade e estrutura completa",
+    "Salas de Atendimento em Florianópolis com privacidade e estrutura completa",
   description:
     "Espaços projetados para atendimentos presenciais com privacidade e profissionalismo. Estrutura completa com recepção, internet e mobiliário, ideais para psicólogos, terapeutas, consultores e outros especialistas que valorizam qualidade e confiança.",
   image: salaImg.src,
@@ -21,7 +21,7 @@ export const salasAtendimento: IServiceItem = {
       "Perfeitas para psicólogos, terapeutas, consultores e outros profissionais que precisam de um espaço reservado e profissional.",
   },
   detailsPage: {
-    h1: "Seu espaço de atendimento pronto para <br> uso em Florianópolis",
+    h1: "Seu espaço de atendimento pronto para uso em Florianópolis",
     subtitle:
       "Atenda seus clientes em um ambiente profissional e acolhedor, com privacidade, conforto e toda <br> a estrutura necessária para um atendimento de alto padrão.",
     heroCTAText: "ENTRAR EM CONTATO",

@@ -28,7 +28,7 @@ export const membroX: IServiceItem = {
     benefitsSection: {
       h2: "Presença profissional sólida e benefícios que geram valor",
       subtitle:
-        "Tenha todos os benefícios de um endereço comercial — com gestão de correspondências, presença no Google e vantagens exclusivas que fortalecem sua marca e reduzem <br> custos ao longo do ano.",
+        "Tenha todos os benefícios de um endereço comercial — com gestão de correspondências, presença no Google e vantagens exclusivas que fortalecem sua marca e reduzem custos ao longo do ano.",
       items: [
         {
           text: "<strong>Endereço comercial de prestígio  </strong>  para destacar sua empresa nos canais digitais e materiais corporativos",
