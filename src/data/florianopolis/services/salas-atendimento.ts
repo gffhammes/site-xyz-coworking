@@ -23,7 +23,7 @@ export const salasAtendimento: IServiceItem = {
   detailsPage: {
     h1: "Seu espaço de atendimento pronto para uso em Florianópolis",
     subtitle:
-      "Atenda seus clientes em um ambiente profissional e acolhedor, com privacidade, conforto e toda <br> a estrutura necessária para um atendimento de alto padrão.",
+      "Atenda seus clientes em um ambiente profissional e acolhedor, com privacidade, conforto e toda a estrutura necessária para um atendimento de alto padrão.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Ambiente acolhedor e estrutura completa para seus atendimentos",
