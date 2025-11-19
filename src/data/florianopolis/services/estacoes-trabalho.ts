@@ -13,7 +13,7 @@ export const estacoesTrabalho: IServiceItem = {
     "Espaços compartilhados e bem estruturados, ideais para profissionais que valorizam foco e flexibilidade. Uma solução prática para quem busca produtividade em um ambiente colaborativo e inspirador.",
   image: estacoesImg.src,
   slug: "estacoes-trabalho",
-  heroText: "Inspiração e produtividade em um só lugar",
+  heroText: "Inspiração e produtividade",
   homeCard: {
     title: "Estações de Trabalho",
     description:
