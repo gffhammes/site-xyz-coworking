@@ -31,7 +31,7 @@ const workingHours = [
 const address = {
   line1: "Av. Hercílio Luz, 639 - 11 ° Andar",
   line2: "Centro, Florianópolis - SC CEP: 88020-000",
-  href: "https://www.google.com/maps/place/R.+55,+50+-+Centro,+Balne%C3%A1rio+Cambori%C3%BA+-+SC,+88330-681,+Brazil/@-26.9859901,-48.6354357,15.61z/data=!4m6!3m5!1s0x94d8b6015f1e5f4d:0xf16002cdc8ee5e78!8m2!3d-26.9866223!4d-48.6339933!16s%2Fg%2F11cpjygcv2?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+  href: "https://www.google.com/maps/place/Edif%C3%ADcio+Alpha+Centauri+-+Av.+Herc%C3%ADlio+Luz,+639+-+11+%C2%B0+Andar+-+Centro,+Florian%C3%B3polis+-+SC,+88020-000/@-27.597434,-48.5479969,17z/data=!3m1!4b1!4m5!3m4!1s0x9527383ad9a1e201:0x793c22eb738c8972!8m2!3d-27.597434!4d-48.5479969?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
 };
 
 export const florianopolisData: ISiteData = {
@@ -86,7 +86,7 @@ export const florianopolisData: ISiteData = {
     mapSection: {
       h2: "Venha conhecer nosso espaço na Ilha da Magia!",
       mapAddress:
-        "https://www.google.com/maps?q=Av.+Hercílio+Luz,+639+-+Sala+1103,+Centro,+Florianópolis+-+SC,+88020-000&output=embed",
+        "https://www.google.com/maps/place/Edif%C3%ADcio+Alpha+Centauri+-+Av.+Herc%C3%ADlio+Luz,+639+-+11+%C2%B0+Andar+-+Centro,+Florian%C3%B3polis+-+SC,+88020-000/@-27.597434,-48.5479969,17z/data=!3m1!4b1!4m5!3m4!1s0x9527383ad9a1e201:0x793c22eb738c8972!8m2!3d-27.597434!4d-48.5479969?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
     },
   },
   servicesPage: {
