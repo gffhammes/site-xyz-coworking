@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bc.xyzcoworking.com
+
+# Sitemaps
+Sitemap: https://bc.xyzcoworking.com/sitemap.xml
