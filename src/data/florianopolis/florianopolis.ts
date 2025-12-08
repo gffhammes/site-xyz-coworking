@@ -15,8 +15,8 @@ import circulodireito from "../../../public/images/circulodireito.jpeg";
 
 
 const contact = {
-  phoneNumber: "(48)9838-0483",
-  whatsappNumber: "(48)9838-0483",
+  phoneNumber: "48998380483",
+  whatsappNumber: "48998380483",
   email: "contatofloripa@xyzworking,com",
 };
 
