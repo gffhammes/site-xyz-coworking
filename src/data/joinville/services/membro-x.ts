@@ -6,7 +6,7 @@ import DiscountIcon from "@mui/icons-material/Discount";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 
 export const membroX: IServiceItem = {
-  title: "Membro X",
+  title: "Comercial / Membro X",
   seoTitle:
     "Membro X — Endereço Comercial e Benefícios Exclusivos em Joinville",
   description:

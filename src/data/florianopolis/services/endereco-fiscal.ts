@@ -7,7 +7,7 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import { IServiceItem } from "@/data/types";
 
 export const enderecoFiscal: IServiceItem = {
-  title: "Endereço Fiscal e Comercial",
+  title: "Endereço Fiscal",
   seoTitle: "Endereço Fiscal e Comercial em Florianópolis",
   description:
     "Garanta um endereço de prestígio na capital de Santa Catarina e referência em qualidade de vida e inovação. Ideal para empresas em crescimento e negócios digitais que buscam credibilidade, regularização e presença em um dos mercados mais promissores do país, sem custos elevados.",
@@ -58,7 +58,7 @@ export const enderecoFiscal: IServiceItem = {
         "Feito! Você já pode registrar ou transferir seu CNPJ",
       ],
     },
-    plansMessage: `Economize <strong>R$398</strong>
+    plansMessage: `Economize <strong>R$258</strong>
 <br />
 no plano anual`,
     plans: [
@@ -67,9 +67,12 @@ no plano anual`,
         label: "Anual",
         period: "Ano",
         included: [
+
+          "Autorização para uso de endereço para abertura ou transferência de CNPJ",
+          "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
           "Endereço fiscal e comercial para o seu CNPJ em um coworking que, desde 2006, é referência em Santa Catarina.",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
-          "Utilização dos espaços de coworking com <strong>30%</strong> de desconto",
+          "Utilização dos espaços de coworking com <strong>50%</strong> de desconto",
        
         ],
         whatsappMessage:

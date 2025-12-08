@@ -6,7 +6,7 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import { IServiceItem } from "@/data/types";
 
 export const enderecoFiscal: IServiceItem = {
-  title: "Endereço Fiscal e Comercial",
+  title: "Endereço Fiscal",
   seoTitle: "Endereço Fiscal e Comercial em Joinville",
   description:
     "Formalize sua empresa com um endereço profissional em Joinville. Ideal para negócios digitais, prestadores de serviço e empresas em fase inicial que buscam credibilidade e regularização sem altos custos.",
@@ -63,7 +63,7 @@ export const enderecoFiscal: IServiceItem = {
     plans: [
       {
         price: 1290,
-        label: "Fiscal",
+        label: "Anual",
         period: "Ano",
         included: [
           "Endereço fiscal válido para CNPJ",
@@ -75,7 +75,7 @@ export const enderecoFiscal: IServiceItem = {
       },
       {
         price: 684,
-        label: "Comercial",
+        label: "Mensal",
         period: "Ano",
         included: [
           "Endereço comercial válido para CNPJ",
