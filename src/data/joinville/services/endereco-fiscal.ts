@@ -74,13 +74,15 @@ export const enderecoFiscal: IServiceItem = {
           "Olá! Tenho interesse no plano anual de endereço fiscal em Joinville.",
       },
       {
-        price: 684,
+        price: 129,
         label: "Mensal",
         period: "Ano",
         included: [
-          "Endereço comercial válido para CNPJ",
-          "Triagem e notificação de correspondências",
-          "50% de desconto no uso de salas de reunião e coworking",
+           "Autorização para uso de endereço para abertura ou transferência de CNPJ",
+          "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
+          "Gestão de correspondências e encomendas com notificação de recebimento.",
+          "Utilização dos espaços de coworking com <strong>50%</strong> de desconto",
+       
         ],
         whatsappMessage:
           "Olá! Tenho interesse no plano anual de endereço fiscal em Joinville.",
