@@ -1,3 +1,5 @@
+"use client";
+
 import { Stack } from "@mui/material";
 import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
 import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";
@@ -12,13 +14,11 @@ export default function Servicos() {
         <Stack gap={{ xs: 20 }}>
           <Stack>
             <ServicesHeroSection />
-
             <ServicesServicesSection />
           </Stack>
 
           <Stack gap={20} sx={{ pb: { xs: 0, md: 20 } }}>
             <AdvantagesSection />
-
             <ReviewsSection />
           </Stack>
         </Stack>
