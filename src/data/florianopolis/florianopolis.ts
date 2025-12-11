@@ -86,8 +86,8 @@ export const florianopolisData: ISiteData = {
     mapSection: {
       h2: "Venha conhecer nosso espaço na Ilha da Magia!",
       mapAddress:
-        "https://www.google.com/maps/place/Edif%C3%ADcio+Alpha+Centauri+-+Av.+Herc%C3%ADlio+Luz,+639+-+11+%C2%B0+Andar+-+Centro,+Florian%C3%B3polis+-+SC,+88020-000/@-27.597434,-48.5479969,17z/data=!3m1!4b1!4m5!3m4!1s0x9527383ad9a1e201:0x793c22eb738c8972!8m2!3d-27.597434!4d-48.5479969?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
-    },
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.5158149069794!2d-48.550571!3d-27.597433999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527383ad9a1e201%3A0x793c22eb738c8972!2sEdif%C3%ADcio%20Alpha%20Centauri%20-%20Av.%20Herc%C3%ADlio%20Luz%2C%20639%20-%2011%20%C2%B0%20Andar%20-%20Centro%2C%20Florian%C3%B3polis%20-%20SC%2C%2088020-000!5e0!3m2!1spt-BR!2sbr!4v1733949728266!5m2!1spt-BR!2sbr",
+    }
   },
   servicesPage: {
     heroImage: servicesHeroImage.src,
