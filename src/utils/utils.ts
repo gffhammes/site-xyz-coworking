@@ -86,3 +86,18 @@ export const getElementId = ({
 
   return `click---${page}---${section}---${action}`;
 };
+
+export function decodeHtmlEntities(str: string): string {
+  const map: Record<string, string> = {
+    "&amp;": "&",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&quot;": '"',
+    "&#39;": "'",
+  };
+
+  return str.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, (match) => map[match]);
+}
+
+// Exemplo:
+console.log(decodeHtmlEntities("Vida &amp; Trabalho"));

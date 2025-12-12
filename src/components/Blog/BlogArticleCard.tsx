@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IBlogPost } from "@/data/blog-articles";
 import Image from "next/image";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { decodeHtmlEntities } from "@/utils/utils";
 
 export interface IBlogArticleCardProps {
   article: IBlogPost;
@@ -66,7 +67,11 @@ export const BlogArticleCard = ({ article }: IBlogArticleCardProps) => {
           <Stack alignItems="flex-start">
             <Typography>{dateText}</Typography>
 
-            <Chip label={article.category} size="small" variant="outlined" />
+            <Chip
+              label={decodeHtmlEntities(article.category)}
+              size="small"
+              variant="outlined"
+            />
 
             <Typography fontWeight="bold" fontSize={20}>
               {article.title}

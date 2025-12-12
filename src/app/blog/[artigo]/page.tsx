@@ -6,6 +6,7 @@ import Image from "next/image";
 import parse, { domToReact } from "html-react-parser";
 import Link from "next/link";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
+import { decodeHtmlEntities } from "@/utils/utils";
 
 const options = {
   replace: (domNode: any) => {
@@ -185,7 +186,7 @@ export default async function Artigo({
           <Container sx={{ height: "100%", mt: -10 }}>
             <Stack height="100%" justifyContent="center">
               <Typography color="primary" textTransform="uppercase">
-                {article.category}
+                {decodeHtmlEntities(article.category)}
               </Typography>
 
               <Typography variant="h1" color="white" fontWeight={500}>

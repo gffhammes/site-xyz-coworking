@@ -12,6 +12,7 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { BlogArticleCard } from "./BlogArticleCard";
 import { CustomSelect } from "../Forms/CustomSelect";
+import { decodeHtmlEntities } from "@/utils/utils";
 
 export interface IBlogTestProps {
   posts: IBlogPost[];
@@ -25,15 +26,15 @@ export const BlogTest = ({ posts }: IBlogTestProps) => {
 
   // Extrai categorias únicas
   const blogCategories = useMemo(() => {
-    const cats = posts.map((p) => p.category);
-    return Array.from(new Set(cats));
+    const categories = posts.map((p) => decodeHtmlEntities(p.category));
+    return Array.from(new Set(categories));
   }, [posts]);
 
   // Filtra por categoria
   const filteredArticles = useMemo(() => {
     if (selectedCategories.length === 0) return posts;
     return posts.filter((article) =>
-      selectedCategories.includes(article.category)
+      selectedCategories.includes(decodeHtmlEntities(article.category))
     );
   }, [posts, selectedCategories]);
 
@@ -62,45 +63,53 @@ export const BlogTest = ({ posts }: IBlogTestProps) => {
   return (
     <Box sx={{ width: "100%" }}>
       <Container>
-        <CustomSelect
-          options={[
-            { label: "Do mais novo ao mais antigo", value: "newest-to-oldest" },
-            { label: "Do mais antigo ao mais novo", value: "oldest-to-newest" },
-          ]}
-          currentValue={sort}
-          displayKey="label"
-          valueKey="value"
-          label="Ordenar"
-          onChange={(value) => setSort(value as TSortOptions)}
-        />
+        <Stack gap={2} sx={{ pb: 4 }}>
+          <CustomSelect
+            options={[
+              {
+                label: "Do mais novo ao mais antigo",
+                value: "newest-to-oldest",
+              },
+              {
+                label: "Do mais antigo ao mais novo",
+                value: "oldest-to-newest",
+              },
+            ]}
+            currentValue={sort}
+            displayKey="label"
+            valueKey="value"
+            label="Ordenar"
+            onChange={(value) => setSort(value as TSortOptions)}
+          />
 
-        <Stack
-          direction="row"
-          flexWrap="wrap"
-          width="100%"
-          overflow="hidden"
-          gap={1}
-        >
-          {blogCategories.map((category) => {
-            const isSelected = selectedCategories.includes(category);
-            return (
-              <Chip
-                key={category}
-                label={category}
-                color={isSelected ? "primary" : "default"}
-                onClick={() =>
-                  setSelectedCategories((current) =>
-                    current.includes(category)
-                      ? current.filter((c) => c !== category)
-                      : [...current, category]
-                  )
-                }
-              />
-            );
-          })}
+          <Stack
+            direction="row"
+            flexWrap="wrap"
+            width="100%"
+            overflow="hidden"
+            gap={1}
+          >
+            {blogCategories.map((category) => {
+              const isSelected = selectedCategories.includes(category);
+              return (
+                <Chip
+                  key={decodeHtmlEntities(category)}
+                  label={decodeHtmlEntities(category)}
+                  color={isSelected ? "primary" : "default"}
+                  onClick={() =>
+                    setSelectedCategories((current) =>
+                      current.includes(category)
+                        ? current.filter((c) => c !== category)
+                        : [...current, category]
+                    )
+                  }
+                />
+              );
+            })}
+          </Stack>
+
+          <Typography>{`${filteredArticles.length} artigo(s) encontrado(s)`}</Typography>
         </Stack>
-
-        <Typography>{`${filteredArticles.length} artigo(s) encontrado(s)`}</Typography>
       </Container>
 
       <Container id="blog-content">
@@ -111,7 +120,7 @@ export const BlogTest = ({ posts }: IBlogTestProps) => {
         </Box>
       </Container>
 
-      <Container>
+      <Container sx={{ mx: "auto", width: "fit-content", mt: 8 }}>
         <Pagination
           count={pagesQuantity}
           page={page + 1}

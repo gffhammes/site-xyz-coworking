@@ -53,17 +53,6 @@ export default async function Blog() {
           <BlogHeroSection />
 
           <BlogTest posts={posts} />
-          {/* <Stack>
-            <ServicesHeroSection />
-
-            <ServicesServicesSection />
-          </Stack>
-
-          <Stack gap={20} sx={{ pb: { xs: 0, md: 20 } }}>
-            <AdvantagesSection />
-
-            <ReviewsSection />
-          </Stack> */}
         </Stack>
       </main>
     </div>
