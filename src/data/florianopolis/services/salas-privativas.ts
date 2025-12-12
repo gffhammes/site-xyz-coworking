@@ -1,4 +1,4 @@
-import salaImg from "../../../../public/images/XYZ - BC-45.webp";
+import privativafloripaImg from "../../../../public/images/DSC022401.png";
 import { IServiceItem } from "@/data/types";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
@@ -10,7 +10,7 @@ export const salasPrivativas: IServiceItem = {
   seoTitle: "Salas Privativas em Balneário Camboriú",
   description:
     "Tenha total privacidade e um espaço exclusivo, com estrutura completa para o seu negócio unindo sofisticação, profissionalismo e a presença em um dos ecossistemas mais promissores do país. Ideal para empreendedores e empresas que valorizam credibilidade.",
-  image: salaImg.src,
+  image: privativafloripaImg.src,
   slug: "salas-privativas",
   heroText: "Uma sala privativa<br/>para meu negócio",
   homeCard: {
@@ -21,7 +21,7 @@ export const salasPrivativas: IServiceItem = {
   detailsPage: {
     h1: "Seu escritório em Florianópolis, com <br/> estrutura de empresa de verdade",
     subtitle:
-      "Trabalhe com conforto, privacidade e a imagem profissional que seu negócio merece. Salas prontas para uso, em localização estratégica e Trabalhe com conforto, privacidade e a imagem profissional que seu negócio merece. Salas prontas para uso, em localização estratégica e com tudo o que você precisa para receber seus clientes.com tudo o que você precisa para receber seus clientes.",
+      "Trabalhe com conforto, privacidade e a imagem profissional que seu negócio merece. Salas prontas para uso, em localização estratégica e com tudo o que você precisa para receber seus clientes.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Mais que um espaço — é seu escritório com status e privacidade",

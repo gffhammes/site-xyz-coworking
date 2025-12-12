@@ -76,7 +76,7 @@ export const ServicesHeroSection = (props: IServicesHeroSectionProps) => {
 };
 
 export const servicesHeroSectionData = {
-  h1: `Encontre a solução certa para o seu sucesso`,
+  h1: `O ambiente pensado para criar e produzir `,
   subtitle: `Soluções sob medida para quem quer crescer com estrutura, credibilidade e estilo.`,
   selectLabel: "Selecione o que você busca:",
 

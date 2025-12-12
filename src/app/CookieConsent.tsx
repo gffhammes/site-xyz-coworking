@@ -10,10 +10,10 @@ import {
   Container,
   useScrollTrigger,
 } from "@mui/material";
-import { siteKey } from "@/data/sites";
+import { siteData, siteKey } from "@/data/sites";
 
 const localStorageId = "cookie-consent";
-export const gtmId = "GTM-T588QKB9";
+export const gtmId = siteData.gtmId;
 
 export const CookieConsent = () => {
   const scrollTrigger = useScrollTrigger({ disableHysteresis: true });
@@ -64,7 +64,6 @@ export const CookieConsent = () => {
   }, [status]);
 
   const mustShowBanner = status === "notAccepted";
-  const mustInstantiateGTM = siteKey === "bc" && shouldLoadGTM;
 
   return (
     <>
@@ -100,7 +99,7 @@ export const CookieConsent = () => {
         </Container>
       )}
 
-      {mustInstantiateGTM && <GoogleTagManager gtmId={gtmId} />}
+      {shouldLoadGTM && <GoogleTagManager gtmId={gtmId} />}
     </>
   );
 };
