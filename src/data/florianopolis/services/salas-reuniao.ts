@@ -78,9 +78,10 @@ export const salasReuniao: IServiceItem = {
       {
         price: 336,
         label: "Período",
-        period: "Período",
+        period: "Período de 5 horas",
         included: [
           "Sala de reunião equipada com TV e ar-condicionado",
+          "Perríodo de manhã, tarde e noite",          
           "Wi-Fi de alta velocidade",
           "Recepção de clientes",
           "Água, café e estrutura de apoio",
