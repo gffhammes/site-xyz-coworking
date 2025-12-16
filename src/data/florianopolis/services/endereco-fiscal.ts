@@ -42,7 +42,7 @@ export const enderecoFiscal: IServiceItem = {
           icon: VerifiedIcon,
         },
         {
-          text: "Startups e negócios criativos instalados na <strong> Av. Hercilio Luz</strog> podem garantir <strong>isenção de IPTU</strong> por ate 3 anos, conforme a nova Lei Municipal.",
+          text: "Startups e negócios <strong>instalados no XYZ Floripa podem garantir isenção parcial de ISS.</strog> ",
           icon: TrendingUpIcon,
         },
       ],
@@ -82,9 +82,10 @@ no plano anual`,
         label: "Mensal",
         period: "Mês",
         included: [
-          "Endereço fiscal e/ou comercial válido para CNPJ",
-          "Atendimento e triagem de correspondências",
-          "50% de desconto no aluguel de salas de reunião e estações de coworking",
+           "Autorização para uso de endereço para abertura ou transferência de CNPJ",
+          "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
+          "Gestão de correspondências e encomendas com notificação de recebimento.",
+          "Utilização dos espaços de coworking com <strong>50%</strong> de desconto",
         ],
         whatsappMessage:
           "Olá! Vim do site e tenho interesse em contratar o plano mensal de endereço fiscal.",
