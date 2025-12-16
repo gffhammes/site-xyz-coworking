@@ -65,7 +65,7 @@ export const salasReuniao: IServiceItem = {
         label: "Hora",
         period: "Hora",
         included: [
-          "Até 6 pessoas",
+          "Até 8 pessoas",
           "Para salas com maior capacidade entre em contato",
           "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
