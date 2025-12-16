@@ -76,8 +76,9 @@ export const salasAtendimento: IServiceItem = {
       {
         price: 189,
         label: "Período",
-        period: "PERÍODO",
+        period: "Período de 5 horas",
         included: [
+          "Período de manhã, tarde e noite",  
           "Sala mobiliada e climatizada",
           "Internet de alta velocidade",
           "Recepção para seus clientes",
