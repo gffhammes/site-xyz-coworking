@@ -80,7 +80,7 @@ export const salasReuniao: IServiceItem = {
         label: "Período",
         period: "Período de 5 horas",
         included: [
-          "Perríodo de manhã, tarde e noite",          
+          "Período de manhã, tarde e noite",          
           "Até 8 pessoas",
           "Para salas com maior capacidade entre em contato",
           "Sala de reunião equipada com TV e ar-condicionado",
