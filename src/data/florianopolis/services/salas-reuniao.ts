@@ -80,8 +80,10 @@ export const salasReuniao: IServiceItem = {
         label: "Período",
         period: "Período de 5 horas",
         included: [
-          "Sala de reunião equipada com TV e ar-condicionado",
           "Perríodo de manhã, tarde e noite",          
+          "Até 8 pessoas",
+          "Para salas com maior capacidade entre em contato",
+          "Sala de reunião equipada com TV e ar-condicionado",
           "Wi-Fi de alta velocidade",
           "Recepção de clientes",
           "Água, café e estrutura de apoio",
