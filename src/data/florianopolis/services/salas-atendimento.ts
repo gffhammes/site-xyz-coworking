@@ -31,7 +31,7 @@ export const salasAtendimento: IServiceItem = {
         "Atenda com conforto e profissionalismo em um espaço silencioso, climatizado e totalmente preparado para receber seus pacientes ou clientes com excelência.",
       items: [
         {
-          text: "<strong>Espaço ideal para psicólogos,</strong> terapeutas, coaches e consultores",
+          text: "<strong>Espaço ideal para psicólogos,</strong> terapeutas, advogados e consultores",
           icon: MedicalInformationIcon,
         },
         {

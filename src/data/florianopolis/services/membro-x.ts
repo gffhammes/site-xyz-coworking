@@ -21,9 +21,9 @@ export const membroX: IServiceItem = {
       "Plano anual com endereço comercial qualificado e vantagens exclusivas para economizar e fortalecer sua presença online.",
   },
   detailsPage: {
-    h1: "Fortaleça sua presença na capital <br/> com o Membro X",
+    h1: "Fortaleça sua presença na capital <br/> com o XYZ coworking Membro X",
     subtitle:
-      "Com o plano Membro X, sua empresa ganha mais credibilidade, um endereço comercial para divulgar, recebimento seguro de correspondências, vantagens exclusivas em coworking e salas de reunião o ano todo.",
+      "Com o plano de Endereço Comercial / Membro X, sua empresa ganha mais credibilidade, um endereço comercial para divulgar, recebimento seguro de correspondências, vantagens exclusivas em coworking e salas de reunião o ano todo.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Presença profissional sólida e benefícios que geram valor",
@@ -65,7 +65,7 @@ export const membroX: IServiceItem = {
         label: "Anual",
         period: "ANO",
         included: [
-          "Endereço fiscal e comercial para o seu CNPJ em um coworking que,desde 2006,é referência em Santa Catarina.",
+          "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
           "Utilização dos espaços de coworking com <strong>50%</strong> de desconto.",
           "Recepção com atendimento personalizado, ambiente climatizado, água e café com torrefação especial à vontade.",
