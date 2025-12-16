@@ -21,7 +21,7 @@ export const membroX: IServiceItem = {
       "Plano anual com endereço comercial qualificado e vantagens exclusivas para economizar e fortalecer sua presença online.",
   },
   detailsPage: {
-    h1: "Fortaleça sua presença na capital <br/> com o XYZ coworking Membro X",
+    h1: "Fortaleça sua presença na capital <br/> com o XYZ Coworking",
     subtitle:
       "Com o plano de Endereço Comercial / Membro X, sua empresa ganha mais credibilidade, um endereço comercial para divulgar, recebimento seguro de correspondências, vantagens exclusivas em coworking e salas de reunião o ano todo.",
     heroCTAText: "ENTRAR EM CONTATO",
