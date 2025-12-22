@@ -27,6 +27,7 @@ const address = {
 };
 
 export const balnearioData: ISiteData = {
+  urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T588QKB9",
   contact,
   services,

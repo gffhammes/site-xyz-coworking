@@ -33,6 +33,7 @@ const address = {
 };
 
 export const joinvilleData: ISiteData = {
+  urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T364HBZH",
   contact,
   services,

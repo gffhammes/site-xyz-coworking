@@ -47,6 +47,7 @@ export interface IServiceItem {
 }
 
 export interface ISiteData {
+  urlConexa: string;
   gtmId: string;
   contact: {
     phoneNumber: string;
