@@ -1,5 +1,4 @@
-import enderecoImg from "../../../../public/images/XYZ - BC-64.webp";
-import enderecofiscalfloripa from "../../../../public/images/DSC02319.png";
+import enderecofiscalfloripa from "../../../../public/images/endereço fiscal.jpg";
 import PlaceIcon from "@mui/icons-material/Place";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -22,7 +21,7 @@ export const enderecoFiscal: IServiceItem = {
   detailsPage: {
     h1: "Mais que um endereço fiscal:<br/> uma posição estratégica",
     subtitle:
-      "Regularize sua empresa, conquiste credibilidade e aproveite a força de um espaço físico em um dos maiores polos de inovação do país.",
+      "Regularize sua empresa, conquiste credibilidade e aproveite a força<br/>de um espaço físico em um dos maiores polos de inovação do país.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Por que centenas de empresas confiam no nosso endereço?",
@@ -67,12 +66,10 @@ no plano anual`,
         label: "Anual",
         period: "Ano",
         included: [
-
           "Autorização para uso de endereço para abertura ou transferência de CNPJ",
           "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
           "Utilização dos espaços de coworking com <strong>50%</strong> de desconto",
-       
         ],
         whatsappMessage:
           "Olá! Vim do site e tenho interesse em contratar o plano anual de endereço fiscal.",
@@ -82,7 +79,7 @@ no plano anual`,
         label: "Mensal",
         period: "Mês",
         included: [
-           "Autorização para uso de endereço para abertura ou transferência de CNPJ",
+          "Autorização para uso de endereço para abertura ou transferência de CNPJ",
           "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
           "Gestão de correspondências e encomendas com notificação de recebimento.",
           "Utilização dos espaços de coworking com <strong>50%</strong> de desconto",

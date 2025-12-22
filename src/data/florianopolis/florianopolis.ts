@@ -10,7 +10,7 @@ import diferencialimage3 from "../../../public/images/exclusivoambiente.png";
 import diferencialimage4 from "../../../public/images/network.png";
 import homefloripa from "../../../public/images/homefloripa.jpeg";
 import circuloesquerdo from "../../../public/images/circuloesquerdo.jpeg";
-import circulodireito from "../../../public/images/circulodireito.jpeg";
+import circulodireito from "../../../public/images/bolinha direita - home.jpg";
 
 const contact = {
   phoneNumber: "48998380483",
