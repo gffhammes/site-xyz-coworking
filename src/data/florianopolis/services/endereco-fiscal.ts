@@ -1,4 +1,4 @@
-import enderecofiscalfloripa from "../../../../public/images/endereço fiscal.jpg";
+import enderecofiscalfloripa from "../../../../public/images/endereco fiscal.jpg";
 import PlaceIcon from "@mui/icons-material/Place";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import VerifiedIcon from "@mui/icons-material/Verified";
