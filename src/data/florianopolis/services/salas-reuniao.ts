@@ -1,5 +1,5 @@
 import { IServiceItem } from "@/data/types";
-import reunioesfloripaImg from "../../../../public/images/salareuniaonova.png";
+import reunioesfloripaImg from "../../../../public/images/Sala Grécia (1).png";
 import TvIcon from "@mui/icons-material/Tv";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import GroupsIcon from "@mui/icons-material/Groups";
@@ -20,9 +20,9 @@ export const salasReuniao: IServiceItem = {
       "Precisa de uma sala para uma reunião? Você pode agendar por hora para seu conforto e de seus clientes!",
   },
   detailsPage: {
-    h1: "O cenário certo para suas reuniões <br/> mais importantes",
+    h1: "O cenário certo para suas<br/>reuniões mais importantes",
     subtitle:
-      "Ambientes elegantes e equipados, ideais para reuniões estratégicas, apresentações e videoconferências que exigem foco e credibilidade.",
+      "Ambientes elegantes e equipados, ideais para reuniões estratégicas,<br/>apresentações e videoconferências que exigem foco e credibilidade.",
     heroCTAText: "ENTRAR EM CONTATO",
     benefitsSection: {
       h2: "Ambientes pensados para fechar negócios de verdade",
@@ -58,8 +58,6 @@ export const salasReuniao: IServiceItem = {
       ],
     },
     plans: [
-
-
       {
         price: 85,
         label: "Hora",
@@ -80,7 +78,7 @@ export const salasReuniao: IServiceItem = {
         label: "Período",
         period: "Período de 5 horas",
         included: [
-          "Período de manhã, tarde e noite",          
+          "Período de manhã, tarde e noite",
           "Até 8 pessoas",
           "Para salas com maior capacidade entre em contato",
           "Sala de reunião equipada com TV e ar-condicionado",

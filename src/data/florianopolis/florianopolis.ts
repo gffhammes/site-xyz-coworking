@@ -1,8 +1,5 @@
 import { ISiteData } from "../types";
 import { services } from "./services/services";
-import heroBg from "../../../public/images/XYZ - BC-10.webp";
-import image1 from "../../../public/images/XYZ - BC-3.webp";
-import image2 from "../../../public/images/XYZ - BC-4.webp";
 import servicesHeroImage from "../../../public/images/servicos.png";
 import diferencialimage1 from "../../../public/images/enderecofiscalfloripa.jpeg";
 import diferencialimage2 from "../../../public/images/membrox.jpeg";
@@ -15,7 +12,7 @@ import circulodireito from "../../../public/images/bolinha direita - home.jpg";
 const contact = {
   phoneNumber: "48998380483",
   whatsappNumber: "48998380483",
-  email: "contatofloripa@xyzworking,com",
+  email: "contatofloripa@xyzcoworking.com",
 };
 
 const workingHours = [
