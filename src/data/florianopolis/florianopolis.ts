@@ -36,9 +36,9 @@ export const florianopolisData: ISiteData = {
   address,
   homeData: {
     metaTitle:
-      "Coworking em Florianopolis | XYZ Coworking - Endereço Fiscal, Salas e Estações",
+      "Coworking em Florianópolis | XYZ Coworking - Endereço Fiscal, Salas e Estações",
     metaDescription:
-      "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
+      "Encontre o melhor coworking em Floripa! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
     heroSection: {
       h1: `Trabalhe com performance sem abrir mão da qualidade de vida!`,
       subtitle: `Trabalhar em casa pode parecer liberdade, mas e quando a produtividade despenca? No XYZ Floripa você tem um espaço criativo, cheio de networking e pronto para te ajudar a crescer!`,
