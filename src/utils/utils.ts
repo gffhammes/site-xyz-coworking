@@ -46,14 +46,13 @@ export const getFormattedPhoneNumber = (phoneNumber: string) => {
 
   const localNumber = digits.startsWith("55") ? digits.slice(2) : digits;
 
-  const prefixCut = digits.length === 12 ? 6 : 7;
+  const prefixCut = localNumber.length === 9 ? 5 : 6;
 
-  // Extrai DDD, prefixo e sufixo
   const ddd = localNumber.slice(0, 2);
   const prefix = localNumber.slice(2, prefixCut);
-  const suffix = localNumber.slice(prefixCut, 11);
+  const suffix = localNumber.slice(prefixCut);
 
-  return `(${ddd}) ${prefix}-${suffix}`;
+  return `+55 ${ddd} ${prefix}-${suffix}`;
 };
 
 export const formattedPhoneNumber = getFormattedPhoneNumber(

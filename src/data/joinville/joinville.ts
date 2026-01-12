@@ -15,8 +15,8 @@ import diferencialimage7 from "../../../public/images/infraestrutura.jpg";
 import diferencialimage8 from "../../../public/images/network-abre-portas.jpg";
 
 const contact = {
-  phoneNumber: "554730321893",
-  whatsappNumber: "554734613100",
+  phoneNumber: "+554730321893",
+  whatsappNumber: "+554734613100",
   email: "contato@xyzcoworking.com",
 };
 

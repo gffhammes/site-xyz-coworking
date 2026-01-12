@@ -39,13 +39,13 @@ export const MobileAdvantagesSection = (
           <Stack gap={4} direction={{ xs: "column" }}>
             {advantageSectionData.advantageItems.map((item) => (
               <Animate
+                key={item.title}
                 initial={{ opacity: 0, x: -10 }}
                 transition={{ duration: 2, type: "spring" }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-30%" }}
               >
                 <Box
-                  key={item.title}
                   display="grid"
                   gridTemplateColumns="min-content auto"
                   gridTemplateRows="auto auto"
