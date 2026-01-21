@@ -11,7 +11,7 @@ import circulodireito from "../../../public/images/bolinha direita - home.jpg";
 
 const contact = {
   phoneNumber: "+554830505051",
-  whatsappNumber: "+55 48 999630480",
+  whatsappNumber: "+554899630480",
   email: "contatofloripa@xyzcoworking.com",
 };
 
