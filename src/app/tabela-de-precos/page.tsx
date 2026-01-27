@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { XYZLogo } from "@/components/common/XYZLogo";
 import { siteData } from "@/data/sites";
