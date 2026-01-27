@@ -5,31 +5,27 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const AbTestContext = createContext<boolean>(false);
 
 export const AbTestProvider = ({ children }: { children: React.ReactNode }) => {
-  const [active, setActive] = useState<boolean>(false);
-
-  useEffect(() => {
+  const [active] = useState<boolean>(() => {
     const isJoinville = process.env.NEXT_PUBLIC_SITE_KEY === "joinville";
-    if (!isJoinville) return;
+    if (!isJoinville) return false;
 
     try {
-      const pathname = window.location.pathname || "";
+      if (typeof window === "undefined") return false;
 
-      // If app started on /google (or /google/...), enable experiment and persist
+      const pathname = window.location.pathname || "";
       const startedWithGoogle = pathname.startsWith("/google");
 
       if (startedWithGoogle) {
-        setActive(true);
         sessionStorage.setItem("ab_google_active", "1");
-        return;
+        return true;
       }
 
-      // Otherwise, restore from session if previously enabled
       const stored = sessionStorage.getItem("ab_google_active");
-      if (stored === "1") setActive(true);
+      return stored === "1";
     } catch (e) {
-      // ignore (window/sessionStorage not available)
+      return false;
     }
-  }, []);
+  });
 
   return <AbTestContext.Provider value={active}>{children}</AbTestContext.Provider>;
 };
