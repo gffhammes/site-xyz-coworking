@@ -13,6 +13,10 @@ export const HomeHeroSectionButtons = (props: IHomeHeroSectionButtonsProps) => {
   const message = isGoogle
     ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
     : "Olá, vim pelo site e gostaria de agendar uma visita!";
+  
+  console.log("[HomeHeroSectionButtons] isGoogle:", isGoogle);
+  console.log("[HomeHeroSectionButtons] message:", message);
+  
   return (
     <>
       <TrackingWrapper section="hero" action="contato">

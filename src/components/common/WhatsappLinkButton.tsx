@@ -15,6 +15,9 @@ export const WhatsappLinkButton = ({
     ? getWhatsappLink(customMessage)
     : whatsappLink;
 
+  console.log("[WhatsappLinkButton] customMessage:", customMessage);
+  console.log("[WhatsappLinkButton] buttonHref:", buttonHref);
+
   return (
     <a href={buttonHref} target="_blank" id={id} style={{ display: "block" }}>
       <Button {...props} />
