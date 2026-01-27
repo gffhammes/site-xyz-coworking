@@ -1,14 +1,17 @@
 import { Box, Container, Stack, SxProps, Typography } from "@mui/material";
 import { NavigationList } from "../common/NavigationList/NavigationList";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
-import { socials } from "./Footer";
+import { getSocials } from "./Footer";
 import { FooterInfoTemplate } from "./FooterInfoTemplate";
 import { FooterInfos } from "./FooterInfos";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 
-export interface IMobileFooterProps {}
+export interface IMobileFooterProps {
+  footerWhatsappLink: string;
+}
 
-export const MobileFooter = (props: IMobileFooterProps) => {
+export const MobileFooter = ({ footerWhatsappLink }: IMobileFooterProps) => {
+  const socials = getSocials(footerWhatsappLink);
   return (
     <>
       <Box

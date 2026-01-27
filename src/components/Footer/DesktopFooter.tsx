@@ -1,12 +1,15 @@
 import { Box, Container, Stack } from "@mui/material";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
-import { socials } from "./Footer";
+import { getSocials } from "./Footer";
 import { FooterInfos } from "./FooterInfos";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 
-export interface IDesktopFooterProps {}
+export interface IDesktopFooterProps {
+  footerWhatsappLink: string;
+}
 
-export const DesktopFooter = (props: IDesktopFooterProps) => {
+export const DesktopFooter = ({ footerWhatsappLink }: IDesktopFooterProps) => {
+  const socials = getSocials(footerWhatsappLink);
   return (
     <>
       <Box

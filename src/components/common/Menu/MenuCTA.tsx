@@ -19,7 +19,10 @@ export const MenuCTA = ({ theme }: IMenuCTAProps) => {
   const getCustomMessage = () => {
     if (!isGoogle) return undefined;
 
-    if (pathname === "/servicos") {
+    // Remove /google prefix to get the actual page
+    const actualPath = pathname.replace(/^\/google/, '') || '/';
+
+    if (actualPath === "/servicos") {
       return "Olá! Vim pelo anúncio do Google e quero conhecer os serviços do XYZ Coworking.";
     }
 

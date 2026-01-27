@@ -5,6 +5,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { getElementId, whatsappLink, getWhatsappLink } from "@/utils/utils";
 import { usePathname } from "next/navigation";
 import { useAbTest } from "@/hooks/useAbTest";
+import { useMemo } from "react";
 
 export interface IWhatsappFloatingButtonProps {}
 
@@ -16,47 +17,55 @@ export const WhatsappFloatingButton = (props: IWhatsappFloatingButtonProps) => {
   const getCustomMessage = () => {
     if (!isGoogle) return undefined;
 
-    if (pathname === "/") {
+    // Remove /google prefix to get the actual page
+    const actualPath = pathname.replace(/^\/google/, '') || '/';
+
+    if (actualPath === "/") {
       return "Olá! Vim pelo anúncio do Google e gostaria de saber mais sobre o XYZ Coworking.";
     }
 
-    if (pathname === "/servicos") {
+    if (actualPath === "/servicos") {
       return "Olá! Vim pelo anúncio do Google e gostaria de conhecer os serviços do XYZ Coworking.";
     }
 
     // service pages
-    if (pathname.includes("endereco-fiscal") || pathname.includes("endereco-fiscal-e-comercial")) {
+    if (actualPath.includes("endereco-fiscal") || actualPath.includes("endereco-fiscal-e-comercial")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre Endereço Fiscal!";
     }
 
-    if (pathname.includes("salas-privativas")) {
+    if (actualPath.includes("salas-privativas")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas Privativas.";
     }
 
-    if (pathname.includes("salas-reuniao")) {
+    if (actualPath.includes("salas-reuniao")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Reunião.";
     }
 
-    if (pathname.includes("estacoes-trabalho")) {
+    if (actualPath.includes("estacoes-trabalho")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Estações de Trabalho.";
     }
 
-    if (pathname.includes("salas-atendimento")) {
+    if (actualPath.includes("salas-atendimento")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Atendimento.";
     }
 
-    if (pathname.includes("membro-x")) {
+    if (actualPath.includes("membro-x")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre o Endereço Comercial / Membro X.";
     }
 
-    if (pathname.includes("sessao-fotografica")) {
+    if (actualPath.includes("sessao-fotografica")) {
       return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre a Sessão Fotográfica Corporativa!";
     }
 
-    return undefined;
+    return "Olá, vim pelo anúncio do Google e gostaria de mais informações!";
   };
 
-  const href = getCustomMessage() ? getWhatsappLink(getCustomMessage()) : whatsappLink;
+  const href = useMemo(() => {
+    const customMsg = getCustomMessage();
+    const link = customMsg ? getWhatsappLink(customMsg) : whatsappLink;
+    console.log('[WhatsappFloatingButton] isGoogle:', isGoogle, 'pathname:', pathname, 'customMsg:', customMsg, 'href:', link);
+    return link;
+  }, [isGoogle, pathname]);
   
   return (
     <ButtonBase

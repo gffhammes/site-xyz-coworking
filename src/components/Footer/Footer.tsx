@@ -1,3 +1,5 @@
+"use client";
+
 import { ResponsiveComponent } from "../common/ResponsiveComponent";
 import { DiretoLightRow } from "../DiretoRow/DiretoLightRow";
 import { DesktopFooter } from "./DesktopFooter";
@@ -5,19 +7,71 @@ import { MobileFooter } from "./MobileFooter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { whatsappLink } from "@/utils/utils";
+import { whatsappLink, getWhatsappLink } from "@/utils/utils";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 import { siteData } from "@/data/sites";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { SvgIcon } from "@mui/material";
+import { useAbTest } from "@/hooks/useAbTest";
+import { usePathname } from "next/navigation";
 
 export interface IFooterProps {}
 
 export const Footer = (props: IFooterProps) => {
+  const isGoogle = useAbTest();
+  const pathname = usePathname();
+
+  const getCustomMessage = () => {
+    if (!isGoogle) return undefined;
+
+    // Remove /google prefix to get the actual page
+    const actualPath = pathname.replace(/^\/google/, '') || '/';
+
+    if (actualPath === "/") {
+      return "Olá! Vim pelo anúncio do Google e gostaria de saber mais sobre o XYZ Coworking.";
+    }
+
+    if (actualPath === "/servicos") {
+      return "Olá! Vim pelo anúncio do Google e gostaria de conhecer os serviços do XYZ Coworking.";
+    }
+
+    if (actualPath.includes("endereco-fiscal") || actualPath.includes("endereco-fiscal-e-comercial")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre Endereço Fiscal!";
+    }
+
+    if (actualPath.includes("salas-privativas")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas Privativas.";
+    }
+
+    if (actualPath.includes("salas-reuniao")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Reunião.";
+    }
+
+    if (actualPath.includes("estacoes-trabalho")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Estações de Trabalho.";
+    }
+
+    if (actualPath.includes("salas-atendimento")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Atendimento.";
+    }
+
+    if (actualPath.includes("membro-x")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre o Endereço Comercial / Membro X.";
+    }
+
+    return "Olá, vim pelo anúncio do Google e gostaria de mais informações!";
+  };
+
+  const customMessage = getCustomMessage();
+  const footerWhatsappLink = customMessage ? getWhatsappLink(customMessage) : whatsappLink;
+
   return (
     <>
-      <ResponsiveComponent xs={<MobileFooter />} md={<DesktopFooter />} />
+      <ResponsiveComponent 
+        xs={<MobileFooter footerWhatsappLink={footerWhatsappLink} />} 
+        md={<DesktopFooter footerWhatsappLink={footerWhatsappLink} />} 
+      />
 
       <DiretoLightRow />
     </>
@@ -60,11 +114,11 @@ c-601 49 -1071 516 -1129 1124 l-7 72 -438 0 -439 0 0 -1757z"
   </SvgIcon>
 );
 
-export const socials = [
+export const getSocials = (footerWhatsappLink: string) => [
   {
     icon: WhatsAppIcon,
     name: "WhatsApp",
-    href: whatsappLink,
+    href: footerWhatsappLink,
   },
   {
     icon: InstagramIcon,
