@@ -72,6 +72,8 @@ export const membroX: IServiceItem = {
         customPriceText: "Investimento único",
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse no Plano Anual de Endereço Comercial / Membro X.",
+        whatsappMessageOriginal:
+          "Olá! Vi o plano Membro X no site e gostaria de saber mais sobre como funciona em Joinville.",
       },
     ],
     floatingCtaMessage: "R$684/ano",

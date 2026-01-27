@@ -32,7 +32,7 @@ export const getWhatsappLink = (customText?: string) => {
 
   const text =
     customText ??
-    "Olá! Vim pelo anúncio do Google e gostaria de mais informações sobre o XYZ Coworking.";
+    "Olá! Vim pelo site e gostaria de mais informações sobre o XYZ Coworking.";
 
   const link = `https://api.whatsapp.com/send/?phone=${phone}&text=${text}`;
 

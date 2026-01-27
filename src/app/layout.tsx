@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { CookieConsent } from "./CookieConsent";
 import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton/WhatsappFloatingButton";
 import { siteData } from "@/data/sites";
+import AbTestProvider from "@/hooks/AbTestProvider";
 
 export const metadata: Metadata = {
   title: siteData.homeData.metaTitle,
@@ -70,12 +71,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <Header />
-            {children}
+            <AbTestProvider>
+              <Header />
+              {children}
 
-            <WhatsappFloatingButton />
-            <Footer />
-            <CookieConsent />
+              <WhatsappFloatingButton />
+              <Footer />
+              <CookieConsent />
+            </AbTestProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

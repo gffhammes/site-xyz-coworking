@@ -8,7 +8,9 @@ export interface IServicePlan {
   price: number;
   included: string[];
   whatsappMessage?: string;
+  whatsappMessageOriginal?: string;
   customPriceText?: string;
+  [key: string]: any;
 }
 
 export interface IServiceItem {

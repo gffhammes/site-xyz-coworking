@@ -1,5 +1,8 @@
+"use client";
+
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "@/components/common/Animate";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 import { siteData } from "@/data/sites";
@@ -7,6 +10,10 @@ import { siteData } from "@/data/sites";
 export interface IPhraseSectionProps {}
 
 export const PhraseSection = (props: IPhraseSectionProps) => {
+  const isGoogle = useAbTest();
+  const fotosMessage = isGoogle
+    ? "Olá, vim pelo anúncio do Google gostaria de agendar uma visita!"
+    : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <Box id="home-content">
       <Container>
@@ -108,7 +115,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
             <WhatsappLinkButton
               variant="contained"
               color="secondary"
-              customMessage="Olá, vim pelo anúncio do Google gostaria de agendar uma visita!"
+              customMessage={fotosMessage}
             >
               agendar visita
             </WhatsappLinkButton>

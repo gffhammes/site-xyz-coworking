@@ -75,6 +75,8 @@ export const sessaoFotografica: IServiceItem = {
         ],
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse na diária da Sessão Fotográfica Corporativa!",
+        whatsappMessageOriginal:
+          "Olá! Tenho interesse em reservar uma diária para sessão fotográfica corporativa em Joinville.",
       },
     ],
     plansMessage:

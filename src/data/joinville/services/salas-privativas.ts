@@ -72,6 +72,8 @@ export const salasPrivativas: IServiceItem = {
         customPriceText: "A partir de",
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse em conhecer as opções de salas privativas em Joinville.",
+        whatsappMessageOriginal:
+          "Olá! Tenho interesse em conhecer as opções de salas privativas em Joinville.",
       },
     ],
     floatingCtaMessage: "A partir de 1800/mês",

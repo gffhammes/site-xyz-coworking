@@ -4,24 +4,58 @@ import { Box, ButtonBase, IconButton } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { getElementId, whatsappLink, getWhatsappLink } from "@/utils/utils";
 import { usePathname } from "next/navigation";
+import { useAbTest } from "@/hooks/useAbTest";
 
 export interface IWhatsappFloatingButtonProps {}
 
 export const WhatsappFloatingButton = (props: IWhatsappFloatingButtonProps) => {
   const pathname = usePathname();
-  
-  // Define mensagens específicas baseadas na rota
+  const isGoogle = useAbTest();
+
+  // Only apply custom Google messages when experiment active on Joinville
   const getCustomMessage = () => {
+    if (!isGoogle) return undefined;
+
     if (pathname === "/") {
       return "Olá! Vim pelo anúncio do Google e gostaria de saber mais sobre o XYZ Coworking.";
     }
+
     if (pathname === "/servicos") {
       return "Olá! Vim pelo anúncio do Google e gostaria de conhecer os serviços do XYZ Coworking.";
     }
-    // Para outras páginas, usa a mensagem padrão
+
+    // service pages
+    if (pathname.includes("endereco-fiscal") || pathname.includes("endereco-fiscal-e-comercial")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre Endereço Fiscal!";
+    }
+
+    if (pathname.includes("salas-privativas")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas Privativas.";
+    }
+
+    if (pathname.includes("salas-reuniao")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Reunião.";
+    }
+
+    if (pathname.includes("estacoes-trabalho")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Estações de Trabalho.";
+    }
+
+    if (pathname.includes("salas-atendimento")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Atendimento.";
+    }
+
+    if (pathname.includes("membro-x")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre o Endereço Comercial / Membro X.";
+    }
+
+    if (pathname.includes("sessao-fotografica")) {
+      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre a Sessão Fotográfica Corporativa!";
+    }
+
     return undefined;
   };
-  
+
   const href = getCustomMessage() ? getWhatsappLink(getCustomMessage()) : whatsappLink;
   
   return (

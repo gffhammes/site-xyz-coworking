@@ -2,6 +2,7 @@
 
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { IServiceItem } from "@/data/types";
 import { scrollTo } from "@/utils/utils";
 import { Button } from "@mui/material";
@@ -13,12 +14,16 @@ export interface IServiceDetailsHeroSectionButtonsProps {
 export const ServiceDetailsHeroSectionButtons = ({
   service,
 }: IServiceDetailsHeroSectionButtonsProps) => {
+  const isGoogle = useAbTest();
+  const heroMessage = isGoogle
+    ? `Olá, vim pelo anúncio do Google e gostaria de mais detalhes sobre ${service.title}!`
+    : `Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`;
   return (
     <>
       <TrackingWrapper section="hero" action="contato">
         <WhatsappLinkButton
           variant="contained"
-          customMessage={`Olá, vim pelo anúncio do Google e gostaria de mais detalhes sobre ${service.title}!`}
+          customMessage={heroMessage}
           fullWidth
         >
           {service.detailsPage.heroCTAText}

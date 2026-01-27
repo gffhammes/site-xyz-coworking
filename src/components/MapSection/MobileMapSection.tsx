@@ -1,8 +1,11 @@
+"use client";
+
 import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import { FooterMap } from "../Footer/FooterMap";
 import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "../common/Animate";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 import { siteData } from "@/data/sites";
@@ -36,7 +39,11 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
                 <WhatsappLinkButton
                   variant="contained"
                   startIcon={<WhatsAppIcon fontSize="inherit" />}
-                  customMessage="Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
+                  customMessage={
+                    useAbTest()
+                      ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
+                      : "Olá, vim pelo site e gostaria de agendar uma visita!"
+                  }
                 >
                   agendar
                 </WhatsappLinkButton>

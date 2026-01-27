@@ -75,6 +75,8 @@ export const salasAtendimento: IServiceItem = {
         ],
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
+        whatsappMessageOriginal:
+          "Olá! Tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
       },
       {
         customPriceText: "A partir de",
@@ -92,6 +94,8 @@ export const salasAtendimento: IServiceItem = {
         ],
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
+        whatsappMessageOriginal:
+          "Olá! Tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
       },
       // {
       //   price: 720,

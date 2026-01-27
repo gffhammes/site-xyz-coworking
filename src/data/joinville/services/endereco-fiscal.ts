@@ -72,6 +72,8 @@ export const enderecoFiscal: IServiceItem = {
         ],
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse no Plano Anual de Endereço Fiscal em Joinville!",
+        whatsappMessageOriginal:
+          "Olá! Tenho interesse no plano anual de endereço fiscal em Joinville.",
       },
       {
         price: 129,
@@ -86,6 +88,8 @@ export const enderecoFiscal: IServiceItem = {
         ],
         whatsappMessage:
           "Olá, vim pelo anúncio do Google e tenho interesse no Plano Mensal de Endereço Fiscal em Joinville!",
+        whatsappMessageOriginal:
+          "Olá! Tenho interesse no plano mensal de endereço fiscal em Joinville.",
       },
       // {
       //   price: 189,

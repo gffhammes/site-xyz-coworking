@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Button,
@@ -9,6 +11,7 @@ import {
 import { Carousel } from "../Carousel/Carousel";
 import { reviewsSectionData } from "./ReviewsSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "../common/Animate";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 
@@ -108,7 +111,11 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
             <WhatsappLinkButton
               color="secondary"
               variant="contained"
-              customMessage="Olá, vim pelo anúncio do Google e gostaria de conhecer o XYZ Coworking!"
+              customMessage={
+                useAbTest()
+                  ? "Olá, vim pelo anúncio do Google e gostaria de conhecer o XYZ Coworking!"
+                  : "Olá, vim pelo site e gostaria de agendar uma visita!"
+              }
               sx={{ mt: 2 }}
             >
               Quero trabalhar em um ambiente feito para crescer

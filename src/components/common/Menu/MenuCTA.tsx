@@ -5,6 +5,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { getWhatsappLink } from "@/utils/utils";
 import { TrackingWrapper } from "../TrackingWrapper";
 import { usePathname } from "next/navigation";
+import { useAbTest } from "@/hooks/useAbTest";
 
 export interface IMenuCTAProps {
   theme?: "light" | "dark";
@@ -12,14 +13,17 @@ export interface IMenuCTAProps {
 
 export const MenuCTA = ({ theme }: IMenuCTAProps) => {
   const pathname = usePathname();
-  
-  // Define mensagens específicas baseadas na rota
+  const isGoogle = useAbTest();
+
+  // Define mensagens específicas baseadas na rota apenas para o experimento
   const getCustomMessage = () => {
+    if (!isGoogle) return undefined;
+
     if (pathname === "/servicos") {
       return "Olá! Vim pelo anúncio do Google e quero conhecer os serviços do XYZ Coworking.";
     }
-    // Para home e outras páginas, usa a mensagem padrão
-    return undefined;
+
+    return "Olá, vim pelo anúncio do Google e gostaria de mais informações!";
   };
   
   return (
