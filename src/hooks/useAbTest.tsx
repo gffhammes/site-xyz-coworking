@@ -8,24 +8,10 @@ export const useAbTest = () => {
   const pathname = usePathname() || "";
   const isJoinville = process.env.NEXT_PUBLIC_SITE_KEY === "joinville";
 
-  console.log("[useAbTest] contextFlag:", contextFlag);
-  console.log("[useAbTest] pathname:", pathname);
-  console.log("[useAbTest] isJoinville:", isJoinville);
+  if (!isJoinville) return false;
+  if (contextFlag) return true;
 
-  // If context was set (app started with /google) use it. Otherwise fall back to current pathname.
-  if (!isJoinville) {
-    console.log("[useAbTest] returning false - not Joinville");
-    return false;
-  }
-
-  if (contextFlag) {
-    console.log("[useAbTest] returning true - contextFlag is true");
-    return true;
-  }
-
-  const result = pathname.includes("/google");
-  console.log("[useAbTest] returning", result, "- pathname check");
-  return result;
+  return pathname.includes("/google");
 };
 
 export default useAbTest;

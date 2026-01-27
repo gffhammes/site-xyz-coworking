@@ -29,10 +29,6 @@ export const MenuCTA = ({ theme }: IMenuCTAProps) => {
   const customMsg = getCustomMessage();
   const href = getWhatsappLink(customMsg);
   
-  console.log("[MenuCTA] isGoogle:", isGoogle);
-  console.log("[MenuCTA] customMessage:", customMsg);
-  console.log("[MenuCTA] href:", href);
-  
   return (
     <TrackingWrapper section="header" action="contato">
       <Button
@@ -43,9 +39,8 @@ export const MenuCTA = ({ theme }: IMenuCTAProps) => {
         LinkComponent="a"
         href={href}
         target="_blank"
-        title={`isGoogle: ${isGoogle} | msg: ${customMsg ? 'custom' : 'default'}`}
       >
-        contato {isGoogle ? "🟢" : "⚪"}
+        contato
       </Button>
     </TrackingWrapper>
   );
