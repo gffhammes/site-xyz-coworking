@@ -18,7 +18,7 @@ export const ServiceDetailsHeroSectionButtons = ({
       <TrackingWrapper section="hero" action="contato">
         <WhatsappLinkButton
           variant="contained"
-          customMessage={`Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`}
+          customMessage={`Olá, vim pelo anúncio do Google e gostaria de mais detalhes sobre ${service.title}!`}
           fullWidth
         >
           {service.detailsPage.heroCTAText}

@@ -108,7 +108,7 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
             <WhatsappLinkButton
               color="secondary"
               variant="contained"
-              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              customMessage="Olá, vim pelo anúncio do Google e gostaria de conhecer o XYZ Coworking!"
               sx={{ mt: 2 }}
             >
               Quero trabalhar em um ambiente feito para crescer

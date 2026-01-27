@@ -1,14 +1,33 @@
+"use client";
+
 import { Box, ButtonBase, IconButton } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { getElementId, whatsappLink } from "@/utils/utils";
+import { getElementId, whatsappLink, getWhatsappLink } from "@/utils/utils";
+import { usePathname } from "next/navigation";
 
 export interface IWhatsappFloatingButtonProps {}
 
 export const WhatsappFloatingButton = (props: IWhatsappFloatingButtonProps) => {
+  const pathname = usePathname();
+  
+  // Define mensagens específicas baseadas na rota
+  const getCustomMessage = () => {
+    if (pathname === "/") {
+      return "Olá! Vim pelo anúncio do Google e gostaria de saber mais sobre o XYZ Coworking.";
+    }
+    if (pathname === "/servicos") {
+      return "Olá! Vim pelo anúncio do Google e gostaria de conhecer os serviços do XYZ Coworking.";
+    }
+    // Para outras páginas, usa a mensagem padrão
+    return undefined;
+  };
+  
+  const href = getCustomMessage() ? getWhatsappLink(getCustomMessage()) : whatsappLink;
+  
   return (
     <ButtonBase
       LinkComponent="a"
-      href={whatsappLink}
+      href={href}
       id="click---botao-flutuante---contato"
       aria-label="whatsapp"
       target="_blank"

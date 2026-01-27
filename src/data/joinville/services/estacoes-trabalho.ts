@@ -70,7 +70,7 @@ export const estacoesTrabalho: IServiceItem = {
           "Café à vontade",
         ],
         whatsappMessage:
-          "Olá! Tenho interesse em reservar uma estação de trabalho em Joinville.",
+          "Olá, vim pelo anúncio do Google e tenho interesse em reservar uma estação de trabalho em Joinville.",
       },
     ],
     plansMessage:

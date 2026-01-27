@@ -72,7 +72,7 @@ export const salasReuniao: IServiceItem = {
           "Para salas com maior capacidade, entre em contato",
         ],
         whatsappMessage:
-          "Olá! Gostaria de reservar uma hora em uma sala de reunião em Joinville.",
+          "Olá, vim pelo anúncio do Google e gostaria de reservar uma hora em uma sala de reunião em Joinville.",
       },
       {
         customPriceText: "A partir de",
@@ -88,7 +88,7 @@ export const salasReuniao: IServiceItem = {
           "Para salas com maior capacidade, entre em contato",
         ],
         whatsappMessage:
-          "Olá! Gostaria de reservar um período em uma sala de reunião em Joinville.",
+          "Olá, vim pelo anúncio do Google e gostaria de reservar um período em uma sala de reunião em Joinville.",
       },
       // {
       //   price: 800,

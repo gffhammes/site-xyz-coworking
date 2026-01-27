@@ -81,7 +81,7 @@ export const MobileAdvantagesSection = (
             <TrackingWrapper section="vantagens" action="contato">
               <WhatsappLinkButton
                 variant="contained"
-                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+                customMessage="Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
               >
                 agendar visita
               </WhatsappLinkButton>
