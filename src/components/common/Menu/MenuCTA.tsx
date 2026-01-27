@@ -43,8 +43,9 @@ export const MenuCTA = ({ theme }: IMenuCTAProps) => {
         LinkComponent="a"
         href={href}
         target="_blank"
+        title={`isGoogle: ${isGoogle} | msg: ${customMsg ? 'custom' : 'default'}`}
       >
-        contato
+        contato {isGoogle ? "🟢" : "⚪"}
       </Button>
     </TrackingWrapper>
   );
