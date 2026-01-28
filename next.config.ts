@@ -12,8 +12,18 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   async rewrites() {
     return [
+      // Suporta /google no início: /google, /google/servicos
+      {
+        source: "/google",
+        destination: "/",
+      },
       {
         source: "/google/:path*",
+        destination: "/:path*",
+      },
+      // Suporta /google no final: /servicos/google, /servicos/sessao-fotografica/google
+      {
+        source: "/:path*/google",
         destination: "/:path*",
       },
     ];

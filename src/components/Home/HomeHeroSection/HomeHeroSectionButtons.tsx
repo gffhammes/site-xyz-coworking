@@ -15,7 +15,7 @@ export const HomeHeroSectionButtons = (props: IHomeHeroSectionButtonsProps) => {
     : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <>
-      <TrackingWrapper section="hero" action="contato">
+      <TrackingWrapper section="hero" action="contato" isGoogle={isGoogle}>
         <WhatsappLinkButton
           variant="contained"
           customMessage={message}
@@ -25,7 +25,7 @@ export const HomeHeroSectionButtons = (props: IHomeHeroSectionButtonsProps) => {
         </WhatsappLinkButton>
       </TrackingWrapper>
 
-      <TrackingWrapper section="hero" action="ver-mais">
+      <TrackingWrapper section="hero" action="ver-mais" isGoogle={isGoogle}>
         <Button
           variant="outlined"
           onClick={() => scrollTo("home-content", 200)}

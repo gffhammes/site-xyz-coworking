@@ -66,12 +66,16 @@ export const WhatsappFloatingButton = (props: IWhatsappFloatingButtonProps) => {
     console.log('[WhatsappFloatingButton] isGoogle:', isGoogle, 'pathname:', pathname, 'customMsg:', customMsg, 'href:', link);
     return link;
   }, [isGoogle, pathname]);
+
+  const buttonId = useMemo(() => {
+    return isGoogle ? "click---botao-flutuante---contato---google" : "click---botao-flutuante---contato";
+  }, [isGoogle]);
   
   return (
     <ButtonBase
       LinkComponent="a"
       href={href}
-      id="click---botao-flutuante---contato"
+      id={buttonId}
       aria-label="whatsapp"
       target="_blank"
       sx={{

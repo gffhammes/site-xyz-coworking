@@ -66,23 +66,32 @@ export const formattedWhatsApp = getFormattedPhoneNumber(
 interface IGetElementIdArgs {
   section: string;
   action: string;
+  isGoogle?: boolean;
 }
 
 export const getElementId = ({
   section,
   action,
+  isGoogle = false,
 }: IGetElementIdArgs): string => {
   if (typeof window === "undefined") {
     return "";
   }
 
   const pathname = window.location.pathname;
+  
+  // Remove /google do início ou final: /google/servicos ou /servicos/google
+  const cleanPathname = pathname
+    .replace(/^\/google(\/|$)/, "/") // Remove do início
+    .replace(/\/google$/, ""); // Remove do final
+  
   const page =
-    pathname
+    cleanPathname
       .replace(/^\/|\/$/g, "") // remove barras no início/fim
       .replace(/\//g, "-") // troca / por -
       .replace(/\s+/g, "-") // troca espaços por -
       .toLowerCase() || "home";
 
-  return `click---${page}---${section}---${action}`;
+  const googleSuffix = isGoogle ? "---google" : "";
+  return `click---${page}---${section}---${action}${googleSuffix}`;
 };

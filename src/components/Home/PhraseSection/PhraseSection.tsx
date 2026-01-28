@@ -111,7 +111,7 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           viewport={{ once: true, margin: "-30%" }}
           transition={{ duration: 1, type: "spring" }}
         >
-          <TrackingWrapper section="fotos-circulares" action="contato">
+          <TrackingWrapper section="fotos-circulares" action="contato" isGoogle={isGoogle}>
             <WhatsappLinkButton
               variant="contained"
               color="secondary"

@@ -69,8 +69,8 @@ export const Footer = (props: IFooterProps) => {
   return (
     <>
       <ResponsiveComponent 
-        xs={<MobileFooter footerWhatsappLink={footerWhatsappLink} />} 
-        md={<DesktopFooter footerWhatsappLink={footerWhatsappLink} />} 
+        xs={<MobileFooter footerWhatsappLink={footerWhatsappLink} isGoogle={isGoogle} />} 
+        md={<DesktopFooter footerWhatsappLink={footerWhatsappLink} isGoogle={isGoogle} />} 
       />
 
       <DiretoLightRow />

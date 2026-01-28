@@ -11,7 +11,8 @@ export const useAbTest = () => {
   if (!isJoinville) return false;
   if (contextFlag) return true;
 
-  return pathname.includes("/google");
+  // Detecta /google no início ou final: /google/servicos ou /servicos/google
+  return pathname.startsWith("/google") || pathname.endsWith("/google");
 };
 
 export default useAbTest;

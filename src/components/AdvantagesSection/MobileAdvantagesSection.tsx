@@ -85,7 +85,7 @@ export const MobileAdvantagesSection = (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-30%" }}
           >
-            <TrackingWrapper section="vantagens" action="contato">
+            <TrackingWrapper section="vantagens" action="contato" isGoogle={isGoogle}>
               <WhatsappLinkButton
                 variant="contained"
                 customMessage={vantagensMessage}

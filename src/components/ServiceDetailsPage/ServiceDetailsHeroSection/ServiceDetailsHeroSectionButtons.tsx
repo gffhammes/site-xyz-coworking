@@ -20,7 +20,7 @@ export const ServiceDetailsHeroSectionButtons = ({
     : `Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`;
   return (
     <>
-      <TrackingWrapper section="hero" action="contato">
+      <TrackingWrapper section="hero" action="contato" isGoogle={isGoogle}>
         <WhatsappLinkButton
           variant="contained"
           customMessage={heroMessage}
@@ -30,7 +30,7 @@ export const ServiceDetailsHeroSectionButtons = ({
         </WhatsappLinkButton>
       </TrackingWrapper>
 
-      <TrackingWrapper section="hero" action="ver-mais">
+      <TrackingWrapper section="hero" action="ver-mais" isGoogle={isGoogle}>
         <Button variant="outlined" onClick={() => scrollTo("beneficios", 200)}>
           CONHECER MAIS
         </Button>

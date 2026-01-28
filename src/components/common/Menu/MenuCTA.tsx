@@ -33,7 +33,7 @@ export const MenuCTA = ({ theme }: IMenuCTAProps) => {
   const href = getWhatsappLink(customMsg);
   
   return (
-    <TrackingWrapper section="header" action="contato">
+    <TrackingWrapper section="header" action="contato" isGoogle={isGoogle}>
       <Button
         variant="outlined"
         color={theme === "dark" ? "primary" : "secondary"}

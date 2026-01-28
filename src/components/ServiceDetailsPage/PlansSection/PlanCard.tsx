@@ -39,6 +39,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
           <TrackingWrapper
             section="card-preco"
             action={`contato-${selectedPlan.label}`}
+            isGoogle={isGoogle}
           >
             <Button
               LinkComponent="a"

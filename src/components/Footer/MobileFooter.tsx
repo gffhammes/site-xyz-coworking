@@ -8,9 +8,10 @@ import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IMobileFooterProps {
   footerWhatsappLink: string;
+  isGoogle?: boolean;
 }
 
-export const MobileFooter = ({ footerWhatsappLink }: IMobileFooterProps) => {
+export const MobileFooter = ({ footerWhatsappLink, isGoogle = false }: IMobileFooterProps) => {
   const socials = getSocials(footerWhatsappLink);
   return (
     <>
@@ -64,6 +65,7 @@ export const MobileFooter = ({ footerWhatsappLink }: IMobileFooterProps) => {
                       key={social.name}
                       section="footer"
                       action={`ir-para-${social.name}`}
+                      isGoogle={isGoogle}
                     >
                       <Stack
                         key={social.name}

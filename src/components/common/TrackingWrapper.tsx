@@ -12,18 +12,20 @@ interface TrackingWrapperProps {
   section: string;
   action: string;
   children: ReactElement;
+  isGoogle?: boolean;
 }
 
 export function TrackingWrapper({
   section,
   action,
   children,
+  isGoogle = false,
 }: TrackingWrapperProps) {
   const [id, setId] = useState<string | null>(null);
 
   useEffect(() => {
-    setId(getElementId({ section, action }));
-  }, [section, action]);
+    setId(getElementId({ section, action, isGoogle }));
+  }, [section, action, isGoogle]);
 
   if (!isValidElement(children)) {
     console.warn(

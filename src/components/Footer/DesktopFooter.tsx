@@ -6,9 +6,10 @@ import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IDesktopFooterProps {
   footerWhatsappLink: string;
+  isGoogle?: boolean;
 }
 
-export const DesktopFooter = ({ footerWhatsappLink }: IDesktopFooterProps) => {
+export const DesktopFooter = ({ footerWhatsappLink, isGoogle = false }: IDesktopFooterProps) => {
   const socials = getSocials(footerWhatsappLink);
   return (
     <>
@@ -45,6 +46,7 @@ export const DesktopFooter = ({ footerWhatsappLink }: IDesktopFooterProps) => {
                       key={social.name}
                       section="footer"
                       action={`ir-para-${social.name}`}
+                      isGoogle={isGoogle}
                     >
                       <Stack
                         component="a"

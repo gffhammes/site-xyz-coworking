@@ -13,6 +13,10 @@ import { siteData } from "@/data/sites";
 export interface IDesktopMapSectionProps {}
 
 export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
+  const isGoogle = useAbTest();
+  const mapMessage = isGoogle
+    ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
+    : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <Box>
       <Container>
@@ -41,15 +45,11 @@ export const DesktopMapSection = (props: IDesktopMapSectionProps) => {
               viewport={{ once: true, margin: "-30%" }}
               style={{ width: "100%" }}
             >
-              <TrackingWrapper section="mapa" action="contato">
+              <TrackingWrapper section="mapa" action="contato" isGoogle={isGoogle}>
                 <WhatsappLinkButton
                   variant="contained"
                   startIcon={<WhatsAppIcon fontSize="inherit" />}
-                  customMessage={
-                    useAbTest()
-                      ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
-                      : "Olá, vim pelo site e gostaria de agendar uma visita!"
-                  }
+                  customMessage={mapMessage}
                 >
                   agendar
                 </WhatsappLinkButton>
