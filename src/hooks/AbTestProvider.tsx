@@ -13,9 +13,10 @@ export const AbTestProvider = ({ children }: { children: React.ReactNode }) => {
       if (typeof window === "undefined") return false;
 
       const pathname = window.location.pathname || "";
-      const startedWithGoogle = pathname.startsWith("/google");
+      // Detecta /google no início ou final: /google/servicos ou /servicos/google
+      const hasGoogle = pathname.startsWith("/google") || pathname.endsWith("/google");
 
-      if (startedWithGoogle) {
+      if (hasGoogle) {
         sessionStorage.setItem("ab_google_active", "1");
         return true;
       }
