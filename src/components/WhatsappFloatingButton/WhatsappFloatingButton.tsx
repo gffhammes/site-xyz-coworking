@@ -62,9 +62,7 @@ export const WhatsappFloatingButton = (props: IWhatsappFloatingButtonProps) => {
 
   const href = useMemo(() => {
     const customMsg = getCustomMessage();
-    const link = customMsg ? getWhatsappLink(customMsg) : whatsappLink;
-    console.log('[WhatsappFloatingButton] isGoogle:', isGoogle, 'pathname:', pathname, 'customMsg:', customMsg, 'href:', link);
-    return link;
+    return customMsg ? getWhatsappLink(customMsg) : whatsappLink;
   }, [isGoogle, pathname]);
 
   const buttonId = useMemo(() => {
