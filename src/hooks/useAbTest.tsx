@@ -1,18 +1,26 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useAbTestContext } from "./AbTestProvider";
+import { useState, useEffect } from "react";
 
 export const useAbTest = () => {
   const contextFlag = useAbTestContext();
-  const pathname = usePathname() || "";
+  const [isGoogleUrl, setIsGoogleUrl] = useState(false);
   const isJoinville = process.env.NEXT_PUBLIC_SITE_KEY === "joinville";
+
+  // Verifica a URL original do browser (antes do rewrite) no cliente
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const originalPathname = window.location.pathname;
+      const hasGoogle = originalPathname.startsWith("/google") || originalPathname.endsWith("/google");
+      setIsGoogleUrl(hasGoogle);
+    }
+  }, []);
 
   if (!isJoinville) return false;
   if (contextFlag) return true;
-
-  // Detecta /google no início ou final: /google/servicos ou /servicos/google
-  return pathname.startsWith("/google") || pathname.endsWith("/google");
+  
+  return isGoogleUrl;
 };
 
 export default useAbTest;
