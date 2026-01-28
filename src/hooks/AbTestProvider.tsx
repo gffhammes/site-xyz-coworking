@@ -1,12 +1,10 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
 const AbTestContext = createContext<boolean>(false);
 
 export const AbTestProvider = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname();
   // Sempre iniciar com false para evitar hydration mismatch (servidor não tem sessionStorage)
   const [active, setActive] = useState<boolean>(false);
 
@@ -16,8 +14,11 @@ export const AbTestProvider = ({ children }: { children: React.ReactNode }) => {
     if (!isJoinville) return;
 
     try {
+      // Usa window.location.pathname para pegar a URL ORIGINAL (antes do rewrite)
+      const originalPathname = window.location.pathname;
+      
       // Detecta /google no início ou final: /google/servicos ou /servicos/google
-      const hasGoogle = pathname.startsWith("/google") || pathname.endsWith("/google");
+      const hasGoogle = originalPathname.startsWith("/google") || originalPathname.endsWith("/google");
 
       if (hasGoogle) {
         sessionStorage.setItem("ab_google_active", "1");
@@ -30,7 +31,7 @@ export const AbTestProvider = ({ children }: { children: React.ReactNode }) => {
     } catch (e) {
       setActive(false);
     }
-  }, [pathname]);
+  }, []);
 
   return <AbTestContext.Provider value={active}>{children}</AbTestContext.Provider>;
 };
