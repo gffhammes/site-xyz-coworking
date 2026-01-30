@@ -78,7 +78,7 @@ export const enderecoFiscal: IServiceItem = {
       {
         price: 129,
         label: "Mensal",
-        period: "Ano",
+        period: "Mês",
         included: [
            "Autorização para uso de endereço para abertura ou transferência de CNPJ",
           "Autorização para uso de endereço para divulgação em mídias e no Google Meu Negócio",
