@@ -16,7 +16,9 @@ export const BlogHeroSection = (props: IBlogHeroSectionProps) => {
               {h1}
             </Typography>
 
-            <Animate {...subtitleAnimateProps}>{subtitle}</Animate>
+            <Animate {...subtitleAnimateProps}>
+              <Typography maxWidth="60ch">{subtitle}</Typography>
+            </Animate>
           </Stack>
 
           <Animate {...buttonsAnimateProps}>

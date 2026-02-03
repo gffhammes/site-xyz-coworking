@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import { BlogTest } from "@/components/Blog/BlogTest";
+import { BlogArticlesList } from "@/components/Blog/BlogArticlesList";
 import { Metadata } from "next";
 import { BlogHeroSection } from "@/components/Blog/BlogHeroSection";
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default async function Blog() {
   const res = await fetch(
     "https://xyzcoworking.com/wp-json/wp/v2/posts?per_page=100&_embed",
-    { next: { revalidate: 60 } } // ISR: revalida a cada 60s
+    { next: { revalidate: 60 } }, // ISR: revalida a cada 60s
   );
   const data = await res.json();
 
@@ -52,7 +52,7 @@ export default async function Blog() {
         <Stack>
           <BlogHeroSection />
 
-          <BlogTest posts={posts} />
+          <BlogArticlesList posts={posts} />
         </Stack>
       </main>
     </div>

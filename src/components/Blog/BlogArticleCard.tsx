@@ -26,7 +26,7 @@ export const BlogArticleCard = ({ article }: IBlogArticleCardProps) => {
     >
       <ButtonBase
         sx={{
-          width: "20rem",
+          width: "100%",
           height: "100%",
           borderRadius: 3,
           pb: 2,
@@ -36,15 +36,16 @@ export const BlogArticleCard = ({ article }: IBlogArticleCardProps) => {
           "&:hover": {
             backgroundColor: "#e3e3e3",
           },
+          alignItems: "flex-start",
         }}
         component={Stack}
       >
         <Box
           sx={{
             position: "relative",
-            width: "100%",
+            width: { xs: "30svw", md: "100%" },
             aspectRatio: "1 / 1",
-            borderRadius: 8,
+            borderRadius: { xs: 2, md: 8 },
             overflow: "hidden",
             flexShrink: 0,
           }}
