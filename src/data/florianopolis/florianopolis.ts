@@ -1,8 +1,5 @@
 import { ISiteData } from "../types";
 import { services } from "./services/services";
-import heroBg from "../../../public/images/XYZ - BC-10.webp";
-import image1 from "../../../public/images/XYZ - BC-3.webp";
-import image2 from "../../../public/images/XYZ - BC-4.webp";
 import servicesHeroImage from "../../../public/images/servicos.png";
 import diferencialimage1 from "../../../public/images/enderecofiscalfloripa.jpeg";
 import diferencialimage2 from "../../../public/images/membrox.jpeg";
@@ -10,22 +7,18 @@ import diferencialimage3 from "../../../public/images/exclusivoambiente.png";
 import diferencialimage4 from "../../../public/images/network.png";
 import homefloripa from "../../../public/images/homefloripa.jpeg";
 import circuloesquerdo from "../../../public/images/circuloesquerdo.jpeg";
-import circulodireito from "../../../public/images/circulodireito.jpeg";
-
-
+import circulodireito from "../../../public/images/bolinha direita - home.jpg";
 
 const contact = {
-  phoneNumber: "48998380483",
-  whatsappNumber: "48998380483",
-  email: "contatofloripa@xyzworking,com",
+  phoneNumber: "+554830505051",
+  whatsappNumber: "+554899630480",
+  email: "contatofloripa@xyzcoworking.com",
 };
 
 const workingHours = [
-
   "Segunda à Sexta 8h às 18h30",
   "Sábados 9h às 13h",
-  "Acesso 24h para clientes com Face ID"
-
+  "Acesso 24h para clientes com Face ID",
 ];
 
 const address = {
@@ -35,6 +28,7 @@ const address = {
 };
 
 export const florianopolisData: ISiteData = {
+  urlConexa: "https://lumiere.conexa.app/",
   gtmId: "",
   contact,
   services,
@@ -42,9 +36,9 @@ export const florianopolisData: ISiteData = {
   address,
   homeData: {
     metaTitle:
-      "Coworking em Florianopolis | XYZ Coworking - Endereço Fiscal, Salas e Estações",
+      "Coworking em Florianópolis | XYZ Coworking - Endereço Fiscal, Salas e Estações",
     metaDescription:
-      "Encontre o melhor coworking em Balneário Camboriú! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
+      "Encontre o melhor coworking em Floripa! Salas privativas, endereço fiscal, estações de trabalho e estrutura premium para sua empresa crescer. Conheça o XYZ Coworking!",
     heroSection: {
       h1: `Trabalhe com performance sem abrir mão da qualidade de vida!`,
       subtitle: `Trabalhar em casa pode parecer liberdade, mas e quando a produtividade despenca? No XYZ Floripa você tem um espaço criativo, cheio de networking e pronto para te ajudar a crescer!`,
@@ -86,8 +80,8 @@ export const florianopolisData: ISiteData = {
     mapSection: {
       h2: "Venha conhecer nosso espaço na Ilha da Magia!",
       mapAddress:
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.5158149069794!2d-48.550571!3d-27.597433999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527383ad9a1e201%3A0x793c22eb738c8972!2sEdif%C3%ADcio%20Alpha%20Centauri%20-%20Av.%20Herc%C3%ADlio%20Luz%2C%20639%20-%2011%20%C2%B0%20Andar%20-%20Centro%2C%20Florian%C3%B3polis%20-%20SC%2C%2088020-000!5e0!3m2!1spt-BR!2sbr!4v1733949728266!5m2!1spt-BR!2sbr",
-    }
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.5158149069794!2d-48.550571!3d-27.597433999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527383ad9a1e201%3A0x793c22eb738c8972!2sEdif%C3%ADcio%20Alpha%20Centauri%20-%20Av.%20Herc%C3%ADlio%20Luz%2C%20639%20-%2011%20%C2%B0%20Andar%20-%20Centro%2C%20Florian%C3%B3polis%20-%20SC%2C%2088020-000!5e0!3m2!1spt-BR!2sbr!4v1733949728266!5m2!1spt-BR!2sbr",
+    },
   },
   servicesPage: {
     heroImage: servicesHeroImage.src,

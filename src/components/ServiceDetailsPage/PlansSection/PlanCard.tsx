@@ -1,8 +1,11 @@
+"use client";
+
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { PlanCardPrice } from "./PlanCardPrice";
 import { PlanCardIncluded } from "./PlanCardIncluded";
 import { IServicePlan } from "@/data/types";
 import { getWhatsappLink } from "@/utils/utils";
+import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "@/components/common/Animate";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 
@@ -11,7 +14,12 @@ export interface IPlanCardProps {
 }
 
 export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
-  const buttonHref = getWhatsappLink(selectedPlan.whatsappMessage);
+  const isGoogle = useAbTest();
+  const planMessage = isGoogle
+    ? selectedPlan.whatsappMessage
+    : selectedPlan.whatsappMessageOriginal ?? selectedPlan.whatsappMessage;
+
+  const buttonHref = getWhatsappLink(planMessage);
 
   return (
     <Animate
@@ -31,6 +39,7 @@ export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
           <TrackingWrapper
             section="card-preco"
             action={`contato-${selectedPlan.label}`}
+            isGoogle={isGoogle}
           >
             <Button
               LinkComponent="a"

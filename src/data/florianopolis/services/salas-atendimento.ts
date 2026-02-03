@@ -31,7 +31,7 @@ export const salasAtendimento: IServiceItem = {
         "Atenda com conforto e profissionalismo em um espaço silencioso, climatizado e totalmente preparado para receber seus pacientes ou clientes com excelência.",
       items: [
         {
-          text: "<strong>Espaço ideal para psicólogos,</strong> terapeutas, coaches e consultores",
+          text: "<strong>Espaço ideal para psicólogos,</strong> terapeutas, advogados e consultores",
           icon: MedicalInformationIcon,
         },
         {
@@ -76,8 +76,9 @@ export const salasAtendimento: IServiceItem = {
       {
         price: 189,
         label: "Período",
-        period: "PERÍODO",
+        period: "Período de 5 horas",
         included: [
+          "Período de manhã, tarde e noite",  
           "Sala mobiliada e climatizada",
           "Internet de alta velocidade",
           "Recepção para seus clientes",

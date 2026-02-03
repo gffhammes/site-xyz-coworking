@@ -34,7 +34,8 @@ export const getWhatsappLink = (customText?: string) => {
     customText ??
     "Olá! Vim pelo site e gostaria de mais informações sobre o XYZ Coworking.";
 
-  const link = `https://api.whatsapp.com/send/?phone=${phone}&text=${text}`;
+  const encodedText = encodeURIComponent(text);
+  const link = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodedText}`;
 
   return link;
 };
@@ -46,14 +47,13 @@ export const getFormattedPhoneNumber = (phoneNumber: string) => {
 
   const localNumber = digits.startsWith("55") ? digits.slice(2) : digits;
 
-  const prefixCut = digits.length === 12 ? 6 : 7;
+  const prefixCut = localNumber.length === 9 ? 5 : 6;
 
-  // Extrai DDD, prefixo e sufixo
   const ddd = localNumber.slice(0, 2);
   const prefix = localNumber.slice(2, prefixCut);
-  const suffix = localNumber.slice(prefixCut, 11);
+  const suffix = localNumber.slice(prefixCut);
 
-  return `(${ddd}) ${prefix}-${suffix}`;
+  return `+55 ${ddd} ${prefix}-${suffix}`;
 };
 
 export const formattedPhoneNumber = getFormattedPhoneNumber(
@@ -66,25 +66,34 @@ export const formattedWhatsApp = getFormattedPhoneNumber(
 interface IGetElementIdArgs {
   section: string;
   action: string;
+  isGoogle?: boolean;
 }
 
 export const getElementId = ({
   section,
   action,
+  isGoogle = false,
 }: IGetElementIdArgs): string => {
   if (typeof window === "undefined") {
     return "";
   }
 
   const pathname = window.location.pathname;
+  
+  // Remove /google do início ou final: /google/servicos ou /servicos/google
+  const cleanPathname = pathname
+    .replace(/^\/google(\/|$)/, "/") // Remove do início
+    .replace(/\/google$/, ""); // Remove do final
+  
   const page =
-    pathname
+    cleanPathname
       .replace(/^\/|\/$/g, "") // remove barras no início/fim
       .replace(/\//g, "-") // troca / por -
       .replace(/\s+/g, "-") // troca espaços por -
       .toLowerCase() || "home";
 
-  return `click---${page}---${section}---${action}`;
+  const googleSuffix = isGoogle ? "---google" : "";
+  return `click---${page}---${section}---${action}${googleSuffix}`;
 };
 
 export function decodeHtmlEntities(str: string): string {

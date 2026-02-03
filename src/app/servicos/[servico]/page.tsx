@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { Stack } from "@mui/material";
 import { AdvantagesSection } from "@/components/AdvantagesSection/AdvantagesSection";
 import { ReviewsSection } from "@/components/ReviewsSection/ReviewsSection";

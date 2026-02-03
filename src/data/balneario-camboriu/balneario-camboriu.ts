@@ -10,8 +10,8 @@ import diferencialimage3 from "../../../public/images/conexao-bc.webp";
 import diferencialimage4 from "../../../public/images/servicos.webp";
 
 const contact = {
-  phoneNumber: "5547999990294",
-  whatsappNumber: "5547999990294",
+  phoneNumber: "+5547999990294",
+  whatsappNumber: "+5547999990294",
   email: "jamal@xyzcoworking.com",
 };
 
@@ -27,6 +27,7 @@ const address = {
 };
 
 export const balnearioData: ISiteData = {
+  urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T588QKB9",
   contact,
   services,

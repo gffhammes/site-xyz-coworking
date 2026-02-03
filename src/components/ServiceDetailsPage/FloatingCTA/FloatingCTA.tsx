@@ -4,6 +4,7 @@ import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 import { IServiceItem } from "@/data/types";
 import { useFloatingCardTrigger } from "@/hooks/useFloatingCTATrigger";
 import { scrollTo } from "@/utils/utils";
+import { useAbTest } from "@/hooks/useAbTest";
 import {
   Box,
   ButtonBase,
@@ -20,6 +21,7 @@ export interface IFloatingCTAProps {
 
 export const FloatingCTA = ({ service }: IFloatingCTAProps) => {
   const { show: showTrigger } = useFloatingCardTrigger("beneficios", "planos");
+  const isGoogle = useAbTest();
   const [show, setShow] = useState(false);
   const [collapse, setCollapse] = useState(false);
 
@@ -80,7 +82,7 @@ export const FloatingCTA = ({ service }: IFloatingCTAProps) => {
               </Typography>
             </Collapse>
 
-            <TrackingWrapper section="botao-flutuante" action="ver-planos">
+            <TrackingWrapper section="botao-flutuante" action="ver-planos" isGoogle={isGoogle}>
               <Box
                 sx={{
                   px: 2,

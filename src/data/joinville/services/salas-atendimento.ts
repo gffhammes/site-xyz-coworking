@@ -74,6 +74,8 @@ export const salasAtendimento: IServiceItem = {
           "Para salas com maior capacidade, entre em contato",
         ],
         whatsappMessage:
+          "Olá, vim pelo anúncio do Google e tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
+        whatsappMessageOriginal:
           "Olá! Tenho interesse em reservar uma hora em uma sala de atendimento em Joinville.",
       },
       {
@@ -91,6 +93,8 @@ export const salasAtendimento: IServiceItem = {
           "Para salas com maior capacidade, entre em contato",
         ],
         whatsappMessage:
+          "Olá, vim pelo anúncio do Google e tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
+        whatsappMessageOriginal:
           "Olá! Tenho interesse em reservar um período em uma sala de atendimento em Joinville.",
       },
       // {

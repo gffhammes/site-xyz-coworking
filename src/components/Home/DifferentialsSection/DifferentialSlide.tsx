@@ -5,6 +5,7 @@ import { forwardRef } from "react";
 import parse from "html-react-parser";
 import { mdXTranslateCircle } from "./DifferentialSection";
 import { WhatsappLinkButton } from "@/components/common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
 import { siteData } from "@/data/sites";
 
@@ -58,7 +59,11 @@ export const DifferentialSlide = forwardRef(function Slide(
           >
             <WhatsappLinkButton
               variant="contained"
-              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              customMessage={
+                useAbTest()
+                  ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
+                  : "Olá, vim pelo site e gostaria de agendar uma visita!"
+              }
             >
               agendar visita
             </WhatsappLinkButton>

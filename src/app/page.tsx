@@ -3,6 +3,9 @@ import { Stack } from "@mui/material";
 import { HomeHeroSection } from "@/components/Home/HomeHeroSection/HomeHeroSection";
 import dynamic from "next/dynamic";
 
+export const dynamicParams = false;
+export const revalidate = 0;
+
 const DynamicServicesSection = dynamic(() =>
   import("../components/Home/ServicesSection/ServicesSection").then(
     (mod) => mod.ServicesSection

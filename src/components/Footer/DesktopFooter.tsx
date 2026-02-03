@@ -1,12 +1,16 @@
 import { Box, Container, Stack } from "@mui/material";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
-import { socials } from "./Footer";
+import { getSocials } from "./Footer";
 import { FooterInfos } from "./FooterInfos";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 
-export interface IDesktopFooterProps {}
+export interface IDesktopFooterProps {
+  footerWhatsappLink: string;
+  isGoogle?: boolean;
+}
 
-export const DesktopFooter = (props: IDesktopFooterProps) => {
+export const DesktopFooter = ({ footerWhatsappLink, isGoogle = false }: IDesktopFooterProps) => {
+  const socials = getSocials(footerWhatsappLink);
   return (
     <>
       <Box
@@ -42,6 +46,7 @@ export const DesktopFooter = (props: IDesktopFooterProps) => {
                       key={social.name}
                       section="footer"
                       action={`ir-para-${social.name}`}
+                      isGoogle={isGoogle}
                     >
                       <Stack
                         component="a"

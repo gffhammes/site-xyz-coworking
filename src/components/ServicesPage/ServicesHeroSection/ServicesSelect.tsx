@@ -50,9 +50,8 @@ export const ServicesSelect = ({ align = "center" }: IServicesSelectProps) => {
       >
         {siteData.services.map((option) => {
           return (
-            <TrackingWrapper section="hero" action={`ver-${option.slug}`}>
+            <TrackingWrapper key={option.slug} section="hero" action={`ver-${option.slug}`}>
               <Stack
-                key={option.slug}
                 alignItems="center"
                 justifyContent="center"
                 sx={{

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Button,
@@ -9,12 +11,14 @@ import {
 import { Carousel } from "../Carousel/Carousel";
 import { reviewsSectionData } from "./ReviewsSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "../common/Animate";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 
 export interface IDesktopReviewsSectionProps {}
 
 export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
+  const isGoogle = useAbTest();
   return (
     <Container>
       <Stack alignItems="center" gap={10}>
@@ -104,11 +108,15 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-30%" }}
         >
-          <TrackingWrapper section="reviews" action="contato">
+          <TrackingWrapper section="reviews" action="contato" isGoogle={isGoogle}>
             <WhatsappLinkButton
               color="secondary"
               variant="contained"
-              customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+              customMessage={
+                isGoogle
+                  ? "Olá, vim pelo anúncio do Google e gostaria de conhecer o XYZ Coworking!"
+                  : "Olá, vim pelo site e gostaria de agendar uma visita!"
+              }
               sx={{ mt: 2 }}
             >
               Quero trabalhar em um ambiente feito para crescer

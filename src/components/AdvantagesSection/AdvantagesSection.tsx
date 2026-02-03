@@ -28,7 +28,7 @@ export const advantageItems: IAdvantageItem[] = [
   {
     title: "Flexibilidade total.",
     description:
-      "Seu trabalho não tem horário fixo? Aqui você tem acesso ao seu espaço a qualquer hora do dia (ou da noite).",
+      "Seu trabalho não tem horário fixo? Aqui você tem acesso ao seu espaço 24h.",
     Icon: UpdateOutlinedIcon,
   },
   {

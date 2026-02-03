@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { getWhatsappLink } from "@/utils/utils";
 import { TrackingWrapper } from "../TrackingWrapper";
+import { siteData } from "@/data/sites";
 
 export interface IMenuClientsAccessProps {
   theme?: "light" | "dark";
@@ -14,7 +15,7 @@ export const MenuClientsAccess = ({ theme }: IMenuClientsAccessProps) => {
         color={theme === "dark" ? "primary" : "secondary"}
         size="small"
         LinkComponent="a"
-        href="https://xyzcoworking.conexa.app/index.php?r=site/login"
+        href={siteData.urlConexa}
         target="_blank"
       >
         acesso clientes

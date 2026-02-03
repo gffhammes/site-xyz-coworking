@@ -1,6 +1,9 @@
+"use client";
+
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { advantageSectionData } from "./AdvantagesSection";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
+import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "../common/Animate";
 import parse from "html-react-parser";
 import { TrackingWrapper } from "../common/TrackingWrapper";
@@ -9,6 +12,10 @@ export interface IDesktopAdvantagesSectionProps {}
 export const DesktopAdvantagesSection = (
   props: IDesktopAdvantagesSectionProps
 ) => {
+  const isGoogle = useAbTest();
+  const vantagensMessage = isGoogle
+    ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
+    : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <Box sx={{ position: "relative" }}>
       <Container sx={{ position: "relative", zIndex: 1 }}>
@@ -81,10 +88,10 @@ export const DesktopAdvantagesSection = (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-30%" }}
           >
-            <TrackingWrapper section="vantagens" action="contato">
+            <TrackingWrapper section="vantagens" action="contato" isGoogle={isGoogle}>
               <WhatsappLinkButton
                 variant="contained"
-                customMessage="Olá, vim pelo site e gostaria de agendar uma visita!"
+                customMessage={vantagensMessage}
               >
                 agendar visita
               </WhatsappLinkButton>

@@ -1,14 +1,18 @@
 import { Box, Container, Stack, SxProps, Typography } from "@mui/material";
 import { NavigationList } from "../common/NavigationList/NavigationList";
 import { XYZLogoWithLink } from "../common/XYZLogoWithLink";
-import { socials } from "./Footer";
+import { getSocials } from "./Footer";
 import { FooterInfoTemplate } from "./FooterInfoTemplate";
 import { FooterInfos } from "./FooterInfos";
 import { TrackingWrapper } from "../common/TrackingWrapper";
 
-export interface IMobileFooterProps {}
+export interface IMobileFooterProps {
+  footerWhatsappLink: string;
+  isGoogle?: boolean;
+}
 
-export const MobileFooter = (props: IMobileFooterProps) => {
+export const MobileFooter = ({ footerWhatsappLink, isGoogle = false }: IMobileFooterProps) => {
+  const socials = getSocials(footerWhatsappLink);
   return (
     <>
       <Box
@@ -61,6 +65,7 @@ export const MobileFooter = (props: IMobileFooterProps) => {
                       key={social.name}
                       section="footer"
                       action={`ir-para-${social.name}`}
+                      isGoogle={isGoogle}
                     >
                       <Stack
                         key={social.name}
