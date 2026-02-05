@@ -95,3 +95,23 @@ export const getElementId = ({
   const googleSuffix = isGoogle ? "---google" : "";
   return `click---${page}---${section}---${action}${googleSuffix}`;
 };
+
+export function decodeHtmlEntities(str: string): string {
+  const map: Record<string, string> = {
+    "&amp;": "&",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&quot;": '"',
+    "&#39;": "'",
+  };
+
+  return str.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, (match) => map[match]);
+}
+
+export function formatDateISOToBR(iso: string): string {
+  const d = new Date(iso);
+  const dia = String(d.getDate()).padStart(2, "0");
+  const mes = String(d.getMonth() + 1).padStart(2, "0");
+  const ano = d.getFullYear();
+  return `${dia}/${mes}/${ano}`;
+}

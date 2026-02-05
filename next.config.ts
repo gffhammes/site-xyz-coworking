@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.studiodireto.com.br",
       },
+      {
+        protocol: "https",
+        hostname: "xyz.systemprime.com.br",
+      },
+      {
+        protocol: "https",
+        hostname: "xyzcoworking.com",
+      },
     ],
   },
   reactStrictMode: true,
