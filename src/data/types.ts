@@ -49,6 +49,7 @@ export interface IServiceItem {
 }
 
 export interface ISiteData {
+  termsAndConditionFileId: string;
   urlConexa: string;
   gtmId: string;
   contact: {

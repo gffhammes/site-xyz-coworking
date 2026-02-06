@@ -24,6 +24,7 @@
     "formik": "^2.4.6",
     "gsap": "^3.12.7",
     "html-react-parser": "^5.2.3",
+    "jsdom": "^28.0.0",
     "lenis": "^1.2.3",
     "motion": "^12.6.3",
     "next": "^16.0.8",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/jsdom": "^27.0.0",
     "@types/node": "^20",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
