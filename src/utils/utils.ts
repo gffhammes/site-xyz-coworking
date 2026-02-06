@@ -23,7 +23,7 @@ export const validateEmail = (email: string) => {
   return !!String(email)
     .toLowerCase()
     .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     );
 };
 
@@ -57,11 +57,11 @@ export const getFormattedPhoneNumber = (phoneNumber: string) => {
 };
 
 export const formattedPhoneNumber = getFormattedPhoneNumber(
-  siteData.contact.phoneNumber
+  siteData.contact.phoneNumber,
 );
 
 export const formattedWhatsApp = getFormattedPhoneNumber(
-  siteData.contact.whatsappNumber
+  siteData.contact.whatsappNumber,
 );
 interface IGetElementIdArgs {
   section: string;
@@ -79,12 +79,12 @@ export const getElementId = ({
   }
 
   const pathname = window.location.pathname;
-  
+
   // Remove /google do início ou final: /google/servicos ou /servicos/google
   const cleanPathname = pathname
     .replace(/^\/google(\/|$)/, "/") // Remove do início
     .replace(/\/google$/, ""); // Remove do final
-  
+
   const page =
     cleanPathname
       .replace(/^\/|\/$/g, "") // remove barras no início/fim
@@ -114,4 +114,47 @@ export function formatDateISOToBR(iso: string): string {
   const mes = String(d.getMonth() + 1).padStart(2, "0");
   const ano = d.getFullYear();
   return `${dia}/${mes}/${ano}`;
+}
+
+function splitCSVLine(line: string): string[] {
+  const result: string[] = [];
+  let current = "";
+  let insideQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+
+    if (char === '"') {
+      insideQuotes = !insideQuotes;
+      continue;
+    }
+
+    if (char === "," && !insideQuotes) {
+      result.push(current.trim());
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  result.push(current.trim());
+  return result;
+}
+
+export function parseCSV(csv: string, keys: string[]) {
+  const lines = csv.replace(/\r/g, "").trim().split("\n");
+
+  // remove header
+  lines.shift();
+
+  return lines.map((line) => {
+    const values = splitCSVLine(line);
+
+    const obj: Record<string, string> = {};
+    keys.forEach((key, index) => {
+      obj[key] = values[index] ?? "";
+    });
+
+    return obj;
+  });
 }

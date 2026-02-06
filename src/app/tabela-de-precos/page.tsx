@@ -1,15 +1,22 @@
-export const dynamic = 'force-dynamic';
-
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import { XYZLogo } from "@/components/common/XYZLogo";
+import { Metadata } from "next";
 import { siteData } from "@/data/sites";
-import { redirect, RedirectType } from "next/navigation";
 import { PriceTable } from "@/components/PriceTable/PriceTable";
 
-export default function TabelaDePrecos() {
-  if (!siteData.tabelaDePrecos) {
-    redirect("/", RedirectType.replace);
-  }
+export const metadata: Metadata = {
+  title: `Tabela de Preços ${siteData.filialName} | XYZ Coworking`,
+};
+
+export default async function TabelaDePrecos() {
+  const fileId = siteData.pricesTableFileId;
+  const apiKey = process.env.GOOGLE_API_KEY;
+
+  const url = `https://www.googleapis.com/drive/v3/files/${fileId}/export?mimeType=text/csv&key=${apiKey}`;
+  const res = await fetch(url, {
+    next: { revalidate: 3600 },
+  });
+  const html = await res.text();
 
   return (
     <div>
@@ -18,9 +25,11 @@ export default function TabelaDePrecos() {
           <Stack sx={{ gap: 4, mt: 4 }}>
             <XYZLogo width="5rem" />
 
-            <Typography variant="h1">Tabela de Preços</Typography>
+            <Typography variant="h1">
+              Tabela de Preços {siteData.filialName}
+            </Typography>
 
-            <PriceTable />
+            <PriceTable content={html} />
           </Stack>
         </Container>
       </main>

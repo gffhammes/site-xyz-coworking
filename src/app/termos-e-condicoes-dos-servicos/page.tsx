@@ -35,14 +35,10 @@ export default async function TermosECondicoes() {
             <XYZLogo width="5rem" />
 
             <Typography variant="h1">
-              Termos e Condições dos Serviços
+              Termos e Condições dos Serviços {siteData.filialName}
             </Typography>
 
             <TermsAndConditions content={htmlToRender} />
-
-            <div></div>
-
-            {/* <PriceTable /> */}
           </Stack>
         </Container>
       </main>
