@@ -11,10 +11,15 @@ export const metadata: Metadata = {
 export default async function TabelaDePrecos() {
   const fileId = siteData.pricesTableFileId;
   const apiKey = process.env.GOOGLE_API_KEY;
+  const env = process.env.NODE_ENV;
+  const revalidateTimeInMinutes = 5;
 
   const url = `https://www.googleapis.com/drive/v3/files/${fileId}/export?mimeType=text/csv&key=${apiKey}`;
   const res = await fetch(url, {
-    next: { revalidate: 3600 },
+    next: {
+      revalidate:
+        env === "development" ? undefined : revalidateTimeInMinutes * 60,
+    },
   });
   const html = await res.text();
 
