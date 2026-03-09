@@ -4,11 +4,6 @@ import heroBg from "../../../public/images/XYZ - Jvll-4.webp";
 import image1 from "../../../public/images/XYZ - Jvll-05.webp";
 import image2 from "../../../public/images/XYZ - Jvll-16.webp";
 import servicesHeroImage from "../../../public/images/Equipe-23.jpg";
-import { tabelaDePrecosJoinville } from "./tabela-de-precos";
-import diferencialimage1 from "../../../public/images/endereco-estrategico.webp";
-import diferencialimage2 from "../../../public/images/infra-bc.webp";
-import diferencialimage3 from "../../../public/images/conexao-bc.webp";
-import diferencialimage4 from "../../../public/images/servicos.webp";
 import diferencialimage5 from "../../../public/images/ambiente-negocios.jpg";
 import diferencialimage6 from "../../../public/images/fachada.jpg";
 import diferencialimage7 from "../../../public/images/infraestrutura.jpg";
@@ -33,6 +28,9 @@ const address = {
 };
 
 export const joinvilleData: ISiteData = {
+  filialName: "Joinville",
+  pricesTableFileId: "1_8F_EkxQ51tCG3azkxqnb4oDfI9TE_2ODggYi_zmEFo",
+  termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
   urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T364HBZH",
   contact,
@@ -90,7 +88,6 @@ export const joinvilleData: ISiteData = {
   servicesPage: {
     heroImage: servicesHeroImage.src,
   },
-  tabelaDePrecos: tabelaDePrecosJoinville,
   socials: {
     instagram: "https://www.instagram.com/coworkingxyz/",
     linkedin: "https://www.linkedin.com/company/coworkingxyz",

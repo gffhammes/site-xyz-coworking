@@ -28,6 +28,9 @@ const address = {
 };
 
 export const florianopolisData: ISiteData = {
+  filialName: "Florianópolis",
+  pricesTableFileId: "1UHKjsavVmOXCv9MPI_ZPxuW3-M6kMbTYKgemTbBHBys",
+  termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
   urlConexa: "https://lumiere.conexa.app/",
   gtmId: "",
   contact,

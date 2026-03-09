@@ -27,6 +27,9 @@ const address = {
 };
 
 export const balnearioData: ISiteData = {
+  filialName: "Balneário Camboriú",
+  pricesTableFileId: "1UHKjsavVmOXCv9MPI_ZPxuW3-M6kMbTYKgemTbBHBys",
+  termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
   urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T588QKB9",
   contact,

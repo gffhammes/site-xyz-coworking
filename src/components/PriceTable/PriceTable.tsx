@@ -1,6 +1,6 @@
 "use client";
 
-import { siteData } from "@/data/sites";
+import { parseCSV } from "@/utils/utils";
 import Box from "@mui/material/Box";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
@@ -18,10 +18,14 @@ const columns: GridColDef[] = [
   },
 ];
 
-export const PriceTable = () => {
-  if (!siteData.tabelaDePrecos) return null;
+export interface IPriceTableProps {
+  content: string;
+}
 
-  const rows = siteData.tabelaDePrecos.map((item) => ({
+export const PriceTable = ({ content }: IPriceTableProps) => {
+  const formatedPrices = parseCSV(content, ["servico", "valor2025"]);
+
+  const rows = formatedPrices.map((item) => ({
     ...item,
     id: item.servico,
   }));

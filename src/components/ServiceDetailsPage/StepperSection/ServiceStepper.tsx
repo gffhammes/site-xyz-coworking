@@ -1,6 +1,6 @@
 "use client";
 
-import { Animate } from "@/components/common/Animate";
+import { Animate, IAnimateProps } from "@/components/common/Animate";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { Box, Stack, Typography } from "@mui/material";
 import parse from "html-react-parser";
@@ -12,7 +12,7 @@ export interface IServiceStepperProps {
 export const ServiceStepper = ({ steps }: IServiceStepperProps) => {
   const { md } = useBreakpoint();
 
-  const animateProps = (index: number) => {
+  const animateProps: (index: number) => IAnimateProps = (index) => {
     return md
       ? {
           initial: { opacity: 0, y: 10 },
