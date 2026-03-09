@@ -29,7 +29,7 @@ const address = {
 
 export const joinvilleData: ISiteData = {
   filialName: "Joinville",
-  pricesTableFileId: "1UHKjsavVmOXCv9MPI_ZPxuW3-M6kMbTYKgemTbBHBys",
+  pricesTableFileId: "1_8F_EkxQ51tCG3azkxqnb4oDfI9TE_2ODggYi_zmEFo",
   termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
   urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T364HBZH",
