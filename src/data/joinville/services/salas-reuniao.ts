@@ -60,7 +60,7 @@ export const salasReuniao: IServiceItem = {
     plans: [
       {
         customPriceText: "A partir de",
-        price: 75,
+        price: 78,
         label: "Hora",
         period: "Hora",
         included: [
