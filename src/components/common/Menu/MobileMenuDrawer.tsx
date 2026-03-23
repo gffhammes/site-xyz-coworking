@@ -27,7 +27,11 @@ export const MobileMenuDrawer = ({
           </IconButton>
         </Box>
 
-        <NavigationList direction="column" onItemClick={handleClose} />
+        <NavigationList
+          direction="column"
+          onItemClick={handleClose}
+          location="header"
+        />
 
         <Stack gap={2}>
           <MenuClientsAccess />
