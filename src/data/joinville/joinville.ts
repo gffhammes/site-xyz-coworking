@@ -28,6 +28,7 @@ const address = {
 };
 
 export const joinvilleData: ISiteData = {
+  filialCNPJ: "08.106.045.0001/57",
   filialName: "Joinville",
   pricesTableFileId: "1_8F_EkxQ51tCG3azkxqnb4oDfI9TE_2ODggYi_zmEFo",
   termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",

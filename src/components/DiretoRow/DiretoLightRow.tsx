@@ -1,3 +1,4 @@
+import { siteData } from "@/data/sites";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -16,7 +17,7 @@ export const DiretoLightRow = (props: IDiretoLightRowProps) => {
           gap={1}
         >
           <Typography color="black" lineHeight={1}>
-            © {clientName} | {new Date().getFullYear()}
+            © {clientName} {new Date().getFullYear()} | {siteData.filialCNPJ}
           </Typography>
 
           <Stack

@@ -49,6 +49,7 @@ export interface IServiceItem {
 }
 
 export interface ISiteData {
+  filialCNPJ: string;
   filialName: string;
   pricesTableFileId: string;
   termsAndConditionFileId: string;
