@@ -15,7 +15,12 @@ export const FooterInfos = (props: IFooterInfosProps) => {
   return (
     <>
       <FooterInfoTemplate title="Mapa do Site">
-        <NavigationList direction="column" gap={0.5} theme="dark" />
+        <NavigationList
+          direction="column"
+          gap={0.5}
+          theme="dark"
+          location="footer"
+        />
       </FooterInfoTemplate>
 
       <FooterInfoTemplate title="Horário de Funcionamento">
@@ -27,8 +32,8 @@ export const FooterInfos = (props: IFooterInfosProps) => {
 
                 return `${previousValue}<br/>- ${currentValue}`;
               },
-              ""
-            )
+              "",
+            ),
           )}
         </Typography>
       </FooterInfoTemplate>

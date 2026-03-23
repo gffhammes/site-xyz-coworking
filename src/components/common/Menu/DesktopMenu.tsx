@@ -10,7 +10,7 @@ export interface IDesktopMenuProps {
 export const DesktopMenu = ({ theme = "light" }: IDesktopMenuProps) => {
   return (
     <Stack direction="row" gap={4} alignItems="center">
-      <NavigationList theme={theme} />
+      <NavigationList theme={theme} location="header" />
 
       <Stack direction="row" gap={2}>
         <MenuClientsAccess theme={theme} />
