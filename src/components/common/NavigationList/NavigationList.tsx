@@ -61,6 +61,7 @@ export const pages: IPage[] = [
       target: service.slug,
     })),
   },
+  { name: "Tabela de Preços", isActive: true, target: "/tabela-de-precos" },
   {
     name: "Blog",
     target: "/blog",

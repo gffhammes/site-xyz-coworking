@@ -1,8 +1,8 @@
 import { Container, Stack, Typography } from "@mui/material";
-import { XYZLogo } from "@/components/common/XYZLogo";
 import { Metadata } from "next";
 import { TermsAndConditions } from "@/components/TermsAndConditions/TermsAndConditions";
 import { siteData } from "@/data/sites";
+import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 
 export const metadata: Metadata = {
   title: "Termos e Condições | XYZ Coworking",
@@ -36,8 +36,8 @@ export default async function TermosECondicoes() {
     <div>
       <main>
         <Container>
-          <Stack sx={{ gap: 4, mt: 4 }}>
-            <XYZLogo width="5rem" />
+          <Stack alignItems="flex-start" sx={{ gap: 4, mt: 4 }}>
+            <XYZLogoWithLink width="5rem" />
 
             <Typography variant="h1">
               Termos e Condições dos Serviços {siteData.filialName}

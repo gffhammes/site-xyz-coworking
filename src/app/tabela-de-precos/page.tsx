@@ -1,8 +1,8 @@
 import { Container, Stack, Typography } from "@mui/material";
-import { XYZLogo } from "@/components/common/XYZLogo";
 import { Metadata } from "next";
 import { siteData } from "@/data/sites";
 import { PriceTable } from "@/components/PriceTable/PriceTable";
+import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
 
 export const metadata: Metadata = {
   title: `Tabela de Preços ${siteData.filialName} | XYZ Coworking`,
@@ -27,8 +27,8 @@ export default async function TabelaDePrecos() {
     <div>
       <main>
         <Container>
-          <Stack sx={{ gap: 4, mt: 4 }}>
-            <XYZLogo width="5rem" />
+          <Stack alignItems="flex-start" sx={{ gap: 4, mt: 4 }}>
+            <XYZLogoWithLink width="5rem" />
 
             <Typography variant="h1">
               Tabela de Preços {siteData.filialName}
