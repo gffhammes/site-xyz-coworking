@@ -3,12 +3,17 @@ import { Metadata } from "next";
 import { siteData } from "@/data/sites";
 import { PriceTable } from "@/components/PriceTable/PriceTable";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: `Tabela de Preços ${siteData.filialName} | XYZ Coworking`,
 };
 
 export default async function TabelaDePrecos() {
+  if (!siteData.pricesTableFileId) {
+    redirect("/");
+  }
+
   const fileId = siteData.pricesTableFileId;
   const apiKey = process.env.GOOGLE_API_KEY;
   const env = process.env.NODE_ENV;

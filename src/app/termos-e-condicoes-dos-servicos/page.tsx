@@ -3,12 +3,17 @@ import { Metadata } from "next";
 import { TermsAndConditions } from "@/components/TermsAndConditions/TermsAndConditions";
 import { siteData } from "@/data/sites";
 import { XYZLogoWithLink } from "@/components/common/XYZLogoWithLink";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Termos e Condições | XYZ Coworking",
 };
 
 export default async function TermosECondicoes() {
+  if (!siteData.termsAndConditionFileId) {
+    redirect("/");
+  }
+
   const fileId = siteData.termsAndConditionFileId;
   const apiKey = process.env.GOOGLE_API_KEY;
   const env = process.env.NODE_ENV;

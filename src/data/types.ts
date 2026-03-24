@@ -51,8 +51,8 @@ export interface IServiceItem {
 export interface ISiteData {
   filialCNPJ: string;
   filialName: string;
-  pricesTableFileId: string;
-  termsAndConditionFileId: string;
+  pricesTableFileId?: string;
+  termsAndConditionFileId?: string;
   urlConexa: string;
   gtmId: string;
   contact: {

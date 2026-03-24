@@ -85,10 +85,14 @@ export const pages: IPage[] = [
       target: service.slug,
     })),
   },
-  { name: "Tabela de Preços", isActive: true, target: "/tabela-de-precos" },
+  {
+    name: "Tabela de Preços",
+    isActive: !!siteData.pricesTableFileId,
+    target: "/tabela-de-precos",
+  },
   {
     name: "Termos e Condições",
-    isActive: true,
+    isActive: !!siteData.termsAndConditionFileId,
     target: "/termos-e-condicoes-dos-servicos",
     whereToShow: "footerOnly",
   },
