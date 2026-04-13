@@ -31,7 +31,7 @@ export const florianopolisData: ISiteData = {
   filialCNPJ: "30.735.437.0001/34",
   filialName: "Florianópolis",
   pricesTableFileId: "1uBqQ-GdGMAiviJdwNwbeL8GTB6akdFQ_jkrOBIeccKM",
-  // termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
+  termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
   urlConexa: "https://lumiere.conexa.app/",
   gtmId: "",
   contact,
