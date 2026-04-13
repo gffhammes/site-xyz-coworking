@@ -1,7 +1,7 @@
 import { ISiteData } from "../types";
 import { services } from "./services/services";
 import servicesHeroImage from "../../../public/images/servicos.png";
-import diferencialimage1 from "../../../public/images/enderecofiscalfloripa.jpeg";
+import diferencialimage1 from "../../../public/images/fachada floripa.jpeg";
 import diferencialimage2 from "../../../public/images/membrox.jpeg";
 import diferencialimage3 from "../../../public/images/exclusivoambiente.png";
 import diferencialimage4 from "../../../public/images/network.png";
