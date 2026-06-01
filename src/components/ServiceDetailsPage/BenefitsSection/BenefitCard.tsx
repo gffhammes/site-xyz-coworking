@@ -1,4 +1,4 @@
-import { Stack, SvgIconTypeMap, Typography } from "@mui/material";
+import { Stack, SvgIconTypeMap, SxProps, Typography } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import parse from "html-react-parser";
 
@@ -7,9 +7,10 @@ export interface IBenefitCardProps {
     icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> | null;
     text: string;
   };
+  sx?: SxProps;
 }
 
-export const BenefitCard = ({ item }: IBenefitCardProps) => {
+export const BenefitCard = ({ item, sx }: IBenefitCardProps) => {
   return (
     <Stack
       direction={{ xs: "row", md: "column" }}
@@ -25,6 +26,7 @@ export const BenefitCard = ({ item }: IBenefitCardProps) => {
         "&:hover": {
           backgroundColor: "secondary.light",
         },
+        ...sx,
       }}
     >
       {item.icon && <item.icon color="secondary" fontSize="inherit" />}

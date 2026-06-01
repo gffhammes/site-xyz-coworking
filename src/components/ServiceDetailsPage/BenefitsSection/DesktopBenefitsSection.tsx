@@ -64,7 +64,7 @@ export const DesktopBenefitsSection = ({
                   width: "100%",
                 }}
               >
-                <BenefitCard item={item} />
+                <BenefitCard item={item} sx={{ height: "100%" }} />
               </Animate>
             ))}
           </Box>

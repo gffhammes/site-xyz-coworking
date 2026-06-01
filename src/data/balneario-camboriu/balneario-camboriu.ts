@@ -30,7 +30,7 @@ export const balnearioData: ISiteData = {
   filialCNPJ: "57.658.953/0001-69",
   filialName: "Balneário Camboriú",
   pricesTableFileId: "1i8aIp7Aav2WH_f1cJu5xmwPTbEdyaURjhos60ltoSO8",
-  termsAndConditionFileId: "1OgIZzs79Sa2aU8hZoPPvTit6FwEEo5Zid6T9aqcV14Y",
+  termsAndConditionFileId: "1QgQjfTwRk6N2iFzPT6Z2-MD-pF_rrqwtnejEpSWono8",
   urlConexa: "https://xyzcoworking.conexa.app/index.php?r=site/login",
   gtmId: "GTM-T588QKB9",
   contact,
