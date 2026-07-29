@@ -1,4 +1,6 @@
 import { siteData } from "@/data/sites";
+import { SEARCH_PARAMS } from "@/data/global";
+import { TUtmSourceKeys } from "@/data/types";
 
 export const scrollTo = (id: string, offset?: number) => {
   const target = document.getElementById(id);
@@ -27,20 +29,74 @@ export const validateEmail = (email: string) => {
     );
 };
 
-export const getWhatsappLink = (customText?: string) => {
+export const WHATSAPP_UTM_SOURCE_STORAGE_KEY = "xyz-whatsapp-utm-source";
+
+const DEFAULT_WHATSAPP_MESSAGE_SUFFIX =
+  "gostaria de mais informações sobre o XYZ Coworking.";
+
+export function normalizeUtmSource(value?: string | null) {
+  return value?.trim().toLowerCase() || undefined;
+}
+
+export function getWhatsappMessagePrefix(utmSource?: string | null) {
+  const utmSourceMessages = siteData.utmSourceMessages;
+
+  if (!utmSourceMessages) {
+    return "Olá! Vim pelo site e";
+  }
+
+  const normalizedUtmSource = normalizeUtmSource(utmSource);
+
+  if (normalizedUtmSource && normalizedUtmSource in utmSourceMessages) {
+    return utmSourceMessages[normalizedUtmSource as TUtmSourceKeys];
+  }
+
+  return utmSourceMessages.fallback;
+}
+
+export function normalizeWhatsappSuffix(messageSuffix?: string) {
+  if (!messageSuffix) {
+    return undefined;
+  }
+
+  const trimmedMessage = messageSuffix.trim();
+
+  if (!trimmedMessage) {
+    return undefined;
+  }
+
+  const withoutGreeting = trimmedMessage.replace(/^Olá[!,]?\s*/i, "");
+  const withoutCampaignPrefix = withoutGreeting
+    .replace(/^vim\s+(?:pelo|do|da|pela|através de)\s+.+?\s+e\s+/i, "")
+    .replace(/^vim\s+(?:pelo|do|da|pela|através de)\s+.+?\s+/i, "");
+
+  return withoutCampaignPrefix.replace(/^[,\-–]\s*/, "").trim();
+}
+
+export function getWhatsappMessage(
+  messageSuffix?: string,
+  utmSource?: string | null,
+) {
+  const prefix = getWhatsappMessagePrefix(utmSource);
+  const suffix =
+    normalizeWhatsappSuffix(messageSuffix) ?? DEFAULT_WHATSAPP_MESSAGE_SUFFIX;
+
+  return `${prefix} ${suffix}`;
+}
+
+export const getWhatsappLink = (
+  messageSuffix?: string,
+  utmSource?: string | null,
+) => {
   const phone = siteData.contact.whatsappNumber;
 
-  const text =
-    customText ??
-    "Olá! Vim pelo site e gostaria de mais informações sobre o XYZ Coworking.";
+  const text = getWhatsappMessage(messageSuffix, utmSource);
 
   const encodedText = encodeURIComponent(text);
   const link = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodedText}`;
 
   return link;
 };
-
-export const whatsappLink = getWhatsappLink();
 
 export const getFormattedPhoneNumber = (phoneNumber: string) => {
   const digits = phoneNumber.replace(/\D/g, "");
@@ -87,7 +143,7 @@ export const getElementId = ({
 
   const page =
     cleanPathname
-      .replace(/^\/|\/$/g, "") // remove barras no início/fim
+      .replace(/^\/?|\/$/g, "") // remove barras no início/fim
       .replace(/\//g, "-") // troca / por -
       .replace(/\s+/g, "-") // troca espaços por -
       .toLowerCase() || "home";

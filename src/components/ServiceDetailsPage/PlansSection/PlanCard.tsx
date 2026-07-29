@@ -4,10 +4,10 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import { PlanCardPrice } from "./PlanCardPrice";
 import { PlanCardIncluded } from "./PlanCardIncluded";
 import { IServicePlan } from "@/data/types";
-import { getWhatsappLink } from "@/utils/utils";
 import { useAbTest } from "@/hooks/useAbTest";
 import { Animate } from "@/components/common/Animate";
 import { TrackingWrapper } from "@/components/common/TrackingWrapper";
+import { useWhatsappLink } from "@/hooks/useWhatsappLink";
 
 export interface IPlanCardProps {
   selectedPlan: IServicePlan;
@@ -15,11 +15,10 @@ export interface IPlanCardProps {
 
 export const PlanCard = ({ selectedPlan }: IPlanCardProps) => {
   const isGoogle = useAbTest();
-  const planMessage = isGoogle
-    ? selectedPlan.whatsappMessage
-    : selectedPlan.whatsappMessageOriginal ?? selectedPlan.whatsappMessage;
+  const planMessage =
+    selectedPlan.whatsappMessageOriginal ?? selectedPlan.whatsappMessage;
 
-  const buttonHref = getWhatsappLink(planMessage);
+  const buttonHref = useWhatsappLink(planMessage);
 
   return (
     <Animate

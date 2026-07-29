@@ -2,36 +2,18 @@
 
 import { Button } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { getWhatsappLink } from "@/utils/utils";
 import { TrackingWrapper } from "../TrackingWrapper";
-import { usePathname } from "next/navigation";
 import { useAbTest } from "@/hooks/useAbTest";
+import { useWhatsappLink } from "@/hooks/useWhatsappLink";
 
 export interface IMenuCTAProps {
   theme?: "light" | "dark";
 }
 
 export const MenuCTA = ({ theme }: IMenuCTAProps) => {
-  const pathname = usePathname();
   const isGoogle = useAbTest();
+  const href = useWhatsappLink("gostaria de mais informações!");
 
-  // Define mensagens específicas baseadas na rota apenas para o experimento
-  const getCustomMessage = () => {
-    if (!isGoogle) return undefined;
-
-    // Remove /google prefix to get the actual page
-    const actualPath = pathname.replace(/^\/google/, '') || '/';
-
-    if (actualPath === "/servicos") {
-      return "Olá! Vim pelo anúncio do Google e quero conhecer os serviços do XYZ Coworking.";
-    }
-
-    return "Olá, vim pelo anúncio do Google e gostaria de mais informações!";
-  };
-  
-  const customMsg = getCustomMessage();
-  const href = getWhatsappLink(customMsg);
-  
   return (
     <TrackingWrapper section="header" action="contato" isGoogle={isGoogle}>
       <Button

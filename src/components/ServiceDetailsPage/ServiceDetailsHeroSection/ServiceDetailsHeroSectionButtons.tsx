@@ -15,15 +15,12 @@ export const ServiceDetailsHeroSectionButtons = ({
   service,
 }: IServiceDetailsHeroSectionButtonsProps) => {
   const isGoogle = useAbTest();
-  const heroMessage = isGoogle
-    ? `Olá, vim pelo anúncio do Google e gostaria de mais detalhes sobre ${service.title}!`
-    : `Olá, vim pelo site e gostaria de mais detalhes sobre ${service.title}!`;
   return (
     <>
       <TrackingWrapper section="hero" action="contato" isGoogle={isGoogle}>
         <WhatsappLinkButton
           variant="contained"
-          customMessage={heroMessage}
+          messageSuffix={`gostaria de mais detalhes sobre ${service.title}!`}
           fullWidth
         >
           {service.detailsPage.heroCTAText}

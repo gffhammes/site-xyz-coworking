@@ -8,6 +8,7 @@ import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { CookieConsent } from "./CookieConsent";
 import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton/WhatsappFloatingButton";
+import { UtmSourceUrlSync } from "@/components/common/UtmSourceUrlSync";
 import { siteData } from "@/data/sites";
 import AbTestProvider from "@/hooks/AbTestProvider";
 
@@ -72,6 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <AbTestProvider>
+              <UtmSourceUrlSync />
               <Header />
               {children}
 

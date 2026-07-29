@@ -11,9 +11,6 @@ export interface IPhraseSectionProps {}
 
 export const PhraseSection = (props: IPhraseSectionProps) => {
   const isGoogle = useAbTest();
-  const fotosMessage = isGoogle
-    ? "Olá, vim pelo anúncio do Google gostaria de agendar uma visita!"
-    : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <Box id="home-content">
       <Container>
@@ -111,11 +108,15 @@ export const PhraseSection = (props: IPhraseSectionProps) => {
           viewport={{ once: true, margin: "-30%" }}
           transition={{ duration: 1, type: "spring" }}
         >
-          <TrackingWrapper section="fotos-circulares" action="contato" isGoogle={isGoogle}>
+          <TrackingWrapper
+            section="fotos-circulares"
+            action="contato"
+            isGoogle={isGoogle}
+          >
             <WhatsappLinkButton
               variant="contained"
               color="secondary"
-              customMessage={fotosMessage}
+              messageSuffix="gostaria de agendar uma visita!"
             >
               agendar visita
             </WhatsappLinkButton>

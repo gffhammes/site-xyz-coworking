@@ -2,7 +2,6 @@
 
 import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import { FooterMap } from "../Footer/FooterMap";
-import { getWhatsappLink } from "@/utils/utils";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { WhatsappLinkButton } from "../common/WhatsappLinkButton";
 import { useAbTest } from "@/hooks/useAbTest";
@@ -14,9 +13,6 @@ export interface IMobileMapSectionProps {}
 
 export const MobileMapSection = (props: IMobileMapSectionProps) => {
   const isGoogle = useAbTest();
-  const mapMessage = isGoogle
-    ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
-    : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <Box sx={{ mb: -10 }}>
       <Stack gap={10} sx={{ backgroundColor: "#f4f4f4", pt: 10 }}>
@@ -39,11 +35,15 @@ export const MobileMapSection = (props: IMobileMapSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30%" }}
             >
-              <TrackingWrapper section="mapa" action="contato" isGoogle={isGoogle}>
+              <TrackingWrapper
+                section="mapa"
+                action="contato"
+                isGoogle={isGoogle}
+              >
                 <WhatsappLinkButton
                   variant="contained"
                   startIcon={<WhatsAppIcon fontSize="inherit" />}
-                  customMessage={mapMessage}
+                  messageSuffix="gostaria de agendar uma visita!"
                 >
                   agendar
                 </WhatsappLinkButton>
