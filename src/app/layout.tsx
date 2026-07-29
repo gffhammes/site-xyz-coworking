@@ -11,6 +11,7 @@ import { WhatsappFloatingButton } from "@/components/WhatsappFloatingButton/What
 import { UtmSourceUrlSync } from "@/components/common/UtmSourceUrlSync";
 import { siteData } from "@/data/sites";
 import AbTestProvider from "@/hooks/AbTestProvider";
+import { connection } from "next/server";
 
 export const metadata: Metadata = {
   title: siteData.homeData.metaTitle,
@@ -34,11 +35,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  await connection();
+
   const isFlorianopolis = process.env.NEXT_PUBLIC_SITE_KEY === "florianopolis";
 
   return (

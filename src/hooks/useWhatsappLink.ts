@@ -1,13 +1,14 @@
 "use client";
 
 import { SEARCH_PARAMS } from "@/data/global";
+
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   getWhatsappLink,
   normalizeUtmSource,
   WHATSAPP_UTM_SOURCE_STORAGE_KEY,
 } from "@/utils/utils";
-import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 export const useWhatsappLink = (messageSuffix?: string) => {
   const searchParams = useSearchParams();
