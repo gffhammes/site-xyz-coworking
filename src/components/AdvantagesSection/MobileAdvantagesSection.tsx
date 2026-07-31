@@ -11,12 +11,9 @@ import { TrackingWrapper } from "../common/TrackingWrapper";
 export interface IMobileAdvantagesSectionProps {}
 
 export const MobileAdvantagesSection = (
-  props: IMobileAdvantagesSectionProps
+  props: IMobileAdvantagesSectionProps,
 ) => {
   const isGoogle = useAbTest();
-  const vantagensMessage = isGoogle
-    ? "Olá, vim pelo anúncio do Google e gostaria de agendar uma visita!"
-    : "Olá, vim pelo site e gostaria de agendar uma visita!";
   return (
     <Box sx={{ position: "relative" }}>
       <Container maxWidth="sm" sx={{ position: "relative", zIndex: 1 }}>
@@ -85,10 +82,14 @@ export const MobileAdvantagesSection = (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-30%" }}
           >
-            <TrackingWrapper section="vantagens" action="contato" isGoogle={isGoogle}>
+            <TrackingWrapper
+              section="vantagens"
+              action="contato"
+              isGoogle={isGoogle}
+            >
               <WhatsappLinkButton
                 variant="contained"
-                customMessage={vantagensMessage}
+                messageSuffix="gostaria de agendar uma visita!"
               >
                 agendar visita
               </WhatsappLinkButton>

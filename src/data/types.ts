@@ -48,7 +48,12 @@ export interface IServiceItem {
   };
 }
 
+export type TUtmSourceKeys = "googleads" | "instagram";
+
 export interface ISiteData {
+  utmSourceMessages?: Partial<Record<TUtmSourceKeys, string>> & {
+    fallback: string;
+  };
   filialCNPJ: string;
   filialName: string;
   pricesTableFileId?: string;

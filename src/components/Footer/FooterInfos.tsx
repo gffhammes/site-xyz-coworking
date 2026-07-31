@@ -1,13 +1,10 @@
 import { Stack, Typography } from "@mui/material";
 import { FooterInfoTemplate } from "./FooterInfoTemplate";
 import { NavigationList } from "../common/NavigationList/NavigationList";
-import {
-  formattedPhoneNumber,
-  formattedWhatsApp,
-  getWhatsappLink,
-} from "@/utils/utils";
+import { formattedPhoneNumber } from "@/utils/utils";
 import parse from "html-react-parser";
 import { siteData } from "@/data/sites";
+import { FooterWhatsappLink } from "./FooterWhatsappLink";
 
 export interface IFooterInfosProps {}
 
@@ -53,9 +50,7 @@ export const FooterInfos = (props: IFooterInfosProps) => {
             <Typography>Telefone: {formattedPhoneNumber}</Typography>
           </a>
 
-          <a href={getWhatsappLink()}>
-            <Typography>WhatsApp: {formattedWhatsApp}</Typography>
-          </a>
+          <FooterWhatsappLink />
 
           <a href={`mailto:${siteData.contact.email}`}>
             <Typography>E-mail: {siteData.contact.email}</Typography>

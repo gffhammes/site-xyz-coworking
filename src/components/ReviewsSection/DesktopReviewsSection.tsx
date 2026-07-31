@@ -108,15 +108,15 @@ export const DesktopReviewsSection = (props: IDesktopReviewsSectionProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-30%" }}
         >
-          <TrackingWrapper section="reviews" action="contato" isGoogle={isGoogle}>
+          <TrackingWrapper
+            section="reviews"
+            action="contato"
+            isGoogle={isGoogle}
+          >
             <WhatsappLinkButton
               color="secondary"
               variant="contained"
-              customMessage={
-                isGoogle
-                  ? "Olá, vim pelo anúncio do Google e gostaria de conhecer o XYZ Coworking!"
-                  : "Olá, vim pelo site e gostaria de agendar uma visita!"
-              }
+              messageSuffix="gostaria de conhecer o XYZ Coworking!"
               sx={{ mt: 2 }}
             >
               Quero trabalhar em um ambiente feito para crescer

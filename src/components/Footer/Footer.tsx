@@ -7,70 +7,35 @@ import { MobileFooter } from "./MobileFooter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { whatsappLink, getWhatsappLink } from "@/utils/utils";
+import { useWhatsappLink } from "@/hooks/useWhatsappLink";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 import { siteData } from "@/data/sites";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { SvgIcon } from "@mui/material";
 import { useAbTest } from "@/hooks/useAbTest";
-import { usePathname } from "next/navigation";
 
 export interface IFooterProps {}
 
 export const Footer = (props: IFooterProps) => {
   const isGoogle = useAbTest();
-  const pathname = usePathname();
-
-  const getCustomMessage = () => {
-    if (!isGoogle) return undefined;
-
-    // Remove /google prefix to get the actual page
-    const actualPath = pathname.replace(/^\/google/, '') || '/';
-
-    if (actualPath === "/") {
-      return "Olá! Vim pelo anúncio do Google e gostaria de saber mais sobre o XYZ Coworking.";
-    }
-
-    if (actualPath === "/servicos") {
-      return "Olá! Vim pelo anúncio do Google e gostaria de conhecer os serviços do XYZ Coworking.";
-    }
-
-    if (actualPath.includes("endereco-fiscal") || actualPath.includes("endereco-fiscal-e-comercial")) {
-      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre Endereço Fiscal!";
-    }
-
-    if (actualPath.includes("salas-privativas")) {
-      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas Privativas.";
-    }
-
-    if (actualPath.includes("salas-reuniao")) {
-      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Reunião.";
-    }
-
-    if (actualPath.includes("estacoes-trabalho")) {
-      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Estações de Trabalho.";
-    }
-
-    if (actualPath.includes("salas-atendimento")) {
-      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre as Salas de Atendimento.";
-    }
-
-    if (actualPath.includes("membro-x")) {
-      return "Olá, vim pelo anúncio do Google e gostaria de mais informações sobre o Endereço Comercial / Membro X.";
-    }
-
-    return "Olá, vim pelo anúncio do Google e gostaria de mais informações!";
-  };
-
-  const customMessage = getCustomMessage();
-  const footerWhatsappLink = customMessage ? getWhatsappLink(customMessage) : whatsappLink;
+  const footerWhatsappLink = useWhatsappLink("gostaria de mais informações!");
 
   return (
     <>
-      <ResponsiveComponent 
-        xs={<MobileFooter footerWhatsappLink={footerWhatsappLink} isGoogle={isGoogle} />} 
-        md={<DesktopFooter footerWhatsappLink={footerWhatsappLink} isGoogle={isGoogle} />} 
+      <ResponsiveComponent
+        xs={
+          <MobileFooter
+            footerWhatsappLink={footerWhatsappLink}
+            isGoogle={isGoogle}
+          />
+        }
+        md={
+          <DesktopFooter
+            footerWhatsappLink={footerWhatsappLink}
+            isGoogle={isGoogle}
+          />
+        }
       />
 
       <DiretoLightRow />

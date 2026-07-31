@@ -12,14 +12,16 @@ export const useAbTest = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const originalPathname = window.location.pathname;
-      const hasGoogle = originalPathname.startsWith("/google") || originalPathname.endsWith("/google");
+      const hasGoogle =
+        originalPathname.startsWith("/google") ||
+        originalPathname.endsWith("/google");
       setIsGoogleUrl(hasGoogle);
     }
   }, []);
 
   if (!isJoinville) return false;
   if (contextFlag) return true;
-  
+
   return isGoogleUrl;
 };
 
