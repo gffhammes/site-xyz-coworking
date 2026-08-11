@@ -87,7 +87,7 @@ export const pages: IPage[] = [
   },
   {
     name: "Tabela de Preços",
-    isActive: !!siteData.pricesTableFileId,
+    isActive: false, //!!siteData.pricesTableFileId,
     target: "/tabela-de-precos",
   },
   {
