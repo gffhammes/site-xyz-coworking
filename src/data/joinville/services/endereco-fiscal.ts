@@ -62,7 +62,7 @@ export const enderecoFiscal: IServiceItem = {
     // no plano anual`,
     plans: [
       {
-        price: 998,
+        price: 1290,
         label: "Anual",
         period: "Ano",
         included: [
@@ -76,7 +76,7 @@ export const enderecoFiscal: IServiceItem = {
           "Olá! Tenho interesse no plano anual de endereço fiscal em Joinville.",
       },
       { customPriceText: "A partir de",
-        price: 109,
+        price: 139,
         label: "Mensal",
         period: "Mês",
         included: [
@@ -104,6 +104,6 @@ export const enderecoFiscal: IServiceItem = {
       //     "Olá! Tenho interesse no plano mensal de endereço fiscal em Joinville.",
       // },
     ],
-    floatingCtaMessage: "R$998/ano",
+    floatingCtaMessage: "R$1290/ano",
   },
 };
