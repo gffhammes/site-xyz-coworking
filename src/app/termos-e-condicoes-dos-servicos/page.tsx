@@ -28,14 +28,8 @@ export default async function TermosECondicoes() {
   });
   const html = await res.text();
 
-  const { JSDOM } = await import("jsdom");
-  const dom = new JSDOM(html);
-  const document = dom.window.document;
-
-  document.querySelector("head")?.remove();
-  const body = document.querySelector("body");
-
-  const htmlToRender: string = body?.innerHTML || "";
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  const htmlToRender: string = bodyMatch ? bodyMatch[1] : html;
 
   return (
     <div>
